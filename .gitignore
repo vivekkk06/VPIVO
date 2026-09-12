@@ -1,0 +1,13 @@
+# Provided raw data (2.8GB, mostly screenshots) — not our work product,
+# and far too large to push. See README.md "Provided Data" for how to obtain it.
+dataset_a/
+dataset_b/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS
+.DS_Store

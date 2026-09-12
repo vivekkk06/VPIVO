@@ -1,0 +1,9 @@
+[project]
+name = "procmine"
+version = "0.1.0"
+description = "Recover business-process executions from desktop operation logs."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
