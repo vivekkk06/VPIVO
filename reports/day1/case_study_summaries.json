@@ -1,0 +1,42 @@
+[
+  {
+    "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+    "n_events": 2348,
+    "n_gt_executions": 32,
+    "n_processes": 9,
+    "duration_minutes": 25.2,
+    "figure": "reports/day1/figures/case_study_ses_20260630-121953-LAPTOP-R36BQBTE.png"
+  },
+  {
+    "session_id": "ses_20260701-051820-CHAITANYA0BCF",
+    "n_events": 2195,
+    "n_gt_executions": 26,
+    "n_processes": 8,
+    "duration_minutes": 18.8,
+    "figure": "reports/day1/figures/case_study_ses_20260701-051820-CHAITANYA0BCF.png"
+  },
+  {
+    "session_id": "ses_20260701-115141-SIDDHIGUPTAB00B",
+    "n_events": 3557,
+    "n_gt_executions": 44,
+    "n_processes": 13,
+    "duration_minutes": 43.2,
+    "figure": "reports/day1/figures/case_study_ses_20260701-115141-SIDDHIGUPTAB00B.png"
+  },
+  {
+    "session_id": "ses_20260701-075548-CHAITANYA0BCF",
+    "n_events": 1795,
+    "n_gt_executions": 24,
+    "n_processes": 8,
+    "duration_minutes": 14.6,
+    "figure": "reports/day1/figures/case_study_ses_20260701-075548-CHAITANYA0BCF.png"
+  },
+  {
+    "session_id": "ses_20260701-070320-JAYESH",
+    "n_events": 3773,
+    "n_gt_executions": 42,
+    "n_processes": 12,
+    "duration_minutes": 26.6,
+    "figure": "reports/day1/figures/case_study_ses_20260701-070320-JAYESH.png"
+  }
+]
