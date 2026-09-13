@@ -1,0 +1,225 @@
+{
+  "n_labeled_transitions": 139121,
+  "n_sessions": 63,
+  "pooled_auc": {
+    "V1_log1p_delta_t_ms": {
+      "auc": 0.1098,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_density_before": {
+      "auc": 0.6547,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_density_after": {
+      "auc": 0.3056,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_application_changed": {
+      "auc": 0.4987,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_window_title_changed": {
+      "auc": 0.5019,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_browser_domain_changed_with_port": {
+      "auc": 0.2154,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_interaction_category_changed": {
+      "auc": 0.2747,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_extracted_text_at_transition": {
+      "auc": 0.4955,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V1_chunk_boundary": {
+      "auc": 0.4999,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "T2_delta_t_over_session_median": {
+      "auc": 0.1097,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "V2_browser_domain_changed_host_only": {
+      "auc": 0.2174,
+      "n": 94798,
+      "coverage": 0.6814
+    },
+    "N3_application_jaccard": {
+      "auc": 0.4804,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N3_event_type_jaccard": {
+      "auc": 0.3857,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N3_interaction_category_jaccard": {
+      "auc": 0.3694,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N3_browser_domain_jaccard_with_port": {
+      "auc": 0.4607,
+      "n": 98705,
+      "coverage": 0.7095
+    },
+    "N3_browser_domain_jaccard_host_only": {
+      "auc": 0.479,
+      "n": 98705,
+      "coverage": 0.7095
+    },
+    "N3_window_title_jaccard": {
+      "auc": 0.4643,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N3_before_window_duration_ms": {
+      "auc": 0.2445,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N3_after_window_duration_ms": {
+      "auc": 0.5397,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N5_application_jaccard": {
+      "auc": 0.4654,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N5_event_type_jaccard": {
+      "auc": 0.4386,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N5_interaction_category_jaccard": {
+      "auc": 0.5326,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N5_browser_domain_jaccard_with_port": {
+      "auc": 0.427,
+      "n": 102335,
+      "coverage": 0.7356
+    },
+    "N5_browser_domain_jaccard_host_only": {
+      "auc": 0.4596,
+      "n": 102335,
+      "coverage": 0.7356
+    },
+    "N5_window_title_jaccard": {
+      "auc": 0.4408,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N5_before_window_duration_ms": {
+      "auc": 0.2103,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N5_after_window_duration_ms": {
+      "auc": 0.6608,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N10_application_jaccard": {
+      "auc": 0.4361,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N10_event_type_jaccard": {
+      "auc": 0.6972,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N10_interaction_category_jaccard": {
+      "auc": 0.605,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N10_browser_domain_jaccard_with_port": {
+      "auc": 0.3626,
+      "n": 111174,
+      "coverage": 0.7991
+    },
+    "N10_browser_domain_jaccard_host_only": {
+      "auc": 0.4248,
+      "n": 111174,
+      "coverage": 0.7991
+    },
+    "N10_window_title_jaccard": {
+      "auc": 0.3904,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N10_before_window_duration_ms": {
+      "auc": 0.3168,
+      "n": 139121,
+      "coverage": 1.0
+    },
+    "N10_after_window_duration_ms": {
+      "auc": 0.6858,
+      "n": 139121,
+      "coverage": 1.0
+    }
+  },
+  "per_session_stability_top_features": {
+    "T2_delta_t_over_session_median": {
+      "n_sessions_with_valid_auc": 63,
+      "mean": 0.1102,
+      "std": 0.0192,
+      "min": 0.0572,
+      "max": 0.1547
+    },
+    "V1_log1p_delta_t_ms": {
+      "n_sessions_with_valid_auc": 63,
+      "mean": 0.1102,
+      "std": 0.0192,
+      "min": 0.0572,
+      "max": 0.1547
+    },
+    "N5_before_window_duration_ms": {
+      "n_sessions_with_valid_auc": 63,
+      "mean": 0.2098,
+      "std": 0.0454,
+      "min": 0.1405,
+      "max": 0.4812
+    },
+    "V1_browser_domain_changed_with_port": {
+      "n_sessions_with_valid_auc": 63,
+      "mean": 0.215,
+      "std": 0.1027,
+      "min": 0.1365,
+      "max": 0.5
+    },
+    "V2_browser_domain_changed_host_only": {
+      "n_sessions_with_valid_auc": 57,
+      "mean": 0.2195,
+      "std": 0.0308,
+      "min": 0.1835,
+      "max": 0.3742
+    },
+    "N3_before_window_duration_ms": {
+      "n_sessions_with_valid_auc": 63,
+      "mean": 0.2449,
+      "std": 0.0766,
+      "min": 0.1045,
+      "max": 0.5315
+    }
+  }
+}
