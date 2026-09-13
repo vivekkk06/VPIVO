@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HR/Payroll Automation Prototype -- DEMO ONLY</title>
+<style>
+  body { font-family: sans-serif; max-width: 640px; margin: 2em auto; }
+  .banner { background: #fff3cd; border: 1px solid #d4a017; padding: 0.75em 1em; margin-bottom: 1.5em; }
+  nav a { margin-right: 1em; }
+  textarea { width: 100%; height: 5em; }
+  button { padding: 0.5em 1em; margin-top: 0.5em; }
+  .btn.success { background: #2e7d32; color: white; border: none; }
+  .route-panel { border: 1px solid #ccc; padding: 1em; margin-top: 1em; }
+</style>
+</head>
+<body>
+<div class="banner"><strong>PROTOTYPE / DEMO ENVIRONMENT</strong> -- this is a
+mock UI built to demonstrate an automation opportunity discovered from
+Dataset B. It is NOT the production HR/Payroll system and does not
+reproduce any real business logic beyond the DOM structure that was
+directly observed.</div>
+<nav>
+  <a href="#/payroll-items">Payroll Items</a>
+  <a href="#/leave-applications">Leave Applications</a>
+  <a href="#/onboarding">Onboarding</a>
+  <a href="#/social-insurance">Social Insurance</a>
+</nav>
+<p id="no-route-message">Select a route above.</p>
+<section class="route-panel" id="panel-pi" data-route="#/payroll-items" hidden>
+  <h3>Payroll Items (#/payroll-items)</h3>
+  <textarea id="pi-note" class="input" placeholder="note"></textarea>
+  <br>
+  <button id="btn-pi-ok" class="btn success">OK</button>
+</section>
+<section class="route-panel" id="panel-la" data-route="#/leave-applications" hidden>
+  <h3>Leave Applications (#/leave-applications)</h3>
+  <textarea id="la-note" class="input" placeholder="note"></textarea>
+  <br>
+  <button id="btn-la-ok" class="btn success">OK</button>
+</section>
+<section class="route-panel" id="panel-ob" data-route="#/onboarding" hidden>
+  <h3>Onboarding (#/onboarding)</h3>
+  <textarea id="ob-note" class="input" placeholder="note"></textarea>
+  <br>
+  <button id="btn-ob-ok" class="btn success">OK</button>
+</section>
+<section class="route-panel" id="panel-si" data-route="#/social-insurance" hidden>
+  <h3>Social Insurance (#/social-insurance)</h3>
+  <textarea id="si-note" class="input" placeholder="note"></textarea>
+  <br>
+  <button id="btn-si-ok" class="btn success">OK</button>
+</section>
+<script>
+function render() {
+  const route = location.hash || "";
+  document.querySelectorAll(".route-panel").forEach(function (panel) {
+    panel.hidden = (panel.dataset.route !== route);
+  });
+  document.getElementById("no-route-message").hidden = !!route;
+}
+window.addEventListener("hashchange", render);
+render();
+</script>
+</body>
+</html>
