@@ -1,0 +1,145 @@
+{
+  "confusion": {
+    "v1=True_v2=True": 1578,
+    "v1=False_v2=False": 83,
+    "v1=True_v2=False": 10,
+    "v1=False_v2=True": 81
+  },
+  "both_fragmented_mean_extra_segments": {
+    "v1": 3.0012674271229405,
+    "v2": 3.5259822560202787,
+    "n": 1578
+  },
+  "only_v2_fragmented_examples": [
+    {
+      "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+      "case_id": "LA-175009-001",
+      "process_code": "C",
+      "n_v1_segments": 1,
+      "n_v2_segments": 3,
+      "duration_s": 44.3
+    },
+    {
+      "session_id": "ses_20260630-124826-CHAITANYA0BCF",
+      "case_id": "INV-181750-003",
+      "process_code": "F",
+      "n_v1_segments": 1,
+      "n_v2_segments": 3,
+      "duration_s": 26.3
+    },
+    {
+      "session_id": "ses_20260630-124826-CHAITANYA0BCF",
+      "case_id": "SUP-181750-001",
+      "process_code": "M",
+      "n_v1_segments": 1,
+      "n_v2_segments": 3,
+      "duration_s": 38.9
+    },
+    {
+      "session_id": "ses_20260630-125757-LAPTOP-R36BQBTE",
+      "case_id": "BR-182807-001",
+      "process_code": "H",
+      "n_v1_segments": 1,
+      "n_v2_segments": 2,
+      "duration_s": 27.1
+    },
+    {
+      "session_id": "ses_20260630-125757-LAPTOP-R36BQBTE",
+      "case_id": "BR-182807-002",
+      "process_code": "H",
+      "n_v1_segments": 1,
+      "n_v2_segments": 2,
+      "duration_s": 30.2
+    },
+    {
+      "session_id": "ses_20260630-125757-LAPTOP-R36BQBTE",
+      "case_id": "BR-182807-003",
+      "process_code": "H",
+      "n_v1_segments": 1,
+      "n_v2_segments": 2,
+      "duration_s": 26.3
+    },
+    {
+      "session_id": "ses_20260630-125757-LAPTOP-R36BQBTE",
+      "case_id": "PM-182807-001",
+      "process_code": "J",
+      "n_v1_segments": 1,
+      "n_v2_segments": 2,
+      "duration_s": 30.1
+    },
+    {
+      "session_id": "ses_20260630-125757-LAPTOP-R36BQBTE",
+      "case_id": "PM-182807-003",
+      "process_code": "J",
+      "n_v1_segments": 1,
+      "n_v2_segments": 2,
+      "duration_s": 24.4
+    }
+  ],
+  "only_v1_fragmented_examples": [
+    {
+      "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+      "case_id": "PI-175009-002",
+      "process_code": "B",
+      "n_v1_segments": 2,
+      "n_v2_segments": 1,
+      "duration_s": 17.5
+    },
+    {
+      "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+      "case_id": "EXP-175009-003",
+      "process_code": "G",
+      "n_v1_segments": 3,
+      "n_v2_segments": 1,
+      "duration_s": 25.7
+    },
+    {
+      "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+      "case_id": "PM-175009-002",
+      "process_code": "J",
+      "n_v1_segments": 3,
+      "n_v2_segments": 1,
+      "duration_s": 22.9
+    },
+    {
+      "session_id": "ses_20260701-032825-CHAITANYA0BCF",
+      "case_id": "RT-085736-002",
+      "process_code": "A",
+      "n_v1_segments": 2,
+      "n_v2_segments": 1,
+      "duration_s": 26.4
+    },
+    {
+      "session_id": "ses_20260701-051820-CHAITANYA0BCF",
+      "case_id": "PM-101000-001",
+      "process_code": "J",
+      "n_v1_segments": 2,
+      "n_v2_segments": 1,
+      "duration_s": 24.7
+    },
+    {
+      "session_id": "ses_20260701-054901-LAPTOP-R36BQBTE",
+      "case_id": "BV-111912-003",
+      "process_code": "I",
+      "n_v1_segments": 2,
+      "n_v2_segments": 1,
+      "duration_s": 58.4
+    },
+    {
+      "session_id": "ses_20260701-103521-LAPTOP-0IM1OHQH",
+      "case_id": "RET-160443-001",
+      "process_code": "O",
+      "n_v1_segments": 2,
+      "n_v2_segments": 1,
+      "duration_s": 24.9
+    },
+    {
+      "session_id": "ses_20260701-123729-Marcos",
+      "case_id": "INV-180703-001",
+      "process_code": "F",
+      "n_v1_segments": 2,
+      "n_v2_segments": 1,
+      "duration_s": 23.6
+    }
+  ]
+}

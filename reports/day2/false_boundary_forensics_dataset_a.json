@@ -1,0 +1,218 @@
+{
+  "tp": 1094,
+  "fn": 577,
+  "tn": 155164,
+  "n_false_internal": 4903,
+  "n_false_noise_excluded": 967,
+  "feature_comparison": {
+    "delta_t_ms": {
+      "true_boundaries": {
+        "n": 1671,
+        "mean": 3408.8468,
+        "median": 526,
+        "p25": 470,
+        "p75": 3661,
+        "p90": 4381,
+        "p95": 14154
+      },
+      "false_internal": {
+        "n": 4903,
+        "mean": 5988.043,
+        "median": 2627,
+        "p25": 1822,
+        "p75": 3918,
+        "p90": 15079,
+        "p95": 19652
+      }
+    },
+    "log1p_delta_t_ms": {
+      "true_boundaries": {
+        "n": 1671,
+        "mean": 7.0965,
+        "median": 6.2672,
+        "p25": 6.1549,
+        "p75": 8.2058,
+        "p90": 8.3853,
+        "p95": 9.5578
+      },
+      "false_internal": {
+        "n": 4903,
+        "mean": 7.8961,
+        "median": 7.874,
+        "p25": 7.5082,
+        "p75": 8.2736,
+        "p90": 9.6211,
+        "p95": 9.886
+      }
+    },
+    "density_before": {
+      "true_boundaries": {
+        "n": 1671,
+        "mean": 12.2711,
+        "median": 11,
+        "p25": 7,
+        "p75": 14,
+        "p90": 27,
+        "p95": 29
+      },
+      "false_internal": {
+        "n": 4903,
+        "mean": 12.9494,
+        "median": 13,
+        "p25": 7,
+        "p75": 18,
+        "p90": 21,
+        "p95": 24
+      }
+    },
+    "density_after": {
+      "true_boundaries": {
+        "n": 1671,
+        "mean": 23.7528,
+        "median": 30,
+        "p25": 8,
+        "p75": 32,
+        "p90": 34,
+        "p95": 35
+      },
+      "false_internal": {
+        "n": 4903,
+        "mean": 25.534,
+        "median": 20,
+        "p25": 16,
+        "p75": 30,
+        "p90": 35,
+        "p95": 67
+      }
+    },
+    "application_changed": {
+      "true_boundaries": {
+        "n": 1671,
+        "rate": 0.0197
+      },
+      "false_internal": {
+        "n": 4903,
+        "rate": 0.0455
+      }
+    },
+    "window_title_changed": {
+      "true_boundaries": {
+        "n": 1671,
+        "rate": 0.0233
+      },
+      "false_internal": {
+        "n": 4903,
+        "rate": 0.0583
+      }
+    },
+    "browser_domain_changed": {
+      "true_boundaries": {
+        "n": 1671,
+        "rate": 0.8612
+      },
+      "false_internal": {
+        "n": 4903,
+        "rate": 0.7885
+      }
+    },
+    "interaction_category_changed": {
+      "true_boundaries": {
+        "n": 1671,
+        "rate": 0.9749
+      },
+      "false_internal": {
+        "n": 4903,
+        "rate": 0.9767
+      }
+    },
+    "extracted_text_at_transition": {
+      "true_boundaries": {
+        "n": 1671,
+        "rate": 0.0981
+      },
+      "false_internal": {
+        "n": 4903,
+        "rate": 0.2111
+      }
+    },
+    "chunk_boundary": {
+      "true_boundaries": {
+        "n": 1671,
+        "rate": 0.0006
+      },
+      "false_internal": {
+        "n": 4903,
+        "rate": 0.0016
+      }
+    }
+  },
+  "probability_comparison": {
+    "true_boundaries": {
+      "n": 1671,
+      "mean": 0.8765,
+      "median": 0.9319,
+      "p25": 0.844,
+      "p75": 0.9578,
+      "p90": 0.9754,
+      "p95": 0.989
+    },
+    "false_internal": {
+      "n": 4903,
+      "mean": 0.958,
+      "median": 0.96,
+      "p25": 0.9364,
+      "p75": 0.9802,
+      "p90": 0.9927,
+      "p95": 0.9981
+    }
+  },
+  "contribution_summary": {
+    "log1p_delta_t_ms": {
+      "mean_contribution": 6.6451,
+      "positive_rate": 0.967
+    },
+    "density_before": {
+      "mean_contribution": 0.3363,
+      "positive_rate": 0.6729
+    },
+    "density_after": {
+      "mean_contribution": 1.1596,
+      "positive_rate": 0.7192
+    },
+    "application_changed": {
+      "mean_contribution": -0.014,
+      "positive_rate": 0.937
+    },
+    "window_title_changed": {
+      "mean_contribution": -0.0243,
+      "positive_rate": 0.9417
+    },
+    "browser_domain_changed": {
+      "mean_contribution": 0.9691,
+      "positive_rate": 0.7885
+    },
+    "interaction_category_changed": {
+      "mean_contribution": 0.6831,
+      "positive_rate": 0.9767
+    },
+    "extracted_text_at_transition": {
+      "mean_contribution": -0.2486,
+      "positive_rate": 0.7889
+    },
+    "chunk_boundary": {
+      "mean_contribution": -0.0031,
+      "positive_rate": 0.9984
+    }
+  },
+  "noise_relationship": {
+    "n_false_internal_total": 4903,
+    "involving_duplicate_app_switch": {
+      "n": 15,
+      "rate": 0.0031
+    },
+    "at_chunk_boundary": {
+      "n": 8,
+      "rate": 0.0016
+    }
+  }
+}
