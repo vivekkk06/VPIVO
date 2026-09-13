@@ -1,0 +1,591 @@
+{
+  "n_sessions": 15,
+  "gap_thresholds_ms": {
+    "p90": 1885,
+    "p95": 2744,
+    "p99": 5971
+  },
+  "method_comparison": {
+    "gap_p90_1885ms": {
+      "total_boundaries": 2048,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 136.53,
+        "median": 132,
+        "p25": 122,
+        "p75": 148,
+        "min": 83,
+        "max": 189
+      },
+      "segment_length_events": {
+        "n": 2063,
+        "mean": 9.93,
+        "median": 7,
+        "p25": 4,
+        "p75": 13,
+        "min": 1,
+        "max": 249
+      },
+      "segment_length_ms": {
+        "n": 2063,
+        "mean": 1725.71,
+        "median": 1161,
+        "p25": 306,
+        "p75": 2591,
+        "min": 0,
+        "max": 19252
+      },
+      "n_segments_total": 2063
+    },
+    "gap_p95_2744ms": {
+      "total_boundaries": 1024,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 68.27,
+        "median": 69,
+        "p25": 63,
+        "p75": 75,
+        "min": 44,
+        "max": 84
+      },
+      "segment_length_events": {
+        "n": 1039,
+        "mean": 19.71,
+        "median": 17,
+        "p25": 12,
+        "p75": 23,
+        "min": 1,
+        "max": 253
+      },
+      "segment_length_ms": {
+        "n": 1039,
+        "mean": 5469.89,
+        "median": 4776,
+        "p25": 3254,
+        "p75": 6856,
+        "min": 0,
+        "max": 28181
+      },
+      "n_segments_total": 1039
+    },
+    "gap_p99_5971ms": {
+      "total_boundaries": 205,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 13.67,
+        "median": 14,
+        "p25": 10,
+        "p75": 16,
+        "min": 6,
+        "max": 19
+      },
+      "segment_length_events": {
+        "n": 220,
+        "mean": 93.08,
+        "median": 67.0,
+        "p25": 19,
+        "p75": 137,
+        "min": 1,
+        "max": 686
+      },
+      "segment_length_ms": {
+        "n": 220,
+        "mean": 40530.75,
+        "median": 26282.5,
+        "p25": 6662,
+        "p75": 61185,
+        "min": 0,
+        "max": 337339
+      },
+      "n_segments_total": 220
+    },
+    "application_change": {
+      "total_boundaries": 982,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 65.47,
+        "median": 63,
+        "p25": 56,
+        "p75": 75,
+        "min": 35,
+        "max": 111
+      },
+      "segment_length_events": {
+        "n": 997,
+        "mean": 20.54,
+        "median": 11,
+        "p25": 4,
+        "p75": 27,
+        "min": 1,
+        "max": 237
+      },
+      "segment_length_ms": {
+        "n": 997,
+        "mean": 9158.14,
+        "median": 4178,
+        "p25": 1527,
+        "p75": 10521,
+        "min": 0,
+        "max": 154221
+      },
+      "n_segments_total": 997
+    },
+    "system_change": {
+      "total_boundaries": 1003,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 66.87,
+        "median": 70,
+        "p25": 55,
+        "p75": 76,
+        "min": 32,
+        "max": 113
+      },
+      "segment_length_events": {
+        "n": 1018,
+        "mean": 20.11,
+        "median": 12.0,
+        "p25": 4,
+        "p75": 29,
+        "min": 1,
+        "max": 220
+      },
+      "segment_length_ms": {
+        "n": 1018,
+        "mean": 9002.18,
+        "median": 4499.5,
+        "p25": 2880,
+        "p75": 11108,
+        "min": 0,
+        "max": 125430
+      },
+      "n_segments_total": 1018
+    },
+    "system_change_debounced_2": {
+      "total_boundaries": 948,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 63.2,
+        "median": 64,
+        "p25": 52,
+        "p75": 73,
+        "min": 28,
+        "max": 110
+      },
+      "segment_length_events": {
+        "n": 963,
+        "mean": 21.26,
+        "median": 13,
+        "p25": 5,
+        "p75": 30,
+        "min": 2,
+        "max": 220
+      },
+      "segment_length_ms": {
+        "n": 963,
+        "mean": 9673.35,
+        "median": 4760,
+        "p25": 3236,
+        "p75": 12054,
+        "min": 2,
+        "max": 125430
+      },
+      "n_segments_total": 963
+    },
+    "system_change_debounced_3": {
+      "total_boundaries": 908,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 60.53,
+        "median": 60,
+        "p25": 50,
+        "p75": 71,
+        "min": 27,
+        "max": 106
+      },
+      "segment_length_events": {
+        "n": 923,
+        "mean": 22.19,
+        "median": 14,
+        "p25": 6,
+        "p75": 30,
+        "min": 2,
+        "max": 220
+      },
+      "segment_length_ms": {
+        "n": 923,
+        "mean": 10122.31,
+        "median": 5515,
+        "p25": 3415,
+        "p75": 12419,
+        "min": 36,
+        "max": 125430
+      },
+      "n_segments_total": 923
+    },
+    "system_change_debounced_5": {
+      "total_boundaries": 755,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 50.33,
+        "median": 49,
+        "p25": 40,
+        "p75": 57,
+        "min": 19,
+        "max": 93
+      },
+      "segment_length_events": {
+        "n": 770,
+        "mean": 26.59,
+        "median": 19.0,
+        "p25": 11,
+        "p75": 35,
+        "min": 2,
+        "max": 220
+      },
+      "segment_length_ms": {
+        "n": 770,
+        "mean": 12354.77,
+        "median": 8719.0,
+        "p25": 3824,
+        "p75": 14982,
+        "min": 158,
+        "max": 125430
+      },
+      "n_segments_total": 770
+    },
+    "system_change_debounced_8": {
+      "total_boundaries": 645,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 43.0,
+        "median": 41,
+        "p25": 32,
+        "p75": 52,
+        "min": 18,
+        "max": 82
+      },
+      "segment_length_events": {
+        "n": 660,
+        "mean": 31.03,
+        "median": 22.0,
+        "p25": 14,
+        "p75": 37,
+        "min": 2,
+        "max": 230
+      },
+      "segment_length_ms": {
+        "n": 660,
+        "mean": 14859.01,
+        "median": 11079.0,
+        "p25": 4722,
+        "p75": 16910,
+        "min": 285,
+        "max": 144335
+      },
+      "n_segments_total": 660
+    },
+    "system_change_debounced_12": {
+      "total_boundaries": 515,
+      "boundaries_per_session": {
+        "n": 15,
+        "mean": 34.33,
+        "median": 37,
+        "p25": 27,
+        "p75": 40,
+        "min": 14,
+        "max": 65
+      },
+      "segment_length_events": {
+        "n": 530,
+        "mean": 38.64,
+        "median": 31.5,
+        "p25": 20,
+        "p75": 46,
+        "min": 2,
+        "max": 230
+      },
+      "segment_length_ms": {
+        "n": 530,
+        "mean": 18808.18,
+        "median": 14776.0,
+        "p25": 9384,
+        "p75": 21760,
+        "min": 285,
+        "max": 144335
+      },
+      "n_segments_total": 530
+    }
+  },
+  "spot_check_session": "ses_20260701-164424-CHAITANYA0BCF",
+  "spot_check_segments_system_change_debounced_2": [
+    {
+      "n_events": 10,
+      "duration_ms": 7813,
+      "dominant_system_ids": [
+        [
+          "app:WindowsTerminal",
+          6
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "Windows PowerShell",
+          6
+        ],
+        [
+          "Untitled and 1 more page - Profile 1 - Microsoft​ Edge",
+          3
+        ]
+      ]
+    },
+    {
+      "n_events": 33,
+      "duration_ms": 10846,
+      "dominant_system_ids": [
+        [
+          "system:受発注在庫管理システム",
+          19
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "受発注在庫管理システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          19
+        ],
+        [
+          "Turn off extensions in developer mode",
+          10
+        ]
+      ]
+    },
+    {
+      "n_events": 2,
+      "duration_ms": 10,
+      "dominant_system_ids": [
+        [
+          "system:財務会計システム",
+          2
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "財務会計システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          2
+        ]
+      ]
+    },
+    {
+      "n_events": 6,
+      "duration_ms": 3487,
+      "dominant_system_ids": [
+        [
+          "app:Microsoft Word",
+          6
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "getsujitsu_teigaku_torihikisaki_ichiran [Compatibility Mode] - Word",
+          3
+        ],
+        [
+          "Opening - Word",
+          2
+        ]
+      ]
+    },
+    {
+      "n_events": 13,
+      "duration_ms": 7347,
+      "dominant_system_ids": [
+        [
+          "system:財務会計システム",
+          13
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "財務会計システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          13
+        ]
+      ]
+    },
+    {
+      "n_events": 4,
+      "duration_ms": 4263,
+      "dominant_system_ids": [
+        [
+          "app:Microsoft Word",
+          4
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "getsujitsu_teigaku_torihikisaki_ichiran [Compatibility Mode] - Word",
+          4
+        ]
+      ]
+    },
+    {
+      "n_events": 18,
+      "duration_ms": 9287,
+      "dominant_system_ids": [
+        [
+          "system:財務会計システム",
+          18
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "財務会計システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          18
+        ]
+      ]
+    },
+    {
+      "n_events": 4,
+      "duration_ms": 3870,
+      "dominant_system_ids": [
+        [
+          "app:Microsoft Word",
+          3
+        ],
+        [
+          "app:WindowsTerminal",
+          1
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "getsujitsu_teigaku_torihikisaki_ichiran [Compatibility Mode] - Word",
+          3
+        ],
+        [
+          "Windows PowerShell",
+          1
+        ]
+      ]
+    },
+    {
+      "n_events": 220,
+      "duration_ms": 3403,
+      "dominant_system_ids": [
+        [
+          "app:WindowsTerminal",
+          220
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "Windows PowerShell",
+          220
+        ]
+      ]
+    },
+    {
+      "n_events": 27,
+      "duration_ms": 285,
+      "dominant_system_ids": [
+        [
+          "system:財務会計システム",
+          27
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "財務会計システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          27
+        ]
+      ]
+    },
+    {
+      "n_events": 37,
+      "duration_ms": 9566,
+      "dominant_system_ids": [
+        [
+          "app:Microsoft Excel",
+          37
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "expense_calc - Excel",
+          36
+        ],
+        [
+          "Opening - Excel",
+          1
+        ]
+      ]
+    },
+    {
+      "n_events": 29,
+      "duration_ms": 14051,
+      "dominant_system_ids": [
+        [
+          "system:財務会計システム",
+          29
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "財務会計システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          29
+        ]
+      ]
+    },
+    {
+      "n_events": 4,
+      "duration_ms": 134,
+      "dominant_system_ids": [
+        [
+          "system:HR人事給与システム",
+          4
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "HR人事給与システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          4
+        ]
+      ]
+    },
+    {
+      "n_events": 7,
+      "duration_ms": 4109,
+      "dominant_system_ids": [
+        [
+          "app:Microsoft Word",
+          7
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "kazoku_teate_kitei [Compatibility Mode] - Word",
+          6
+        ],
+        [
+          "getsujitsu_teigaku_torihikisaki_ichiran [Compatibility Mode] - Word",
+          1
+        ]
+      ]
+    },
+    {
+      "n_events": 74,
+      "duration_ms": 42303,
+      "dominant_system_ids": [
+        [
+          "system:HR人事給与システム",
+          74
+        ]
+      ],
+      "dominant_window_titles": [
+        [
+          "HR人事給与システム and 1 more page - Profile 1 - Microsoft​ Edge",
+          74
+        ]
+      ]
+    }
+  ]
+}

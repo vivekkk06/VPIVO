@@ -1,0 +1,1810 @@
+{
+  "app:WindowsTerminal": [
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "capture",
+      "frequency": 59,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "pointer",
+      "frequency": 35,
+      "total_time_ms": 10940,
+      "avg_time_ms": 312.6
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "input",
+      "frequency": 32,
+      "total_time_ms": 13987,
+      "avg_time_ms": 437.1
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "navigation",
+      "frequency": 31,
+      "total_time_ms": 10988,
+      "avg_time_ms": 354.5
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "system",
+      "frequency": 9,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": null,
+      "interaction_category": "system",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "ui_state",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "capture",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "clipboard",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "system:受発注在庫管理システム": [
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "capture",
+      "frequency": 781,
+      "total_time_ms": 140,
+      "avg_time_ms": 0.2
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "pointer",
+      "frequency": 615,
+      "total_time_ms": 117362,
+      "avg_time_ms": 190.8
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "input",
+      "frequency": 364,
+      "total_time_ms": 8248,
+      "avg_time_ms": 22.7
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "clipboard",
+      "frequency": 184,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "navigation",
+      "frequency": 145,
+      "total_time_ms": 8825,
+      "avg_time_ms": 60.9
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 42,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 38,
+      "total_time_ms": 341,
+      "avg_time_ms": 9.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "ui_state",
+      "frequency": 36,
+      "total_time_ms": 1083,
+      "avg_time_ms": 30.1
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "system",
+      "frequency": 19,
+      "total_time_ms": 686,
+      "avg_time_ms": 36.1
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 5,
+      "total_time_ms": 1629,
+      "avg_time_ms": 325.8
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "capture",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "navigation",
+      "frequency": 4,
+      "total_time_ms": 18,
+      "avg_time_ms": 4.5
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "ui_state",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": null,
+      "interaction_category": "system",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "navigation",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 1,
+      "total_time_ms": 83,
+      "avg_time_ms": 83.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "input",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "ui_state",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "capture",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "system:財務会計システム": [
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "capture",
+      "frequency": 1068,
+      "total_time_ms": 2497,
+      "avg_time_ms": 2.3
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "pointer",
+      "frequency": 925,
+      "total_time_ms": 220129,
+      "avg_time_ms": 238.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "input",
+      "frequency": 512,
+      "total_time_ms": 13084,
+      "avg_time_ms": 25.6
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "clipboard",
+      "frequency": 230,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "navigation",
+      "frequency": 143,
+      "total_time_ms": 7710,
+      "avg_time_ms": 53.9
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 129,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 124,
+      "total_time_ms": 9894,
+      "avg_time_ms": 79.8
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "ui_state",
+      "frequency": 13,
+      "total_time_ms": 221,
+      "avg_time_ms": 17.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 10,
+      "total_time_ms": 1156,
+      "avg_time_ms": 115.6
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "system",
+      "frequency": 10,
+      "total_time_ms": 1876,
+      "avg_time_ms": 187.6
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "navigation",
+      "frequency": 4,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "ui_state",
+      "frequency": 4,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "capture",
+      "frequency": 4,
+      "total_time_ms": 674,
+      "avg_time_ms": 168.5
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "input",
+      "frequency": 4,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "navigation",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "capture",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "input",
+      "frequency": 1,
+      "total_time_ms": 68,
+      "avg_time_ms": 68.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::getsujitsu_teigaku_torihikisaki_ichiran": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 23,
+      "total_time_ms": 3629,
+      "avg_time_ms": 157.8
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 21,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 6,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 3,
+      "total_time_ms": 174,
+      "avg_time_ms": 58.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 1,
+      "total_time_ms": 1,
+      "avg_time_ms": 1.0
+    }
+  ],
+  "app:Microsoft Excel::expense_calc": [
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "capture",
+      "frequency": 88,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "input",
+      "frequency": 80,
+      "total_time_ms": 11178,
+      "avg_time_ms": 139.7
+    },
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "ui_state",
+      "frequency": 22,
+      "total_time_ms": 7278,
+      "avg_time_ms": 330.8
+    },
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "navigation",
+      "frequency": 21,
+      "total_time_ms": 7417,
+      "avg_time_ms": 353.2
+    }
+  ],
+  "system:HR人事給与システム": [
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "capture",
+      "frequency": 1361,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "pointer",
+      "frequency": 1194,
+      "total_time_ms": 292986,
+      "avg_time_ms": 245.4
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "input",
+      "frequency": 648,
+      "total_time_ms": 19286,
+      "avg_time_ms": 29.8
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "clipboard",
+      "frequency": 305,
+      "total_time_ms": 94,
+      "avg_time_ms": 0.3
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "navigation",
+      "frequency": 163,
+      "total_time_ms": 4900,
+      "avg_time_ms": 30.1
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 62,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 60,
+      "total_time_ms": 31685,
+      "avg_time_ms": 528.1
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "ui_state",
+      "frequency": 16,
+      "total_time_ms": 343,
+      "avg_time_ms": 21.4
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "capture",
+      "frequency": 4,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "ui_state",
+      "frequency": 4,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "pointer",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "system",
+      "frequency": 3,
+      "total_time_ms": 216,
+      "avg_time_ms": 72.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "capture",
+      "frequency": 3,
+      "total_time_ms": 1409,
+      "avg_time_ms": 469.7
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "input",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 3,
+      "total_time_ms": 2426,
+      "avg_time_ms": 808.7
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "input",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::kazoku_teate_kitei": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 7,
+      "total_time_ms": 386,
+      "avg_time_ms": 55.1
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 6,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 4,
+      "total_time_ms": 11,
+      "avg_time_ms": 2.8
+    }
+  ],
+  "app:Microsoft Word::shinkui_keiyaku_tetsuzuki": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 31,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 22,
+      "total_time_ms": 577,
+      "avg_time_ms": 26.2
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 16,
+      "total_time_ms": 262,
+      "avg_time_ms": 16.4
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 8,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 6,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 30,
+      "avg_time_ms": 15.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "capture",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::keiyaku_kaijo_tetsuzuki": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 211,
+      "total_time_ms": 467,
+      "avg_time_ms": 2.2
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 145,
+      "total_time_ms": 16802,
+      "avg_time_ms": 115.9
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 125,
+      "total_time_ms": 24156,
+      "avg_time_ms": 193.2
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "pointer",
+      "frequency": 37,
+      "total_time_ms": 1094,
+      "avg_time_ms": 29.6
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 36,
+      "total_time_ms": 13,
+      "avg_time_ms": 0.4
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "capture",
+      "frequency": 30,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 25,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "input",
+      "frequency": 16,
+      "total_time_ms": 394,
+      "avg_time_ms": 24.6
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 10,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "clipboard",
+      "frequency": 8,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 46,
+      "avg_time_ms": 46.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Notepad::IT申請メモ": [
+    {
+      "system": "app:Notepad",
+      "interaction_category": "capture",
+      "frequency": 22,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "input",
+      "frequency": 13,
+      "total_time_ms": 73,
+      "avg_time_ms": 5.6
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "navigation",
+      "frequency": 11,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "clipboard",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "ui_state",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "pointer",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::shinkuitorihikisaki_touroku_tetsuzuki": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 19,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 18,
+      "total_time_ms": 323,
+      "avg_time_ms": 17.9
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 2,
+      "total_time_ms": 61,
+      "avg_time_ms": 30.5
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 143,
+      "avg_time_ms": 143.0
+    }
+  ],
+  "app:ms-teams": [
+    {
+      "system": "app:ms-teams",
+      "interaction_category": "navigation",
+      "frequency": 33,
+      "total_time_ms": 11610,
+      "avg_time_ms": 351.8
+    },
+    {
+      "system": "app:ms-teams",
+      "interaction_category": "capture",
+      "frequency": 24,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:ms-teams",
+      "interaction_category": "ui_state",
+      "frequency": 18,
+      "total_time_ms": 174,
+      "avg_time_ms": 9.7
+    },
+    {
+      "system": null,
+      "interaction_category": "system",
+      "frequency": 6,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": null,
+      "interaction_category": "navigation",
+      "frequency": 4,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:ms-teams",
+      "interaction_category": "pointer",
+      "frequency": 3,
+      "total_time_ms": 37498,
+      "avg_time_ms": 12499.3
+    },
+    {
+      "system": null,
+      "interaction_category": "ui_state",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "navigation",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": null,
+      "interaction_category": "capture",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "ui_state",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::nyusha_checklist_shinsotsu_batch": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 155,
+      "total_time_ms": 316,
+      "avg_time_ms": 2.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 104,
+      "total_time_ms": 39919,
+      "avg_time_ms": 383.8
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 81,
+      "total_time_ms": 26979,
+      "avg_time_ms": 333.1
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 22,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 19,
+      "total_time_ms": 17,
+      "avg_time_ms": 0.9
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 4,
+      "total_time_ms": 198,
+      "avg_time_ms": 49.5
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 187,
+      "avg_time_ms": 93.5
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 10,
+      "avg_time_ms": 10.0
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "capture",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Excel::budget_analysis": [
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "capture",
+      "frequency": 48,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "input",
+      "frequency": 48,
+      "total_time_ms": 12769,
+      "avg_time_ms": 266.0
+    },
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "navigation",
+      "frequency": 10,
+      "total_time_ms": 2373,
+      "avg_time_ms": 237.3
+    },
+    {
+      "system": "app:Microsoft Excel",
+      "interaction_category": "ui_state",
+      "frequency": 7,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::ikuji_kyuugyou_kitei": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 12,
+      "total_time_ms": 319,
+      "avg_time_ms": 26.6
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 10,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 4,
+      "total_time_ms": 27,
+      "avg_time_ms": 6.8
+    }
+  ],
+  "app:Microsoft Word::gyomu_itaku_ukeire_tetsuzuki": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 35,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 23,
+      "total_time_ms": 3834,
+      "avg_time_ms": 166.7
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 21,
+      "total_time_ms": 2675,
+      "avg_time_ms": 127.4
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 5,
+      "total_time_ms": 44,
+      "avg_time_ms": 8.8
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 554,
+      "avg_time_ms": 554.0
+    }
+  ],
+  "app:Microsoft Word::gyomu_itaku_kyuuyo_kitei": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 156,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 113,
+      "total_time_ms": 15577,
+      "avg_time_ms": 137.8
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 90,
+      "total_time_ms": 7952,
+      "avg_time_ms": 88.4
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 23,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 23,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 11,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 14,
+      "avg_time_ms": 7.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:受発注在庫管理システム",
+      "interaction_category": "capture",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::gyomu_itaku_keihi_kitei": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 13,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 12,
+      "total_time_ms": 134,
+      "avg_time_ms": 11.2
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 3,
+      "total_time_ms": 14,
+      "avg_time_ms": 4.7
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 3,
+      "total_time_ms": 181,
+      "avg_time_ms": 60.3
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Notepad::精算確認メモ": [
+    {
+      "system": "app:Notepad",
+      "interaction_category": "capture",
+      "frequency": 57,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "navigation",
+      "frequency": 36,
+      "total_time_ms": 2296,
+      "avg_time_ms": 63.8
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "input",
+      "frequency": 33,
+      "total_time_ms": 64,
+      "avg_time_ms": 1.9
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "ui_state",
+      "frequency": 16,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "clipboard",
+      "frequency": 15,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "pointer",
+      "frequency": 4,
+      "total_time_ms": 16959,
+      "avg_time_ms": 4239.8
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::kanrisya_kengen_shinsei_tetsuzuki": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 9,
+      "total_time_ms": 416,
+      "avg_time_ms": 46.2
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 9,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 2,
+      "total_time_ms": 220,
+      "avg_time_ms": 110.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 575,
+      "avg_time_ms": 575.0
+    }
+  ],
+  "app:Windows Explorer": [
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "capture",
+      "frequency": 13,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "navigation",
+      "frequency": 10,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "system",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "ui_state",
+      "frequency": 2,
+      "total_time_ms": 65,
+      "avg_time_ms": 32.5
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "input",
+      "frequency": 2,
+      "total_time_ms": 4,
+      "avg_time_ms": 2.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Windows Explorer",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:WindowsTerminal",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Notepad": [
+    {
+      "system": "app:Notepad",
+      "interaction_category": "navigation",
+      "frequency": 5,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "ui_state",
+      "frequency": 4,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "capture",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": null,
+      "interaction_category": "system",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "browser:127.0.0.1:5133": [
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "navigation",
+      "frequency": 4,
+      "total_time_ms": 1,
+      "avg_time_ms": 0.2
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "ui_state",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "ui_state",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 2,
+      "avg_time_ms": 2.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "browser:127.0.0.1:5132": [
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 2,
+      "avg_time_ms": 0.7
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "ui_state",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "browser:127.0.0.1:5134": [
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 2,
+      "avg_time_ms": 0.7
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "ui_state",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5134",
+      "interaction_category": "system",
+      "frequency": 2,
+      "total_time_ms": 35,
+      "avg_time_ms": 17.5
+    }
+  ],
+  "app:Notepad::在庫調整メモ": [
+    {
+      "system": "app:Notepad",
+      "interaction_category": "capture",
+      "frequency": 52,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "navigation",
+      "frequency": 37,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "input",
+      "frequency": 35,
+      "total_time_ms": 619,
+      "avg_time_ms": 17.7
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "clipboard",
+      "frequency": 17,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "ui_state",
+      "frequency": 9,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Notepad",
+      "interaction_category": "pointer",
+      "frequency": 5,
+      "total_time_ms": 14030,
+      "avg_time_ms": 2806.0
+    },
+    {
+      "system": "browser:127.0.0.1:5133",
+      "interaction_category": "navigation",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:Microsoft Word::kaigo_kyuugyou_kitei": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 77,
+      "avg_time_ms": 25.7
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 137,
+      "avg_time_ms": 137.0
+    }
+  ],
+  "app:Microsoft Word::settai_keihi_kitei": [
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "capture",
+      "frequency": 113,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "navigation",
+      "frequency": 71,
+      "total_time_ms": 7638,
+      "avg_time_ms": 107.6
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "input",
+      "frequency": 69,
+      "total_time_ms": 7797,
+      "avg_time_ms": 113.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "ui_state",
+      "frequency": 18,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "clipboard",
+      "frequency": 14,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "capture",
+      "frequency": 7,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "pointer",
+      "frequency": 5,
+      "total_time_ms": 267,
+      "avg_time_ms": 53.4
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "navigation",
+      "frequency": 3,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "pointer",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "browser:127.0.0.1:5132",
+      "interaction_category": "navigation",
+      "frequency": 2,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "input",
+      "frequency": 2,
+      "total_time_ms": 2,
+      "avg_time_ms": 1.0
+    },
+    {
+      "system": "app:Microsoft Word",
+      "interaction_category": "system",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "pointer",
+      "frequency": 1,
+      "total_time_ms": 8,
+      "avg_time_ms": 8.0
+    },
+    {
+      "system": "system:HR人事給与システム",
+      "interaction_category": "capture",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "system:財務会計システム",
+      "interaction_category": "clipboard",
+      "frequency": 1,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ],
+  "app:OpenWith": [
+    {
+      "system": "app:OpenWith",
+      "interaction_category": "capture",
+      "frequency": 83,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    },
+    {
+      "system": "app:OpenWith",
+      "interaction_category": "input",
+      "frequency": 83,
+      "total_time_ms": 17070,
+      "avg_time_ms": 205.7
+    },
+    {
+      "system": "app:OpenWith",
+      "interaction_category": "navigation",
+      "frequency": 15,
+      "total_time_ms": 0,
+      "avg_time_ms": 0.0
+    }
+  ]
+}

@@ -1,0 +1,3355 @@
+{
+  "dataset": "dataset_b",
+  "n_sessions": 15,
+  "n_events_total": 20477,
+  "runtime_seconds": 2.62,
+  "events_per_second": 7810.7,
+  "total_exact_duplicate_groups": 0,
+  "total_semantic_duplicate_groups": 4,
+  "total_sequential_duplicates": 150,
+  "sequential_duplicates_by_type": {
+    "mouse_scroll": 110,
+    "extension_disconnected": 20,
+    "extension_connected": 17,
+    "clipboard_change": 3
+  },
+  "total_session_chunk_identity_issues": 0,
+  "unknown_layers": {},
+  "unknown_event_type_for_layer": {},
+  "sessions": [
+    {
+      "session_id": "ses_20260701-164424-CHAITANYA0BCF",
+      "n_events": 1613,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [
+        {
+          "timestamp_ms": 1782924911352,
+          "event_type": "extension_disconnected",
+          "event_ids": [
+            "evt_b2cbc6bb-5344-42c2-87b3-1c5dc88b2de1",
+            "evt_c53ea866-fd8b-4975-9f8b-e496b3b9cf55"
+          ]
+        }
+      ],
+      "n_semantic_duplicate_groups": 1,
+      "sequential_duplicates_count": 112,
+      "sequential_duplicates_by_type": {
+        "mouse_scroll": 110,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 9,
+          "null_pct": 0.56,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 1013,
+          "null_pct": 62.8,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1557,
+          "missing_pct": 96.53,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.5,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1613,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 86,
+        "max_gap_ms": 16755,
+        "gap_ms_bucket_counts": {
+          "100ms-1s": 295,
+          "<100ms": 1116,
+          "1s-10s": 199,
+          "10s-60s": 2
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 98,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 304,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 274,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 119,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 46,
+          "empty_payload": 46,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1613,
+        "n_with_nonempty_text": 56,
+        "pct_with_nonempty_text": 3.47,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 28,
+          "mouse_click": 22,
+          "text_input_complete": 6
+        },
+        "by_application": {
+          "Microsoft Edge": 34,
+          "Microsoft Word": 11,
+          "Microsoft Excel": 6,
+          "WindowsTerminal": 2,
+          "Notepad": 2,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 1,
+          "max": 7288,
+          "mean": 397.5
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 6,
+        "with_apparent_content": 6,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 772,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+      "n_events": 2015,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 3,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 2,
+        "extension_disconnected": 1
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 9,
+          "null_pct": 0.45,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 1163,
+          "null_pct": 57.72,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1936,
+          "missing_pct": 96.08,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 9,
+          "null_pct": 0.45,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 2015,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 127,
+        "max_gap_ms": 8929,
+        "gap_ms_bucket_counts": {
+          "100ms-1s": 408,
+          "<100ms": 1344,
+          "1s-10s": 262
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 123,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 404,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 732,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 167,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 63,
+          "empty_payload": 63,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 2015,
+        "n_with_nonempty_text": 79,
+        "pct_with_nonempty_text": 3.92,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 44,
+          "mouse_click": 21,
+          "text_input_complete": 14
+        },
+        "by_application": {
+          "Microsoft Edge": 47,
+          "Microsoft Excel": 14,
+          "Microsoft Word": 13,
+          "WindowsTerminal": 2,
+          "ms-teams": 1,
+          "Windows Explorer": 1,
+          "Notepad": 1
+        },
+        "length_chars": {
+          "min": 3,
+          "max": 19954,
+          "mean": 876.3
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 14,
+        "with_apparent_content": 14,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 1215,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "n_events": 1439,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 1,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.56,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 676,
+          "null_pct": 46.98,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1365,
+          "missing_pct": 94.86,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.56,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1439,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 108,
+        "max_gap_ms": 8681,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 240,
+          "<100ms": 805,
+          "100ms-1s": 393
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 135,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 364,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 157,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 244,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 71,
+          "empty_payload": 71,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1439,
+        "n_with_nonempty_text": 74,
+        "pct_with_nonempty_text": 5.14,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 51,
+          "mouse_click": 23
+        },
+        "by_application": {
+          "Microsoft Edge": 46,
+          "Microsoft Word": 17,
+          "Notepad": 7,
+          "WindowsTerminal": 2,
+          "ms-teams": 1,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 6,
+          "max": 3450,
+          "mean": 420.7
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 0,
+        "with_apparent_content": 0,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 753,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "n_events": 1136,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [
+        {
+          "timestamp_ms": 1782927413991,
+          "event_type": "extension_connected",
+          "event_ids": [
+            "evt_d753087e-3821-497f-a713-1c5f1c37ca66",
+            "evt_50c94db2-9947-4659-aa8e-b02894105113"
+          ]
+        }
+      ],
+      "n_semantic_duplicate_groups": 1,
+      "sequential_duplicates_count": 3,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.7,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 492,
+          "null_pct": 43.31,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1081,
+          "missing_pct": 95.16,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.7,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1136,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 76,
+        "max_gap_ms": 17122,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 186,
+          "<100ms": 695,
+          "100ms-1s": 252,
+          "10s-60s": 2
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 83,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 281,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 136,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 212,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 51,
+          "empty_payload": 51,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1136,
+        "n_with_nonempty_text": 55,
+        "pct_with_nonempty_text": 4.84,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 33,
+          "mouse_click": 17,
+          "text_input_complete": 5
+        },
+        "by_application": {
+          "Microsoft Edge": 34,
+          "Notepad": 7,
+          "Microsoft Excel": 5,
+          "ms-teams": 4,
+          "Microsoft Word": 3,
+          "WindowsTerminal": 2
+        },
+        "length_chars": {
+          "min": 3,
+          "max": 19973,
+          "mean": 1131.0
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 5,
+        "with_apparent_content": 5,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 625,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+      "n_events": 1550,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 7,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 2,
+        "clipboard_change": 3,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 10,
+          "null_pct": 0.65,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 760,
+          "null_pct": 49.03,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1476,
+          "missing_pct": 95.23,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 10,
+          "null_pct": 0.65,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1550,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 124,
+        "max_gap_ms": 64117,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 250,
+          "100ms-1s": 353,
+          "<100ms": 945,
+          ">60s": 1
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 111,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 371,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 162,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 352,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 68,
+          "empty_payload": 68,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1550,
+        "n_with_nonempty_text": 74,
+        "pct_with_nonempty_text": 4.77,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 40,
+          "mouse_click": 26,
+          "text_input_complete": 8
+        },
+        "by_application": {
+          "Microsoft Edge": 43,
+          "Microsoft Word": 14,
+          "OpenWith": 9,
+          "Notepad": 5,
+          "Windows Explorer": 2,
+          "WindowsTerminal": 1
+        },
+        "length_chars": {
+          "min": 1,
+          "max": 17662,
+          "mean": 608.5
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 8,
+        "with_apparent_content": 8,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 793,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-175747-SIDDHIGUPTAB00B",
+      "n_events": 1309,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 3,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 10,
+          "null_pct": 0.76,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 527,
+          "null_pct": 40.26,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1247,
+          "missing_pct": 95.26,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 10,
+          "null_pct": 0.76,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1309,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 92,
+        "max_gap_ms": 18419,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 210,
+          "<100ms": 771,
+          "100ms-1s": 325,
+          "10s-60s": 2
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 67,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 323,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 246,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 156,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 64,
+          "empty_payload": 64,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1309,
+        "n_with_nonempty_text": 62,
+        "pct_with_nonempty_text": 4.74,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 36,
+          "mouse_click": 19,
+          "text_input_complete": 7
+        },
+        "by_application": {
+          "Microsoft Edge": 38,
+          "Notepad": 9,
+          "Microsoft Word": 5,
+          "WindowsTerminal": 4,
+          "Microsoft Excel": 4,
+          "ms-teams": 1,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 1,
+          "max": 20000,
+          "mean": 623.1
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 7,
+        "with_apparent_content": 7,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 725,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "n_events": 1349,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [
+        {
+          "timestamp_ms": 1782929376688,
+          "event_type": "extension_connected",
+          "event_ids": [
+            "evt_b80060a0-9f50-42fa-9d44-a6cf6a301e96",
+            "evt_07946457-0e56-4a2d-9d8e-ef7913318511"
+          ]
+        }
+      ],
+      "n_semantic_duplicate_groups": 1,
+      "sequential_duplicates_count": 4,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 2,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 9,
+          "null_pct": 0.67,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 666,
+          "null_pct": 49.37,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1308,
+          "missing_pct": 96.96,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.59,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1349,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 106,
+        "max_gap_ms": 16959,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 234,
+          "<100ms": 796,
+          "100ms-1s": 317,
+          "10s-60s": 1
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 111,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 332,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 258,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 63,
+          "empty_payload": 63,
+          "empty_payload_pct": 100.0
+        },
+        "browser_click": {
+          "n": 148,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1349,
+        "n_with_nonempty_text": 41,
+        "pct_with_nonempty_text": 3.04,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 29,
+          "mouse_click": 12
+        },
+        "by_application": {
+          "Microsoft Edge": 24,
+          "Microsoft Word": 12,
+          "Notepad": 3,
+          "WindowsTerminal": 2
+        },
+        "length_chars": {
+          "min": 27,
+          "max": 19973,
+          "mean": 1499.4
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 0,
+        "with_apparent_content": 0,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 606,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "n_events": 1518,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 2,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.53,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 780,
+          "null_pct": 51.38,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1435,
+          "missing_pct": 94.53,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.53,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1518,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 116,
+        "max_gap_ms": 16452,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 239,
+          "100ms-1s": 310,
+          "<100ms": 967,
+          "10s-60s": 1
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 142,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 357,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 151,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 354,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 60,
+          "empty_payload": 60,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1518,
+        "n_with_nonempty_text": 83,
+        "pct_with_nonempty_text": 5.47,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 46,
+          "mouse_click": 25,
+          "text_input_complete": 12
+        },
+        "by_application": {
+          "Microsoft Edge": 53,
+          "OpenWith": 13,
+          "Microsoft Word": 12,
+          "Notepad": 3,
+          "ms-teams": 1,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 2,
+          "max": 1189,
+          "mean": 332.5
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 12,
+        "with_apparent_content": 12,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 744,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+      "n_events": 1165,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [
+        {
+          "timestamp_ms": 1782930566239,
+          "event_type": "extension_disconnected",
+          "event_ids": [
+            "evt_dfb9e9c2-4779-43c7-aa6a-52712613bed9",
+            "evt_930030e3-8267-4d33-9612-59082916dac1"
+          ]
+        }
+      ],
+      "n_semantic_duplicate_groups": 1,
+      "sequential_duplicates_count": 3,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.69,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 612,
+          "null_pct": 52.53,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1106,
+          "missing_pct": 94.94,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.69,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1165,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 91,
+        "max_gap_ms": 10030,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 188,
+          "100ms-1s": 331,
+          "<100ms": 644,
+          "10s-60s": 1
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 122,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 292,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 119,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 248,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 48,
+          "empty_payload": 48,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1165,
+        "n_with_nonempty_text": 59,
+        "pct_with_nonempty_text": 5.06,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 44,
+          "mouse_click": 12,
+          "text_input_complete": 3
+        },
+        "by_application": {
+          "Microsoft Edge": 34,
+          "Microsoft Word": 19,
+          "Microsoft Excel": 3,
+          "Notepad": 1,
+          "ms-teams": 1,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 3,
+          "max": 1182,
+          "mean": 395.6
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 3,
+        "with_apparent_content": 3,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 572,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-182634-NEELA9BAF",
+      "n_events": 1001,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 3,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 10,
+          "null_pct": 1.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 483,
+          "null_pct": 48.25,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 955,
+          "missing_pct": 95.4,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 10,
+          "null_pct": 1.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1001,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 68,
+        "max_gap_ms": 20817,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 179,
+          "100ms-1s": 219,
+          "<100ms": 598,
+          "10s-60s": 4
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 100,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 241,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 186,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 112,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 44,
+          "empty_payload": 44,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1001,
+        "n_with_nonempty_text": 46,
+        "pct_with_nonempty_text": 4.6,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 33,
+          "mouse_click": 10,
+          "text_input_complete": 3
+        },
+        "by_application": {
+          "Microsoft Edge": 26,
+          "Microsoft Word": 12,
+          "Notepad": 3,
+          "Microsoft Excel": 3,
+          "ms-teams": 1,
+          "WindowsTerminal": 1
+        },
+        "length_chars": {
+          "min": 3,
+          "max": 19973,
+          "mean": 841.2
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 3,
+        "with_apparent_content": 3,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 541,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+      "n_events": 781,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 2,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 1
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 1.02,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 269,
+          "null_pct": 34.44,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 740,
+          "missing_pct": 94.75,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 1.02,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 781,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 50,
+        "max_gap_ms": 14030,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 131,
+          "<100ms": 446,
+          "100ms-1s": 202,
+          "10s-60s": 1
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "screenshot_smart": {
+          "n": 193,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "app_switch": {
+          "n": 52,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 100,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 104,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 40,
+          "empty_payload": 40,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 781,
+        "n_with_nonempty_text": 41,
+        "pct_with_nonempty_text": 5.25,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 22,
+          "mouse_click": 19
+        },
+        "by_application": {
+          "Microsoft Edge": 33,
+          "Notepad": 4,
+          "Microsoft Word": 2,
+          "WindowsTerminal": 1,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 16,
+          "max": 19964,
+          "mean": 805.7
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 0,
+        "with_apparent_content": 0,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 427,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-184201-LAPTOP-76QMG9DE",
+      "n_events": 1895,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 3,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 2
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.42,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 1062,
+          "null_pct": 56.04,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1806,
+          "missing_pct": 95.3,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.42,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1895,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 165,
+        "max_gap_ms": 17915,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 332,
+          "100ms-1s": 466,
+          "<100ms": 1094,
+          "10s-60s": 2
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 228,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 456,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 157,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 430,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 80,
+          "empty_payload": 80,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1895,
+        "n_with_nonempty_text": 89,
+        "pct_with_nonempty_text": 4.7,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 68,
+          "mouse_click": 21
+        },
+        "by_application": {
+          "Microsoft Edge": 49,
+          "Microsoft Word": 35,
+          "Notepad": 2,
+          "ms-teams": 1,
+          "WindowsTerminal": 1,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 27,
+          "max": 19964,
+          "mean": 701.1
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 0,
+        "with_apparent_content": 0,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 766,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-190250-NEELA9BAF",
+      "n_events": 1146,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 2,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 1
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.7,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 568,
+          "null_pct": 49.56,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1088,
+          "missing_pct": 94.94,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.7,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1146,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 90,
+        "max_gap_ms": 16743,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 188,
+          "<100ms": 681,
+          "100ms-1s": 275,
+          "10s-60s": 1
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 113,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 275,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 115,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 252,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 51,
+          "empty_payload": 51,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1146,
+        "n_with_nonempty_text": 58,
+        "pct_with_nonempty_text": 5.06,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 37,
+          "mouse_click": 16,
+          "text_input_complete": 5
+        },
+        "by_application": {
+          "Microsoft Edge": 36,
+          "Notepad": 9,
+          "Microsoft Word": 6,
+          "Microsoft Excel": 5,
+          "ms-teams": 1,
+          "WindowsTerminal": 1
+        },
+        "length_chars": {
+          "min": 1,
+          "max": 19973,
+          "mean": 810.9
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 5,
+        "with_apparent_content": 5,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 556,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-191537-LAPTOP-76QMG9DE",
+      "n_events": 1562,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 2,
+      "sequential_duplicates_by_type": {
+        "extension_connected": 1,
+        "extension_disconnected": 1
+      },
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.51,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 880,
+          "null_pct": 56.34,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 1499,
+          "missing_pct": 95.97,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 8,
+          "null_pct": 0.51,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 1562,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 109,
+        "max_gap_ms": 18942,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 208,
+          "100ms-1s": 278,
+          "<100ms": 1073,
+          "10s-60s": 2
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 86,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 328,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "browser_click": {
+          "n": 115,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 556,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 60,
+          "empty_payload": 60,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 1562,
+        "n_with_nonempty_text": 63,
+        "pct_with_nonempty_text": 4.03,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 38,
+          "mouse_click": 15,
+          "text_input_complete": 10
+        },
+        "by_application": {
+          "Microsoft Edge": 34,
+          "OpenWith": 11,
+          "Microsoft Word": 9,
+          "Notepad": 7,
+          "ms-teams": 1,
+          "Windows Explorer": 1
+        },
+        "length_chars": {
+          "min": 3,
+          "max": 1798,
+          "mean": 420.7
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 10,
+        "with_apparent_content": 10,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 834,
+          "information_lost": false
+        }
+      ]
+    },
+    {
+      "session_id": "ses_20260701-192455-NEELA9BAF",
+      "n_events": 998,
+      "malformed_json_lines": 0,
+      "exact_duplicates": [],
+      "semantic_duplicates": [],
+      "n_semantic_duplicate_groups": 0,
+      "sequential_duplicates_count": 0,
+      "sequential_duplicates_by_type": {},
+      "missingness": {
+        "event_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "session_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_ms": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "timestamp_iso": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "layer": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "event_type": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_app": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 4,
+          "null_pct": 0.4,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.active_browser_tab": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 998,
+          "null_pct": 100.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "context.extracted_text": {
+          "missing": 939,
+          "missing_pct": 94.09,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.sequence_number": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.chunk_id": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "correlation.ms_since_last_event": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 4,
+          "null_pct": 0.4,
+          "empty": 0,
+          "empty_pct": 0.0
+        },
+        "payload": {
+          "missing": 0,
+          "missing_pct": 0.0,
+          "null": 0,
+          "null_pct": 0.0,
+          "empty": 0,
+          "empty_pct": 0.0
+        }
+      },
+      "timestamp_quality": {
+        "n_events": 998,
+        "ms_iso_mismatch_count": 0,
+        "ms_iso_mismatch_examples": [],
+        "non_utc_iso_count": 0,
+        "negative_gaps": 0,
+        "zero_gaps": 92,
+        "max_gap_ms": 9883,
+        "gap_ms_bucket_counts": {
+          "1s-10s": 211,
+          "<100ms": 516,
+          "100ms-1s": 270
+        }
+      },
+      "type_layer_consistency": {
+        "unknown_layers": {},
+        "unknown_event_type_for_layer": {}
+      },
+      "payload_emptiness_by_type": {
+        "app_switch": {
+          "n": 83,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "screenshot_smart": {
+          "n": 238,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "keystroke": {
+          "n": 230,
+          "empty_payload": 0,
+          "empty_payload_pct": 0.0
+        },
+        "clipboard_change": {
+          "n": 63,
+          "empty_payload": 63,
+          "empty_payload_pct": 100.0
+        }
+      },
+      "extracted_text": {
+        "n_events": 998,
+        "n_with_nonempty_text": 59,
+        "pct_with_nonempty_text": 5.91,
+        "n_present_but_empty": 0,
+        "by_event_type": {
+          "app_switch": 34,
+          "mouse_click": 21,
+          "text_input_complete": 4
+        },
+        "by_application": {
+          "Microsoft Edge": 38,
+          "Microsoft Word": 7,
+          "Notepad": 6,
+          "Microsoft Excel": 4,
+          "ms-teams": 3,
+          "WindowsTerminal": 1
+        },
+        "length_chars": {
+          "min": 2,
+          "max": 19798,
+          "mean": 767.8
+        }
+      },
+      "text_input_complete": {
+        "n_text_input_complete_events": 4,
+        "with_apparent_content": 4,
+        "missing_or_empty_content": 0,
+        "missing_pct": 0.0,
+        "password_fields_with_plaintext_final_text": 0,
+        "note": "DATA_SCHEMA.md documents this event type as unreliable — some entries are missing content, and some non-text actions (e.g. shortcuts) are mixed in. Treat as a hint only; reconstruct text from keystroke/clipboard_change when text content is actually needed. Content lives in payload.final_text, which DATA_SCHEMA.md does not name explicitly."
+      },
+      "session_chunk_identity_issues": [],
+      "cleaning_log": [
+        {
+          "step": "drop_exact_duplicate_records",
+          "reason": "byte-identical JSON record seen more than once; identity is unambiguous",
+          "affected_events": 0,
+          "information_lost": false,
+          "note": "only the repeat is dropped, one copy of the record is kept"
+        },
+        {
+          "step": "sort_chronologically_by_timestamp_ms",
+          "reason": "raw file/chunk order is not guaranteed chronological (see timestamp_quality.md)",
+          "affected_events": 400,
+          "information_lost": false
+        }
+      ]
+    }
+  ]
+}
