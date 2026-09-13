@@ -1,0 +1,46 @@
+{
+  "interior": {
+    "n": 161034,
+    "median": 52.0,
+    "mean": 537.5,
+    "p10": 1,
+    "p90": 1173
+  },
+  "normal_boundary": {
+    "n": 1509,
+    "median": 528,
+    "mean": 3561.8,
+    "p10": 437,
+    "p90": 4457
+  },
+  "resume_boundary": {
+    "n": 162,
+    "median": 513.5,
+    "mean": 1984.0,
+    "p10": 444,
+    "p90": 4117
+  },
+  "chunk_boundary_any": {
+    "n": 56,
+    "median": 3969.5,
+    "mean": 45129.0,
+    "p10": 50,
+    "p90": 56205
+  },
+  "chunk_boundary_not_a_gt_boundary": {
+    "n": 55,
+    "median": 3982,
+    "mean": 45939.9,
+    "p10": 50,
+    "p90": 56205
+  },
+  "per_session_boundary_gap_median": {
+    "n_sessions": 63,
+    "mean_of_medians": 950.1,
+    "std_of_medians": 1009.8,
+    "min": 467.0,
+    "max": 5528
+  },
+  "n_sessions_with_gt": 63,
+  "n_total_transitions": 162705
+}

@@ -5,6 +5,7 @@ from procmine.audit import (
     missingness_audit,
     semantic_duplicate_events,
     sequential_duplicate_events,
+    session_gt_coverage_check,
     text_input_complete_profile,
     timestamp_quality,
 )
@@ -122,3 +123,27 @@ def test_text_input_complete_profile_flags_plaintext_password():
     ]
     profile = text_input_complete_profile(events)
     assert profile["password_fields_with_plaintext_final_text"] == 1
+
+
+def test_session_gt_coverage_check_flags_events_ending_well_before_gt_end():
+    # events stop 16 minutes before gt_manifest's session end -> the real
+    # anomaly this check was built to catch
+    result = session_gt_coverage_check(last_event_ms=0, gt_session_end_ms=16 * 60_000)
+    assert result["flagged"] is True
+    assert result["events_end_before_gt_by_ms"] == 16 * 60_000
+
+
+def test_session_gt_coverage_check_accepts_normal_trailing_activity():
+    # events run a bit *past* gt_end, or end within the slack window before
+    # it -- both are the normal, observed pattern, not a defect
+    past_gt_end = session_gt_coverage_check(last_event_ms=100_000, gt_session_end_ms=90_000)
+    within_slack = session_gt_coverage_check(last_event_ms=90_000, gt_session_end_ms=100_000)
+    assert past_gt_end["flagged"] is False
+    assert within_slack["flagged"] is False
+
+
+def test_session_gt_coverage_check_respects_custom_slack():
+    result = session_gt_coverage_check(
+        last_event_ms=0, gt_session_end_ms=200_000, trailing_slack_ms=100_000
+    )
+    assert result["flagged"] is True

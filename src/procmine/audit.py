@@ -369,3 +369,26 @@ def session_chunk_identity_checks(session, raw_events_by_chunk: dict[str, list[d
     if len(machine_ids) > 1:
         issues.append({"issue": "inconsistent machine_id within session", "machine_ids": sorted(machine_ids)})
     return issues
+
+
+def session_gt_coverage_check(
+    last_event_ms: int, gt_session_end_ms: int, trailing_slack_ms: int = 120_000
+) -> dict[str, Any]:
+    """Compares a session's last recorded event against its own
+    gt_manifest.json `session.end_ts`. Found via Stage 2 feature-table
+    construction: one Dataset A session's events stop ~16 minutes before
+    its own ground truth says the session ends — a real missing-data gap,
+    not a code bug (confirmed by checking all 10 single-chunk sessions:
+    the other 9 have events running slightly *past* gt_end, as expected;
+    this was the only outlier). `trailing_slack_ms` (default 2 minutes)
+    tolerates the normal case of a few seconds to ~1.5 minutes of trailing
+    activity after the "logical" GT end — only a large, one-directional
+    gap (events ending well *before* gt_end) is flagged."""
+    gap_ms = gt_session_end_ms - last_event_ms
+    return {
+        "last_event_ms": last_event_ms,
+        "gt_session_end_ms": gt_session_end_ms,
+        "gap_ms": gap_ms,
+        "events_end_before_gt_by_ms": max(gap_ms, 0),
+        "flagged": gap_ms > trailing_slack_ms,
+    }
