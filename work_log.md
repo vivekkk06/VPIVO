@@ -1630,3 +1630,488 @@ modified — the DP/Combined-comparison code path that would have
 imported them was never reached. Next: Day 3, apply the locked
 Design 2 + Strategy Combined pipeline to Dataset B unchanged. No
 commits or pushes made.
+
+## Day 3 — Dataset B process discovery, HR/Payroll selection, and the automation prototype
+
+**Question:** with Dataset A's segmentation architecture locked, what
+does Dataset B actually contain, and which real, repeated piece of work
+in it is the strongest, most evidence-backed candidate to automate
+first?
+
+**Reasoning:** I explicitly did not assume Dataset A's segmentation
+approach — or any of its findings — would transfer to Dataset B.
+Dataset B has no ground-truth execution labels at all, so I treated it
+as production-style, unlabeled data throughout and required every claim
+about it to trace to something directly observed in the raw events, not
+inferred from Dataset A's patterns.
+
+**Profiling first:** I profiled Dataset B before building anything —
+15 sessions, 4 operators, and (this mattered a lot for what came next)
+essentially no large time gaps anywhere in the data, unlike Dataset A.
+That single finding told me a gap-threshold segmentation approach
+(which Dataset A's whole investigation was built around originally)
+would not find structure in Dataset B, so I didn't start there.
+
+**Building the boundary/execution logic fresh:** I built a
+`system_identity`-based boundary signal for Dataset B from scratch,
+grounded in window titles and DOM evidence rather than time gaps. My
+first version used `browser_domain` as the primary signal (it had
+mattered most for Dataset A), and running it against real data
+immediately produced obviously broken output — thousands of near-zero-
+length segments. I dug into why and found `browser_domain` is often
+null in Dataset B even when the window title clearly names the active
+system; I rebuilt the signal around window titles instead, and it
+produced sensible, readable segments. I'm recording this here
+deliberately: the first design was a real, wrong guess, caught only by
+checking it against the data rather than trusting it because it worked
+for the other dataset.
+
+**Process/priority discovery:** I grouped the resulting executions into
+named processes and variants, then ranked them with a transparent,
+normalized priority score (equal-weighted by default, since Dataset B
+gives me no labeled outcome to fit weights against) and ran a
+sensitivity sweep across several alternate weightings. HR/Payroll came
+out #1 under the default weighting and two of the four alternates; I
+reported honestly that it isn't #1 under every weighting tested (two
+near-zero-volume Excel workbooks edge it out under a risk-averse
+weighting) and explained why that doesn't change my recommendation —
+those workbooks "win" mainly because they have almost no volume to
+carry any risk.
+
+**Forensic deep-dive on the winner:** before designing any automation,
+I did a focused, event-level reconstruction of HR/Payroll's dominant
+path specifically. First pass reverse-engineered execution boundaries
+from timestamp ranges in the already-written JSON, and a cross-check I
+ran specifically to catch this kind of error found it silently
+misattributing events for 16 of 94 executions at exact-millisecond
+boundary collisions. I fixed this by rebuilding execution boundaries
+from the same index-based pipeline that produced the JSON in the first
+place, rather than reverse-engineering from timestamps, and verified a
+0/645 mismatch before trusting anything downstream. The forensic
+result: 94/122 (77.05%) of HR/Payroll executions follow one dominant,
+DOM-evidenced pattern (navigate to one of four routes, paste a note,
+click confirm), with real structured evidence for it — 100% of observed
+form inputs were paste operations, and the note-field/confirm-button
+click pairing is nearly exactly 1:1 (139 vs. 138) across 94 independent
+executions.
+
+**Choosing the automation form:** RPA/UI automation, not an API
+integration and not an AI agent, decided directly from what the logs do
+and don't show — no API call was ever evidenced (inventing one would be
+fabricating business logic I have no evidence for), and no
+judgment-requiring or unstructured-content step appears inside the
+dominant path itself (that's the Word-detour variant, which I scoped
+out of this prototype entirely, not partially automated).
+
+**Building the prototype:** I scoped the automation to exactly the
+evidenced boundary — navigate, verify the note field, insert the note,
+verify the confirm button, then a mandatory human-review checkpoint
+before a separate, deliberate confirmation call. I built a small,
+dependency-free mock HR application (no new third-party dependency —
+checked what's installed first, nothing for browser automation was
+available, and I judged that adding one just to prove the automation
+*logic* works wasn't justified) with deliberate fault injection so
+every required failure mode could be tested without a real, unpredictable
+target. Going back through the safety requirements a second time, I
+found two gaps in my first version: it didn't reject an empty/whitespace
+note before touching the UI at all, and it clicked the confirm button
+from a cached reference instead of re-verifying it was still there right
+before clicking — meaning a DOM change during the human-review pause
+would have gone undetected. I fixed both (new `InvalidNoteError` and
+`ConfirmationFailedError`, tested with 8 new test cases) before calling
+the safety model complete.
+
+**What I did not do:** I did not invent an API endpoint anywhere in this
+prototype. I did not claim the mock application is the real HR system —
+it's banner-labeled as a prototype/demo everywhere, including in the
+generated HTML page. I did not project any specific hours-saved or
+dollar figure — Dataset B has no production-volume or cost data to
+support that, so the ROI section states the formula a real estimate
+would need and what measurements are missing, rather than making one up.
+I did not touch Dataset A's locked segmentation architecture anywhere in
+this work.
+
+**AI contribution:** implementation was AI-assisted using Claude Code —
+the segmentation-signal code, the process-discovery pipeline, the
+forensic scripts, the mock application, the automation layer, and the
+test suites were all AI-implemented. I directed the investigation
+(what to profile, in what order), formed the hypotheses that turned out
+wrong and needed correcting (the browser_domain signal, the timestamp-
+range reconstruction), set the evaluation criteria (the priority-score
+weighting discipline, the automation boundary), and made the final
+scope and architecture decisions (HR/Payroll as the candidate, RPA over
+API/AI-agent, exactly which four routes and which failure modes are in
+scope). Claude Code is not being credited with deciding what mattered;
+it accelerated building and testing what I decided mattered.
+
+### Status — Day 3 prototype complete
+
+369 tests passing (361 prior + 8 new for empty-note validation and
+confirmation-time re-verification). Dataset A's locked architecture
+(`src/procmine/segmentation/`) was not read or modified. Dataset B was
+read-only throughout. Deliverables:
+`reports/day3/dataset_b_profile.md`, `process_discovery.md`,
+`hr_payroll_dominant_path_analysis.md` (+ its JSON artifact),
+`automation_candidate_analysis.md`, and
+`hr_payroll_automation_prototype.md` (+ the generated demo HTML page).
+Git commits for Day 3 are being handled by me directly, not by Claude
+Code, per my own instruction partway through this stage.
+
+## Day 3 (continued) — questioning my own Problem-2 scoring before finalizing it
+
+**Why I did this:** the 8-factor priority score I'd built for Problem 2
+(frequency, time, manual effort, repetitiveness, feasibility, business
+impact, risk, complexity, all blended additively with two subtracted
+penalties) worked, and it did pick HR/Payroll — but it was a scoring
+scheme I designed myself, ad hoc, without checking it against anything
+more standard. Before treating "HR/Payroll is #1" as settled going into
+Problem 3, I wanted to know whether a more conventional process-mining
+treatment — the kind of thing an actual process-mining tool would do
+(trace abstraction, a directly-follows graph, variant similarity,
+entropy, impact kept separate from feasibility instead of blended) —
+would agree with my own scoring, or expose that I'd built something
+that only looked reasonable because I hadn't compared it to anything.
+I did not go into this assuming the fancier approach would win; I went
+in specifically to try to break my own earlier conclusion.
+
+**What I tested:** I built a trace abstraction at two granularities
+(system-level, which turned out to just be the variant-signature I
+already had, and a finer system+interaction-category level), a
+directly-follows graph, three different sequence-similarity measures
+(normalized edit distance, LCS, Jaccard), variant entropy, and a
+genuinely different scoring structure — Impact and Feasibility computed
+as two separate, named quantities and only multiplied together at the
+end, instead of my old approach's one blended additive sum. I ran the
+whole thing over the real Dataset B process population (21 candidate
+processes), not just HR/Payroll, specifically so I couldn't be accused
+of tuning the method to reproduce the answer I already wanted.
+
+**What the comparison actually showed:** the DFG and the similarity
+investigation mostly *confirmed* what the exact-match variant grouping
+had already found — they didn't overturn anything, they gave me a
+second, more standard way to see the same structure (e.g. the DFG shows
+every detour from HR returns to HR with probability 1.000, which lines
+up with what I already knew about the Word-detour always closing the
+loop). The one number that gave me pause was a very high correlation
+(0.977) between execution count and total duration across processes —
+a real sign that frequency and time aren't as independent as I'd been
+treating them, in both my old scoring and the new one. And when I first
+ran the new sensitivity sweep, HR/Payroll looked #1 in every scenario I
+threw at it — which made me suspicious rather than pleased, because my
+*old* scoring's own sensitivity sweep had let two tiny Excel workbooks
+overtake HR/Payroll under a risk-averse weighting. I went back and
+built an equivalently adversarial scenario for the new scoring instead
+of accepting a result that just happened to look better than my
+earlier one. Once I did, the same displacement happened again — a
+volume-de-emphasizing weighting lets those same small, simple workbooks
+win under the new method too (HR dropped to rank 4, then 6). That told
+me the earlier "new method is more stable" impression was really just
+me not having tried hard enough to break it, not a real property of the
+new formula.
+
+**What I decided:** AUGMENT, not replace, and not just keep the old
+approach unexamined either. The new methodology earned its place — the
+Impact/Feasibility separation is genuinely more explainable than my old
+8-factor blend (I can now say exactly *why* a process ranks where it
+does, not just that it does), and the correlation check is a real,
+useful caveat I hadn't checked for before. But it didn't produce a
+different top candidate, and once I tested it fairly (not just under
+scenarios convenient to it), it didn't show categorically better
+ranking stability than what I already had either. Replacing a working,
+already-validated pipeline on a result that only looked better because
+I hadn't stress-tested it the same way would have been the wrong call.
+HR/Payroll remains the Problem-3 candidate, on stronger and more
+carefully-checked grounds than before, not because I forced the numbers
+to agree with my earlier work.
+
+**AI contribution:** implementation was AI-assisted using Claude Code —
+the trace/similarity/DFG/scoring modules, the analysis script, and the
+test suites were AI-implemented. I directed which methods to test
+(edit distance, LCS, and Jaccard specifically, not a larger menu),
+required the correlation/double-counting check the assignment's own
+instructions called for, caught myself accepting a too-convenient
+"new method is more stable" result and required an equivalently
+adversarial sensitivity scenario before trusting it, and made the
+final AUGMENT decision myself from the comparison.
+
+### Status — Problem 2 investigation complete, Problem 3 unchanged
+
+421 tests passing (369 prior + 52 new for the process-mining modules).
+Decision: **AUGMENT current approach** — HR/Payroll remains the
+Problem-3 candidate, ranked #1 by both the original and the new
+methodology, under the default weighting and 9 of 12 sensitivity
+scenarios tested (vs. 3 of 5 for the original approach — a real but
+modest difference, not claimed as decisive). Problem 1 (Dataset A's
+locked segmentation architecture) was not touched. The HR/Payroll
+automation prototype is unchanged and remains consistent with this
+conclusion. New report: `reports/day3/problem2_process_mining_analysis.md`
++ `problem2_process_metrics.json`. Git commits for Day 3 remain mine to
+create, not Claude Code's, per my standing instruction.
+
+---
+
+# DAY 3 — PROBLEM 2: PROCESS ANALYSIS AND AUTOMATION PRIORITIZATION (final audit)
+
+## 1. Starting point
+
+After Problem 1 (Dataset-A segmentation) was locked, I moved to
+Dataset B and asked the actual Problem-2 question: given the recovered
+executions, where does automation look most impactful? I didn't start
+with a scoring formula — I started the way the earlier entries in this
+log already show: group executions, look for repeated patterns, measure
+frequency/time/manual work by hand, and dig into whatever candidate
+looked promising. That direct approach is what found HR/Payroll in the
+first place.
+
+## 2. Initial finding (recap — full detail in the entries above)
+
+94/122 executions (77.05%) followed one dominant, DOM-evidenced path
+(HR system → route → note → paste → confirmation); 24/122 (19.7%) were
+a Word-detour variant; ~4/122 (3.3%) were rare multi-hop cases. High
+concentration, but I was clear with myself even then that concentration
+alone doesn't prove it's the *best* automation target, just a real,
+repeatable one.
+
+## 3. My Problem-2 question, restated for this final pass
+
+Before treating any of this as settled going into Problem 3, I wanted
+one more, stricter pass: not "does my scoring agree with itself," but
+"if I actually try to break my own ranking — check the math for real
+errors, test redundancy properly, check whether HR is genuinely
+undominated rather than just highest-scoring, and see how far a
+reasonably adversarial weighting can push it — does HR/Payroll still
+hold up, and do I actually know *why*?"
+
+## 4. Mathematical audit — one real bug found
+
+I re-checked every formula in `opportunity_scoring.py` rather than
+assuming last turn's code was correct because it had already run once.
+Most of it held up: normalization direction was right everywhere
+(risk, complexity, and entropy are all correctly inverted before being
+added as feasibility contributions), constant-column handling was
+already correct (maps to 0.5, not 0, when nothing in the set differs).
+But `variant_entropy` itself had a real problem: it returns raw
+Shannon-entropy bits, and raw bits aren't comparable across processes
+with *different numbers of variants* — a process with 7 variants has a
+higher ceiling (log2(7)) than one with 3 (log2(3)), so a moderately
+skewed 7-variant process can show *higher* raw entropy than a genuinely
+more evenly-used 3-variant one. I checked this wasn't theoretical by
+computing it on the real data: "Word: Contract Termination Procedure"
+(7 variants) showed raw entropy 2.195, higher than "Word: New Contract
+Procedure" (3 variants) at 1.500 — even though the 3-variant process is
+actually more evenly spread relative to its own maximum (94.6% of its
+ceiling vs. 78.2%). That's a genuine mathematical error feeding into a
+cross-process comparison, not a style preference, so I fixed it: added
+normalized entropy (H / H_max, bounded 0–1 regardless of variant count)
+and switched Feasibility to use it. It moved real numbers — HR's own
+Feasibility went from 0.453 to 0.477, and Financial Accounting swapped
+ranks 4 and 5 with an Excel workbook as a direct consequence.
+
+## 5. Separating impact from feasibility — kept, re-verified sound
+
+I didn't change the Impact/Feasibility separation itself this pass —
+it was already the right idea (a process can consume a lot of time
+while being poorly suited to automation, or vice versa) and nothing in
+this audit gave me a reason to collapse it back into one blended score.
+What I did check, freshly, is whether Feasibility was quietly becoming
+a "how much I like this process" score in disguise — it isn't:
+HR/Payroll is my Impact leader (0.924) but explicitly *not* my
+Feasibility leader (0.477, versus 0.92–0.95 for the two Excel
+workbooks) — the model keeps saying that out loud instead of hiding it
+behind one number, which is exactly what I wanted from separating them
+in the first place.
+
+## 6. The redundancy question, tested properly this time
+
+Last pass I noted the 0.977 correlation between execution count and
+total duration and reasoned informally that it "probably doesn't
+matter much." This time I actually tested that claim instead of
+asserting it: I built four different Impact formulations (frequency +
+total duration; frequency + average duration; total duration + average
+duration; and frequency + manual-effort only, with duration dropped
+entirely). Three of the four keep HR at #1 with high rank agreement
+(Spearman ≥ 0.977) — genuinely reassuring, since it means the exact
+pairing of volume/duration signals doesn't matter much. But the fourth
+one — dropping duration entirely — knocks HR down to rank 3. That told
+me something I hadn't actually confirmed before: HR's advantage is
+substantially carried by the *time* signal specifically, not by raw
+frequency or manual-effort rate on their own. I recorded that plainly
+rather than treating three-out-of-four agreeing as enough to call the
+question closed.
+
+## 7. Sensitivity analysis, done stricter this time
+
+The prior sensitivity sweep used a looser scenario grid and reported
+HR at #1 in 9 of 12 combinations. For this audit I built the eight
+scenarios the task actually asked for, one axis varied at a time
+(balanced, frequency-heavy, time-heavy, manual-effort-heavy,
+feasibility-heavy, risk-averse, volume-deemphasized, and a
+"correlation-aware" scenario that explicitly down-weights frequency and
+time together instead of double-counting them). Under this tighter set,
+HR is #1 in only 5 of 8 — and the three that displace it
+(manual-effort-heavy, volume-deemphasized, correlation-aware) all share
+the same mechanism: each one reduces how much weight the model puts on
+the time/volume signal HR wins on, which lines up exactly with what the
+redundancy test in the previous section already showed. I want to be
+honest about why the two numbers (9/12 vs. 5/8) differ: it isn't that
+the new run is more pessimistic for no reason, it's that this run is a
+more targeted test, including two scenarios (manual-effort-heavy,
+correlation-aware) the earlier sweep never tried. A stricter test found
+a real vulnerability the looser one missed, and reporting only the
+looser number would have been misleading even though it wasn't wrong
+at the time I ran it.
+
+## 8. Ablation — which components actually carry HR's ranking
+
+I removed one scoring component at a time from the full model to see
+which ones were doing real work versus just adding complexity. Only two
+removals change HR's own rank: taking out frequency (HR falls to 2) or
+taking out time (HR falls to 3) — matching sections 6 and 7 from a
+third, independent angle. Every Feasibility-side component
+(determinism, entropy, automation surface, risk) leaves HR at #1 when
+removed individually, even though removing manual-effort causes the
+single biggest disturbance to the *overall* ranking of all 21
+processes (rank correlation 0.896 vs. the full model, the lowest of any
+single removal). That told me manual effort matters a lot for the
+population as a whole, just not specifically for whether HR stays on
+top — a distinction I wouldn't have seen without doing the ablation
+one component at a time instead of just eyeballing the formula.
+
+## 9. Pareto analysis — the one result that doesn't depend on weighting
+
+Everything in sections 6–8 depends on how the score is weighted. I
+wanted at least one piece of evidence that didn't. A Pareto frontier
+over (Impact, Feasibility) doesn't need weights at all — a process is
+either dominated by another (equal-or-better on both axes, strictly
+better on at least one) or it isn't. Only 3 of 21 processes are
+non-dominated: HR/Payroll, Order & Inventory, and Excel: Budget
+Analysis. HR/Payroll is one of them — genuinely, not because I put it
+there. That's the strongest single piece of evidence in this whole
+audit, because it's the one claim that survives regardless of which
+sensitivity scenario or redundancy formulation someone prefers.
+
+## 10. Old vs. new decision, and why it's still AUGMENT
+
+The enhanced methodology did not produce a different top candidate that
+survives scrutiny — Excel: Budget Analysis only wins under scenarios
+and formulations that deliberately discount the time signal, and it has
+no equivalent to the independent DOM-forensic validation HR/Payroll
+already has from the Problem-3 prototype work. So I kept AUGMENT, not
+REPLACE. But I also won't pretend this audit made HR's case *stronger*
+than I'd previously reported — the honest result is that the more
+rigorous test found HR's ranking is *more contested* than the looser
+9/12 sweep suggested (5/8 here), while also finding one thing that
+isn't contested at all (Pareto non-domination). Both of those are real,
+and I'm reporting both rather than picking the one that sounds better.
+
+## 11. Final HR/Payroll status
+
+HR/Payroll never fell below rank 3 in anything I tested — not the
+redundancy formulations, not the 8 sensitivity scenarios, not the
+per-component ablation, not even winsorized (outlier-capped)
+normalization, which also displaces it to rank 2. It's Pareto-
+non-dominated, it's #1 under the plain unweighted default, and it still
+has the DOM-forensic grounding from Problem 3 that no other candidate
+in this population has. That's the case I'm taking into Problem 3 — not
+"HR is mathematically optimal," which the evidence doesn't support
+unconditionally, but "HR is the strongest evidence-backed candidate in
+this Dataset-B population, and I know exactly which assumptions that
+conclusion leans on."
+
+## 12. Transition to Problem 3, and Problem-3 status
+
+Problem 2 answers "what should be automated." The DOM forensic work
+(already done, unchanged by this audit) answers "which part of that
+process is technically bounded and deterministic enough to attempt."
+Problem 3 demonstrates "can that bounded part actually be automated." I
+re-ran the existing HR/Payroll RPA prototype after this audit
+specifically to confirm I hadn't broken anything relevant — all four
+routes still complete end to end, the safe-failure case still stops
+correctly, and I did not touch `src/procmine/automation/` at all this
+pass, per my own rule not to redesign a working prototype without a
+real bug driving it.
+
+## 13. AI contribution
+
+Claude Code was used as an implementation and analysis accelerator for
+this audit too — the entropy fix, the Pareto/rank-correlation module,
+the redundancy/sensitivity/ablation script, and the test suites were
+AI-implemented. I directed which formulas to re-check and why, required
+the entropy issue to be verified against real data before calling it a
+bug rather than a style complaint, specified the exact 8 sensitivity
+scenarios and the 4 redundancy formulations to test, required the
+Pareto analysis specifically because I wanted at least one
+weighting-independent check, and made the final AUGMENT call and the
+"HR is the strongest evidence-backed candidate, not the mathematically
+optimal one" framing myself, from the comparison.
+
+## 14. Final Day-3 reflection
+
+The main improvement from this whole Day-3 arc wasn't a more
+complicated algorithm. It was turning Problem 2 from "which process did
+I happen to notice first" into a decision I could actually defend on a
+whiteboard — including the parts where the defense is "here's exactly
+where this conclusion gets shakier, and here's the one piece of
+evidence that doesn't." Because the enhanced approach added real
+explanatory and validation value (a genuine bug fix, a clearer picture
+of what HR's ranking actually depends on, and a weighting-independent
+Pareto check) without producing a decisively better candidate, I
+augmented the original methodology instead of replacing it. That's the
+final engineering judgment for Day 3.
+
+### Status — Problem 2 final audit complete
+
+448 tests passing (421 prior + 5 for normalized entropy + 22 for the
+new Pareto/rank-correlation/winsorization module). One real
+mathematical bug found and fixed (unnormalized cross-process entropy).
+Decision unchanged: **AUGMENT**. HR/Payroll status: #1 by default,
+Pareto-non-dominated, never worse than rank 3 under any tested
+perturbation, displaced from #1 under 3/8 stricter sensitivity
+scenarios and 1/4 redundancy formulations — reported in full, not
+smoothed over. Problem 1 untouched. Problem 3 prototype re-verified
+working, not redesigned. New/updated:
+`reports/day3/problem2_process_mining_analysis.md`,
+`problem2_audit_results.json`. Git remains mine to commit, not Claude
+Code's.
+
+## Day 3 — closing the one real gap: `segments.jsonl`
+
+I ran a full audit of the repository against the assignment brief's
+own Deliverables section before calling Day 3 done, and it caught a
+real, concrete gap: the brief names `segments.jsonl` (Dataset B, one
+line per execution, `session_id`/`start`/`end`/`label`) as the actual
+Step-1 submission artifact, and it didn't exist anywhere in the repo.
+Everything upstream of it did — `process_executions_dataset_b.json`
+already has the segmented Dataset B executions from Section 3's
+system-change-boundary + leave-and-return pipeline — it just had never
+been converted into the exact schema the brief asks for.
+
+I deliberately treated this as a format conversion, not new
+segmentation work: no boundary logic runs in the conversion script,
+nothing is merged, split, invented, or dropped. `label` reuses the
+already-computed `dominant_context` -> `readable_name` mapping from
+`process_profiles_dataset_b.json`, so "same process gets the same
+label" holds by construction, not by a new rule I had to justify.
+
+One real edge case turned up during validation, not before: 11 of 645
+executions are genuine single-event executions where `start_ms ==
+end_ms` at millisecond resolution — a real property of the data, not a
+bug. The schema requires `start < end`, so I nudged `end` forward by
+1ms *in the output timestamp only* for those 11 records, and logged
+exactly how many that affected rather than silently rounding the
+problem away. I validated the result independently after generating
+it (not just trusted the generator's own printout): 645/645 records,
+valid JSON, correct schema, all 15 session_ids actually belong to
+Dataset B, all timestamps parse and satisfy start < end, no empty
+labels, and an exact 1:1 count match against the source executions
+file.
+
+### Status — Day 3 complete
+
+453 tests passing (448 + 5 for the new conversion function). New file:
+`scripts/build_segments_jsonl.py`, `tests/test_build_segments_jsonl.py`,
+and the deliverable itself, `segments.jsonl` (repo root, 645 records).
+No segmentation algorithm was touched to produce it. Final submission
+report, README rewrite, and Day 4/5 work remain explicitly out of
+scope for today, per my own instruction. Git remains mine to handle,
+not Claude Code's — no git command was run this session.
