@@ -1,0 +1,69 @@
+{
+  "dataset": "dataset_a",
+  "n_sessions": 63,
+  "n_gt_executions_closed": 1752,
+  "selected_architecture": "Design 2 + Strategy Combined protection",
+  "candidate_set": "V1_predicted UNION V2_predicted (union, demote-only, never adds a boundary)",
+  "thresholds": {
+    "v1_boundary_threshold": 0.9078,
+    "v2_boundary_score_threshold": 0.8860,
+    "rule4_continuity_threshold_event_type_jaccard_n10": 0.40,
+    "protection_tempo_threshold_after_window_duration_ms_n10": 4680.2613
+  },
+  "threshold_selection_method": "global, pooled, out-of-fold analytical selection over all Dataset-A sessions at once (Stage 7's grid method); NOT nested/cross-fitted, NOT selected per session",
+  "ordered_rules": [
+    {"rule": 1, "name": "chunk_noise_override", "condition": "chunk_boundary OR duplicate_app_switch", "action": "DEMOTE"},
+    {"rule": 2, "name": "leave_and_return", "condition": "candidate is a leave/return edge of a detected pattern (+/-10 event window, no GT scoping)", "action": "DEMOTE both edges"},
+    {"rule": 3, "name": "cluster_protection", "condition": "candidate belongs to a run of >=2 consecutive candidates", "action": "KEEP (conservative default)"},
+    {"rule": 4, "name": "n10_continuity_fallback", "condition": "isolated candidate; event_type_jaccard (N=10) >= 0.40", "action": "DEMOTE if true, else KEEP"},
+    {"rule": "4_protection", "name": "combined_protection", "condition": "ONLY applies to Rule-4 demotions; flagged_by_both_models AND after_window_duration_ms (N=10) >= 4680.2613", "action": "override to KEEP"}
+  ],
+  "final_comparison": {
+    "V1": {"recall": 0.655, "f1": 0.253, "pct_fragmented": 90.6, "under_segmentation_rate": 0.085, "over_segmentation_rate": 2.710},
+    "V2": {"recall": 0.703, "f1": 0.240, "pct_fragmented": 94.7, "under_segmentation_rate": 0.063, "over_segmentation_rate": 3.239},
+    "Design2_baseline": {"recall": 0.520, "f1": 0.304, "pct_fragmented": 77.6, "under_segmentation_rate": 0.204, "over_segmentation_rate": 1.490},
+    "Strategy_Agreement": {"recall": 0.681, "f1": 0.252, "pct_fragmented": 93.0, "under_segmentation_rate": 0.075, "over_segmentation_rate": 2.877, "gate_result": "FAIL (3/7 conditions)"},
+    "Strategy_Tempo": {"recall": 0.6433, "f1": 0.3393, "pct_fragmented": 79.85, "under_segmentation_rate": 0.1332, "over_segmentation_rate": 1.6712, "gate_result": "PASS (7/7)"},
+    "Strategy_Combined": {"recall": 0.6355, "f1": 0.3440, "pct_fragmented": 79.05, "under_segmentation_rate": 0.1412, "over_segmentation_rate": 1.6033, "gate_result": "PASS (7/7)", "selected": true}
+  },
+  "tempo_vs_combined_session_level": {
+    "pct_fragmented": {"tempo_better": 0, "combined_better": 9, "equal": 54},
+    "under_segmentation_rate": {"tempo_better": 52, "combined_better": 0, "equal": 11},
+    "recall": {"tempo_better": 12, "combined_better": 0, "equal": 51}
+  },
+  "tempo_vs_combined_execution_level": {
+    "fragmented_under_neither": 353,
+    "fragmented_under_tempo_only": 14,
+    "fragmented_under_combined_only": 0,
+    "fragmented_under_both": 1385,
+    "note": "no GT execution fragments under Combined but not under Tempo -- one-directional dominance"
+  },
+  "sensitivity_analysis": {
+    "neighborhood_grid_points_evaluated": 9,
+    "tau_range_ms": [4031.0, 5652.1],
+    "combined_f1_ge_tempo_f1_count": 9,
+    "combined_f1_ge_tempo_f1_total": 9,
+    "conclusion": "ordering is stable across the full sensitivity neighborhood; not dependent on one fragile threshold value"
+  },
+  "decision": {
+    "selected": "Strategy Combined",
+    "alternative_retained": "Strategy Tempo (documented alternative if under-segmentation reduction is weighted above all else)",
+    "primary_reasons": [
+      "one-directional dominance on fragmentation: Combined never worse than Tempo in any of 63 sessions or 1752 GT executions",
+      "better false:true protection ratio (1.34:1 vs 1.99:1)",
+      "F1 advantage stable across all 9 sensitivity-neighborhood grid points"
+    ],
+    "acknowledged_tradeoffs": [
+      "Tempo has better under-segmentation in 52/63 sessions",
+      "Tempo has marginally higher recall (0.6433 vs 0.6355)"
+    ]
+  },
+  "leakage_status": {
+    "gt_used_for_training_labels": true,
+    "gt_used_for_threshold_selection": true,
+    "gt_used_as_reconstruction_feature": false,
+    "verified_by": "tests/test_architecture_lock.py signature-inspection tests"
+  },
+  "dataset_b_status": "untouched -- no Dataset B file read, loaded, profiled, or referenced computationally in this investigation",
+  "test_suite": {"total_passing": 206}
+}
