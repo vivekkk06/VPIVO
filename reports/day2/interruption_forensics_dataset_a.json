@@ -1,0 +1,1114 @@
+{
+  "n_sessions": 63,
+  "n_gt_executions": 1752,
+  "n_transitions_total": 162705,
+  "gap_percentiles_same_execution_ms": {
+    "p50": 52,
+    "p75": 122,
+    "p90": 1147,
+    "p95": 2285,
+    "p99": 4726
+  },
+  "item1_signal_rates_and_combinations": {
+    "n_same_execution_transitions": 137450,
+    "large_gap_threshold_ms_p90": 1147,
+    "individual_signal_rates": {
+      "long_gap_ge_p90": {
+        "n": 137450,
+        "n_true": 13746,
+        "rate": 0.1
+      },
+      "app_switch": {
+        "n": 137450,
+        "n_true": 2362,
+        "rate": 0.0172
+      },
+      "window_title_change": {
+        "n": 137450,
+        "n_true": 3731,
+        "rate": 0.0271
+      },
+      "browser_domain_change": {
+        "n": 137450,
+        "n_true": 40122,
+        "rate": 0.2919
+      },
+      "interaction_category_change": {
+        "n": 137450,
+        "n_true": 72067,
+        "rate": 0.5243
+      }
+    },
+    "pairwise_cooccurrence": {
+      "long_gap_ge_p90+app_switch": {
+        "n_both": 1055,
+        "rate_of_all_internal": 0.0077,
+        "jaccard_of_the_two_signals": 0.0701
+      },
+      "long_gap_ge_p90+window_title_change": {
+        "n_both": 1249,
+        "rate_of_all_internal": 0.0091,
+        "jaccard_of_the_two_signals": 0.077
+      },
+      "long_gap_ge_p90+browser_domain_change": {
+        "n_both": 6695,
+        "rate_of_all_internal": 0.0487,
+        "jaccard_of_the_two_signals": 0.1419
+      },
+      "long_gap_ge_p90+interaction_category_change": {
+        "n_both": 12374,
+        "rate_of_all_internal": 0.09,
+        "jaccard_of_the_two_signals": 0.1685
+      },
+      "app_switch+window_title_change": {
+        "n_both": 2362,
+        "rate_of_all_internal": 0.0172,
+        "jaccard_of_the_two_signals": 0.6331
+      },
+      "app_switch+browser_domain_change": {
+        "n_both": 1201,
+        "rate_of_all_internal": 0.0087,
+        "jaccard_of_the_two_signals": 0.0291
+      },
+      "app_switch+interaction_category_change": {
+        "n_both": 2289,
+        "rate_of_all_internal": 0.0167,
+        "jaccard_of_the_two_signals": 0.0317
+      },
+      "window_title_change+browser_domain_change": {
+        "n_both": 2116,
+        "rate_of_all_internal": 0.0154,
+        "jaccard_of_the_two_signals": 0.0507
+      },
+      "window_title_change+interaction_category_change": {
+        "n_both": 3566,
+        "rate_of_all_internal": 0.0259,
+        "jaccard_of_the_two_signals": 0.0494
+      },
+      "browser_domain_change+interaction_category_change": {
+        "n_both": 39521,
+        "rate_of_all_internal": 0.2875,
+        "jaccard_of_the_two_signals": 0.5439
+      }
+    },
+    "n_signals_firing_simultaneously_histogram": {
+      "0": 63324,
+      "1": 28099,
+      "2": 36476,
+      "3": 7554,
+      "4": 1670,
+      "5": 327
+    }
+  },
+  "item2_per_execution_interruption_pattern": {
+    "n_gt_executions": 1752,
+    "n_executions_with_zero_internal_transitions": 18,
+    "max_internal_gap_ms_distribution": {
+      "n": 1734,
+      "mean": 12500.1361,
+      "median": 4598.0,
+      "p10": 3299,
+      "p25": 3802,
+      "p75": 15139,
+      "p90": 22062,
+      "p95": 34217,
+      "p99": 70647,
+      "min": 1031,
+      "max": 983945
+    },
+    "n_gaps_ge_p90_per_execution_distribution": {
+      "n": 1752,
+      "mean": 7.8459,
+      "median": 7.0,
+      "p10": 5,
+      "p25": 6,
+      "p75": 9,
+      "p90": 11,
+      "p95": 13,
+      "p99": 16,
+      "min": 0,
+      "max": 34
+    },
+    "n_app_switches_per_execution_distribution": {
+      "n": 1752,
+      "mean": 1.3482,
+      "median": 2.0,
+      "p10": 0,
+      "p25": 0,
+      "p75": 2,
+      "p90": 3,
+      "p95": 4,
+      "p99": 6,
+      "min": 0,
+      "max": 9
+    },
+    "n_browser_domain_changes_per_execution_distribution": {
+      "n": 1752,
+      "mean": 22.9007,
+      "median": 25.0,
+      "p10": 2,
+      "p25": 17,
+      "p75": 31,
+      "p90": 35,
+      "p95": 38,
+      "p99": 50,
+      "min": 0,
+      "max": 99
+    },
+    "n_window_title_changes_per_execution_distribution": {
+      "n": 1752,
+      "mean": 2.1296,
+      "median": 2.0,
+      "p10": 0,
+      "p25": 1,
+      "p75": 3,
+      "p90": 4,
+      "p95": 6,
+      "p99": 8,
+      "min": 0,
+      "max": 14
+    },
+    "n_interaction_category_changes_per_execution_distribution": {
+      "n": 1752,
+      "mean": 41.1341,
+      "median": 40.0,
+      "p10": 29,
+      "p25": 35,
+      "p75": 47,
+      "p90": 54,
+      "p95": 60,
+      "p99": 76,
+      "min": 0,
+      "max": 187
+    },
+    "resumption_evidence": {
+      "n_executions_with_a_large_gap_ge_p90": 1733,
+      "reference_median_event_type_jaccard_same_execution_population": 0.5,
+      "reference_median_interaction_category_jaccard_same_execution_population": 0.6,
+      "n_at_or_above_median_event_type_jaccard": 1320,
+      "pct_at_or_above_median_event_type_jaccard": 76.2,
+      "n_at_or_above_median_interaction_category_jaccard": 1069,
+      "pct_at_or_above_median_interaction_category_jaccard": 61.7,
+      "density_after_at_max_gap_distribution": {
+        "n": 1734,
+        "mean": 17.4239,
+        "median": 17.0,
+        "p10": 8,
+        "p25": 11,
+        "p75": 21,
+        "p90": 31,
+        "p95": 32,
+        "p99": 35,
+        "min": 1,
+        "max": 116
+      }
+    }
+  },
+  "item3_internal_vs_true_boundary": {
+    "n_same_execution": 137450,
+    "n_true_boundary": 1671,
+    "note": "true_boundary = EXIT_TO_DIFFERENT_EXEC + EXIT_TO_NOISE_BOUNDARY (Stage 4's approved continuity-label categories, reused unchanged) -- a different, narrower cut than time_gap_analysis.md's 'interior vs. boundary-window' framing; both are valid, not to be conflated.",
+    "delta_t_ms": {
+      "same_execution": {
+        "n": 137450,
+        "mean": 486.0842,
+        "median": 52.0,
+        "p10": 1,
+        "p25": 8,
+        "p75": 122,
+        "p90": 1147,
+        "p95": 2285,
+        "p99": 4726,
+        "min": 0,
+        "max": 983945
+      },
+      "true_boundary": {
+        "n": 1671,
+        "mean": 3408.8468,
+        "median": 526,
+        "p10": 438,
+        "p25": 470,
+        "p75": 3661,
+        "p90": 4381,
+        "p95": 14154,
+        "p99": 41944,
+        "min": 58,
+        "max": 123703
+      }
+    },
+    "density_before": {
+      "same_execution": {
+        "n": 137450,
+        "mean": 17.0453,
+        "median": 16.0,
+        "p10": 6,
+        "p25": 10,
+        "p75": 22,
+        "p90": 28,
+        "p95": 32,
+        "p99": 62,
+        "min": 1,
+        "max": 199
+      },
+      "true_boundary": {
+        "n": 1671,
+        "mean": 12.2711,
+        "median": 11,
+        "p10": 4,
+        "p25": 7,
+        "p75": 14,
+        "p90": 27,
+        "p95": 29,
+        "p99": 30,
+        "min": 1,
+        "max": 69
+      }
+    },
+    "density_after": {
+      "same_execution": {
+        "n": 137450,
+        "mean": 16.9956,
+        "median": 16.0,
+        "p10": 6,
+        "p25": 10,
+        "p75": 22,
+        "p90": 28,
+        "p95": 31,
+        "p99": 62,
+        "min": 1,
+        "max": 199
+      },
+      "true_boundary": {
+        "n": 1671,
+        "mean": 23.7528,
+        "median": 30,
+        "p10": 6,
+        "p25": 8,
+        "p75": 32,
+        "p90": 34,
+        "p95": 35,
+        "p99": 36,
+        "min": 1,
+        "max": 77
+      }
+    },
+    "application_changed": {
+      "same_execution": {
+        "n": 137450,
+        "n_true": 2362,
+        "rate": 0.0172
+      },
+      "true_boundary": {
+        "n": 1671,
+        "n_true": 33,
+        "rate": 0.0197
+      }
+    },
+    "window_title_changed": {
+      "same_execution": {
+        "n": 137450,
+        "n_true": 3731,
+        "rate": 0.0271
+      },
+      "true_boundary": {
+        "n": 1671,
+        "n_true": 39,
+        "rate": 0.0233
+      }
+    },
+    "browser_domain_changed": {
+      "same_execution": {
+        "n": 137450,
+        "n_true": 40122,
+        "rate": 0.2919
+      },
+      "true_boundary": {
+        "n": 1671,
+        "n_true": 1439,
+        "rate": 0.8612
+      }
+    },
+    "interaction_category_changed": {
+      "same_execution": {
+        "n": 137450,
+        "n_true": 72067,
+        "rate": 0.5243
+      },
+      "true_boundary": {
+        "n": 1671,
+        "n_true": 1629,
+        "rate": 0.9749
+      }
+    },
+    "event_type_jaccard_n10": {
+      "same_execution": {
+        "n": 137450,
+        "mean": 0.5029,
+        "median": 0.5,
+        "p10": 0.25,
+        "p25": 0.3333,
+        "p75": 0.6667,
+        "p90": 0.8,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "true_boundary": {
+        "n": 1671,
+        "mean": 0.3672,
+        "median": 0.2857,
+        "p10": 0.25,
+        "p25": 0.2857,
+        "p75": 0.5,
+        "p90": 0.5556,
+        "p95": 0.6667,
+        "p99": 1.0,
+        "min": 0.0909,
+        "max": 1.0
+      }
+    },
+    "interaction_category_jaccard_n10": {
+      "same_execution": {
+        "n": 137450,
+        "mean": 0.6146,
+        "median": 0.6,
+        "p10": 0.4,
+        "p25": 0.5,
+        "p75": 0.75,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "true_boundary": {
+        "n": 1671,
+        "mean": 0.5248,
+        "median": 0.5,
+        "p10": 0.4,
+        "p25": 0.5,
+        "p75": 0.6,
+        "p90": 0.75,
+        "p95": 0.8,
+        "p99": 1.0,
+        "min": 0.1667,
+        "max": 1.0
+      }
+    }
+  },
+  "item4_false_internal_boundary_characterization": {
+    "v1": {
+      "model": "V1",
+      "n_false_internal": 4903,
+      "n_ordinary_same_execution": 132547,
+      "isolated_vs_clustered": {
+        "cluster_size_histogram": {
+          "1": 4691,
+          "2": 33,
+          "3": 20,
+          "4": 3,
+          "5+": 4
+        },
+        "n_isolated_single_transition": 4691,
+        "n_in_clusters_of_2_or_more": 60
+      },
+      "gap_association": {
+        "flagged": {
+          "n": 4903,
+          "mean": 5988.043,
+          "median": 2627,
+          "p10": 1219,
+          "p25": 1822,
+          "p75": 3918,
+          "p90": 15079,
+          "p95": 19652,
+          "p99": 46447,
+          "min": 0,
+          "max": 983945
+        },
+        "ordinary_same_execution": {
+          "n": 132547,
+          "mean": 282.5632,
+          "median": 51,
+          "p10": 1,
+          "p25": 6,
+          "p75": 105,
+          "p90": 777,
+          "p95": 1705,
+          "p99": 3205,
+          "min": 0,
+          "max": 41882
+        }
+      },
+      "context_change_association": {
+        "application_changed": {
+          "flagged": {
+            "n": 4903,
+            "n_true": 223,
+            "rate": 0.0455
+          },
+          "ordinary": {
+            "n": 132547,
+            "n_true": 2139,
+            "rate": 0.0161
+          }
+        },
+        "window_title_changed": {
+          "flagged": {
+            "n": 4903,
+            "n_true": 286,
+            "rate": 0.0583
+          },
+          "ordinary": {
+            "n": 132547,
+            "n_true": 3445,
+            "rate": 0.026
+          }
+        },
+        "browser_domain_changed": {
+          "flagged": {
+            "n": 4903,
+            "n_true": 3866,
+            "rate": 0.7885
+          },
+          "ordinary": {
+            "n": 132547,
+            "n_true": 36256,
+            "rate": 0.2735
+          }
+        },
+        "interaction_category_changed": {
+          "flagged": {
+            "n": 4903,
+            "n_true": 4789,
+            "rate": 0.9767
+          },
+          "ordinary": {
+            "n": 132547,
+            "n_true": 67278,
+            "rate": 0.5076
+          }
+        }
+      },
+      "neighborhood_evidence_of_return_to_context": {
+        "event_type_jaccard_n10": {
+          "flagged": {
+            "n": 4903,
+            "mean": 0.5042,
+            "median": 0.5,
+            "p10": 0.125,
+            "p25": 0.3333,
+            "p75": 0.6667,
+            "p90": 0.8,
+            "p95": 1.0,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "ordinary": {
+            "n": 132547,
+            "mean": 0.5028,
+            "median": 0.5,
+            "p10": 0.25,
+            "p25": 0.3333,
+            "p75": 0.6667,
+            "p90": 0.8,
+            "p95": 1.0,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "interaction_category_jaccard_n10": {
+          "flagged": {
+            "n": 4903,
+            "mean": 0.6127,
+            "median": 0.6,
+            "p10": 0.2,
+            "p25": 0.5,
+            "p75": 0.8,
+            "p90": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "ordinary": {
+            "n": 132547,
+            "mean": 0.6147,
+            "median": 0.6,
+            "p10": 0.4,
+            "p25": 0.5,
+            "p75": 0.75,
+            "p90": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "reference_median_event_type_jaccard_same_execution_population": 0.5,
+        "n_flagged_at_or_above_reference_median": 2722,
+        "pct_flagged_at_or_above_reference_median": 55.5
+      },
+      "surrounded_by_continuous_activity": {
+        "density_before_ratio_to_executions_own_mean_distribution": {
+          "n": 4903,
+          "mean": 0.8106,
+          "median": 0.7806,
+          "p10": 0.2229,
+          "p25": 0.4281,
+          "p75": 1.1381,
+          "p90": 1.4128,
+          "p95": 1.6207,
+          "p99": 1.9265,
+          "min": 0.011,
+          "max": 2.7692
+        },
+        "note": "ratio of this transition's density_before to its own GT execution's mean internal density_before -- a ratio near 1 means the flagged transition sits in an otherwise-ordinary-density stretch, not an isolated sparse spot."
+      }
+    },
+    "v2": {
+      "model": "V2",
+      "n_false_internal": 5870,
+      "n_ordinary_same_execution": 131580,
+      "isolated_vs_clustered": {
+        "cluster_size_histogram": {
+          "1": 5614,
+          "2": 47,
+          "3": 17,
+          "4": 3,
+          "5+": 10
+        },
+        "n_isolated_single_transition": 5614,
+        "n_in_clusters_of_2_or_more": 77
+      },
+      "gap_association": {
+        "flagged": {
+          "n": 5870,
+          "mean": 5802.4034,
+          "median": 2578.5,
+          "p10": 1475,
+          "p25": 1950,
+          "p75": 3594,
+          "p90": 14854,
+          "p95": 19254,
+          "p99": 41882,
+          "min": 0,
+          "max": 983945
+        },
+        "ordinary_same_execution": {
+          "n": 131580,
+          "mean": 248.9145,
+          "median": 50.0,
+          "p10": 1,
+          "p25": 6,
+          "p75": 102,
+          "p90": 709,
+          "p95": 1522,
+          "p99": 3150,
+          "min": 0,
+          "max": 19628
+        }
+      },
+      "context_change_association": {
+        "application_changed": {
+          "flagged": {
+            "n": 5870,
+            "n_true": 517,
+            "rate": 0.0881
+          },
+          "ordinary": {
+            "n": 131580,
+            "n_true": 1845,
+            "rate": 0.014
+          }
+        },
+        "window_title_changed": {
+          "flagged": {
+            "n": 5870,
+            "n_true": 600,
+            "rate": 0.1022
+          },
+          "ordinary": {
+            "n": 131580,
+            "n_true": 3131,
+            "rate": 0.0238
+          }
+        },
+        "browser_domain_changed": {
+          "flagged": {
+            "n": 5870,
+            "n_true": 4180,
+            "rate": 0.7121
+          },
+          "ordinary": {
+            "n": 131580,
+            "n_true": 35942,
+            "rate": 0.2732
+          }
+        },
+        "interaction_category_changed": {
+          "flagged": {
+            "n": 5870,
+            "n_true": 5744,
+            "rate": 0.9785
+          },
+          "ordinary": {
+            "n": 131580,
+            "n_true": 66323,
+            "rate": 0.5041
+          }
+        }
+      },
+      "neighborhood_evidence_of_return_to_context": {
+        "event_type_jaccard_n10": {
+          "flagged": {
+            "n": 5870,
+            "mean": 0.4151,
+            "median": 0.4,
+            "p10": 0.125,
+            "p25": 0.1667,
+            "p75": 0.6,
+            "p90": 0.75,
+            "p95": 0.75,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "ordinary": {
+            "n": 131580,
+            "mean": 0.5068,
+            "median": 0.5,
+            "p10": 0.25,
+            "p25": 0.3333,
+            "p75": 0.6667,
+            "p90": 0.8,
+            "p95": 1.0,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "interaction_category_jaccard_n10": {
+          "flagged": {
+            "n": 5870,
+            "mean": 0.5415,
+            "median": 0.5,
+            "p10": 0.2,
+            "p25": 0.4,
+            "p75": 0.6667,
+            "p90": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          },
+          "ordinary": {
+            "n": 131580,
+            "mean": 0.6179,
+            "median": 0.6,
+            "p10": 0.4,
+            "p25": 0.5,
+            "p75": 0.75,
+            "p90": 1.0,
+            "p95": 1.0,
+            "p99": 1.0,
+            "min": 0.0,
+            "max": 1.0
+          }
+        },
+        "reference_median_event_type_jaccard_same_execution_population": 0.5,
+        "n_flagged_at_or_above_reference_median": 2506,
+        "pct_flagged_at_or_above_reference_median": 42.7
+      },
+      "surrounded_by_continuous_activity": {
+        "density_before_ratio_to_executions_own_mean_distribution": {
+          "n": 5870,
+          "mean": 0.7888,
+          "median": 0.7065,
+          "p10": 0.2442,
+          "p25": 0.4254,
+          "p75": 1.0906,
+          "p90": 1.4497,
+          "p95": 1.65,
+          "p99": 1.971,
+          "min": 0.011,
+          "max": 2.7692
+        },
+        "note": "ratio of this transition's density_before to its own GT execution's mean internal density_before -- a ratio near 1 means the flagged transition sits in an otherwise-ordinary-density stretch, not an isolated sparse spot."
+      }
+    }
+  },
+  "item5_return_patterns": {
+    "n_return_pattern_instances_total": 1175,
+    "n_gt_executions_with_at_least_one_return_pattern": 884,
+    "pct_gt_executions_with_at_least_one_return_pattern": 50.5,
+    "by_field": {
+      "application": {
+        "n_instances": 928,
+        "n_immediate_a_b_a": 784,
+        "n_general_multi_hop_return": 144,
+        "away_duration_ms_distribution": {
+          "n": 928,
+          "mean": 23134.0916,
+          "median": 18564.0,
+          "p10": 6872,
+          "p25": 7618,
+          "p75": 28187,
+          "p90": 49460,
+          "p95": 62459,
+          "p99": 78228,
+          "min": 60,
+          "max": 999313
+        },
+        "v1_flags_leave_transition_rate": {
+          "n": 928,
+          "n_true": 151,
+          "rate": 0.1627
+        },
+        "v1_flags_return_transition_rate": {
+          "n": 928,
+          "n_true": 52,
+          "rate": 0.056
+        },
+        "v2_flags_leave_transition_rate": {
+          "n": 928,
+          "n_true": 366,
+          "rate": 0.3944
+        },
+        "v2_flags_return_transition_rate": {
+          "n": 928,
+          "n_true": 100,
+          "rate": 0.1078
+        }
+      },
+      "browser_domain": {
+        "n_instances": 247,
+        "n_immediate_a_b_a": 194,
+        "n_general_multi_hop_return": 53,
+        "away_duration_ms_distribution": {
+          "n": 247,
+          "mean": 10437.919,
+          "median": 5159,
+          "p10": 182,
+          "p25": 1418,
+          "p75": 7954,
+          "p90": 30525,
+          "p95": 50982,
+          "p99": 73024,
+          "min": 2,
+          "max": 124435
+        },
+        "v1_flags_leave_transition_rate": {
+          "n": 247,
+          "n_true": 2,
+          "rate": 0.0081
+        },
+        "v1_flags_return_transition_rate": {
+          "n": 247,
+          "n_true": 28,
+          "rate": 0.1134
+        },
+        "v2_flags_leave_transition_rate": {
+          "n": 247,
+          "n_true": 3,
+          "rate": 0.0121
+        },
+        "v2_flags_return_transition_rate": {
+          "n": 247,
+          "n_true": 19,
+          "rate": 0.0769
+        }
+      }
+    }
+  },
+  "item6_neighborhood_vs_single_transition_evidence": {
+    "note": "Compares N=10 trajectory-jaccard (neighborhood evidence, unchanged from Stage 5's context_features.py) against the single-transition features that actually drive V1/V2's predictions, across three groups: true boundaries (context genuinely changes), false-internal boundaries per model (flagged but GT says same execution), and ordinary unflagged same-execution transitions.",
+    "event_type_jaccard_n10": {
+      "true_boundary": {
+        "n": 1671,
+        "mean": 0.3672,
+        "median": 0.2857,
+        "p10": 0.25,
+        "p25": 0.2857,
+        "p75": 0.5,
+        "p90": 0.5556,
+        "p95": 0.6667,
+        "p99": 1.0,
+        "min": 0.0909,
+        "max": 1.0
+      },
+      "v1_false_internal": {
+        "n": 4903,
+        "mean": 0.5042,
+        "median": 0.5,
+        "p10": 0.125,
+        "p25": 0.3333,
+        "p75": 0.6667,
+        "p90": 0.8,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "v2_false_internal": {
+        "n": 5870,
+        "mean": 0.4151,
+        "median": 0.4,
+        "p10": 0.125,
+        "p25": 0.1667,
+        "p75": 0.6,
+        "p90": 0.75,
+        "p95": 0.75,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "ordinary_same_execution_v1": {
+        "n": 132547,
+        "mean": 0.5028,
+        "median": 0.5,
+        "p10": 0.25,
+        "p25": 0.3333,
+        "p75": 0.6667,
+        "p90": 0.8,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    "interaction_category_jaccard_n10": {
+      "true_boundary": {
+        "n": 1671,
+        "mean": 0.5248,
+        "median": 0.5,
+        "p10": 0.4,
+        "p25": 0.5,
+        "p75": 0.6,
+        "p90": 0.75,
+        "p95": 0.8,
+        "p99": 1.0,
+        "min": 0.1667,
+        "max": 1.0
+      },
+      "v1_false_internal": {
+        "n": 4903,
+        "mean": 0.6127,
+        "median": 0.6,
+        "p10": 0.2,
+        "p25": 0.5,
+        "p75": 0.8,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "v2_false_internal": {
+        "n": 5870,
+        "mean": 0.5415,
+        "median": 0.5,
+        "p10": 0.2,
+        "p25": 0.4,
+        "p75": 0.6667,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "ordinary_same_execution_v1": {
+        "n": 132547,
+        "mean": 0.6147,
+        "median": 0.6,
+        "p10": 0.4,
+        "p25": 0.5,
+        "p75": 0.75,
+        "p90": 1.0,
+        "p95": 1.0,
+        "p99": 1.0,
+        "min": 0.0,
+        "max": 1.0
+      }
+    },
+    "single_transition_gap_ms_for_contrast": {
+      "true_boundary": {
+        "n": 1671,
+        "mean": 3408.8468,
+        "median": 526,
+        "p10": 438,
+        "p25": 470,
+        "p75": 3661,
+        "p90": 4381,
+        "p95": 14154,
+        "p99": 41944,
+        "min": 58,
+        "max": 123703
+      },
+      "v1_false_internal": {
+        "n": 4903,
+        "mean": 5988.043,
+        "median": 2627,
+        "p10": 1219,
+        "p25": 1822,
+        "p75": 3918,
+        "p90": 15079,
+        "p95": 19652,
+        "p99": 46447,
+        "min": 0,
+        "max": 983945
+      },
+      "ordinary_same_execution_v1": {
+        "n": 132547,
+        "mean": 282.5632,
+        "median": 51,
+        "p10": 1,
+        "p25": 6,
+        "p75": 105,
+        "p90": 777,
+        "p95": 1705,
+        "p99": 3205,
+        "min": 0,
+        "max": 41882
+      }
+    }
+  },
+  "examples": {
+    "median_max_internal_gap_execution": {
+      "session_id": "ses_20260701-070320-JAYESH",
+      "case_id": "RT-123250-003",
+      "process_code": "A",
+      "start_ms": 1782890309841,
+      "end_ms": 1782890337956,
+      "duration_ms": 28115,
+      "n_internal_transitions": 62,
+      "max_internal_gap_ms": 4599,
+      "argmax_gap_transition_index": 2071,
+      "n_gaps_ge_p90": 7,
+      "n_gaps_ge_p95": 5,
+      "n_gaps_ge_p99": 0,
+      "n_app_switches": 0,
+      "n_window_title_changes": 0,
+      "n_browser_domain_changes": 29,
+      "n_interaction_category_changes": 37,
+      "mean_density_before": 12.629032258064516,
+      "mean_density_after": 12.741935483870968,
+      "density_before_at_max_gap": 21,
+      "density_after_at_max_gap": 13
+    },
+    "p90_max_internal_gap_execution": {
+      "session_id": "ses_20260630-135201-LAPTOP-R36BQBTE",
+      "case_id": "SI-192210-001",
+      "process_code": "D",
+      "start_ms": 1782828269727,
+      "end_ms": 1782828324173,
+      "duration_ms": 54446,
+      "n_internal_transitions": 59,
+      "max_internal_gap_ms": 22062,
+      "argmax_gap_transition_index": 1099,
+      "n_gaps_ge_p90": 8,
+      "n_gaps_ge_p95": 6,
+      "n_gaps_ge_p99": 2,
+      "n_app_switches": 2,
+      "n_window_title_changes": 3,
+      "n_browser_domain_changes": 0,
+      "n_interaction_category_changes": 28,
+      "mean_density_before": 14.084745762711865,
+      "mean_density_after": 13.59322033898305,
+      "density_before_at_max_gap": 11,
+      "density_after_at_max_gap": 13
+    },
+    "highest_max_internal_gap_execution": {
+      "session_id": "ses_20260701-081120-SIDDHIGUPTAB00B",
+      "case_id": "SUP-134051-002",
+      "process_code": "M",
+      "start_ms": 1782893720801,
+      "end_ms": 1782894865625,
+      "duration_ms": 1144824,
+      "n_internal_transitions": 89,
+      "max_internal_gap_ms": 983945,
+      "argmax_gap_transition_index": 560,
+      "n_gaps_ge_p90": 20,
+      "n_gaps_ge_p95": 16,
+      "n_gaps_ge_p99": 6,
+      "n_app_switches": 8,
+      "n_window_title_changes": 8,
+      "n_browser_domain_changes": 27,
+      "n_interaction_category_changes": 58,
+      "mean_density_before": 10.764044943820224,
+      "mean_density_after": 10.651685393258427,
+      "density_before_at_max_gap": 2,
+      "density_after_at_max_gap": 4
+    },
+    "sample_return_pattern_instances": [
+      {
+        "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+        "case_id": "RT-175009-003",
+        "field": "application",
+        "value": "Google Chrome",
+        "is_immediate": true,
+        "n_away_values": 1,
+        "away_duration_ms": 7374,
+        "v1_flags_leave_transition": false,
+        "v1_flags_return_transition": false,
+        "v2_flags_leave_transition": false,
+        "v2_flags_return_transition": false
+      },
+      {
+        "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+        "case_id": "RT-175009-004",
+        "field": "application",
+        "value": "Google Chrome",
+        "is_immediate": true,
+        "n_away_values": 1,
+        "away_duration_ms": 6907,
+        "v1_flags_leave_transition": false,
+        "v1_flags_return_transition": false,
+        "v2_flags_leave_transition": false,
+        "v2_flags_return_transition": false
+      },
+      {
+        "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+        "case_id": "LA-175009-001",
+        "field": "application",
+        "value": "Google Chrome",
+        "is_immediate": false,
+        "n_away_values": 2,
+        "away_duration_ms": 33862,
+        "v1_flags_leave_transition": false,
+        "v1_flags_return_transition": false,
+        "v2_flags_leave_transition": true,
+        "v2_flags_return_transition": false
+      },
+      {
+        "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+        "case_id": "LA-175009-003",
+        "field": "application",
+        "value": "Google Chrome",
+        "is_immediate": true,
+        "n_away_values": 1,
+        "away_duration_ms": 11561,
+        "v1_flags_leave_transition": false,
+        "v1_flags_return_transition": false,
+        "v2_flags_leave_transition": false,
+        "v2_flags_return_transition": true
+      },
+      {
+        "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+        "case_id": "LA-175009-004",
+        "field": "application",
+        "value": "Google Chrome",
+        "is_immediate": true,
+        "n_away_values": 1,
+        "away_duration_ms": 32422,
+        "v1_flags_leave_transition": true,
+        "v1_flags_return_transition": false,
+        "v2_flags_leave_transition": true,
+        "v2_flags_return_transition": false
+      }
+    ]
+  }
+}
