@@ -1,0 +1,1520 @@
+{
+  "dfg": {
+    "n_edges": 6,
+    "self_loops": [],
+    "start_activities": {
+      "system:HR人事給与システム": 122
+    },
+    "top_edges": [
+      {
+        "count": 33,
+        "probability": 0.825,
+        "source": "system:HR人事給与システム",
+        "target": "app:Microsoft Word"
+      },
+      {
+        "count": 32,
+        "probability": 1.0,
+        "source": "app:Microsoft Word",
+        "target": "system:HR人事給与システム"
+      },
+      {
+        "count": 4,
+        "probability": 0.1,
+        "source": "system:HR人事給与システム",
+        "target": "system:財務会計システム"
+      },
+      {
+        "count": 4,
+        "probability": 1.0,
+        "source": "system:財務会計システム",
+        "target": "system:HR人事給与システム"
+      },
+      {
+        "count": 3,
+        "probability": 1.0,
+        "source": "app:Windows Explorer",
+        "target": "system:HR人事給与システム"
+      }
+    ]
+  },
+  "dominant_path": {
+    "dominant_variant_analysis": {
+      "app_immediately_after_exit": {
+        "Microsoft Edge": 31,
+        "Microsoft Excel": 1,
+        "Microsoft Word": 49,
+        "Notepad": 12,
+        "Windows Explorer": 1
+      },
+      "app_immediately_before_entry": {
+        "Microsoft Edge": 27,
+        "Microsoft Excel": 2,
+        "Microsoft Word": 48,
+        "Notepad": 12,
+        "OpenWith": 1,
+        "Windows Explorer": 1,
+        "WindowsTerminal": 1,
+        "ms-teams": 1,
+        "null": 1
+      },
+      "click_target_frequency": {
+        "None|panel-body": 1,
+        "btn-la-ok|btn success": 26,
+        "btn-ob-ok|btn success": 32,
+        "btn-pi-ok|btn success": 69,
+        "btn-si-ok|btn success": 11,
+        "la-note|input": 27,
+        "ob-note|input": 32,
+        "pi-note|input": 69,
+        "si-note|input": 11
+      },
+      "clipboard_change_per_execution": {
+        "max": 11,
+        "mean": 1.99,
+        "median": 1.0,
+        "min": 0,
+        "n": 94,
+        "p25": 0,
+        "p75": 3,
+        "std": 2.3
+      },
+      "duration_ms_distribution": {
+        "max": 125430,
+        "mean": 17786.46,
+        "median": 11360.0,
+        "min": 0,
+        "n": 94,
+        "p25": 3095,
+        "p75": 22071,
+        "std": 23118.77
+      },
+      "entry_event_type_distribution": {
+        "keystroke": 15,
+        "mouse_click": 70,
+        "screenshot_smart": 1,
+        "shortcut": 8
+      },
+      "event_count_distribution": {
+        "max": 204,
+        "mean": 35.64,
+        "median": 23.0,
+        "min": 1,
+        "n": 94,
+        "p25": 11,
+        "p75": 48,
+        "std": 39.27
+      },
+      "event_type_frequency": {
+        "app_switch": 94,
+        "browser_click": 422,
+        "browser_error": 1,
+        "browser_form_input": 134,
+        "browser_navigation": 28,
+        "clipboard_change": 187,
+        "extension_connected": 3,
+        "keystroke": 526,
+        "mouse_click": 525,
+        "mouse_scroll": 370,
+        "screenshot_smart": 829,
+        "shortcut": 218,
+        "upload_completed": 1,
+        "upload_started": 1,
+        "window_state_change": 9,
+        "window_title_change": 2
+      },
+      "exit_event_type_distribution": {
+        "browser_click": 4,
+        "keystroke": 1,
+        "mouse_click": 6,
+        "mouse_scroll": 14,
+        "screenshot_smart": 68,
+        "shortcut": 1
+      },
+      "form_field_frequency": {
+        "la-note|承認コメントまたは差戻し理由を入力してください…": 25,
+        "ob-note|照合結果・特記事項を入力してください…": 30,
+        "pi-note|処理内容・確認コメントを入力してください…": 68,
+        "si-note|処理内容・対応状況を入力してください…": 11
+      },
+      "form_input_method_distribution": {
+        "paste": 134
+      },
+      "keystroke_per_execution": {
+        "max": 24,
+        "mean": 5.6,
+        "median": 4.0,
+        "min": 0,
+        "n": 94,
+        "p25": 2,
+        "p75": 8,
+        "std": 4.88
+      },
+      "mouse_click_vs_browser_click": {
+        "browser_click": 422,
+        "mouse_click": 525
+      },
+      "n_distinct_routes_per_execution": {
+        "max": 3,
+        "mean": 1.12,
+        "median": 1.0,
+        "min": 0,
+        "n": 94,
+        "p25": 1,
+        "p75": 1,
+        "std": 0.74
+      },
+      "n_executions": 94,
+      "per_execution": [
+        {
+          "duration_ms": 134,
+          "event_count": 4,
+          "execution_id": "ses_20260701-164424-CHAITANYA0BCF::exec9",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 42303,
+          "event_count": 74,
+          "execution_id": "ses_20260701-164424-CHAITANYA0BCF::exec11",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 45400,
+          "event_count": 89,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec7",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 158,
+          "event_count": 5,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec9",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3003,
+          "event_count": 11,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec11",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3285,
+          "event_count": 12,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec13",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3095,
+          "event_count": 12,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec15",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3705,
+          "event_count": 13,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec17",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3096,
+          "event_count": 10,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec21",
+          "routes_visited": [
+            "#/resident-tax",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 126,
+          "event_count": 3,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec35",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 17490,
+          "event_count": 45,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec41",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 7570,
+          "event_count": 15,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec43",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3081,
+          "event_count": 11,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec45",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 6329,
+          "event_count": 11,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec47",
+          "routes_visited": [
+            "#/onboarding",
+            "#/resident-tax"
+          ]
+        },
+        {
+          "duration_ms": 35487,
+          "event_count": 73,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec56",
+          "routes_visited": [
+            "#/dashboard",
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 7051,
+          "event_count": 22,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec4",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 22268,
+          "event_count": 51,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec6",
+          "routes_visited": [
+            "#/payroll-items",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 25895,
+          "event_count": 58,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec15",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 10947,
+          "event_count": 13,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec17",
+          "routes_visited": [
+            "#/resident-tax",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 71,
+          "event_count": 3,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec19",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 2731,
+          "event_count": 11,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec21",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 13718,
+          "event_count": 29,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec23",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 15707,
+          "event_count": 46,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec38",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 15799,
+          "event_count": 45,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec40",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 3413,
+          "event_count": 11,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec44",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 2821,
+          "event_count": 12,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec46",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 14949,
+          "event_count": 29,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec48",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/onboarding",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 41910,
+          "event_count": 60,
+          "execution_id": "ses_20260701-173642-NEELA9BAF::exec14",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 152,
+          "event_count": 3,
+          "execution_id": "ses_20260701-173642-NEELA9BAF::exec19",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 11612,
+          "event_count": 16,
+          "execution_id": "ses_20260701-173642-NEELA9BAF::exec23",
+          "routes_visited": [
+            "#/payroll-items",
+            "#/resident-tax",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 81413,
+          "event_count": 149,
+          "execution_id": "ses_20260701-173642-NEELA9BAF::exec36",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 24172,
+          "event_count": 65,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec10",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 8556,
+          "event_count": 19,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec13",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 9577,
+          "event_count": 14,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec15",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 26211,
+          "event_count": 54,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec20",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 12419,
+          "event_count": 29,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec22",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 41470,
+          "event_count": 77,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec26",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 22525,
+          "event_count": 48,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec31",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 7676,
+          "event_count": 24,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec33",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 41706,
+          "event_count": 72,
+          "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec7",
+          "routes_visited": [
+            "#/leave-applications"
+          ]
+        },
+        {
+          "duration_ms": 84082,
+          "event_count": 162,
+          "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec24",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/payroll-items",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 13,
+          "event_count": 2,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec12",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3731,
+          "event_count": 11,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec16",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3218,
+          "event_count": 10,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec32",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 2991,
+          "event_count": 12,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec34",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 14236,
+          "event_count": 26,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec36",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 19490,
+          "event_count": 34,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec41",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 37795,
+          "event_count": 79,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec46",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 95391,
+          "event_count": 177,
+          "execution_id": "ses_20260701-181413-LAPTOP-76QMG9DE::exec1",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 38380,
+          "event_count": 75,
+          "execution_id": "ses_20260701-181413-LAPTOP-76QMG9DE::exec35",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 360,
+          "event_count": 3,
+          "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec3",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3038,
+          "event_count": 11,
+          "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec5",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 640,
+          "event_count": 7,
+          "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec7",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 3306,
+          "event_count": 10,
+          "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec9",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 13120,
+          "event_count": 37,
+          "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec30",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 19949,
+          "event_count": 35,
+          "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec32",
+          "routes_visited": [
+            "#/dashboard",
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 17573,
+          "event_count": 36,
+          "execution_id": "ses_20260701-182634-NEELA9BAF::exec7",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 13207,
+          "event_count": 19,
+          "execution_id": "ses_20260701-182634-NEELA9BAF::exec11",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 20101,
+          "event_count": 48,
+          "execution_id": "ses_20260701-182634-NEELA9BAF::exec23",
+          "routes_visited": [
+            "#/leave-applications"
+          ]
+        },
+        {
+          "duration_ms": 14857,
+          "event_count": 43,
+          "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec1",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 97360,
+          "event_count": 204,
+          "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec6",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 111,
+          "event_count": 3,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec3",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3360,
+          "event_count": 9,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec5",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3573,
+          "event_count": 11,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec9",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 2971,
+          "event_count": 12,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec11",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 3312,
+          "event_count": 11,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec17",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 12347,
+          "event_count": 24,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec22",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 7729,
+          "event_count": 25,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec24",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 15831,
+          "event_count": 44,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec7",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 18841,
+          "event_count": 35,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec9",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 143,
+          "event_count": 3,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec15",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 23797,
+          "event_count": 59,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec17",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 12933,
+          "event_count": 33,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec19",
+          "routes_visited": [
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 2884,
+          "event_count": 12,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec21",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 16147,
+          "event_count": 28,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec23",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 15283,
+          "event_count": 30,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec28",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 11108,
+          "event_count": 18,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec1",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 23669,
+          "event_count": 60,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec3",
+          "routes_visited": [
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 15162,
+          "event_count": 45,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec5",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 7770,
+          "event_count": 24,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec10",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 6233,
+          "event_count": 13,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec12",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 582,
+          "event_count": 7,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec18",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 125430,
+          "event_count": 160,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec1",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 55852,
+          "event_count": 73,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec8",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 22071,
+          "event_count": 38,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec10",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 4483,
+          "event_count": 12,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec12",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 2703,
+          "event_count": 7,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec14",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 6442,
+          "event_count": 8,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec16",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 0,
+          "event_count": 1,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec20",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 15697,
+          "event_count": 22,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec22",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 2921,
+          "event_count": 7,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec24",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 56573,
+          "event_count": 69,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec26",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 71,
+          "event_count": 2,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec34",
+          "routes_visited": []
+        },
+        {
+          "duration_ms": 34029,
+          "event_count": 56,
+          "execution_id": "ses_20260701-192455-NEELA9BAF::exec36",
+          "routes_visited": []
+        }
+      ],
+      "route_visit_frequency": {
+        "#/dashboard": 2,
+        "#/leave-applications": 11,
+        "#/onboarding": 43,
+        "#/payroll-items": 31,
+        "#/resident-tax": 4,
+        "#/social-insurance": 14
+      }
+    },
+    "hr_process_id": "system:HR人事給与システム",
+    "n_hr_executions_total": 122,
+    "rare_edge_analysis": {
+      "app_immediately_after_exit": {
+        "Microsoft Edge": 4
+      },
+      "app_immediately_before_entry": {
+        "Microsoft Edge": 1,
+        "Microsoft Word": 2,
+        "OpenWith": 1
+      },
+      "click_target_frequency": {
+        "None|nav-link": 1,
+        "btn-la-ok|btn success": 16,
+        "btn-pi-ok|btn success": 9,
+        "la-note|input": 16,
+        "pi-note|input": 9
+      },
+      "clipboard_change_per_execution": {
+        "max": 12,
+        "mean": 6.25,
+        "median": 6.5,
+        "min": 0,
+        "n": 4,
+        "p25": 4,
+        "p75": 12,
+        "std": 4.6
+      },
+      "duration_ms_distribution": {
+        "max": 131740,
+        "mean": 76484.75,
+        "median": 66765.5,
+        "min": 40668,
+        "n": 4,
+        "p25": 42511,
+        "p75": 131740,
+        "std": 37754.04
+      },
+      "entry_event_type_distribution": {
+        "keystroke": 2,
+        "mouse_click": 2
+      },
+      "event_count_distribution": {
+        "max": 230,
+        "mean": 122.5,
+        "median": 116.5,
+        "min": 27,
+        "n": 4,
+        "p25": 78,
+        "p75": 230,
+        "std": 77.0
+      },
+      "event_type_frequency": {
+        "app_switch": 15,
+        "browser_click": 76,
+        "browser_form_input": 25,
+        "browser_navigation": 6,
+        "clipboard_change": 25,
+        "keystroke": 64,
+        "mouse_click": 76,
+        "mouse_scroll": 47,
+        "screenshot_smart": 123,
+        "shortcut": 28,
+        "window_state_change": 2,
+        "window_title_change": 3
+      },
+      "exit_event_type_distribution": {
+        "screenshot_smart": 4
+      },
+      "form_field_frequency": {
+        "la-note|承認コメントまたは差戻し理由を入力してください…": 16,
+        "pi-note|処理内容・確認コメントを入力してください…": 9
+      },
+      "form_input_method_distribution": {
+        "paste": 25
+      },
+      "keystroke_per_execution": {
+        "max": 26,
+        "mean": 16.0,
+        "median": 16.0,
+        "min": 6,
+        "n": 4,
+        "p25": 10,
+        "p75": 26,
+        "std": 8.25
+      },
+      "mouse_click_vs_browser_click": {
+        "browser_click": 76,
+        "mouse_click": 76
+      },
+      "n_distinct_routes_per_execution": {
+        "max": 3,
+        "mean": 1.75,
+        "median": 1.5,
+        "min": 1,
+        "n": 4,
+        "p25": 1,
+        "p75": 3,
+        "std": 0.83
+      },
+      "n_executions": 4,
+      "per_execution": [
+        {
+          "duration_ms": 91020,
+          "event_count": 155,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec43",
+          "routes_visited": [
+            "#/dashboard",
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 131740,
+          "event_count": 230,
+          "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec13",
+          "routes_visited": [
+            "#/leave-applications"
+          ]
+        },
+        {
+          "duration_ms": 42511,
+          "event_count": 78,
+          "execution_id": "ses_20260701-182634-NEELA9BAF::exec20",
+          "routes_visited": [
+            "#/leave-applications"
+          ]
+        },
+        {
+          "duration_ms": 40668,
+          "event_count": 27,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec26",
+          "routes_visited": [
+            "#/onboarding",
+            "#/social-insurance"
+          ]
+        }
+      ],
+      "route_visit_frequency": {
+        "#/dashboard": 1,
+        "#/leave-applications": 2,
+        "#/onboarding": 2,
+        "#/payroll-items": 1,
+        "#/social-insurance": 1
+      }
+    },
+    "rare_edge_cases": [
+      {
+        "duration_ms": 91020,
+        "event_count": 155,
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec43",
+        "variant_signature": [
+          "system:HR人事給与システム",
+          "system:財務会計システム",
+          "system:HR人事給与システム",
+          "system:財務会計システム",
+          "system:HR人事給与システム",
+          "system:財務会計システム",
+          "system:HR人事給与システム",
+          "system:財務会計システム",
+          "system:HR人事給与システム"
+        ]
+      },
+      {
+        "duration_ms": 131740,
+        "event_count": 230,
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec13",
+        "variant_signature": [
+          "system:HR人事給与システム",
+          "app:Windows Explorer",
+          "system:HR人事給与システム"
+        ]
+      },
+      {
+        "duration_ms": 42511,
+        "event_count": 78,
+        "execution_id": "ses_20260701-182634-NEELA9BAF::exec20",
+        "variant_signature": [
+          "system:HR人事給与システム",
+          "app:Windows Explorer",
+          "system:HR人事給与システム"
+        ]
+      },
+      {
+        "duration_ms": 40668,
+        "event_count": 27,
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec26",
+        "variant_signature": [
+          "system:HR人事給与システム",
+          "app:Windows Explorer",
+          "system:HR人事給与システム"
+        ]
+      }
+    ],
+    "rebuild_cross_check_mismatches": 0,
+    "route_id_prefix_correspondence": {
+      "#/leave-applications": "la",
+      "#/onboarding": "ob",
+      "#/payroll-items": "pi",
+      "#/social-insurance": "si"
+    },
+    "variant_split": {
+      "dominant": {
+        "n": 94,
+        "share": 0.7705
+      },
+      "rare_edge": {
+        "n": 4,
+        "share": 0.0328
+      },
+      "word_detour": {
+        "n": 24,
+        "share": 0.1967
+      }
+    },
+    "word_detour_documents_opened": {
+      "getsujitsu_teigaku_torihikisaki_ichiran": 1,
+      "gyomu_itaku_keihi_kitei": 19,
+      "gyomu_itaku_ukeire_tetsuzuki": 16,
+      "ikuji_kyuugyou_kitei": 24,
+      "kaigo_kyuugyou_kitei": 4,
+      "kanrisya_kengen_shinsei_tetsuzuki": 2,
+      "kazoku_teate_kitei": 14,
+      "nyusha_checklist_shinsotsu_batch": 47,
+      "shinkui_keiyaku_tetsuzuki": 1,
+      "shinkuitorihikisaki_touroku_tetsuzuki": 1
+    },
+    "word_detour_variant_analysis": {
+      "app_immediately_after_exit": {
+        "Microsoft Edge": 6,
+        "Microsoft Excel": 1,
+        "Microsoft Word": 13,
+        "Notepad": 3,
+        "OpenWith": 1
+      },
+      "app_immediately_before_entry": {
+        "Microsoft Edge": 8,
+        "Microsoft Word": 13,
+        "Notepad": 1,
+        "Windows Explorer": 1,
+        "ms-teams": 1
+      },
+      "click_target_frequency": {
+        "btn-la-ok|btn success": 14,
+        "btn-ob-ok|btn success": 23,
+        "btn-pi-ok|btn success": 36,
+        "btn-si-ok|btn success": 23,
+        "la-note|input": 13,
+        "ob-note|input": 23,
+        "pi-note|input": 36,
+        "si-note|input": 23
+      },
+      "clipboard_change_per_execution": {
+        "max": 12,
+        "mean": 4.12,
+        "median": 3.0,
+        "min": 1,
+        "n": 24,
+        "p25": 2,
+        "p75": 6,
+        "std": 2.8
+      },
+      "duration_ms_distribution": {
+        "max": 127471,
+        "mean": 42222.62,
+        "median": 33335.0,
+        "min": 11917,
+        "n": 24,
+        "p25": 22487,
+        "p75": 48226,
+        "std": 29790.47
+      },
+      "entry_event_type_distribution": {
+        "keystroke": 4,
+        "mouse_click": 19,
+        "shortcut": 1
+      },
+      "event_count_distribution": {
+        "max": 222,
+        "mean": 77.96,
+        "median": 62.0,
+        "min": 27,
+        "n": 24,
+        "p25": 36,
+        "p75": 106,
+        "std": 52.07
+      },
+      "event_type_frequency": {
+        "app_switch": 102,
+        "browser_click": 282,
+        "browser_form_input": 95,
+        "browser_navigation": 16,
+        "clipboard_change": 99,
+        "keystroke": 230,
+        "mouse_click": 282,
+        "mouse_scroll": 173,
+        "screenshot_smart": 480,
+        "shortcut": 106,
+        "window_state_change": 5,
+        "window_title_change": 1
+      },
+      "exit_event_type_distribution": {
+        "mouse_scroll": 3,
+        "screenshot_smart": 19,
+        "shortcut": 2
+      },
+      "form_field_frequency": {
+        "la-note|承認コメントまたは差戻し理由を入力してください…": 13,
+        "ob-note|照合結果・特記事項を入力してください…": 23,
+        "pi-note|処理内容・確認コメントを入力してください…": 36,
+        "si-note|処理内容・対応状況を入力してください…": 23
+      },
+      "form_input_method_distribution": {
+        "paste": 95
+      },
+      "keystroke_per_execution": {
+        "max": 24,
+        "mean": 9.58,
+        "median": 8.0,
+        "min": 4,
+        "n": 24,
+        "p25": 6,
+        "p75": 14,
+        "std": 5.35
+      },
+      "mouse_click_vs_browser_click": {
+        "browser_click": 282,
+        "mouse_click": 282
+      },
+      "n_distinct_routes_per_execution": {
+        "max": 3,
+        "mean": 1.42,
+        "median": 1.0,
+        "min": 1,
+        "n": 24,
+        "p25": 1,
+        "p75": 2,
+        "std": 0.64
+      },
+      "n_executions": 24,
+      "per_execution": [
+        {
+          "duration_ms": 15468,
+          "event_count": 33,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec19",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 85281,
+          "event_count": 156,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec37",
+          "routes_visited": [
+            "#/payroll-items",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 43499,
+          "event_count": 74,
+          "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec39",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 26454,
+          "event_count": 36,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec25",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 25083,
+          "event_count": 47,
+          "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec42",
+          "routes_visited": [
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 31111,
+          "event_count": 56,
+          "execution_id": "ses_20260701-173642-NEELA9BAF::exec21",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 38986,
+          "event_count": 76,
+          "execution_id": "ses_20260701-173642-NEELA9BAF::exec40",
+          "routes_visited": [
+            "#/dashboard",
+            "#/payroll-items",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 47155,
+          "event_count": 106,
+          "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec8",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 43606,
+          "event_count": 82,
+          "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec4",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 48226,
+          "event_count": 90,
+          "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec28",
+          "routes_visited": [
+            "#/payroll-items",
+            "#/resident-tax"
+          ]
+        },
+        {
+          "duration_ms": 18550,
+          "event_count": 32,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec14",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 22487,
+          "event_count": 34,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec18",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 21264,
+          "event_count": 36,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec30",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 127471,
+          "event_count": 222,
+          "execution_id": "ses_20260701-180923-NEELA9BAF::exec48",
+          "routes_visited": [
+            "#/dashboard",
+            "#/leave-applications",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 39500,
+          "event_count": 69,
+          "execution_id": "ses_20260701-182634-NEELA9BAF::exec9",
+          "routes_visited": [
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 106895,
+          "event_count": 176,
+          "execution_id": "ses_20260701-182634-NEELA9BAF::exec25",
+          "routes_visited": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ]
+        },
+        {
+          "duration_ms": 11917,
+          "event_count": 27,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec7",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 35559,
+          "event_count": 68,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec13",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 12130,
+          "event_count": 29,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec15",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 17196,
+          "event_count": 32,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec19",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 24831,
+          "event_count": 54,
+          "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec21",
+          "routes_visited": [
+            "#/onboarding"
+          ]
+        },
+        {
+          "duration_ms": 24018,
+          "event_count": 53,
+          "execution_id": "ses_20260701-190250-NEELA9BAF::exec26",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 67037,
+          "event_count": 136,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec8",
+          "routes_visited": [
+            "#/onboarding",
+            "#/payroll-items"
+          ]
+        },
+        {
+          "duration_ms": 79619,
+          "event_count": 147,
+          "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec16",
+          "routes_visited": [
+            "#/payroll-items"
+          ]
+        }
+      ],
+      "route_visit_frequency": {
+        "#/dashboard": 2,
+        "#/leave-applications": 3,
+        "#/onboarding": 12,
+        "#/payroll-items": 10,
+        "#/resident-tax": 1,
+        "#/social-insurance": 6
+      }
+    }
+  },
+  "note": "variant_split (dominant / word_detour / rare_edge) is carried explicitly because it is NOT derivable from variants.json, which holds generic per-signature variants.",
+  "similarity_investigation": {
+    "elapsed_seconds": 1.8546,
+    "n_detour_traces": 24,
+    "n_dominant_traces": 94,
+    "n_pairs_compared": 13924,
+    "results": {
+      "jaccard": {
+        "between_dominant_and_detour": 0.5449,
+        "within_detour": 0.8738,
+        "within_dominant": 0.7021
+      },
+      "lcs": {
+        "between_dominant_and_detour": 0.4175,
+        "within_detour": 0.5887,
+        "within_dominant": 0.4499
+      },
+      "levenshtein": {
+        "between_dominant_and_detour": 0.2958,
+        "within_detour": 0.4428,
+        "within_dominant": 0.3238
+      }
+    }
+  },
+  "variant_split": {
+    "dominant": {
+      "n": 94,
+      "share": 0.7705
+    },
+    "rare_edge": {
+      "n": 4,
+      "share": 0.0328
+    },
+    "word_detour": {
+      "n": 24,
+      "share": 0.1967
+    }
+  }
+}

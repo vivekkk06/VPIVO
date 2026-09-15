@@ -1,0 +1,1041 @@
+[
+  {
+    "avg_manual_event_share": 0.681,
+    "avg_systems_touched_per_execution": 2.032,
+    "dominant_variant_share": 0.664,
+    "duration_ms_distribution": {
+      "max": 99217,
+      "mean": 20773.9,
+      "median": 14339,
+      "min": 0,
+      "n": 125,
+      "p25": 4697,
+      "p75": 28270
+    },
+    "event_count_distribution": {
+      "max": 152,
+      "mean": 37.42,
+      "median": 28,
+      "min": 1,
+      "n": 125,
+      "p25": 17,
+      "p75": 49
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 125,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 23,
+      "LAPTOP-76QMG9DE": 50,
+      "NEELA9BAF": 41,
+      "SIDDHIGUPTAB00B": 11
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 10,
+    "process_id": "system:財務会計システム",
+    "readable_name": "Financial Accounting System",
+    "total_duration_ms": 2596737,
+    "total_human_hours": 0.7213
+  },
+  {
+    "avg_manual_event_share": 0.7006,
+    "avg_systems_touched_per_execution": 1.6475,
+    "dominant_variant_share": 0.7705,
+    "duration_ms_distribution": {
+      "max": 131740,
+      "mean": 24518.11,
+      "median": 15375.5,
+      "min": 0,
+      "n": 122,
+      "p25": 3413,
+      "p75": 35487
+    },
+    "event_count_distribution": {
+      "max": 230,
+      "mean": 46.81,
+      "median": 32.0,
+      "min": 1,
+      "n": 122,
+      "p25": 12,
+      "p75": 60
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 122,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 18,
+      "LAPTOP-76QMG9DE": 35,
+      "NEELA9BAF": 44,
+      "SIDDHIGUPTAB00B": 25
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 7,
+    "process_id": "system:HR人事給与システム",
+    "readable_name": "HR / Payroll System",
+    "total_duration_ms": 2991209,
+    "total_human_hours": 0.8309
+  },
+  {
+    "avg_manual_event_share": 0.6432,
+    "avg_systems_touched_per_execution": 1.4688,
+    "dominant_variant_share": 0.8333,
+    "duration_ms_distribution": {
+      "max": 83134,
+      "mean": 16094.67,
+      "median": 12625.5,
+      "min": 7,
+      "n": 96,
+      "p25": 4756,
+      "p75": 21809
+    },
+    "event_count_distribution": {
+      "max": 122,
+      "mean": 35.29,
+      "median": 32.0,
+      "min": 2,
+      "n": 96,
+      "p25": 16,
+      "p75": 46
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 96,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 9,
+      "LAPTOP-76QMG9DE": 37,
+      "NEELA9BAF": 20,
+      "SIDDHIGUPTAB00B": 30
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 7,
+    "process_id": "system:受発注在庫管理システム",
+    "readable_name": "Order & Inventory Management System",
+    "total_duration_ms": 1545088,
+    "total_human_hours": 0.4292
+  },
+  {
+    "avg_manual_event_share": 0.375,
+    "avg_systems_touched_per_execution": 1.2162,
+    "dominant_variant_share": 0.9189,
+    "duration_ms_distribution": {
+      "max": 21859,
+      "mean": 7720.11,
+      "median": 8445,
+      "min": 2652,
+      "n": 37,
+      "p25": 3481,
+      "p75": 9716
+    },
+    "event_count_distribution": {
+      "max": 47,
+      "mean": 16.92,
+      "median": 18,
+      "min": 6,
+      "n": 37,
+      "p25": 8,
+      "p75": 20
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 37,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 6,
+      "LAPTOP-76QMG9DE": 13,
+      "NEELA9BAF": 10,
+      "SIDDHIGUPTAB00B": 8
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 3,
+    "process_id": "app:Microsoft Word::nyusha_checklist_shinsotsu_batch",
+    "readable_name": "Word: New-Employee Checklist (New-Graduate Batch)",
+    "total_duration_ms": 285644,
+    "total_human_hours": 0.0793
+  },
+  {
+    "avg_manual_event_share": 0.4753,
+    "avg_systems_touched_per_execution": 2.4828,
+    "dominant_variant_share": 0.4483,
+    "duration_ms_distribution": {
+      "max": 39076,
+      "mean": 16900.59,
+      "median": 17733,
+      "min": 2824,
+      "n": 29,
+      "p25": 11389,
+      "p75": 22177
+    },
+    "event_count_distribution": {
+      "max": 71,
+      "mean": 35.52,
+      "median": 34,
+      "min": 7,
+      "n": 29,
+      "p25": 29,
+      "p75": 45
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 29,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 6,
+      "LAPTOP-76QMG9DE": 13,
+      "NEELA9BAF": 1,
+      "SIDDHIGUPTAB00B": 9
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 7,
+    "process_id": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+    "readable_name": "Word: Contract Termination Procedure",
+    "total_duration_ms": 490117,
+    "total_human_hours": 0.1361
+  },
+  {
+    "avg_manual_event_share": 0.5677,
+    "avg_systems_touched_per_execution": 1.3478,
+    "dominant_variant_share": 0.8696,
+    "duration_ms_distribution": {
+      "max": 22118,
+      "mean": 12948.57,
+      "median": 13128,
+      "min": 8484,
+      "n": 23,
+      "p25": 9626,
+      "p75": 14798
+    },
+    "event_count_distribution": {
+      "max": 46,
+      "mean": 29.26,
+      "median": 31,
+      "min": 19,
+      "n": 23,
+      "p25": 22,
+      "p75": 33
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 23,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 4,
+      "LAPTOP-76QMG9DE": 17,
+      "NEELA9BAF": 2
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 3,
+    "process_id": "app:Microsoft Word::gyomu_itaku_kyuuyo_kitei",
+    "readable_name": "Word: Outsourcing Compensation Regulations",
+    "total_duration_ms": 297817,
+    "total_human_hours": 0.0827
+  },
+  {
+    "avg_manual_event_share": 0.4392,
+    "avg_systems_touched_per_execution": 1.5238,
+    "dominant_variant_share": 0.7619,
+    "duration_ms_distribution": {
+      "max": 21564,
+      "mean": 6151.33,
+      "median": 4046,
+      "min": 378,
+      "n": 21,
+      "p25": 2892,
+      "p75": 8129
+    },
+    "event_count_distribution": {
+      "max": 224,
+      "mean": 28.57,
+      "median": 6,
+      "min": 4,
+      "n": 21,
+      "p25": 6,
+      "p75": 10
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 21,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 5,
+      "LAPTOP-76QMG9DE": 4,
+      "NEELA9BAF": 10,
+      "SIDDHIGUPTAB00B": 2
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 4,
+    "process_id": "app:WindowsTerminal",
+    "readable_name": "app:WindowsTerminal",
+    "total_duration_ms": 129178,
+    "total_human_hours": 0.0359
+  },
+  {
+    "avg_manual_event_share": 0.5514,
+    "avg_systems_touched_per_execution": 1.1,
+    "dominant_variant_share": 0.95,
+    "duration_ms_distribution": {
+      "max": 22559,
+      "mean": 5002.25,
+      "median": 3806.5,
+      "min": 422,
+      "n": 20,
+      "p25": 3583,
+      "p75": 5148
+    },
+    "event_count_distribution": {
+      "max": 19,
+      "mean": 11.4,
+      "median": 12.0,
+      "min": 2,
+      "n": 20,
+      "p25": 11,
+      "p75": 13
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 20,
+    "frequency_by_operator": {
+      "LAPTOP-76QMG9DE": 7,
+      "NEELA9BAF": 9,
+      "SIDDHIGUPTAB00B": 4
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 2,
+    "process_id": "app:Notepad::在庫調整メモ",
+    "readable_name": "Notepad: Inventory Adjustment Memo",
+    "total_duration_ms": 100045,
+    "total_human_hours": 0.0278
+  },
+  {
+    "avg_manual_event_share": 0.4996,
+    "avg_systems_touched_per_execution": 1.4211,
+    "dominant_variant_share": 0.7895,
+    "duration_ms_distribution": {
+      "max": 33798,
+      "mean": 6103.21,
+      "median": 3815,
+      "min": 662,
+      "n": 19,
+      "p25": 3670,
+      "p75": 6058
+    },
+    "event_count_distribution": {
+      "max": 21,
+      "mean": 12.68,
+      "median": 13,
+      "min": 6,
+      "n": 19,
+      "p25": 11,
+      "p75": 13
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 19,
+    "frequency_by_operator": {
+      "LAPTOP-76QMG9DE": 7,
+      "NEELA9BAF": 7,
+      "SIDDHIGUPTAB00B": 5
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 4,
+    "process_id": "app:Notepad::精算確認メモ",
+    "readable_name": "Notepad: Expense Settlement Confirmation Memo",
+    "total_duration_ms": 115961,
+    "total_human_hours": 0.0322
+  },
+  {
+    "avg_manual_event_share": 0.7671,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 9714,
+      "mean": 7951.94,
+      "median": 8197,
+      "min": 3864,
+      "n": 17,
+      "p25": 6593,
+      "p75": 9328
+    },
+    "event_count_distribution": {
+      "max": 38,
+      "mean": 36.53,
+      "median": 37,
+      "min": 33,
+      "n": 17,
+      "p25": 36,
+      "p75": 37
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 17,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 3,
+      "NEELA9BAF": 10,
+      "SIDDHIGUPTAB00B": 4
+    },
+    "n_distinct_interaction_categories": 4,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Excel::expense_calc",
+    "readable_name": "Excel: Expense Calculation Workbook",
+    "total_duration_ms": 135183,
+    "total_human_hours": 0.0376
+  },
+  {
+    "avg_manual_event_share": 0.4833,
+    "avg_systems_touched_per_execution": 1.8667,
+    "dominant_variant_share": 0.6667,
+    "duration_ms_distribution": {
+      "max": 28458,
+      "mean": 15051.8,
+      "median": 15315,
+      "min": 176,
+      "n": 15,
+      "p25": 11378,
+      "p75": 20195
+    },
+    "event_count_distribution": {
+      "max": 56,
+      "mean": 33.0,
+      "median": 32,
+      "min": 2,
+      "n": 15,
+      "p25": 29,
+      "p75": 44
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 15,
+    "frequency_by_operator": {
+      "LAPTOP-76QMG9DE": 6,
+      "NEELA9BAF": 9
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 5,
+    "process_id": "app:Microsoft Word::settai_keihi_kitei",
+    "readable_name": "Word: Entertainment Expense Regulations",
+    "total_duration_ms": 225777,
+    "total_human_hours": 0.0627
+  },
+  {
+    "avg_manual_event_share": 0.8524,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 10698,
+      "mean": 9402.6,
+      "median": 9698,
+      "min": 7212,
+      "n": 15,
+      "p25": 8687,
+      "p75": 10199
+    },
+    "event_count_distribution": {
+      "max": 87,
+      "mean": 50.47,
+      "median": 35,
+      "min": 33,
+      "n": 15,
+      "p25": 33,
+      "p75": 80
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 15,
+    "frequency_by_operator": {
+      "LAPTOP-76QMG9DE": 15
+    },
+    "n_distinct_interaction_categories": 3,
+    "n_variants": 1,
+    "process_id": "app:OpenWith",
+    "readable_name": "app:OpenWith",
+    "total_duration_ms": 141039,
+    "total_human_hours": 0.0392
+  },
+  {
+    "avg_manual_event_share": 0.0609,
+    "avg_systems_touched_per_execution": 1.2857,
+    "dominant_variant_share": 0.8571,
+    "duration_ms_distribution": {
+      "max": 28948,
+      "mean": 9009.93,
+      "median": 5738.0,
+      "min": 140,
+      "n": 14,
+      "p25": 3814,
+      "p75": 7947
+    },
+    "event_count_distribution": {
+      "max": 23,
+      "mean": 8.21,
+      "median": 5.5,
+      "min": 2,
+      "n": 14,
+      "p25": 3,
+      "p75": 13
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 14,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 1,
+      "LAPTOP-76QMG9DE": 5,
+      "NEELA9BAF": 5,
+      "SIDDHIGUPTAB00B": 3
+    },
+    "n_distinct_interaction_categories": 5,
+    "n_variants": 2,
+    "process_id": "app:ms-teams",
+    "readable_name": "app:ms-teams",
+    "total_duration_ms": 126139,
+    "total_human_hours": 0.035
+  },
+  {
+    "avg_manual_event_share": 0.3285,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 11387,
+      "mean": 6174.75,
+      "median": 4219.0,
+      "min": 1803,
+      "n": 12,
+      "p25": 3923,
+      "p75": 9790
+    },
+    "event_count_distribution": {
+      "max": 18,
+      "mean": 12.08,
+      "median": 10.0,
+      "min": 6,
+      "n": 12,
+      "p25": 8,
+      "p75": 18
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 12,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 3,
+      "LAPTOP-76QMG9DE": 4,
+      "NEELA9BAF": 3,
+      "SIDDHIGUPTAB00B": 2
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::gyomu_itaku_ukeire_tetsuzuki",
+    "readable_name": "Word: Outsourcing Intake Procedure",
+    "total_duration_ms": 74097,
+    "total_human_hours": 0.0206
+  },
+  {
+    "avg_manual_event_share": 0.0474,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 12198,
+      "mean": 3820.0,
+      "median": 3637.0,
+      "min": 195,
+      "n": 10,
+      "p25": 3371,
+      "p75": 3759
+    },
+    "event_count_distribution": {
+      "max": 13,
+      "mean": 7.3,
+      "median": 7.5,
+      "min": 4,
+      "n": 10,
+      "p25": 6,
+      "p75": 8
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 10,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 1,
+      "LAPTOP-76QMG9DE": 3,
+      "NEELA9BAF": 5,
+      "SIDDHIGUPTAB00B": 1
+    },
+    "n_distinct_interaction_categories": 7,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::getsujitsu_teigaku_torihikisaki_ichiran",
+    "readable_name": "Word: Monthly Fixed-Amount Trading-Partner List",
+    "total_duration_ms": 38200,
+    "total_human_hours": 0.0106
+  },
+  {
+    "avg_manual_event_share": 0.1089,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 9851,
+      "mean": 3925.5,
+      "median": 3553.5,
+      "min": 195,
+      "n": 8,
+      "p25": 3357,
+      "p75": 4169
+    },
+    "event_count_distribution": {
+      "max": 10,
+      "mean": 7.38,
+      "median": 7.5,
+      "min": 4,
+      "n": 8,
+      "p25": 7,
+      "p75": 9
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 8,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 3,
+      "LAPTOP-76QMG9DE": 3,
+      "NEELA9BAF": 1,
+      "SIDDHIGUPTAB00B": 1
+    },
+    "n_distinct_interaction_categories": 5,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::shinkuitorihikisaki_touroku_tetsuzuki",
+    "readable_name": "Word: New Trading-Partner Registration Procedure",
+    "total_duration_ms": 31404,
+    "total_human_hours": 0.0087
+  },
+  {
+    "avg_manual_event_share": 0.8811,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 10994,
+      "mean": 10272.71,
+      "median": 10277,
+      "min": 9177,
+      "n": 7,
+      "p25": 10047,
+      "p75": 10680
+    },
+    "event_count_distribution": {
+      "max": 83,
+      "mean": 82.86,
+      "median": 83,
+      "min": 82,
+      "n": 7,
+      "p25": 83,
+      "p75": 83
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 7,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 7
+    },
+    "n_distinct_interaction_categories": 4,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Excel::budget_analysis",
+    "readable_name": "Excel: Budget Analysis Workbook",
+    "total_duration_ms": 71909,
+    "total_human_hours": 0.02
+  },
+  {
+    "avg_manual_event_share": 0.1139,
+    "avg_systems_touched_per_execution": 1.7143,
+    "dominant_variant_share": 0.7143,
+    "duration_ms_distribution": {
+      "max": 15405,
+      "mean": 4742.0,
+      "median": 2150,
+      "min": 1154,
+      "n": 7,
+      "p25": 1228,
+      "p75": 7154
+    },
+    "event_count_distribution": {
+      "max": 14,
+      "mean": 5.71,
+      "median": 3,
+      "min": 3,
+      "n": 7,
+      "p25": 3,
+      "p75": 8
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 7,
+    "frequency_by_operator": {
+      "LAPTOP-76QMG9DE": 4,
+      "SIDDHIGUPTAB00B": 3
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 3,
+    "process_id": "app:Windows Explorer",
+    "readable_name": "app:Windows Explorer",
+    "total_duration_ms": 33194,
+    "total_human_hours": 0.0092
+  },
+  {
+    "avg_manual_event_share": 0.5291,
+    "avg_systems_touched_per_execution": 2.3333,
+    "dominant_variant_share": 0.5,
+    "duration_ms_distribution": {
+      "max": 30784,
+      "mean": 10280.17,
+      "median": 6372.5,
+      "min": 5102,
+      "n": 6,
+      "p25": 6217,
+      "p75": 6833
+    },
+    "event_count_distribution": {
+      "max": 16,
+      "mean": 14.0,
+      "median": 14.5,
+      "min": 11,
+      "n": 6,
+      "p25": 13,
+      "p75": 15
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 6,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 1,
+      "LAPTOP-76QMG9DE": 1,
+      "NEELA9BAF": 1,
+      "SIDDHIGUPTAB00B": 3
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 3,
+    "process_id": "app:Notepad::IT申請メモ",
+    "readable_name": "Notepad: IT Request Memo",
+    "total_duration_ms": 61681,
+    "total_human_hours": 0.0171
+  },
+  {
+    "avg_manual_event_share": 0.0,
+    "avg_systems_touched_per_execution": 1.3333,
+    "dominant_variant_share": 0.8333,
+    "duration_ms_distribution": {
+      "max": 644,
+      "mean": 162.33,
+      "median": 0.0,
+      "min": 0,
+      "n": 6,
+      "p25": 0,
+      "p75": 330
+    },
+    "event_count_distribution": {
+      "max": 5,
+      "mean": 2.0,
+      "median": 1.0,
+      "min": 1,
+      "n": 6,
+      "p25": 1,
+      "p75": 3
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 6,
+    "frequency_by_operator": {
+      "NEELA9BAF": 6
+    },
+    "n_distinct_interaction_categories": 3,
+    "n_variants": 2,
+    "process_id": "browser:127.0.0.1:5133",
+    "readable_name": "browser:127.0.0.1:5133",
+    "total_duration_ms": 974,
+    "total_human_hours": 0.0003
+  },
+  {
+    "avg_manual_event_share": 0.087,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 12619,
+      "mean": 4242.0,
+      "median": 2966,
+      "min": 287,
+      "n": 5,
+      "p25": 2238,
+      "p75": 3100
+    },
+    "event_count_distribution": {
+      "max": 23,
+      "mean": 10.2,
+      "median": 8,
+      "min": 6,
+      "n": 5,
+      "p25": 6,
+      "p75": 8
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 5,
+    "frequency_by_operator": {
+      "NEELA9BAF": 4,
+      "SIDDHIGUPTAB00B": 1
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::gyomu_itaku_keihi_kitei",
+    "readable_name": "Word: Outsourcing Expense Regulations",
+    "total_duration_ms": 21210,
+    "total_human_hours": 0.0059
+  },
+  {
+    "avg_manual_event_share": 0.0,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 4129,
+      "mean": 1563.8,
+      "median": 437,
+      "min": 174,
+      "n": 5,
+      "p25": 202,
+      "p75": 2877
+    },
+    "event_count_distribution": {
+      "max": 4,
+      "mean": 2.8,
+      "median": 3,
+      "min": 2,
+      "n": 5,
+      "p25": 2,
+      "p75": 3
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 5,
+    "frequency_by_operator": {
+      "LAPTOP-76QMG9DE": 2,
+      "NEELA9BAF": 1,
+      "SIDDHIGUPTAB00B": 2
+    },
+    "n_distinct_interaction_categories": 4,
+    "n_variants": 1,
+    "process_id": "app:Notepad",
+    "readable_name": "app:Notepad",
+    "total_duration_ms": 7819,
+    "total_human_hours": 0.0022
+  },
+  {
+    "avg_manual_event_share": 0.0,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 94,
+      "mean": 19.0,
+      "median": 0,
+      "min": 0,
+      "n": 5,
+      "p25": 0,
+      "p75": 1
+    },
+    "event_count_distribution": {
+      "max": 5,
+      "mean": 2.0,
+      "median": 1,
+      "min": 1,
+      "n": 5,
+      "p25": 1,
+      "p75": 2
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 5,
+    "frequency_by_operator": {
+      "NEELA9BAF": 5
+    },
+    "n_distinct_interaction_categories": 3,
+    "n_variants": 1,
+    "process_id": "browser:127.0.0.1:5134",
+    "readable_name": "browser:127.0.0.1:5134",
+    "total_duration_ms": 95,
+    "total_human_hours": 0.0
+  },
+  {
+    "avg_manual_event_share": 0.0,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 4258,
+      "mean": 3824.75,
+      "median": 3965.5,
+      "min": 3110,
+      "n": 4,
+      "p25": 3954,
+      "p75": 4258
+    },
+    "event_count_distribution": {
+      "max": 8,
+      "mean": 7.25,
+      "median": 7.0,
+      "min": 7,
+      "n": 4,
+      "p25": 7,
+      "p75": 8
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 4,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 1,
+      "NEELA9BAF": 2,
+      "SIDDHIGUPTAB00B": 1
+    },
+    "n_distinct_interaction_categories": 3,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::ikuji_kyuugyou_kitei",
+    "readable_name": "Word: Childcare Leave Regulations",
+    "total_duration_ms": 15299,
+    "total_human_hours": 0.0042
+  },
+  {
+    "avg_manual_event_share": 0.2116,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 4984,
+      "mean": 3485.0,
+      "median": 3163.0,
+      "min": 2630,
+      "n": 4,
+      "p25": 2704,
+      "p75": 4984
+    },
+    "event_count_distribution": {
+      "max": 15,
+      "mean": 10.5,
+      "median": 9.5,
+      "min": 8,
+      "n": 4,
+      "p25": 8,
+      "p75": 15
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 4,
+    "frequency_by_operator": {
+      "LAPTOP-76QMG9DE": 1,
+      "NEELA9BAF": 1,
+      "SIDDHIGUPTAB00B": 2
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::kanrisya_kengen_shinsei_tetsuzuki",
+    "readable_name": "Word: Administrator Authority Request Procedure",
+    "total_duration_ms": 13940,
+    "total_human_hours": 0.0039
+  },
+  {
+    "avg_manual_event_share": 0.2567,
+    "avg_systems_touched_per_execution": 2.5,
+    "dominant_variant_share": 0.5,
+    "duration_ms_distribution": {
+      "max": 36462,
+      "mean": 19968.75,
+      "median": 19795.0,
+      "min": 3823,
+      "n": 4,
+      "p25": 3983,
+      "p75": 36462
+    },
+    "event_count_distribution": {
+      "max": 61,
+      "mean": 32.5,
+      "median": 31.0,
+      "min": 7,
+      "n": 4,
+      "p25": 8,
+      "p75": 61
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 4,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 1,
+      "NEELA9BAF": 1,
+      "SIDDHIGUPTAB00B": 2
+    },
+    "n_distinct_interaction_categories": 6,
+    "n_variants": 3,
+    "process_id": "app:Microsoft Word::shinkui_keiyaku_tetsuzuki",
+    "readable_name": "Word: New Contract Procedure",
+    "total_duration_ms": 79875,
+    "total_human_hours": 0.0222
+  },
+  {
+    "avg_manual_event_share": 0.0,
+    "avg_systems_touched_per_execution": 1.5,
+    "dominant_variant_share": 0.75,
+    "duration_ms_distribution": {
+      "max": 795,
+      "mean": 199.25,
+      "median": 1.0,
+      "min": 0,
+      "n": 4,
+      "p25": 0,
+      "p75": 795
+    },
+    "event_count_distribution": {
+      "max": 6,
+      "mean": 2.5,
+      "median": 1.5,
+      "min": 1,
+      "n": 4,
+      "p25": 1,
+      "p75": 6
+    },
+    "excluded_from_ranking": true,
+    "execution_count": 4,
+    "frequency_by_operator": {
+      "NEELA9BAF": 4
+    },
+    "n_distinct_interaction_categories": 3,
+    "n_variants": 2,
+    "process_id": "browser:127.0.0.1:5132",
+    "readable_name": "browser:127.0.0.1:5132",
+    "total_duration_ms": 797,
+    "total_human_hours": 0.0002
+  },
+  {
+    "avg_manual_event_share": 0.0,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 4109,
+      "mean": 3794.0,
+      "median": 3653,
+      "min": 3620,
+      "n": 3,
+      "p25": 3620,
+      "p75": 4109
+    },
+    "event_count_distribution": {
+      "max": 8,
+      "mean": 7.33,
+      "median": 7,
+      "min": 7,
+      "n": 3,
+      "p25": 7,
+      "p75": 8
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 3,
+    "frequency_by_operator": {
+      "CHAITANYA0BCF": 2,
+      "NEELA9BAF": 1
+    },
+    "n_distinct_interaction_categories": 3,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::kazoku_teate_kitei",
+    "readable_name": "Word: Family Allowance Regulations",
+    "total_duration_ms": 11382,
+    "total_human_hours": 0.0032
+  },
+  {
+    "avg_manual_event_share": 0.0,
+    "avg_systems_touched_per_execution": 1.0,
+    "dominant_variant_share": 1.0,
+    "duration_ms_distribution": {
+      "max": 4274,
+      "mean": 3230.5,
+      "median": 3230.5,
+      "min": 2187,
+      "n": 2,
+      "p25": 2187,
+      "p75": 4274
+    },
+    "event_count_distribution": {
+      "max": 8,
+      "mean": 7.0,
+      "median": 7.0,
+      "min": 6,
+      "n": 2,
+      "p25": 6,
+      "p75": 8
+    },
+    "excluded_from_ranking": false,
+    "execution_count": 2,
+    "frequency_by_operator": {
+      "NEELA9BAF": 2
+    },
+    "n_distinct_interaction_categories": 4,
+    "n_variants": 1,
+    "process_id": "app:Microsoft Word::kaigo_kyuugyou_kitei",
+    "readable_name": "Word: Family-Care Leave Regulations",
+    "total_duration_ms": 6461,
+    "total_human_hours": 0.0018
+  }
+]

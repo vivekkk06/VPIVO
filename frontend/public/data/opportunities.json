@@ -1,0 +1,392 @@
+{
+  "canonical_note": "Post-entropy-fix scores. problem2_process_metrics.json and automation_priority_dataset_b.json hold superseded values and are deliberately NOT read.",
+  "canonical_source": "reports/day3/problem2_audit_results.json",
+  "pareto_frontier": {
+    "hr_on_frontier": true,
+    "n_frontier": 3,
+    "n_total": 21,
+    "processes": [
+      "Excel: Budget Analysis Workbook",
+      "HR / Payroll System",
+      "Order & Inventory Management System"
+    ]
+  },
+  "ranking": [
+    {
+      "best_rank": 1,
+      "feasibility": 0.4765,
+      "impact": 0.9236,
+      "median_rank": 1,
+      "opportunity": 0.4401,
+      "pareto_status": "frontier",
+      "process_id": "system:HR人事給与システム",
+      "rank": 1,
+      "rank_range": 2,
+      "readable_name": "HR / Payroll System",
+      "worst_rank": 3
+    },
+    {
+      "best_rank": 2,
+      "feasibility": 0.5267,
+      "impact": 0.6699,
+      "median_rank": 3,
+      "opportunity": 0.3529,
+      "pareto_status": "frontier",
+      "process_id": "system:受発注在庫管理システム",
+      "rank": 2,
+      "rank_range": 2,
+      "readable_name": "Order & Inventory Management System",
+      "worst_rank": 4
+    },
+    {
+      "best_rank": 1,
+      "feasibility": 0.9544,
+      "impact": 0.3542,
+      "median_rank": 3,
+      "opportunity": 0.338,
+      "pareto_status": "frontier",
+      "process_id": "app:Microsoft Excel::budget_analysis",
+      "rank": 3,
+      "rank_range": 4,
+      "readable_name": "Excel: Budget Analysis Workbook",
+      "worst_rank": 5
+    },
+    {
+      "best_rank": 2,
+      "feasibility": 0.3695,
+      "impact": 0.8802,
+      "median_rank": 4,
+      "opportunity": 0.3252,
+      "pareto_status": "dominated",
+      "process_id": "system:財務会計システム",
+      "rank": 4,
+      "rank_range": 5,
+      "readable_name": "Financial Accounting System",
+      "worst_rank": 7
+    },
+    {
+      "best_rank": 2,
+      "feasibility": 0.9221,
+      "impact": 0.3452,
+      "median_rank": 4,
+      "opportunity": 0.3183,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Excel::expense_calc",
+      "rank": 5,
+      "rank_range": 3,
+      "readable_name": "Excel: Expense Calculation Workbook",
+      "worst_rank": 5
+    },
+    {
+      "best_rank": 5,
+      "feasibility": 0.659,
+      "impact": 0.2678,
+      "median_rank": 6,
+      "opportunity": 0.1765,
+      "pareto_status": "dominated",
+      "process_id": "app:Notepad::在庫調整メモ",
+      "rank": 6,
+      "rank_range": 2,
+      "readable_name": "Notepad: Inventory Adjustment Memo",
+      "worst_rank": 7
+    },
+    {
+      "best_rank": 6,
+      "feasibility": 0.5653,
+      "impact": 0.3042,
+      "median_rank": 7,
+      "opportunity": 0.172,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::gyomu_itaku_kyuuyo_kitei",
+      "rank": 7,
+      "rank_range": 2,
+      "readable_name": "Word: Outsourcing Compensation Regulations",
+      "worst_rank": 8
+    },
+    {
+      "best_rank": 6,
+      "feasibility": 0.5387,
+      "impact": 0.2679,
+      "median_rank": 8,
+      "opportunity": 0.1443,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::nyusha_checklist_shinsotsu_batch",
+      "rank": 8,
+      "rank_range": 4,
+      "readable_name": "Word: New-Employee Checklist (New-Graduate Batch)",
+      "worst_rank": 10
+    },
+    {
+      "best_rank": 8,
+      "feasibility": 0.4708,
+      "impact": 0.2473,
+      "median_rank": 9,
+      "opportunity": 0.1164,
+      "pareto_status": "dominated",
+      "process_id": "app:Notepad::精算確認メモ",
+      "rank": 9,
+      "rank_range": 1,
+      "readable_name": "Notepad: Expense Settlement Confirmation Memo",
+      "worst_rank": 9
+    },
+    {
+      "best_rank": 9,
+      "feasibility": 0.7064,
+      "impact": 0.1589,
+      "median_rank": 10,
+      "opportunity": 0.1123,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::gyomu_itaku_ukeire_tetsuzuki",
+      "rank": 10,
+      "rank_range": 1,
+      "readable_name": "Word: Outsourcing Intake Procedure",
+      "worst_rank": 10
+    },
+    {
+      "best_rank": 11,
+      "feasibility": 0.2911,
+      "impact": 0.2426,
+      "median_rank": 11,
+      "opportunity": 0.0706,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::settai_keihi_kitei",
+      "rank": 11,
+      "rank_range": 0,
+      "readable_name": "Word: Entertainment Expense Regulations",
+      "worst_rank": 11
+    },
+    {
+      "best_rank": 12,
+      "feasibility": 0.6732,
+      "impact": 0.0863,
+      "median_rank": 12,
+      "opportunity": 0.0581,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::kanrisya_kengen_shinsei_tetsuzuki",
+      "rank": 12,
+      "rank_range": 0,
+      "readable_name": "Word: Administrator Authority Request Procedure",
+      "worst_rank": 12
+    },
+    {
+      "best_rank": 13,
+      "feasibility": 0.6897,
+      "impact": 0.0602,
+      "median_rank": 13,
+      "opportunity": 0.0416,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::shinkuitorihikisaki_touroku_tetsuzuki",
+      "rank": 13,
+      "rank_range": 1,
+      "readable_name": "Word: New Trading-Partner Registration Procedure",
+      "worst_rank": 14
+    },
+    {
+      "best_rank": 13,
+      "feasibility": 0.1577,
+      "impact": 0.2172,
+      "median_rank": 14,
+      "opportunity": 0.0343,
+      "pareto_status": "dominated",
+      "process_id": "app:Notepad::IT申請メモ",
+      "rank": 14,
+      "rank_range": 3,
+      "readable_name": "Notepad: IT Request Memo",
+      "worst_rank": 16
+    },
+    {
+      "best_rank": 14,
+      "feasibility": 0.1039,
+      "impact": 0.307,
+      "median_rank": 15,
+      "opportunity": 0.0319,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+      "rank": 15,
+      "rank_range": 3,
+      "readable_name": "Word: Contract Termination Procedure",
+      "worst_rank": 17
+    },
+    {
+      "best_rank": 15,
+      "feasibility": 0.6379,
+      "impact": 0.0427,
+      "median_rank": 16,
+      "opportunity": 0.0272,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::gyomu_itaku_keihi_kitei",
+      "rank": 16,
+      "rank_range": 2,
+      "readable_name": "Word: Outsourcing Expense Regulations",
+      "worst_rank": 17
+    },
+    {
+      "best_rank": 14,
+      "feasibility": 0.5811,
+      "impact": 0.0432,
+      "median_rank": 17,
+      "opportunity": 0.0251,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::getsujitsu_teigaku_torihikisaki_ichiran",
+      "rank": 17,
+      "rank_range": 3,
+      "readable_name": "Word: Monthly Fixed-Amount Trading-Partner List",
+      "worst_rank": 17
+    },
+    {
+      "best_rank": 18,
+      "feasibility": 0.1047,
+      "impact": 0.1107,
+      "median_rank": 18,
+      "opportunity": 0.0116,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::shinkui_keiyaku_tetsuzuki",
+      "rank": 18,
+      "rank_range": 1,
+      "readable_name": "Word: New Contract Procedure",
+      "worst_rank": 19
+    },
+    {
+      "best_rank": 18,
+      "feasibility": 0.75,
+      "impact": 0.0064,
+      "median_rank": 19,
+      "opportunity": 0.0048,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::ikuji_kyuugyou_kitei",
+      "rank": 19,
+      "rank_range": 1,
+      "readable_name": "Word: Childcare Leave Regulations",
+      "worst_rank": 19
+    },
+    {
+      "best_rank": 20,
+      "feasibility": 0.75,
+      "impact": 0.0033,
+      "median_rank": 20,
+      "opportunity": 0.0024,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::kazoku_teate_kitei",
+      "rank": 20,
+      "rank_range": 0,
+      "readable_name": "Word: Family Allowance Regulations",
+      "worst_rank": 20
+    },
+    {
+      "best_rank": 21,
+      "feasibility": 0.7044,
+      "impact": 0.0,
+      "median_rank": 21,
+      "opportunity": 0.0,
+      "pareto_status": "dominated",
+      "process_id": "app:Microsoft Word::kaigo_kyuugyou_kitei",
+      "rank": 21,
+      "rank_range": 0,
+      "readable_name": "Word: Family-Care Leave Regulations",
+      "worst_rank": 21
+    }
+  ],
+  "sensitivity_scenarios": {
+    "balanced": {
+      "hr_rank": 1,
+      "spearman_vs_default": 1.0,
+      "top5": [
+        "HR / Payroll System",
+        "Order & Inventory Management System",
+        "Excel: Budget Analysis Workbook",
+        "Financial Accounting System",
+        "Excel: Expense Calculation Workbook"
+      ],
+      "top_candidate_changed": false
+    },
+    "correlation_aware": {
+      "hr_rank": 3,
+      "spearman_vs_default": 0.9857,
+      "top5": [
+        "Excel: Budget Analysis Workbook",
+        "Excel: Expense Calculation Workbook",
+        "HR / Payroll System",
+        "Order & Inventory Management System",
+        "Financial Accounting System"
+      ],
+      "top_candidate_changed": true
+    },
+    "feasibility_feasibility_heavy": {
+      "hr_rank": 1,
+      "spearman_vs_default": 0.9974,
+      "top5": [
+        "HR / Payroll System",
+        "Order & Inventory Management System",
+        "Financial Accounting System",
+        "Excel: Budget Analysis Workbook",
+        "Excel: Expense Calculation Workbook"
+      ],
+      "top_candidate_changed": false
+    },
+    "feasibility_risk_averse": {
+      "hr_rank": 1,
+      "spearman_vs_default": 0.9935,
+      "top5": [
+        "HR / Payroll System",
+        "Excel: Budget Analysis Workbook",
+        "Order & Inventory Management System",
+        "Excel: Expense Calculation Workbook",
+        "Financial Accounting System"
+      ],
+      "top_candidate_changed": false
+    },
+    "frequency_heavy": {
+      "hr_rank": 1,
+      "spearman_vs_default": 0.9818,
+      "top5": [
+        "HR / Payroll System",
+        "Order & Inventory Management System",
+        "Financial Accounting System",
+        "Excel: Expense Calculation Workbook",
+        "Excel: Budget Analysis Workbook"
+      ],
+      "top_candidate_changed": false
+    },
+    "manual_effort_heavy": {
+      "hr_rank": 3,
+      "spearman_vs_default": 0.9857,
+      "top5": [
+        "Excel: Budget Analysis Workbook",
+        "Excel: Expense Calculation Workbook",
+        "HR / Payroll System",
+        "Order & Inventory Management System",
+        "Financial Accounting System"
+      ],
+      "top_candidate_changed": true
+    },
+    "time_heavy": {
+      "hr_rank": 1,
+      "spearman_vs_default": 0.9935,
+      "top5": [
+        "HR / Payroll System",
+        "Financial Accounting System",
+        "Order & Inventory Management System",
+        "Excel: Budget Analysis Workbook",
+        "Excel: Expense Calculation Workbook"
+      ],
+      "top_candidate_changed": false
+    },
+    "volume_deemphasized": {
+      "hr_rank": 3,
+      "spearman_vs_default": 0.9727,
+      "top5": [
+        "Excel: Budget Analysis Workbook",
+        "Excel: Expense Calculation Workbook",
+        "HR / Payroll System",
+        "Order & Inventory Management System",
+        "Notepad: Inventory Adjustment Memo"
+      ],
+      "top_candidate_changed": true
+    }
+  },
+  "sensitivity_summary": {
+    "mean_kendall_tau_vs_default": 0.9524,
+    "n_hr_first": 5,
+    "n_scenarios": 8
+  }
+}

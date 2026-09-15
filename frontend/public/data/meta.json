@@ -1,0 +1,63 @@
+{
+  "canonical_sources": {
+    "audit": {
+      "bytes": 17632,
+      "path": "reports/day3/problem2_audit_results.json"
+    },
+    "dataset_a_metrics": {
+      "bytes": 169861,
+      "path": "reports/day2/protected_boundary_experiment_dataset_a.json"
+    },
+    "day4_sensitivity": {
+      "bytes": 10006,
+      "path": "reports/day4/instrumentation_sensitivity_check.json"
+    },
+    "executions": {
+      "bytes": 4873714,
+      "path": "reports/day3/process_executions_dataset_b.json"
+    },
+    "health_a": {
+      "bytes": 26231,
+      "path": "reports/day4/instrumentation_health_dataset_a.json"
+    },
+    "health_b": {
+      "bytes": 5759,
+      "path": "reports/day4/instrumentation_health_dataset_b.json"
+    },
+    "hr_dominant_path": {
+      "bytes": 37151,
+      "path": "reports/day3/hr_payroll_dominant_path_dataset_b.json"
+    },
+    "mining_full": {
+      "bytes": 26009,
+      "path": "reports/day3/problem2_process_mining_full_results.json"
+    },
+    "profiles": {
+      "bytes": 26671,
+      "path": "reports/day3/process_profiles_dataset_b.json"
+    },
+    "variants": {
+      "bytes": 17901,
+      "path": "reports/day3/process_variants_dataset_b.json"
+    }
+  },
+  "generated_at": "2026-09-15T09:15:53Z",
+  "generator": "scripts/build_frontend_data.py",
+  "not_available": [
+    "raw per-event streams (dataset_a/ and dataset_b/ are gitignored; the finest persisted grain is executions[].ordered_steps)",
+    "Dataset-A PREDICTED execution boundaries (never serialised by the locked pipeline; only aggregate and per-session metrics exist)",
+    "directly-follows graphs for the 20 non-HR processes (computed in-memory by the Day-3 script but not persisted)"
+  ],
+  "outputs": {
+    "dataset-a-metrics.json": 63,
+    "executions-index.json": 645,
+    "executions/": 15,
+    "hr-payroll.json": 122,
+    "instrumentation-sensitivity.json": 21,
+    "instrumentation.json": 78,
+    "opportunities.json": 21,
+    "processes.json": 29,
+    "sessions.json": 78,
+    "variants.json": 80
+  }
+}

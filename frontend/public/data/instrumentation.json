@@ -1,0 +1,1064 @@
+{
+  "dataset_a": {
+    "baseline_agreement": {
+      "confusion": {
+        "fn": 2,
+        "fp": 0,
+        "tn": 53,
+        "tp": 8
+      },
+      "flagged_f1": {
+        "max": 0.225352,
+        "mean": 0.144105,
+        "median": 0.157895,
+        "min": 0.051282,
+        "n": 8
+      },
+      "flagged_over_segmentation": {
+        "max": 0.972973,
+        "mean": 0.547929,
+        "median": 0.471102,
+        "min": 0.307692,
+        "n": 8
+      },
+      "flagged_pct_fragmented": {
+        "max": 65.217391,
+        "mean": 47.407638,
+        "median": 47.110215,
+        "min": 30.769231,
+        "n": 8
+      },
+      "flagged_sessions": [
+        {
+          "baseline_f1": 0.225352,
+          "baseline_under_segmentation": 0.62963,
+          "coverage": 0.587734,
+          "distinct_domains": 1,
+          "machine": "LAPTOP-R36BQBTE",
+          "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE"
+        },
+        {
+          "baseline_f1": 0.181818,
+          "baseline_under_segmentation": 1.071429,
+          "coverage": 0.0,
+          "distinct_domains": 0,
+          "machine": "LAPTOP-R36BQBTE",
+          "session_id": "ses_20260630-125757-LAPTOP-R36BQBTE"
+        },
+        {
+          "baseline_f1": 0.157895,
+          "baseline_under_segmentation": 1.5,
+          "coverage": 0.0,
+          "distinct_domains": 0,
+          "machine": "LAPTOP-R36BQBTE",
+          "session_id": "ses_20260630-132737-LAPTOP-R36BQBTE"
+        },
+        {
+          "baseline_f1": 0.051282,
+          "baseline_under_segmentation": 1.5,
+          "coverage": 0.0,
+          "distinct_domains": 0,
+          "machine": "LAPTOP-R36BQBTE",
+          "session_id": "ses_20260630-135201-LAPTOP-R36BQBTE"
+        },
+        {
+          "baseline_f1": 0.164706,
+          "baseline_under_segmentation": 0.622222,
+          "coverage": 0.260032,
+          "distinct_domains": 3,
+          "machine": "SIDDHIGUPTAB00B",
+          "session_id": "ses_20260701-043922-SIDDHIGUPTAB00B"
+        },
+        {
+          "baseline_f1": 0.125,
+          "baseline_under_segmentation": 1.421053,
+          "coverage": 0.0,
+          "distinct_domains": 0,
+          "machine": "LAPTOP-R36BQBTE",
+          "session_id": "ses_20260701-051850-LAPTOP-R36BQBTE"
+        },
+        {
+          "baseline_f1": 0.157895,
+          "baseline_under_segmentation": 1.833333,
+          "coverage": 0.0,
+          "distinct_domains": 0,
+          "machine": "LAPTOP-R36BQBTE",
+          "session_id": "ses_20260701-054901-LAPTOP-R36BQBTE"
+        },
+        {
+          "baseline_f1": 0.088889,
+          "baseline_under_segmentation": 1.0,
+          "coverage": 0.0,
+          "distinct_domains": 0,
+          "machine": "LAPTOP-R36BQBTE",
+          "session_id": "ses_20260701-063106-LAPTOP-R36BQBTE"
+        }
+      ],
+      "flagged_under_segmentation": {
+        "max": 1.833333,
+        "mean": 1.197208,
+        "median": 1.246241,
+        "min": 0.622222,
+        "n": 8
+      },
+      "healthy_f1": {
+        "max": 0.43299,
+        "mean": 0.35884,
+        "median": 0.362069,
+        "min": 0.224299,
+        "n": 55
+      },
+      "healthy_over_segmentation": {
+        "max": 2.5,
+        "mean": 1.749287,
+        "median": 1.733333,
+        "min": 0.740741,
+        "n": 55
+      },
+      "healthy_pct_fragmented": {
+        "max": 100.0,
+        "mean": 83.421005,
+        "median": 84.615385,
+        "min": 25.925926,
+        "n": 55
+      },
+      "healthy_under_segmentation": {
+        "max": 0.276923,
+        "mean": 0.103704,
+        "median": 0.092105,
+        "min": 0.017241,
+        "n": 55
+      },
+      "interpretation_caveat": "These figures describe OBSERVED segmentation behaviour on flagged versus healthy sessions. They do not establish that the diagnostic predicts segmentation quality.",
+      "note": "Ground truth used ONLY to evaluate the diagnostic; the diagnostic itself consumes none. Segmentation was not re-run or modified.",
+      "poor_cut_derivation": "5th percentile of the healthy population's own F1",
+      "poor_performance_cut_f1": 0.238532,
+      "sensitivity": 0.8,
+      "specificity": 1.0
+    },
+    "by_machine": {
+      "CHAITANYA0BCF": {
+        "n": 12,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260630-124826-CHAITANYA0BCF",
+          "ses_20260630-131729-CHAITANYA0BCF",
+          "ses_20260630-135451-CHAITANYA0BCF",
+          "ses_20260701-032825-CHAITANYA0BCF",
+          "ses_20260701-051820-CHAITANYA0BCF",
+          "ses_20260701-054930-CHAITANYA0BCF",
+          "ses_20260701-065151-CHAITANYA0BCF",
+          "ses_20260701-072435-CHAITANYA0BCF",
+          "ses_20260701-075548-CHAITANYA0BCF",
+          "ses_20260701-081732-CHAITANYA0BCF",
+          "ses_20260701-152030-CHAITANYA0BCF",
+          "ses_20260701-155031-CHAITANYA0BCF"
+        ]
+      },
+      "JAYESH": {
+        "n": 2,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260630-145433-JAYESH",
+          "ses_20260701-070320-JAYESH"
+        ]
+      },
+      "LAPTOP-0IM1OHQH": {
+        "n": 7,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260701-075604-LAPTOP-0IM1OHQH",
+          "ses_20260701-083656-LAPTOP-0IM1OHQH",
+          "ses_20260701-095337-LAPTOP-0IM1OHQH",
+          "ses_20260701-103521-LAPTOP-0IM1OHQH",
+          "ses_20260701-110548-LAPTOP-0IM1OHQH",
+          "ses_20260701-120828-LAPTOP-0IM1OHQH",
+          "ses_20260701-124550-LAPTOP-0IM1OHQH"
+        ]
+      },
+      "LAPTOP-R36BQBTE": {
+        "n": 7,
+        "n_degraded": 7,
+        "sessions": [
+          "ses_20260630-121953-LAPTOP-R36BQBTE",
+          "ses_20260630-125757-LAPTOP-R36BQBTE",
+          "ses_20260630-132737-LAPTOP-R36BQBTE",
+          "ses_20260630-135201-LAPTOP-R36BQBTE",
+          "ses_20260701-051850-LAPTOP-R36BQBTE",
+          "ses_20260701-054901-LAPTOP-R36BQBTE",
+          "ses_20260701-063106-LAPTOP-R36BQBTE"
+        ]
+      },
+      "MSI": {
+        "n": 8,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260630-164418-MSI",
+          "ses_20260701-053005-MSI",
+          "ses_20260701-055918-MSI",
+          "ses_20260701-062732-MSI",
+          "ses_20260701-072319-MSI",
+          "ses_20260701-124636-MSI",
+          "ses_20260701-131247-MSI",
+          "ses_20260701-145907-MSI"
+        ]
+      },
+      "Marcos": {
+        "n": 10,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260701-055037-Marcos",
+          "ses_20260701-062250-Marcos",
+          "ses_20260701-071849-Marcos",
+          "ses_20260701-090300-Marcos",
+          "ses_20260701-093900-Marcos",
+          "ses_20260701-100550-Marcos",
+          "ses_20260701-103853-Marcos",
+          "ses_20260701-110917-Marcos",
+          "ses_20260701-120612-Marcos",
+          "ses_20260701-123729-Marcos"
+        ]
+      },
+      "SIDDHIGUPTAB00B": {
+        "n": 12,
+        "n_degraded": 1,
+        "sessions": [
+          "ses_20260630-163424-SIDDHIGUPTAB00B",
+          "ses_20260701-035622-SIDDHIGUPTAB00B",
+          "ses_20260701-043922-SIDDHIGUPTAB00B",
+          "ses_20260701-053720-SIDDHIGUPTAB00B",
+          "ses_20260701-074424-SIDDHIGUPTAB00B",
+          "ses_20260701-081120-SIDDHIGUPTAB00B",
+          "ses_20260701-092027-SIDDHIGUPTAB00B",
+          "ses_20260701-115141-SIDDHIGUPTAB00B",
+          "ses_20260701-124033-SIDDHIGUPTAB00B",
+          "ses_20260701-131015-SIDDHIGUPTAB00B",
+          "ses_20260701-134215-SIDDHIGUPTAB00B",
+          "ses_20260701-141430-SIDDHIGUPTAB00B"
+        ]
+      },
+      "yuvraj": {
+        "n": 5,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260701-005920-yuvraj",
+          "ses_20260701-014804-yuvraj",
+          "ses_20260701-022828-yuvraj",
+          "ses_20260701-030836-yuvraj",
+          "ses_20260701-172430-yuvraj"
+        ]
+      }
+    },
+    "dataset": "dataset_a",
+    "per_session": [
+      {
+        "browser_domain_coverage": 0.587734,
+        "n_distinct_browser_domains": 1,
+        "n_events": 2348,
+        "n_events_with_browser_domain": 1380,
+        "session_id": "ses_20260630-121953-LAPTOP-R36BQBTE",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 1 distinct value(s), below the 2 required for a domain-change signal to be observable at all"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.582359,
+        "n_distinct_browser_domains": 3,
+        "n_events": 3163,
+        "n_events_with_browser_domain": 1842,
+        "session_id": "ses_20260630-124826-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.0,
+        "n_distinct_browser_domains": 0,
+        "n_events": 1799,
+        "n_events_with_browser_domain": 0,
+        "session_id": "ses_20260630-125757-LAPTOP-R36BQBTE",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 0 distinct value(s), below the 2 required for a domain-change signal to be observable at all",
+          "browser_domain coverage is materially degraded (0.0% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.539581,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2198,
+        "n_events_with_browser_domain": 1186,
+        "session_id": "ses_20260630-131729-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.0,
+        "n_distinct_browser_domains": 0,
+        "n_events": 2025,
+        "n_events_with_browser_domain": 0,
+        "session_id": "ses_20260630-132737-LAPTOP-R36BQBTE",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 0 distinct value(s), below the 2 required for a domain-change signal to be observable at all",
+          "browser_domain coverage is materially degraded (0.0% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.0,
+        "n_distinct_browser_domains": 0,
+        "n_events": 2020,
+        "n_events_with_browser_domain": 0,
+        "session_id": "ses_20260630-135201-LAPTOP-R36BQBTE",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 0 distinct value(s), below the 2 required for a domain-change signal to be observable at all",
+          "browser_domain coverage is materially degraded (0.0% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.559858,
+        "n_distinct_browser_domains": 3,
+        "n_events": 3099,
+        "n_events_with_browser_domain": 1735,
+        "session_id": "ses_20260630-135451-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.567328,
+        "n_distinct_browser_domains": 3,
+        "n_events": 3379,
+        "n_events_with_browser_domain": 1917,
+        "session_id": "ses_20260630-145433-JAYESH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.558598,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2483,
+        "n_events_with_browser_domain": 1387,
+        "session_id": "ses_20260630-163424-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.464185,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2848,
+        "n_events_with_browser_domain": 1322,
+        "session_id": "ses_20260630-164418-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.591064,
+        "n_distinct_browser_domains": 7,
+        "n_events": 2641,
+        "n_events_with_browser_domain": 1561,
+        "session_id": "ses_20260701-005920-yuvraj",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.657455,
+        "n_distinct_browser_domains": 6,
+        "n_events": 2750,
+        "n_events_with_browser_domain": 1808,
+        "session_id": "ses_20260701-014804-yuvraj",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.694647,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2335,
+        "n_events_with_browser_domain": 1622,
+        "session_id": "ses_20260701-022828-yuvraj",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.688509,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2106,
+        "n_events_with_browser_domain": 1450,
+        "session_id": "ses_20260701-030836-yuvraj",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.547656,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2560,
+        "n_events_with_browser_domain": 1402,
+        "session_id": "ses_20260701-032825-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.476383,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2964,
+        "n_events_with_browser_domain": 1412,
+        "session_id": "ses_20260701-035622-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.260032,
+        "n_distinct_browser_domains": 3,
+        "n_events": 3115,
+        "n_events_with_browser_domain": 810,
+        "session_id": "ses_20260701-043922-SIDDHIGUPTAB00B",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain coverage is materially degraded (26.0% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.527107,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2195,
+        "n_events_with_browser_domain": 1157,
+        "session_id": "ses_20260701-051820-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.0,
+        "n_distinct_browser_domains": 0,
+        "n_events": 2500,
+        "n_events_with_browser_domain": 0,
+        "session_id": "ses_20260701-051850-LAPTOP-R36BQBTE",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 0 distinct value(s), below the 2 required for a domain-change signal to be observable at all",
+          "browser_domain coverage is materially degraded (0.0% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.529828,
+        "n_distinct_browser_domains": 5,
+        "n_events": 2682,
+        "n_events_with_browser_domain": 1421,
+        "session_id": "ses_20260701-053005-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.588568,
+        "n_distinct_browser_domains": 3,
+        "n_events": 3009,
+        "n_events_with_browser_domain": 1771,
+        "session_id": "ses_20260701-053720-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.0,
+        "n_distinct_browser_domains": 0,
+        "n_events": 2417,
+        "n_events_with_browser_domain": 0,
+        "session_id": "ses_20260701-054901-LAPTOP-R36BQBTE",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 0 distinct value(s), below the 2 required for a domain-change signal to be observable at all",
+          "browser_domain coverage is materially degraded (0.0% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.640899,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2626,
+        "n_events_with_browser_domain": 1683,
+        "session_id": "ses_20260701-054930-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.568154,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2487,
+        "n_events_with_browser_domain": 1413,
+        "session_id": "ses_20260701-055037-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.587929,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2883,
+        "n_events_with_browser_domain": 1695,
+        "session_id": "ses_20260701-055918-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.544835,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2643,
+        "n_events_with_browser_domain": 1440,
+        "session_id": "ses_20260701-062250-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.560227,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2640,
+        "n_events_with_browser_domain": 1479,
+        "session_id": "ses_20260701-062732-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.0,
+        "n_distinct_browser_domains": 0,
+        "n_events": 2106,
+        "n_events_with_browser_domain": 0,
+        "session_id": "ses_20260701-063106-LAPTOP-R36BQBTE",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 0 distinct value(s), below the 2 required for a domain-change signal to be observable at all",
+          "browser_domain coverage is materially degraded (0.0% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.596014,
+        "n_distinct_browser_domains": 3,
+        "n_events": 3312,
+        "n_events_with_browser_domain": 1974,
+        "session_id": "ses_20260701-065151-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.574609,
+        "n_distinct_browser_domains": 13,
+        "n_events": 3773,
+        "n_events_with_browser_domain": 2168,
+        "session_id": "ses_20260701-070320-JAYESH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.569492,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2360,
+        "n_events_with_browser_domain": 1344,
+        "session_id": "ses_20260701-071849-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.580504,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2739,
+        "n_events_with_browser_domain": 1590,
+        "session_id": "ses_20260701-072319-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.553067,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2902,
+        "n_events_with_browser_domain": 1605,
+        "session_id": "ses_20260701-072435-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.551092,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2564,
+        "n_events_with_browser_domain": 1413,
+        "session_id": "ses_20260701-074424-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.577716,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1795,
+        "n_events_with_browser_domain": 1037,
+        "session_id": "ses_20260701-075548-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.576184,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2343,
+        "n_events_with_browser_domain": 1350,
+        "session_id": "ses_20260701-075604-LAPTOP-0IM1OHQH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.612158,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2336,
+        "n_events_with_browser_domain": 1430,
+        "session_id": "ses_20260701-081120-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.556017,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2169,
+        "n_events_with_browser_domain": 1206,
+        "session_id": "ses_20260701-081732-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.639421,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2557,
+        "n_events_with_browser_domain": 1635,
+        "session_id": "ses_20260701-083656-LAPTOP-0IM1OHQH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.564731,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2773,
+        "n_events_with_browser_domain": 1566,
+        "session_id": "ses_20260701-090300-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.56909,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2627,
+        "n_events_with_browser_domain": 1495,
+        "session_id": "ses_20260701-092027-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.594886,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2229,
+        "n_events_with_browser_domain": 1326,
+        "session_id": "ses_20260701-093900-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.538091,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2494,
+        "n_events_with_browser_domain": 1342,
+        "session_id": "ses_20260701-095337-LAPTOP-0IM1OHQH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.610035,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2890,
+        "n_events_with_browser_domain": 1763,
+        "session_id": "ses_20260701-100550-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.575595,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2606,
+        "n_events_with_browser_domain": 1500,
+        "session_id": "ses_20260701-103521-LAPTOP-0IM1OHQH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.635913,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2623,
+        "n_events_with_browser_domain": 1668,
+        "session_id": "ses_20260701-103853-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.574573,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2226,
+        "n_events_with_browser_domain": 1279,
+        "session_id": "ses_20260701-110548-LAPTOP-0IM1OHQH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.606309,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2441,
+        "n_events_with_browser_domain": 1480,
+        "session_id": "ses_20260701-110917-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.599663,
+        "n_distinct_browser_domains": 4,
+        "n_events": 3557,
+        "n_events_with_browser_domain": 2133,
+        "session_id": "ses_20260701-115141-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.583511,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2341,
+        "n_events_with_browser_domain": 1366,
+        "session_id": "ses_20260701-120612-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.569906,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2346,
+        "n_events_with_browser_domain": 1337,
+        "session_id": "ses_20260701-120828-LAPTOP-0IM1OHQH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.625922,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2577,
+        "n_events_with_browser_domain": 1613,
+        "session_id": "ses_20260701-123729-Marcos",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.576183,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2704,
+        "n_events_with_browser_domain": 1558,
+        "session_id": "ses_20260701-124033-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.576078,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2550,
+        "n_events_with_browser_domain": 1469,
+        "session_id": "ses_20260701-124550-LAPTOP-0IM1OHQH",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.537672,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2827,
+        "n_events_with_browser_domain": 1520,
+        "session_id": "ses_20260701-124636-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.593996,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2798,
+        "n_events_with_browser_domain": 1662,
+        "session_id": "ses_20260701-131015-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.573916,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2929,
+        "n_events_with_browser_domain": 1681,
+        "session_id": "ses_20260701-131247-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.579184,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2892,
+        "n_events_with_browser_domain": 1675,
+        "session_id": "ses_20260701-134215-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.615625,
+        "n_distinct_browser_domains": 4,
+        "n_events": 3200,
+        "n_events_with_browser_domain": 1970,
+        "session_id": "ses_20260701-141430-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.575494,
+        "n_distinct_browser_domains": 4,
+        "n_events": 2987,
+        "n_events_with_browser_domain": 1719,
+        "session_id": "ses_20260701-145907-MSI",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.480423,
+        "n_distinct_browser_domains": 3,
+        "n_events": 945,
+        "n_events_with_browser_domain": 454,
+        "session_id": "ses_20260701-152030-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.491265,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2404,
+        "n_events_with_browser_domain": 1181,
+        "session_id": "ses_20260701-155031-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.661315,
+        "n_distinct_browser_domains": 4,
+        "n_events": 1931,
+        "n_events_with_browser_domain": 1277,
+        "session_id": "ses_20260701-172430-yuvraj",
+        "status": "healthy",
+        "warnings": []
+      }
+    ],
+    "summary": {
+      "degraded_session_ids": [
+        "ses_20260630-121953-LAPTOP-R36BQBTE",
+        "ses_20260630-125757-LAPTOP-R36BQBTE",
+        "ses_20260630-132737-LAPTOP-R36BQBTE",
+        "ses_20260630-135201-LAPTOP-R36BQBTE",
+        "ses_20260701-043922-SIDDHIGUPTAB00B",
+        "ses_20260701-051850-LAPTOP-R36BQBTE",
+        "ses_20260701-054901-LAPTOP-R36BQBTE",
+        "ses_20260701-063106-LAPTOP-R36BQBTE"
+      ],
+      "n_degraded": 8,
+      "n_healthy": 55,
+      "n_sessions": 63,
+      "thresholds": {
+        "min_browser_domain_coverage": 0.4,
+        "min_distinct_browser_domains": 2
+      }
+    }
+  },
+  "dataset_b": {
+    "by_machine": {
+      "CHAITANYA0BCF": {
+        "n": 2,
+        "n_degraded": 1,
+        "sessions": [
+          "ses_20260701-164424-CHAITANYA0BCF",
+          "ses_20260701-171614-CHAITANYA0BCF"
+        ]
+      },
+      "LAPTOP-76QMG9DE": {
+        "n": 5,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260701-175258-LAPTOP-76QMG9DE",
+          "ses_20260701-181413-LAPTOP-76QMG9DE",
+          "ses_20260701-183232-LAPTOP-76QMG9DE",
+          "ses_20260701-184201-LAPTOP-76QMG9DE",
+          "ses_20260701-191537-LAPTOP-76QMG9DE"
+        ]
+      },
+      "NEELA9BAF": {
+        "n": 5,
+        "n_degraded": 1,
+        "sessions": [
+          "ses_20260701-173642-NEELA9BAF",
+          "ses_20260701-180923-NEELA9BAF",
+          "ses_20260701-182634-NEELA9BAF",
+          "ses_20260701-190250-NEELA9BAF",
+          "ses_20260701-192455-NEELA9BAF"
+        ]
+      },
+      "SIDDHIGUPTAB00B": {
+        "n": 3,
+        "n_degraded": 0,
+        "sessions": [
+          "ses_20260701-173246-SIDDHIGUPTAB00B",
+          "ses_20260701-175747-SIDDHIGUPTAB00B",
+          "ses_20260701-181913-SIDDHIGUPTAB00B"
+        ]
+      }
+    },
+    "dataset": "dataset_b",
+    "per_session": [
+      {
+        "browser_domain_coverage": 0.371978,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1613,
+        "n_events_with_browser_domain": 600,
+        "session_id": "ses_20260701-164424-CHAITANYA0BCF",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain coverage is materially degraded (37.2% of events, below the 40% threshold)"
+        ]
+      },
+      {
+        "browser_domain_coverage": 0.422829,
+        "n_distinct_browser_domains": 3,
+        "n_events": 2015,
+        "n_events_with_browser_domain": 852,
+        "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.530229,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1439,
+        "n_events_with_browser_domain": 763,
+        "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.566901,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1136,
+        "n_events_with_browser_domain": 644,
+        "session_id": "ses_20260701-173642-NEELA9BAF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.509677,
+        "n_distinct_browser_domains": 4,
+        "n_events": 1550,
+        "n_events_with_browser_domain": 790,
+        "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.597403,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1309,
+        "n_events_with_browser_domain": 782,
+        "session_id": "ses_20260701-175747-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.506301,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1349,
+        "n_events_with_browser_domain": 683,
+        "session_id": "ses_20260701-180923-NEELA9BAF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.486166,
+        "n_distinct_browser_domains": 4,
+        "n_events": 1518,
+        "n_events_with_browser_domain": 738,
+        "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.474678,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1165,
+        "n_events_with_browser_domain": 553,
+        "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.517483,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1001,
+        "n_events_with_browser_domain": 518,
+        "session_id": "ses_20260701-182634-NEELA9BAF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.65557,
+        "n_distinct_browser_domains": 3,
+        "n_events": 781,
+        "n_events_with_browser_domain": 512,
+        "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.439578,
+        "n_distinct_browser_domains": 4,
+        "n_events": 1895,
+        "n_events_with_browser_domain": 833,
+        "session_id": "ses_20260701-184201-LAPTOP-76QMG9DE",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.504363,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1146,
+        "n_events_with_browser_domain": 578,
+        "session_id": "ses_20260701-190250-NEELA9BAF",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.43662,
+        "n_distinct_browser_domains": 3,
+        "n_events": 1562,
+        "n_events_with_browser_domain": 682,
+        "session_id": "ses_20260701-191537-LAPTOP-76QMG9DE",
+        "status": "healthy",
+        "warnings": []
+      },
+      {
+        "browser_domain_coverage": 0.0,
+        "n_distinct_browser_domains": 0,
+        "n_events": 998,
+        "n_events_with_browser_domain": 0,
+        "session_id": "ses_20260701-192455-NEELA9BAF",
+        "status": "degraded",
+        "warnings": [
+          "browser_domain has 0 distinct value(s), below the 2 required for a domain-change signal to be observable at all",
+          "browser_domain coverage is materially degraded (0.0% of events, below the 40% threshold)"
+        ]
+      }
+    ],
+    "summary": {
+      "degraded_session_ids": [
+        "ses_20260701-164424-CHAITANYA0BCF",
+        "ses_20260701-192455-NEELA9BAF"
+      ],
+      "n_degraded": 2,
+      "n_healthy": 13,
+      "n_sessions": 15,
+      "thresholds": {
+        "min_browser_domain_coverage": 0.4,
+        "min_distinct_browser_domains": 2
+      }
+    }
+  },
+  "note": "Day-4 diagnostic output copied verbatim. Thresholds and status are owned by procmine.instrumentation_health."
+}

@@ -1,0 +1,7757 @@
+[
+  {
+    "applications": [
+      "Microsoft Edge",
+      "Notepad"
+    ],
+    "dominant_context": "system:受発注在庫管理システム",
+    "duration_ms": 21809,
+    "end_ms": 1782930773941,
+    "event_count": 40,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec0",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "session_start",
+            1
+          ]
+        ],
+        "end_ms": 1782930752132,
+        "interaction_category": "system",
+        "n_events": 1,
+        "start_ms": 1782930752132,
+        "system": null
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_navigation",
+            1
+          ]
+        ],
+        "end_ms": 1782930760532,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930760532,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "extension_connected",
+            1
+          ]
+        ],
+        "end_ms": 1782930760571,
+        "interaction_category": "system",
+        "n_events": 1,
+        "start_ms": 1782930760571,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_error",
+            1
+          ]
+        ],
+        "end_ms": 1782930760577,
+        "interaction_category": "ui_state",
+        "n_events": 1,
+        "start_ms": 1782930760577,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "extension_connected",
+            2
+          ]
+        ],
+        "end_ms": 1782930760925,
+        "interaction_category": "system",
+        "n_events": 2,
+        "start_ms": 1782930760795,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930761146,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930761146,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_navigation",
+            2
+          ]
+        ],
+        "end_ms": 1782930761570,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782930761561,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_error",
+            2
+          ]
+        ],
+        "end_ms": 1782930761606,
+        "interaction_category": "ui_state",
+        "n_events": 2,
+        "start_ms": 1782930761605,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            2
+          ]
+        ],
+        "end_ms": 1782930762624,
+        "interaction_category": "capture",
+        "n_events": 2,
+        "start_ms": 1782930762484,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930764456,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930764456,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930764720,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930764720,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "window_state_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930765083,
+        "interaction_category": "ui_state",
+        "n_events": 1,
+        "start_ms": 1782930765083,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930765087,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930765087,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            2
+          ]
+        ],
+        "end_ms": 1782930766656,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782930766481,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930766697,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930766697,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "window_state_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930767062,
+        "interaction_category": "ui_state",
+        "n_events": 1,
+        "start_ms": 1782930767062,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930767974,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930767974,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "window_state_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930767987,
+        "interaction_category": "ui_state",
+        "n_events": 1,
+        "start_ms": 1782930767987,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            6
+          ]
+        ],
+        "end_ms": 1782930768034,
+        "interaction_category": "navigation",
+        "n_events": 6,
+        "start_ms": 1782930767995,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930768066,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930768066,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "window_title_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930768271,
+        "interaction_category": "ui_state",
+        "n_events": 1,
+        "start_ms": 1782930768271,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            5
+          ],
+          [
+            "browser_navigation",
+            1
+          ]
+        ],
+        "end_ms": 1782930771696,
+        "interaction_category": "navigation",
+        "n_events": 6,
+        "start_ms": 1782930768332,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930771785,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930771785,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930773844,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930773844,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930773941,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930773941,
+        "system": "system:受発注在庫管理システム"
+      }
+    ],
+    "process_readable_name": "Order & Inventory Management System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930752132
+  },
+  {
+    "applications": [
+      "Microsoft Edge"
+    ],
+    "dominant_context": "system:HR人事給与システム",
+    "duration_ms": 14857,
+    "end_ms": 1782930789099,
+    "event_count": 43,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec1",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930775399,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930774242,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930775482,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930775482,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930775766,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930775763,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930776813,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930776812,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930777840,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930777840,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930778003,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930778003,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            2
+          ]
+        ],
+        "end_ms": 1782930778760,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782930778050,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930778778,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930778778,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930778989,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930778986,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930780626,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930780626,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930780671,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930780671,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930780969,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930780967,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930781138,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930781138,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930781211,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930781209,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930781409,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930781409,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930784485,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930784485,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930784570,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930784570,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930786120,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930784657,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930786218,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930786218,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930786402,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930786396,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930786869,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930786869,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930786939,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930786934,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930787049,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930787049,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930788950,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930788950,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930789023,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930789020,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930789099,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930789099,
+        "system": "system:HR人事給与システム"
+      }
+    ],
+    "process_readable_name": "HR / Payroll System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930774242
+  },
+  {
+    "applications": [
+      "Notepad"
+    ],
+    "dominant_context": "app:Notepad::精算確認メモ",
+    "duration_ms": 6483,
+    "end_ms": 1782930797517,
+    "event_count": 15,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec2",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930791034,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930791034,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930791364,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930791364,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930791376,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930791369,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930791533,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930791533,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930791615,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930791613,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "window_title_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930791844,
+        "interaction_category": "ui_state",
+        "n_events": 1,
+        "start_ms": 1782930791844,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930791898,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930791898,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_navigation",
+            1
+          ]
+        ],
+        "end_ms": 1782930795491,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930795491,
+        "system": "browser:127.0.0.1:5134"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930795566,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930795566,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930797487,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930797487,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930797517,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930797517,
+        "system": "app:Notepad"
+      }
+    ],
+    "process_readable_name": "Notepad: Expense Settlement Confirmation Memo",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930791034
+  },
+  {
+    "applications": [
+      "Microsoft Edge"
+    ],
+    "dominant_context": "system:受発注在庫管理システム",
+    "duration_ms": 32440,
+    "end_ms": 1782930830475,
+    "event_count": 79,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec3",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930798052,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930798035,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930798153,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930798153,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930799194,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930799194,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930799289,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930799289,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930799719,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930799714,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930799826,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930799826,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930800175,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930800175,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930800256,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930800254,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930800370,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930800370,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930802276,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930802276,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930802353,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930802350,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930802424,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930802424,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930805993,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930805993,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930806076,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930806076,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930807458,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930806316,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930807570,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930807570,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930807879,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930807875,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930808334,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930808334,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930808416,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930808413,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930808506,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930808506,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930810437,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930810437,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930810787,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930810783,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930810855,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930810855,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930812828,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930812828,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930812908,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930812908,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930813169,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930813167,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930813327,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930813327,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930813408,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930813406,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930813451,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930813451,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930816951,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930816951,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930817021,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930817021,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930818558,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930817122,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930818682,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930818682,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930819080,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930819077,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930819551,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930819551,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930819623,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930819622,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930819836,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930819836,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930821776,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930821776,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930822021,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930822017,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930822088,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930822088,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930825727,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930825727,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930825821,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930825821,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ],
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930827369,
+        "interaction_category": "pointer",
+        "n_events": 4,
+        "start_ms": 1782930826028,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930827379,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930827379,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930827793,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930827790,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930828245,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930828245,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930828330,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930828328,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930828427,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930828427,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930830341,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930830341,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930830393,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930830390,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930830475,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930830475,
+        "system": "system:受発注在庫管理システム"
+      }
+    ],
+    "process_readable_name": "Order & Inventory Management System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930798035
+  },
+  {
+    "applications": [
+      "Notepad"
+    ],
+    "dominant_context": "app:Notepad::在庫調整メモ",
+    "duration_ms": 22559,
+    "end_ms": 1782930854650,
+    "event_count": 19,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec4",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930832091,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930832091,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930832163,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930832163,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930832421,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930832418,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930832585,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930832585,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930832660,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930832658,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930832794,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930832794,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "window_title_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930832876,
+        "interaction_category": "ui_state",
+        "n_events": 1,
+        "start_ms": 1782930832876,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930836756,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930836756,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930837012,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930837012,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930852914,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930838884,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930852989,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930852989,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930854335,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930854335,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930854594,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930854594,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930854650,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930854650,
+        "system": "app:Notepad"
+      }
+    ],
+    "process_readable_name": "Notepad: Inventory Adjustment Memo",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930832091
+  },
+  {
+    "applications": [
+      "Windows Explorer",
+      "WindowsTerminal"
+    ],
+    "dominant_context": "app:WindowsTerminal",
+    "duration_ms": 10258,
+    "end_ms": 1782930870387,
+    "event_count": 6,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec5",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930860129,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930860129,
+        "system": "app:WindowsTerminal"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930860460,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930860460,
+        "system": "app:Windows Explorer"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930860535,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930860535,
+        "system": "app:WindowsTerminal"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            2
+          ]
+        ],
+        "end_ms": 1782930870342,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782930860686,
+        "system": "app:WindowsTerminal"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930870387,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930870387,
+        "system": "app:WindowsTerminal"
+      }
+    ],
+    "process_readable_name": "app:WindowsTerminal",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930860129
+  },
+  {
+    "applications": [
+      "Microsoft Edge"
+    ],
+    "dominant_context": "system:HR人事給与システム",
+    "duration_ms": 97360,
+    "end_ms": 1782930968157,
+    "event_count": 204,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec6",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930872126,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930870797,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930872143,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930872143,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930872393,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930872390,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930872862,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930872862,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930872943,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930872932,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930873073,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930873073,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930874942,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930874942,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930874963,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930874961,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930875033,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930875033,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930878918,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930878918,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930879000,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930879000,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930879467,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930879321,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930879544,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930879544,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930880564,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930880564,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930880575,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930880575,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930881051,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930881049,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930881513,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930881513,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930881600,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930881599,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930881615,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930881615,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930883624,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930883624,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930883843,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930883840,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930883869,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930883869,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930887151,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930887151,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930887249,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930887249,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930887708,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930887550,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930887800,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930887800,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930888790,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930888790,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930888853,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930888853,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930889278,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930889274,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930889739,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930889739,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930889817,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930889814,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930889893,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930889893,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930891832,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930891832,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930892170,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930892167,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930892241,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930892241,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930894058,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930894058,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930894095,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930894095,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930894393,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930894390,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930894600,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930894600,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930894674,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930894672,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930894735,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930894735,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930897651,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930897651,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930897693,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930897693,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930898201,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930897990,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930898230,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930898230,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930899120,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930899120,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930899187,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930899187,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930899574,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930899571,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930900104,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930900104,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930900113,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930900111,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930900205,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930900205,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930902118,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930902118,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930902200,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930902196,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930902248,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930902248,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930903870,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930903870,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930903925,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930903925,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930909538,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930909538,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930909630,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930909630,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930910080,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930910023,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930910169,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930910169,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930911354,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930911354,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930911409,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930911409,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930911751,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930911748,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930912216,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930912216,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930912288,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930912287,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930912348,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930912348,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930914293,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930914293,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930914733,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930914730,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930914803,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930914803,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930918149,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930918149,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930918176,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930918176,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930918700,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930918666,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930918715,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930918715,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930919784,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930919784,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930919859,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930919859,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930920167,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930920164,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930920633,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930920633,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930920711,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930920710,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930920798,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930920798,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930922717,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930922717,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930923063,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930923061,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930923138,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930923138,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930924582,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930924582,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930924694,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930924694,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930927652,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930927652,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930927756,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930927756,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930928256,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930928253,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930928287,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930928287,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782930929651,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930928372,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930929721,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930929721,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930930138,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930930134,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930930594,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930930594,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930930675,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930930674,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930930764,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930930764,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930932700,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930932700,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930932913,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930932910,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930932927,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930932927,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930936591,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930936591,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930936683,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930936683,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930937181,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930937178,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930937239,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930937239,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782930938598,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930937320,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930938686,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930938686,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930938969,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930938967,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930939434,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930939434,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930939507,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930939506,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930939625,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930939625,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930941521,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930941521,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930941822,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930941818,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930941878,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930941878,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930948649,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930948649,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930948686,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930948686,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930949198,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930949134,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930949218,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930949218,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930950292,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930950292,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930950355,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930950355,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930950626,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930950622,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930951087,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930951087,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930951163,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930951161,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930951293,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930951293,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930953177,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930953177,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930953476,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930953474,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930953538,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930953538,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930957090,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930957090,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930957143,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930957143,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930957609,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930957483,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930957698,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930957698,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930958524,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930958524,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930958545,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930958545,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930959019,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930959016,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930959482,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930959482,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930959560,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930959559,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930959581,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930959581,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930961570,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930961570,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930961714,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930961712,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930961823,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930961823,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_navigation",
+            1
+          ]
+        ],
+        "end_ms": 1782930966436,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930966436,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930966516,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930966516,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930968107,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930968107,
+        "system": "system:HR人事給与システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930968157,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930968157,
+        "system": "system:HR人事給与システム"
+      }
+    ],
+    "process_readable_name": "HR / Payroll System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930870797
+  },
+  {
+    "applications": [
+      "Microsoft Edge"
+    ],
+    "dominant_context": "system:受発注在庫管理システム",
+    "duration_ms": 15736,
+    "end_ms": 1782930984422,
+    "event_count": 33,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec7",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930968697,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930968686,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930968793,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930968793,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930969802,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930969802,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930969828,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930969828,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930970269,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930970266,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930970732,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930970732,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930970804,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930970802,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930970859,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930970859,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930972827,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930972827,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930973070,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930973067,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930973105,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930973105,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930979686,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930979686,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930979804,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930979804,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930981328,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782930979844,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930981350,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930981350,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930981704,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930981702,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930982188,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930982188,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930982256,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930982255,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930982282,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930982282,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782930984264,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782930984264,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782930984359,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782930984355,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930984422,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930984422,
+        "system": "system:受発注在庫管理システム"
+      }
+    ],
+    "process_readable_name": "Order & Inventory Management System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930968686
+  },
+  {
+    "applications": [
+      "Microsoft Word"
+    ],
+    "dominant_context": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+    "duration_ms": 7876,
+    "end_ms": 1782930995413,
+    "event_count": 22,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec8",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930987537,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930987537,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930987880,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930987880,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            2
+          ]
+        ],
+        "end_ms": 1782930988343,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782930987966,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930988434,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930988434,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782930991611,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782930991611,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930991647,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930991647,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930992756,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782930992754,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930992921,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930992921,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ]
+        ],
+        "end_ms": 1782930993712,
+        "interaction_category": "input",
+        "n_events": 2,
+        "start_ms": 1782930993711,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930993766,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930993766,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782930993789,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782930993789,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            4
+          ],
+          [
+            "shortcut",
+            2
+          ]
+        ],
+        "end_ms": 1782930995143,
+        "interaction_category": "input",
+        "n_events": 6,
+        "start_ms": 1782930993850,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782930995413,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782930995413,
+        "system": "app:Microsoft Word"
+      }
+    ],
+    "process_readable_name": "Word: Contract Termination Procedure",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930987537
+  },
+  {
+    "applications": [
+      "Microsoft Edge"
+    ],
+    "dominant_context": "system:受発注在庫管理システム",
+    "duration_ms": 4796,
+    "end_ms": 1782931001659,
+    "event_count": 11,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec9",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            4
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782930997419,
+        "interaction_category": "input",
+        "n_events": 5,
+        "start_ms": 1782930996863,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782930997972,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782930997972,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "window_state_change",
+            1
+          ],
+          [
+            "window_title_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931001249,
+        "interaction_category": "ui_state",
+        "n_events": 2,
+        "start_ms": 1782931001239,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931001254,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931001254,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ],
+          [
+            "browser_navigation",
+            1
+          ]
+        ],
+        "end_ms": 1782931001659,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782931001259,
+        "system": "system:受発注在庫管理システム"
+      }
+    ],
+    "process_readable_name": "Order & Inventory Management System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782930996863
+  },
+  {
+    "applications": [
+      "Microsoft Edge",
+      "Microsoft Word"
+    ],
+    "dominant_context": "system:財務会計システム",
+    "duration_ms": 37613,
+    "end_ms": 1782931041555,
+    "event_count": 67,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec10",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931003942,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931003942,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931003960,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931003960,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931004497,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931004497,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931005648,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931005648,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931005775,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931005772,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931005830,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931005830,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931011098,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931011092,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931011133,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931011133,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931013447,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931013447,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931013989,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931013989,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            2
+          ]
+        ],
+        "end_ms": 1782931016239,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782931014101,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931016268,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931016268,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931016642,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931016629,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931017121,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931017121,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931017176,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931017174,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931017213,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931017213,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931019191,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931019191,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931019387,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931019385,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931019395,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931019395,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931022670,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931022670,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931022756,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931022756,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931024490,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782931023098,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931024506,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931024506,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931024897,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931024893,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931025424,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931025424,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931025432,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931025431,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931025652,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931025652,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931027569,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931027569,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931027750,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931027747,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931027788,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931027788,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931031304,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931031304,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931031365,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931031365,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931031854,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782931031704,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931031914,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931031914,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931032949,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931032949,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931033066,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931033066,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931033335,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931033331,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931033818,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931033818,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931033872,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931033871,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931033996,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931033996,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931035879,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931035879,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931036026,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931036022,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931036052,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931036052,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_navigation",
+            1
+          ]
+        ],
+        "end_ms": 1782931040000,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931040000,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931040218,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931040218,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931041474,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931041474,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931041555,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931041555,
+        "system": "system:財務会計システム"
+      }
+    ],
+    "process_readable_name": "Financial Accounting System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782931003942
+  },
+  {
+    "applications": [
+      "Microsoft Edge"
+    ],
+    "dominant_context": "system:受発注在庫管理システム",
+    "duration_ms": 12955,
+    "end_ms": 1782931054833,
+    "event_count": 33,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec11",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ],
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931043206,
+        "interaction_category": "pointer",
+        "n_events": 4,
+        "start_ms": 1782931041878,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931043299,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931043299,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931043696,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931043690,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931044159,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931044159,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931044228,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931044226,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931044270,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931044270,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931046239,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931046239,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931046656,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931046652,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931046739,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931046739,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931050088,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931050086,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931050115,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931050115,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782931051406,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931050130,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931051453,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931051453,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931051809,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931051805,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931052279,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931052279,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931052344,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931052342,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931052391,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931052391,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931054355,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931054355,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931054817,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931054813,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931054833,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931054833,
+        "system": "system:受発注在庫管理システム"
+      }
+    ],
+    "process_readable_name": "Order & Inventory Management System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782931041878
+  },
+  {
+    "applications": [
+      "Notepad"
+    ],
+    "dominant_context": "app:Notepad::在庫調整メモ",
+    "duration_ms": 3103,
+    "end_ms": 1782931060056,
+    "event_count": 11,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec12",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931056953,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931056953,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931056991,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931056991,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931057128,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931057126,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931057349,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931057349,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931057370,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931057369,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931060018,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931060018,
+        "system": "app:Notepad"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931060056,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931060056,
+        "system": "app:Notepad"
+      }
+    ],
+    "process_readable_name": "Notepad: Inventory Adjustment Memo",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782931056953
+  },
+  {
+    "applications": [
+      "Microsoft Edge"
+    ],
+    "dominant_context": "system:受発注在庫管理システム",
+    "duration_ms": 22092,
+    "end_ms": 1782931082593,
+    "event_count": 36,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec13",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931060657,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782931060501,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931060701,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931060701,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931061600,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931061600,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931061677,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931061677,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931061981,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931061979,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931062466,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931062466,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931062534,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931062530,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931062624,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931062624,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931064536,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931064536,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931064840,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931064837,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931064869,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931064869,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931069114,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931069111,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931069163,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931069163,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782931070203,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931069289,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931070310,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931070310,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931070664,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931070661,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931071148,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931071148,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931071200,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931071198,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931071258,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931071258,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931073218,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931073218,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931073288,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931073285,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931073300,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931073300,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931082516,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931082516,
+        "system": "system:受発注在庫管理システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931082593,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931082593,
+        "system": "system:受発注在庫管理システム"
+      }
+    ],
+    "process_readable_name": "Order & Inventory Management System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782931060501
+  },
+  {
+    "applications": [
+      "Microsoft Edge",
+      "Microsoft Word"
+    ],
+    "dominant_context": "system:財務会計システム",
+    "duration_ms": 89186,
+    "end_ms": 1782931172295,
+    "event_count": 152,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec14",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931083116,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931083109,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931083153,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931083153,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782931084553,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931083256,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931084638,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931084638,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931084904,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931084901,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931085378,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931085378,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931085443,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931085438,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931085477,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931085477,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931087461,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931087461,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931087894,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931087892,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931087932,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931087932,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931092021,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931092018,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931092047,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931092047,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782931093155,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931092056,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931093178,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931093178,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931093583,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931093579,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931094093,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931094093,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931094120,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931094119,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931094212,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931094212,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931096134,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931096134,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931096231,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931096227,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931096262,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931096262,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            2
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931100236,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782931099975,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931100327,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931100327,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931100454,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931100414,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931101579,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931101579,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931101691,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931101691,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931106000,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931106000,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931106073,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931106073,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931106497,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931106489,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931106960,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931106960,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931107029,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931107028,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931107107,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931107107,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931109049,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931109049,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931109441,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931109439,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931109460,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931109460,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931113205,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931113202,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931113221,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931113221,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782931114610,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931113334,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931114654,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931114654,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931114918,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931114914,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931115393,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931115393,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931115453,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931115452,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931115481,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931115481,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931117459,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931117459,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931117737,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931117735,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931117842,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931117842,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931124303,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782931124285,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931124340,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931124340,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931125826,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931125826,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931125884,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931125884,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931130644,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931130644,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931130691,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931130691,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931130905,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931130865,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931131342,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931131342,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931131411,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931131409,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931131440,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931131440,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931133414,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931133414,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931133745,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931133742,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931133787,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931133787,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931137810,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931137808,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931137855,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931137855,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            2
+          ]
+        ],
+        "end_ms": 1782931139115,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931137991,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931139211,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931139211,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931139408,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931139405,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931139879,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931139879,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931139942,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931139941,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931140048,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931140048,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931141956,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931141956,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931142442,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931142437,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931142503,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931142503,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ],
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931146253,
+        "interaction_category": "pointer",
+        "n_events": 3,
+        "start_ms": 1782931146234,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931146286,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931146286,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931147359,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931147359,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931147435,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931147435,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931147921,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931147915,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931147973,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931147973,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931148371,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931148371,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931148453,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931148452,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931148513,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931148513,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931150460,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931150460,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931150526,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931150522,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931150565,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931150565,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931154315,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931154312,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931154331,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931154331,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_scroll",
+            1
+          ]
+        ],
+        "end_ms": 1782931154491,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931154491,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931155593,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931155593,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931155669,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931155669,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931159393,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931159393,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931159484,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931159484,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931159929,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931159923,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931160022,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931160022,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "clipboard_change",
+            1
+          ]
+        ],
+        "end_ms": 1782931160403,
+        "interaction_category": "clipboard",
+        "n_events": 1,
+        "start_ms": 1782931160403,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "keystroke",
+            2
+          ],
+          [
+            "shortcut",
+            1
+          ]
+        ],
+        "end_ms": 1782931160461,
+        "interaction_category": "input",
+        "n_events": 3,
+        "start_ms": 1782931160460,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931160556,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931160556,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_form_input",
+            1
+          ]
+        ],
+        "end_ms": 1782931162470,
+        "interaction_category": "input",
+        "n_events": 1,
+        "start_ms": 1782931162470,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ],
+          [
+            "browser_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931162721,
+        "interaction_category": "pointer",
+        "n_events": 2,
+        "start_ms": 1782931162717,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931162809,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931162809,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_navigation",
+            1
+          ]
+        ],
+        "end_ms": 1782931169529,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931169529,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931169622,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931169622,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "browser_navigation",
+            2
+          ]
+        ],
+        "end_ms": 1782931170571,
+        "interaction_category": "navigation",
+        "n_events": 2,
+        "start_ms": 1782931170059,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931170675,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931170675,
+        "system": "system:財務会計システム"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "extension_disconnected",
+            1
+          ]
+        ],
+        "end_ms": 1782931172295,
+        "interaction_category": "system",
+        "n_events": 1,
+        "start_ms": 1782931172295,
+        "system": "system:財務会計システム"
+      }
+    ],
+    "process_readable_name": "Financial Accounting System",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782931083109
+  },
+  {
+    "applications": [
+      "Microsoft Word"
+    ],
+    "dominant_context": "app:Microsoft Word::shinkuitorihikisaki_touroku_tetsuzuki",
+    "duration_ms": 195,
+    "end_ms": 1782931172828,
+    "event_count": 4,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec15",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931172633,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931172633,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "extension_disconnected",
+            2
+          ]
+        ],
+        "end_ms": 1782931172793,
+        "interaction_category": "system",
+        "n_events": 2,
+        "start_ms": 1782931172650,
+        "system": "app:Microsoft Word"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931172828,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931172828,
+        "system": "app:Microsoft Word"
+      }
+    ],
+    "process_readable_name": "Word: New Trading-Partner Registration Procedure",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782931172633
+  },
+  {
+    "applications": [
+      "Windows Explorer",
+      "WindowsTerminal"
+    ],
+    "dominant_context": "app:WindowsTerminal",
+    "duration_ms": 3891,
+    "end_ms": 1782931181610,
+    "event_count": 6,
+    "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec16",
+    "operator": "LAPTOP-76QMG9DE",
+    "ordered_steps": [
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931177719,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931177719,
+        "system": "app:WindowsTerminal"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931177900,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931177900,
+        "system": "app:Windows Explorer"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "screenshot_smart",
+            1
+          ]
+        ],
+        "end_ms": 1782931177932,
+        "interaction_category": "capture",
+        "n_events": 1,
+        "start_ms": 1782931177932,
+        "system": "app:Windows Explorer"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "app_switch",
+            1
+          ]
+        ],
+        "end_ms": 1782931178224,
+        "interaction_category": "navigation",
+        "n_events": 1,
+        "start_ms": 1782931178224,
+        "system": "app:WindowsTerminal"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "mouse_click",
+            1
+          ]
+        ],
+        "end_ms": 1782931179483,
+        "interaction_category": "pointer",
+        "n_events": 1,
+        "start_ms": 1782931179483,
+        "system": "app:WindowsTerminal"
+      },
+      {
+        "dominant_event_types": [
+          [
+            "session_end",
+            1
+          ]
+        ],
+        "end_ms": 1782931181610,
+        "interaction_category": "system",
+        "n_events": 1,
+        "start_ms": 1782931181610,
+        "system": "app:WindowsTerminal"
+      }
+    ],
+    "process_readable_name": "app:WindowsTerminal",
+    "session_id": "ses_20260701-183232-LAPTOP-76QMG9DE",
+    "start_ms": 1782931177719
+  }
+]
