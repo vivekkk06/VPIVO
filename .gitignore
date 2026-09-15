@@ -14,3 +14,11 @@ __pycache__/
 
 # Generated Dataset A feature table
 reports/day2/feature_table_dataset_a.json
+
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+# Frontend generated files
+frontend/node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
