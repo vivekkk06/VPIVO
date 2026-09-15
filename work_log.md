@@ -2115,3 +2115,309 @@ No segmentation algorithm was touched to produce it. Final submission
 report, README rewrite, and Day 4/5 work remain explicitly out of
 scope for today, per my own instruction. Git remains mine to handle,
 not Claude Code's — no git command was run this session.
+
+---
+
+## Day 4 — Instrumentation Health Review
+
+### Starting Point
+
+Days 1–3 left the Dataset-A segmentation architecture locked (V1 ∪ V2 →
+Rules 1–4 → Combined protection, thresholds 0.9078 / 0.8860 / 0.40 /
+4680.2613), Dataset B segmented into 645 executions across 21 processes,
+HR/Payroll selected as the automation candidate on Impact 0.9236 /
+Feasibility 0.4765 / Opportunity 0.4401, and a working RPA prototype for
+its four evidenced routes. Day 2 had already tested and rejected a long
+list of alternatives — temporal baselines, contextual AND/OR rules,
+boundary-first logistic regression, continuity-first V2, threshold
+re-selection, reconnection/merge, Design 3, segment-level coherence, and
+global sequence optimization — so Day 4 deliberately did not open with a
+search for another algorithm.
+
+The day started by re-running the locked protected-boundary experiment
+unchanged, to establish that anything measured later could be trusted
+against a reproducible reference. It reproduced exactly: all 30 pooled
+metrics matching the Day-2 artifact to 1e-12, same selected tempo
+threshold, same populations (3667/296), and confusion verified at
+TP 1062 / FP 3441 / FN 609, precision 0.235843, recall 0.635548,
+F1 0.3440.
+
+### Observation
+
+Looking at the per-session spread rather than the pooled numbers, the
+seven worst sessions in Dataset A all come from the same machine,
+LAPTOP-R36BQBTE. Mean Combined F1 there is 0.14 against 0.32–0.40 for
+every other machine, and mean under-segmentation is 1.28 against
+0.06–0.18 — roughly ten times worse, concentrated in one operator's
+hardware rather than scattered across the dataset.
+
+### Investigation
+
+Measuring the instrumentation actually available in those sessions
+produced a categorical difference, not a marginal one. Six of the seven
+carry `browser_domain` on 0.00% of events. The seventh carries it on
+58.77% of events but has only one distinct domain, so a domain *change*
+can never be observed there either. Normal sessions carry three or four
+distinct domains, and those domains are localhost ports — 127.0.0.1:5122,
+:5123, :5124 — i.e. different internal business systems distinguished by
+port number.
+
+The decisive measurement: on normally-instrumented sessions 96.6% of
+ground-truth boundaries coincide with a browser-domain change. On
+LAPTOP-R36BQBTE that figure is 0%.
+
+Day 1 had already measured browser navigation as the strongest single
+boundary signal (lift 13.98) and noted "one session at exactly 0.0
+coverage" as a caveat. The actual scope turns out to be an entire
+machine — 11% of Dataset A.
+
+### Alternative Explanations
+
+Two competing explanations were tested before accepting the
+instrumentation reading.
+
+*Tempo / pace.* If sessions on that machine simply ran at a different
+speed, a globally-fixed threshold could mis-fit them. Measured: session
+median gaps vary only 1.27x across all 63 sessions, and the degraded
+machine sits at 1.02x of the others. Structural characteristics — events
+per execution, session duration, application mix, top application — are
+also ordinary. Rejected.
+
+*Window-title fallback.* Day 3 had solved the same null-domain problem
+for Dataset B by rebuilding the boundary signal around window titles, so
+the obvious question was whether that fallback transfers back. It does
+not: on these sessions window-title change has a median lift of 1.10,
+firing at 3.33% of boundaries versus 3.55% of non-boundaries — at or
+below chance. Titles are present on 99.6% of events; they simply do not
+carry business-system identity in Dataset A. Rejected.
+
+Testing this second one mattered, because if a fallback signal had
+worked then the correct response would have been to use it, not to build
+a diagnostic. There is no signal left to recover on these sessions.
+
+### Engineering Question
+
+Can sessions whose required instrumentation is materially degraded be
+detected before segmentation, so the system does not silently present
+low-confidence output as normal output?
+
+This was treated as a data-quality and observability question, not as a
+request to change segmentation.
+
+### Hypothesis
+
+A lightweight, ground-truth-free, session-level instrumentation-health
+diagnostic based on observed signal coverage can identify sessions where
+segmentation evidence is materially degraded.
+
+### Proposed Change
+
+A new module, `src/procmine/instrumentation_health.py`, deliberately
+placed outside `src/procmine/segmentation/`. Per session it computes
+event count, `browser_domain`-populated count, coverage, distinct-domain
+count, and a `healthy`/`degraded` status with warnings naming the
+failing criterion. It reads `CanonicalEvent.browser_domain`, reusing the
+URL parsing that already exists rather than duplicating it, consumes no
+ground truth, is deterministic, and writes nothing to raw data.
+
+It was kept diagnostic-only on purpose. The evidence supported the claim
+"the required instrumentation is unavailable"; it did not support any
+claim about how segmentation should behave differently in that
+condition, and conflating the two would have meant changing a locked
+architecture on the strength of an observation that was never tested as
+an intervention.
+
+### Threshold Reasoning
+
+Two criteria, both derived from Dataset A, and a session is degraded if
+either fails.
+
+The distinct-domain minimum of 2 is structural rather than fitted: below
+two distinct domains a domain-change is mathematically unobservable
+regardless of coverage. Dataset A's distinct-domain distribution runs
+0→6 sessions, 1→1, 2→**0**, 3→32, 4→20, then singletons at 5, 6, 7 and
+13. The empty bin at exactly 2 means no session sits on the boundary.
+
+The coverage threshold of 0.40 comes from the shape of the distribution:
+six sessions at 0.00%, one at 26.00%, then the main population from
+46.42% to 69.46% with a median of 57.56%. The two largest gaps in the
+entire distribution are 0.00→26.00 (26.0pp) and 26.00→46.42 (20.4pp);
+the next largest is 3.6pp. The threshold sits inside that second gap with
+a 6.4pp margin to the nearest healthy session.
+
+Recorded for honesty: Dataset B's coverage distribution had already been
+seen earlier in the day while identifying the weakness. The threshold was
+still derived from Dataset A's gap structure alone and was not moved to
+produce any particular Dataset-B result, but it was not chosen blind and
+the entry should say so.
+
+The trade-off is worth keeping. The structural criterion alone catches
+seven sessions, all on the bad machine. The coverage criterion adds an
+eighth, `ses_20260701-043922-SIDDHIGUPTAB00B` at 26.00%, which
+independently is the sixth-worst session in Dataset A. Each criterion
+catches something the other misses, which is why there are two and not
+one — and why no weighted health score was built, since that would have
+added complexity the evidence did not call for.
+
+### Dataset-A Results
+
+Eight of 63 sessions flagged. Against the stated observable "did the
+locked pipeline do materially worse on this session," cut at the healthy
+population's own 5th-percentile F1 (0.2385): TP 8, FP 0, FN 2, TN 53 —
+sensitivity 0.800, specificity 1.000.
+
+| metric | flagged median | healthy median | flagged range | healthy range |
+|---|---:|---:|---:|---:|
+| F1 | 0.1579 | 0.3621 | 0.051 – 0.225 | 0.224 – 0.433 |
+| under-segmentation | 1.2462 | 0.0921 | 0.622 – 1.833 | 0.017 – 0.277 |
+| over-segmentation | 0.4711 | 1.7333 | 0.308 – 0.973 | 0.741 – 2.500 |
+| % fragmented | 47.11 | 84.62 | 30.77 – 65.22 | 25.93 – 100.00 |
+
+The direction is not uniform, and that turned out to be the most
+informative part of the result. Flagged sessions are worse on F1 and
+under-segmentation but *better* on over-segmentation and fragmentation.
+That is mechanically consistent with the diagnosis rather than a
+contradiction of it: without a domain-change signal V1/V2 propose far
+fewer boundary candidates, so fewer false splits are produced while most
+true boundaries are missed. The characteristic failure on these sessions
+is distinct executions being merged together, not executions being split
+apart — which is a more precise statement of the problem than "these
+sessions score badly."
+
+Only under-segmentation separates completely: every flagged session at or
+above 0.622, every healthy one at or below 0.277, with no overlap. F1
+ranges overlap by 0.001; over-segmentation and fragmentation overlap
+substantially. By machine, LAPTOP-R36BQBTE is 7/7 flagged,
+SIDDHIGUPTAB00B is 1/12, the other six machines 0.
+
+Wording kept deliberate: these figures describe observed segmentation
+behaviour on flagged versus healthy sessions. They do not establish that
+the diagnostic predicts segmentation quality, and it was not evaluated as
+a predictor.
+
+Both misses are recorded rather than tuned away.
+`ses_20260701-030836-yuvraj` has F1 0.2243 with 68.85% coverage and 4
+domains — genuinely poor and genuinely well-instrumented, so its problem
+lies elsewhere and the diagnostic correctly declines to claim it.
+`ses_20260701-035622-SIDDHIGUPTAB00B` is a boundary artifact: the
+percentile cut is literally its own F1 value, so it counts as poor by
+construction. Sensitivity 0.800 is the honest figure and the correct
+scope — this detects missing instrumentation, not every cause of bad
+segmentation.
+
+### Dataset-B Results
+
+Same diagnostic, same thresholds, no retuning. Two of fifteen sessions
+flagged. `ses_20260701-192455-NEELA9BAF` at 0.00% coverage — the one
+already known, correctly caught. And `ses_20260701-164424-CHAITANYA0BCF`
+at 37.20%, which had not been identified before and was investigated
+rather than dismissed as a diagnostic error.
+
+Together they contribute 74 of 645 executions (11.5%) and 14 of the 122
+HR/Payroll executions (11.5% of the evidence base behind the
+recommendation).
+
+The caveat belongs on record: Dataset B's coverage distribution sits
+systematically lower than Dataset A's (median 50.44% vs 57.56%), so a
+threshold derived from A is somewhat stricter when applied to B. The
+0.00% session is unambiguous; the 37.20% one is only 2.8pp under the line
+and should be read as marginal. The honest reading is one clear flag plus
+one borderline flag, not two equivalent failures.
+
+### Business Sensitivity
+
+Since 11.5% of the HR/Payroll evidence comes from sessions now considered
+degraded, the recommendation itself had to be re-tested rather than
+assumed.
+
+The Problem-2 chain was re-run end to end, twice, invoking the existing
+Day-3 scripts unmodified as subprocesses, with the only difference being
+which executions are in the input. Profiles and variants are recomputed
+from each population — filtering executions while keeping full-population
+aggregates would have quietly mixed the two, since the opportunity score
+reads execution_count, total_duration_ms, avg_manual_event_share,
+dominant_variant_share and n_variants from the profiles. Case A
+reproduced the Day-3 artifact exactly (0.9236 / 0.4765 / 0.4401),
+confirming the harness was faithful before Case B was read.
+
+With both degraded sessions removed (645 → 571 executions), HR/Payroll
+stays rank 1. Impact 0.9236 → 0.9249, Feasibility 0.4765 → 0.4519,
+Opportunity 0.4401 → 0.4180. Still Pareto-non-dominated. Still #1 in 5 of
+8 sensitivity scenarios, identically. The top five keep their exact
+order; eleven processes move, every move is ±1, and all are below rank 5.
+
+The recommendation survives, but not untouched. HR's Opportunity falls
+5.0% while Order & Inventory rises, so the margin to second place narrows
+from 0.0872 to 0.0546 — a 37.4% reduction. HR still leads clearly; the
+lead is simply smaller on clean evidence than the headline number
+implies, and that belongs in the final report rather than only the
+favourable half.
+
+### Decision
+
+**RETAIN**, strictly as an upstream quality layer.
+
+The diagnostic separates the degraded population cleanly on the metric
+that matches the mechanism, costs two interpretable parameters justified
+structurally and distributionally rather than fitted to their own
+outcome, transfers to Dataset B unchanged and surfaced a session that had
+not been identified, and converts a silent failure into a stated one.
+
+No Dataset-A segmentation metric changed, because nothing in the decision
+path changed. That was the intended outcome — the goal was operational
+honesty, not a better benchmark number.
+
+The architecture is now conceptually: raw logs → instrumentation health
+check → locked segmentation (unchanged) → executions → Problem-2 →
+opportunity → prototype.
+
+Three separate conclusions, kept separate rather than collapsed into one
+figure. *Algorithm quality*: unchanged and unchallenged — F1 0.3440,
+recall 0.6355, fragmentation 79.05%, under-segmentation 0.1412,
+over-segmentation 1.603. *Instrumentation quality*: newly measured — 8 of
+63 Dataset-A sessions and 2 of 15 Dataset-B sessions lack the evidence
+the strongest boundary signal depends on. *Business-analysis confidence*:
+high for "HR/Payroll is the right first target," lower for the precise
+Opportunity value, which moves ~5% depending on which evidence is
+admitted.
+
+### Remaining Question
+
+Under-segmentation separates the flagged and healthy populations
+perfectly (flagged ≥ 0.622, healthy ≤ 0.277, zero overlap) and the
+mechanism is understood, which suggests the pipeline could in principle
+condition on instrumentation availability — relaxing the Rule-4
+continuity demotion, or weighting the remaining signals differently, when
+the domain signal is known absent.
+
+This was deliberately not investigated. It would modify the locked
+architecture, it needs its own pre-registered success gate on all four
+metrics plus per-session robustness, and it would be fitted on only 8
+flagged sessions, which makes overfitting a real risk. Recorded as a
+potential Day-5 hypothesis pending an explicit decision, not folded into
+a diagnostic-only change.
+
+### AI Contribution
+
+AI was used to accelerate implementation, experiment execution, testing,
+and analysis: the diagnostic module, the two analysis scripts, and the
+twelve tests were AI-implemented. The engineering direction was mine —
+starting from baseline reproduction rather than algorithm search,
+requiring the tempo and window-title explanations be measured and ruled
+out before accepting the instrumentation reading, setting the constraint
+that the locked architecture stays untouched, requiring thresholds be
+justified structurally and from distribution shape rather than fitted to
+the outcome, requiring the HR/Payroll sensitivity check because the
+recommendation is mine to defend, and making the RETAIN call and the
+scoping decision not to condition segmentation on the flag.
+
+### Status — Day 4 complete
+
+465 tests passing (453 prior + 12 for the diagnostic). Locked
+segmentation architecture untouched and re-verified bit-identical. New:
+`src/procmine/instrumentation_health.py`,
+`scripts/analyze_instrumentation_health.py`,
+`scripts/run_instrumentation_sensitivity_check.py`,
+`tests/test_instrumentation_health.py`, and `reports/day4/`. Dataset A
+and Dataset B raw data unmodified; no Day-1/2/3 report was altered. Git
+remains mine to handle — no git command was run this session.
