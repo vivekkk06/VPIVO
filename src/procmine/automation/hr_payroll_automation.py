@@ -23,7 +23,11 @@ partial action log attached, rather than falling back to a coordinate
 click, a screenshot-based guess, or any other non-deterministic
 recovery.
 
-Interacts with `procmine.automation.mock_hr_app.MockHRApplication`
+Depends on the `HRApplication` protocol (`procmine.integrations.hr_application`),
+not on any concrete target. Satisfied by MockHRApplication, BrowserHRApplication,
+ApiHRApplication and HTTPHRApplication; this module needs no change to gain a new
+target.
+Originally written against `procmine.automation.mock_hr_app.MockHRApplication`
 (injected as a parameter, never hard-coded) purely by element `id` --
 no pixel coordinates, no computer vision, matching the analysis's own
 "selectors are sufficient" finding. A production version would swap
@@ -37,7 +41,8 @@ from __future__ import annotations
 import datetime
 from dataclasses import dataclass, field
 
-from procmine.automation.mock_hr_app import MockHRApplication
+from procmine.automation.mock_hr_app import MockHRApplication  # noqa: F401  (re-exported for callers)
+from procmine.integrations.hr_application import HRApplication
 from procmine.process_discovery.dom_evidence import KNOWN_ROUTE_PREFIXES
 
 
@@ -87,6 +92,10 @@ class ConfirmationFailedError(AutomationSafetyError):
     pass
 
 
+class NoteInsertionError(AutomationSafetyError):
+    """The verified note field could not be written -- the target refused or failed."""
+
+
 @dataclass
 class ReviewCheckpoint:
     """Returned once navigation, note insertion, and confirm-button
@@ -114,7 +123,7 @@ def _log(entries: list[ActionLogEntry], step: str, detail: str) -> None:
     entries.append(ActionLogEntry(step=step, detail=detail, timestamp=_now()))
 
 
-def prepare_note_submission(app: MockHRApplication, route: str, note_text: str) -> ReviewCheckpoint:
+def prepare_note_submission(app: HRApplication, route: str, note_text: str) -> ReviewCheckpoint:
     """Steps 1-5 of Step 3's automation boundary: accept the route,
     navigate, verify the note field, insert the note, verify the
     confirm button. Never clicks the confirm button. Raises a specific
@@ -142,7 +151,13 @@ def prepare_note_submission(app: MockHRApplication, route: str, note_text: str) 
 
     expected_prefix = KNOWN_ROUTE_PREFIXES[route]
     expected_note_id = f"{expected_prefix}-note"
-    note_fields = app.find_note_field()
+    # Every adapter call can fail on a real target (a driver timeout, an HTTP error).
+    # Each failure is a safe stop carrying the partial log, never a raw exception.
+    try:
+        note_fields = app.find_note_field()
+    except Exception as exc:
+        _log(log, "find_note_field", f"FAILED: could not read the target: {exc}")
+        raise ElementNotFoundError(f"could not read the note field for {route!r}: {exc}", log) from exc
     if len(note_fields) == 0:
         _log(log, "find_note_field", "FAILED: no note field found")
         raise ElementNotFoundError(f"no note field found for {route!r}", log)
@@ -157,11 +172,19 @@ def prepare_note_submission(app: MockHRApplication, route: str, note_text: str) 
         )
     _log(log, "find_note_field", f"found {note_field.element_id!r}")
 
-    app.set_note_value(note_field.element_id, note_text)
+    try:
+        app.set_note_value(note_field.element_id, note_text)
+    except Exception as exc:
+        _log(log, "insert_note", f"FAILED: could not write {note_field.element_id!r}: {exc}")
+        raise NoteInsertionError(f"could not insert the note into {note_field.element_id!r}: {exc}", log) from exc
     _log(log, "insert_note", f"inserted note into {note_field.element_id!r}")
 
     expected_confirm_id = f"btn-{expected_prefix}-ok"
-    confirm_buttons = app.find_confirm_button()
+    try:
+        confirm_buttons = app.find_confirm_button()
+    except Exception as exc:
+        _log(log, "find_confirm_button", f"FAILED: could not read the target: {exc}")
+        raise ElementNotFoundError(f"could not read the confirm button for {route!r}: {exc}", log) from exc
     if len(confirm_buttons) == 0:
         _log(log, "find_confirm_button", "FAILED: no confirm button found")
         raise ElementNotFoundError(f"no confirm button found for {route!r}", log)
@@ -184,7 +207,7 @@ def prepare_note_submission(app: MockHRApplication, route: str, note_text: str) 
     )
 
 
-def confirm_submission(app: MockHRApplication, checkpoint: ReviewCheckpoint) -> AutomationResult:
+def confirm_submission(app: HRApplication, checkpoint: ReviewCheckpoint) -> AutomationResult:
     """The deliberate, separate step representing human approval. Only
     callable once per checkpoint, and only while the application is
     still on the route the checkpoint was prepared for. Before
