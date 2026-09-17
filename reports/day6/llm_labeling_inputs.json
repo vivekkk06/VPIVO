@@ -1,0 +1,237 @@
+{
+  "purpose": "Compressed evidence for LLM semantic labelling (Day-6 Phase 7).",
+  "withheld_note": "The Day-3 `readable_name` is deliberately NOT included in these representations, so the LLM cannot read the answer back. It is used only for comparison in step 2.",
+  "size_note": "One short summary per process. No raw event stream is sent to the LLM.",
+  "n_items": 6,
+  "items": [
+    {
+      "process_id": "system:財務会計システム",
+      "execution_count": 125,
+      "n_variants": 10,
+      "dominant_variant_share": 0.664,
+      "median_duration_ms": 14339,
+      "mean_events_per_execution": 37.42,
+      "manual_event_share": 0.681,
+      "n_operators": 4,
+      "applications_top": [
+        "Microsoft Edge",
+        "Microsoft Word",
+        "Windows Explorer",
+        "WindowsTerminal"
+      ],
+      "systems_touched_top": [
+        "system:財務会計システム",
+        "app:Microsoft Word",
+        "app:Windows Explorer",
+        "app:WindowsTerminal"
+      ],
+      "interaction_categories_top": [
+        "pointer",
+        "capture",
+        "input",
+        "navigation",
+        "clipboard",
+        "ui_state"
+      ],
+      "event_types_top": [
+        "screenshot_smart",
+        "mouse_click",
+        "keystroke",
+        "browser_click",
+        "mouse_scroll",
+        "shortcut"
+      ]
+    },
+    {
+      "process_id": "system:HR人事給与システム",
+      "execution_count": 122,
+      "n_variants": 7,
+      "dominant_variant_share": 0.7705,
+      "median_duration_ms": 15375,
+      "mean_events_per_execution": 46.81,
+      "manual_event_share": 0.7006,
+      "n_operators": 4,
+      "applications_top": [
+        "Microsoft Edge",
+        "Microsoft Word",
+        "Notepad",
+        "Windows Explorer"
+      ],
+      "systems_touched_top": [
+        "system:HR人事給与システム",
+        "app:Microsoft Word",
+        "app:Windows Explorer",
+        "system:財務会計システム"
+      ],
+      "interaction_categories_top": [
+        "pointer",
+        "capture",
+        "input",
+        "clipboard",
+        "navigation",
+        "ui_state"
+      ],
+      "event_types_top": [
+        "screenshot_smart",
+        "mouse_click",
+        "keystroke",
+        "browser_click",
+        "mouse_scroll",
+        "shortcut"
+      ],
+      "ui_form_fields": [
+        "pi-note|処理内容・確認コメントを入力してください…",
+        "ob-note|照合結果・特記事項を入力してください…",
+        "la-note|承認コメントまたは差戻し理由を入力してください…",
+        "si-note|処理内容・対応状況を入力してください…"
+      ]
+    },
+    {
+      "process_id": "system:受発注在庫管理システム",
+      "execution_count": 96,
+      "n_variants": 7,
+      "dominant_variant_share": 0.8333,
+      "median_duration_ms": 12625,
+      "mean_events_per_execution": 35.29,
+      "manual_event_share": 0.6432,
+      "n_operators": 4,
+      "applications_top": [
+        "Microsoft Edge",
+        "Microsoft Word",
+        "Notepad",
+        "Windows Explorer"
+      ],
+      "systems_touched_top": [
+        "system:受発注在庫管理システム",
+        "app:Microsoft Word",
+        "app:Windows Explorer",
+        "app:Notepad"
+      ],
+      "interaction_categories_top": [
+        "pointer",
+        "input",
+        "capture",
+        "navigation",
+        "clipboard",
+        "ui_state"
+      ],
+      "event_types_top": [
+        "screenshot_smart",
+        "keystroke",
+        "mouse_click",
+        "browser_click",
+        "mouse_scroll",
+        "shortcut"
+      ]
+    },
+    {
+      "process_id": "app:Microsoft Word::nyusha_checklist_shinsotsu_batch",
+      "execution_count": 37,
+      "n_variants": 3,
+      "dominant_variant_share": 0.9189,
+      "median_duration_ms": 8445,
+      "mean_events_per_execution": 16.92,
+      "manual_event_share": 0.375,
+      "n_operators": 4,
+      "applications_top": [
+        "Microsoft Word",
+        "Microsoft Edge"
+      ],
+      "systems_touched_top": [
+        "app:Microsoft Word",
+        "system:HR人事給与システム",
+        "system:財務会計システム",
+        "browser:127.0.0.1:5133"
+      ],
+      "interaction_categories_top": [
+        "input",
+        "capture",
+        "navigation",
+        "clipboard",
+        "ui_state",
+        "pointer"
+      ],
+      "event_types_top": [
+        "keystroke",
+        "screenshot_smart",
+        "app_switch",
+        "shortcut",
+        "clipboard_change",
+        "window_title_change"
+      ]
+    },
+    {
+      "process_id": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+      "execution_count": 29,
+      "n_variants": 7,
+      "dominant_variant_share": 0.4483,
+      "median_duration_ms": 17733,
+      "mean_events_per_execution": 35.52,
+      "manual_event_share": 0.4753,
+      "n_operators": 4,
+      "applications_top": [
+        "Microsoft Word",
+        "Microsoft Edge"
+      ],
+      "systems_touched_top": [
+        "app:Microsoft Word",
+        "system:受発注在庫管理システム",
+        "browser:127.0.0.1:5133",
+        "browser:127.0.0.1:5134",
+        "browser:127.0.0.1:5132"
+      ],
+      "interaction_categories_top": [
+        "input",
+        "capture",
+        "navigation",
+        "pointer",
+        "ui_state",
+        "clipboard"
+      ],
+      "event_types_top": [
+        "keystroke",
+        "screenshot_smart",
+        "app_switch",
+        "shortcut",
+        "clipboard_change",
+        "browser_click"
+      ]
+    },
+    {
+      "process_id": "app:Microsoft Word::gyomu_itaku_kyuuyo_kitei",
+      "execution_count": 23,
+      "n_variants": 3,
+      "dominant_variant_share": 0.8696,
+      "median_duration_ms": 13128,
+      "mean_events_per_execution": 29.26,
+      "manual_event_share": 0.5677,
+      "n_operators": 3,
+      "applications_top": [
+        "Microsoft Word",
+        "Microsoft Edge"
+      ],
+      "systems_touched_top": [
+        "app:Microsoft Word",
+        "system:受発注在庫管理システム",
+        "browser:127.0.0.1:5132",
+        "browser:127.0.0.1:5134"
+      ],
+      "interaction_categories_top": [
+        "input",
+        "capture",
+        "navigation",
+        "ui_state",
+        "clipboard",
+        "pointer"
+      ],
+      "event_types_top": [
+        "keystroke",
+        "screenshot_smart",
+        "app_switch",
+        "shortcut",
+        "clipboard_change",
+        "window_title_change"
+      ]
+    }
+  ]
+}

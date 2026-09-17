@@ -1,0 +1,789 @@
+{
+  "label": "Vision-model surrogate review — not ground truth.",
+  "status": "BLIND MANIFEST — contains no answer key",
+  "sample_source": "reports/day6/module2/module2_dataset_b_screenshot_sample.json",
+  "sample_regenerated": false,
+  "seed": 20260918,
+  "rubric": {
+    "A_CLEAR_CONTINUITY": "The frames visibly show the same business context on both sides of the sampled moment: the same application or system and the same screen, form or document.",
+    "B_CLEAR_BOUNDARY": "The frames visibly show a change of business context across the sampled moment: a different system, application, document, or record screen.",
+    "C_AMBIGUOUS": "The visible evidence is not enough to decide — for example a single frame, a change of view within the same screen, or a frame that shows neither context clearly.",
+    "D_UNAVAILABLE": "The sampled screenshot is missing from disk or unreadable. No judgment is inferred from event metadata."
+  },
+  "context_window_ms": 60000,
+  "frame_selection": "The sampled (nearest) frame plus the nearest AVAILABLE frame on the other side of the sampled moment, same session, within the window. Selected by time only, never by execution span.",
+  "unavailable_rule": "A point whose sampled frame is missing is D_UNAVAILABLE by rule. No substitute frame is used.",
+  "recovery": {
+    "method": "exact filename search across the whole dataset; accepted only with a matching session and the recorded byte size",
+    "referenced_missing": 14,
+    "recovered": 0
+  },
+  "points": [
+    {
+      "review_index": 1,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "timestamp_ms": 1782929657546,
+      "nearest_screenshot": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929659426_monitor_1_post.jpg",
+      "screenshot_delta_ms": 1880,
+      "referenced_screenshot": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929659426_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929655502_monitor_1_post.jpg",
+          "timestamp_ms": 1782929655502,
+          "offset_s": -2.0
+        },
+        {
+          "path": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929659426_monitor_1_post.jpg",
+          "timestamp_ms": 1782929659426,
+          "offset_s": 1.9
+        }
+      ]
+    },
+    {
+      "review_index": 2,
+      "session_id": "ses_20260701-190250-NEELA9BAF",
+      "timestamp_ms": 1782932712881,
+      "nearest_screenshot": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782932712079_monitor_1_post.jpg",
+      "screenshot_delta_ms": 802,
+      "referenced_screenshot": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782932712079_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782932712079_monitor_1_post.jpg",
+          "timestamp_ms": 1782932712079,
+          "offset_s": -0.8
+        },
+        {
+          "path": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782932715684_monitor_1_post.jpg",
+          "timestamp_ms": 1782932715684,
+          "offset_s": 2.8
+        }
+      ]
+    },
+    {
+      "review_index": 3,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782929837653,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782929834981_monitor_1_post.jpg",
+      "screenshot_delta_ms": 2672,
+      "referenced_screenshot": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782929834981_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 4,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "timestamp_ms": 1782929928662,
+      "nearest_screenshot": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929928979_monitor_1_post.jpg",
+      "screenshot_delta_ms": 317,
+      "referenced_screenshot": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929928979_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929922659_monitor_1_post.jpg",
+          "timestamp_ms": 1782929922659,
+          "offset_s": -6.0
+        },
+        {
+          "path": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929928979_monitor_1_post.jpg",
+          "timestamp_ms": 1782929928979,
+          "offset_s": 0.3
+        }
+      ]
+    },
+    {
+      "review_index": 5,
+      "session_id": "ses_20260701-184201-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782931516605,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE/screenshots/scr_smart_1782931516858_monitor_1_post.jpg",
+      "screenshot_delta_ms": 253,
+      "referenced_screenshot": "dataset_b/ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE/screenshots/scr_smart_1782931516858_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 6,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782930269181,
+      "nearest_screenshot": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930267750_monitor_1_post.jpg",
+      "screenshot_delta_ms": 1431,
+      "referenced_screenshot": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930267750_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930267750_monitor_1_post.jpg",
+          "timestamp_ms": 1782930267750,
+          "offset_s": -1.4
+        },
+        {
+          "path": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930270686_monitor_1_post.jpg",
+          "timestamp_ms": 1782930270686,
+          "offset_s": 1.5
+        }
+      ]
+    },
+    {
+      "review_index": 7,
+      "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782930265210,
+      "nearest_screenshot": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930264825_monitor_1_post.jpg",
+      "screenshot_delta_ms": 385,
+      "referenced_screenshot": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930264825_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930264825_monitor_1_post.jpg",
+          "timestamp_ms": 1782930264825,
+          "offset_s": -0.4
+        },
+        {
+          "path": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930265849_monitor_1_post.jpg",
+          "timestamp_ms": 1782930265849,
+          "offset_s": 0.6
+        }
+      ]
+    },
+    {
+      "review_index": 8,
+      "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782930414467,
+      "nearest_screenshot": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930413836_monitor_1_post.jpg",
+      "screenshot_delta_ms": 631,
+      "referenced_screenshot": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930413836_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930413836_monitor_1_post.jpg",
+          "timestamp_ms": 1782930413836,
+          "offset_s": -0.6
+        },
+        {
+          "path": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782930415715_monitor_1_post.jpg",
+          "timestamp_ms": 1782930415715,
+          "offset_s": 1.2
+        }
+      ]
+    },
+    {
+      "review_index": 9,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "timestamp_ms": 1782927446696,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927446507_monitor_1_post.jpg",
+      "screenshot_delta_ms": 189,
+      "referenced_screenshot": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927446507_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 10,
+      "session_id": "ses_20260701-175747-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782929328859,
+      "nearest_screenshot": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929328918_monitor_1_post.jpg",
+      "screenshot_delta_ms": 59,
+      "referenced_screenshot": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929328918_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929324815_monitor_1_post.jpg",
+          "timestamp_ms": 1782929324815,
+          "offset_s": -4.0
+        },
+        {
+          "path": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929328918_monitor_1_post.jpg",
+          "timestamp_ms": 1782929328918,
+          "offset_s": 0.1
+        }
+      ]
+    },
+    {
+      "review_index": 11,
+      "session_id": "ses_20260701-182634-NEELA9BAF",
+      "timestamp_ms": 1782930845443,
+      "nearest_screenshot": "dataset_b/ses_20260701-182634-NEELA9BAF/chunk_20260701-1830-NEELA9BAF/screenshots/scr_smart_1782930845821_monitor_1_post.jpg",
+      "screenshot_delta_ms": 378,
+      "referenced_screenshot": "dataset_b/ses_20260701-182634-NEELA9BAF/chunk_20260701-1830-NEELA9BAF/screenshots/scr_smart_1782930845821_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-182634-NEELA9BAF/chunk_20260701-1830-NEELA9BAF/screenshots/scr_smart_1782930844818_monitor_1_post.jpg",
+          "timestamp_ms": 1782930844818,
+          "offset_s": -0.6
+        },
+        {
+          "path": "dataset_b/ses_20260701-182634-NEELA9BAF/chunk_20260701-1830-NEELA9BAF/screenshots/scr_smart_1782930845821_monitor_1_post.jpg",
+          "timestamp_ms": 1782930845821,
+          "offset_s": 0.4
+        }
+      ]
+    },
+    {
+      "review_index": 12,
+      "session_id": "ses_20260701-175747-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782929029747,
+      "nearest_screenshot": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929029926_monitor_1_post.jpg",
+      "screenshot_delta_ms": 179,
+      "referenced_screenshot": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929029926_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929028934_monitor_1_post.jpg",
+          "timestamp_ms": 1782929028934,
+          "offset_s": -0.8
+        },
+        {
+          "path": "dataset_b/ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929029926_monitor_1_post.jpg",
+          "timestamp_ms": 1782929029926,
+          "offset_s": 0.2
+        }
+      ]
+    },
+    {
+      "review_index": 13,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782930030717,
+      "nearest_screenshot": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930030811_monitor_1_post.jpg",
+      "screenshot_delta_ms": 94,
+      "referenced_screenshot": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930030811_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930029476_monitor_1_post.jpg",
+          "timestamp_ms": 1782930029476,
+          "offset_s": -1.2
+        },
+        {
+          "path": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782930030811_monitor_1_post.jpg",
+          "timestamp_ms": 1782930030811,
+          "offset_s": 0.1
+        }
+      ]
+    },
+    {
+      "review_index": 14,
+      "session_id": "ses_20260701-192455-NEELA9BAF",
+      "timestamp_ms": 1782934342483,
+      "nearest_screenshot": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934342290_monitor_1_post.jpg",
+      "screenshot_delta_ms": 193,
+      "referenced_screenshot": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934342290_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934342290_monitor_1_post.jpg",
+          "timestamp_ms": 1782934342290,
+          "offset_s": -0.2
+        },
+        {
+          "path": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934344454_monitor_1_post.jpg",
+          "timestamp_ms": 1782934344454,
+          "offset_s": 2.0
+        }
+      ]
+    },
+    {
+      "review_index": 15,
+      "session_id": "ses_20260701-190250-NEELA9BAF",
+      "timestamp_ms": 1782933104789,
+      "nearest_screenshot": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933104898_monitor_1_post.jpg",
+      "screenshot_delta_ms": 109,
+      "referenced_screenshot": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933104898_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933102496_monitor_1_post.jpg",
+          "timestamp_ms": 1782933102496,
+          "offset_s": -2.3
+        },
+        {
+          "path": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933104898_monitor_1_post.jpg",
+          "timestamp_ms": 1782933104898,
+          "offset_s": 0.1
+        }
+      ]
+    },
+    {
+      "review_index": 16,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "timestamp_ms": 1782927638594,
+      "nearest_screenshot": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927638354_monitor_1_post.jpg",
+      "screenshot_delta_ms": 240,
+      "referenced_screenshot": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927638354_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927638354_monitor_1_post.jpg",
+          "timestamp_ms": 1782927638354,
+          "offset_s": -0.2
+        },
+        {
+          "path": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927638958_monitor_1_post.jpg",
+          "timestamp_ms": 1782927638958,
+          "offset_s": 0.4
+        }
+      ]
+    },
+    {
+      "review_index": 17,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782927351587,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927351422_monitor_1_post.jpg",
+      "screenshot_delta_ms": 165,
+      "referenced_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927351422_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 18,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782927477209,
+      "nearest_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927477031_monitor_1_post.jpg",
+      "screenshot_delta_ms": 178,
+      "referenced_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927477031_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927477031_monitor_1_post.jpg",
+          "timestamp_ms": 1782927477031,
+          "offset_s": -0.2
+        },
+        {
+          "path": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927477973_monitor_1_post.jpg",
+          "timestamp_ms": 1782927477973,
+          "offset_s": 0.8
+        }
+      ]
+    },
+    {
+      "review_index": 19,
+      "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782928952531,
+      "nearest_screenshot": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928951449_monitor_1_post.jpg",
+      "screenshot_delta_ms": 1082,
+      "referenced_screenshot": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928951449_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928951449_monitor_1_post.jpg",
+          "timestamp_ms": 1782928951449,
+          "offset_s": -1.1
+        },
+        {
+          "path": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928955845_monitor_1_post.jpg",
+          "timestamp_ms": 1782928955845,
+          "offset_s": 3.3
+        }
+      ]
+    },
+    {
+      "review_index": 20,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "timestamp_ms": 1782929635207,
+      "nearest_screenshot": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929635033_monitor_1_post.jpg",
+      "screenshot_delta_ms": 174,
+      "referenced_screenshot": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929635033_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929635033_monitor_1_post.jpg",
+          "timestamp_ms": 1782929635033,
+          "offset_s": -0.2
+        },
+        {
+          "path": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929637432_monitor_1_post.jpg",
+          "timestamp_ms": 1782929637432,
+          "offset_s": 2.2
+        }
+      ]
+    },
+    {
+      "review_index": 21,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782927789572,
+      "nearest_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927787018_monitor_1_post.jpg",
+      "screenshot_delta_ms": 2554,
+      "referenced_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927787018_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927787018_monitor_1_post.jpg",
+          "timestamp_ms": 1782927787018,
+          "offset_s": -2.6
+        },
+        {
+          "path": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927792224_monitor_1_post.jpg",
+          "timestamp_ms": 1782927792224,
+          "offset_s": 2.7
+        }
+      ]
+    },
+    {
+      "review_index": 22,
+      "session_id": "ses_20260701-191537-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782933438778,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE/screenshots/scr_smart_1782933443304_monitor_1_post.jpg",
+      "screenshot_delta_ms": 4526,
+      "referenced_screenshot": "dataset_b/ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE/screenshots/scr_smart_1782933443304_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 23,
+      "session_id": "ses_20260701-190250-NEELA9BAF",
+      "timestamp_ms": 1782933070792,
+      "nearest_screenshot": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933070096_monitor_1_post.jpg",
+      "screenshot_delta_ms": 696,
+      "referenced_screenshot": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933070096_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933070096_monitor_1_post.jpg",
+          "timestamp_ms": 1782933070096,
+          "offset_s": -0.7
+        },
+        {
+          "path": "dataset_b/ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF/screenshots/scr_smart_1782933074001_monitor_1_post.jpg",
+          "timestamp_ms": 1782933074001,
+          "offset_s": 3.2
+        }
+      ]
+    },
+    {
+      "review_index": 24,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "timestamp_ms": 1782929437907,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929440327_monitor_1_post.jpg",
+      "screenshot_delta_ms": 2420,
+      "referenced_screenshot": "dataset_b/ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF/screenshots/scr_smart_1782929440327_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 25,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "timestamp_ms": 1782927413661,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927414133_monitor_1_post.jpg",
+      "screenshot_delta_ms": 472,
+      "referenced_screenshot": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927414133_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 26,
+      "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782929965738,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929968061_monitor_1_post.jpg",
+      "screenshot_delta_ms": 2323,
+      "referenced_screenshot": "dataset_b/ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B/screenshots/scr_smart_1782929968061_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 27,
+      "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+      "timestamp_ms": 1782926800784,
+      "nearest_screenshot": "dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926801389_monitor_1_post.jpg",
+      "screenshot_delta_ms": 605,
+      "referenced_screenshot": "dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926801389_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926797295_monitor_1_post.jpg",
+          "timestamp_ms": 1782926797295,
+          "offset_s": -3.5
+        },
+        {
+          "path": "dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926801389_monitor_1_post.jpg",
+          "timestamp_ms": 1782926801389,
+          "offset_s": 0.6
+        }
+      ]
+    },
+    {
+      "review_index": 28,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "timestamp_ms": 1782927413251,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927414133_monitor_1_post.jpg",
+      "screenshot_delta_ms": 882,
+      "referenced_screenshot": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927414133_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 29,
+      "session_id": "ses_20260701-184201-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782931395315,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE/screenshots/scr_smart_1782931395544_monitor_1_post.jpg",
+      "screenshot_delta_ms": 229,
+      "referenced_screenshot": "dataset_b/ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE/screenshots/scr_smart_1782931395544_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 30,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782929845147,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782929845049_monitor_1_post.jpg",
+      "screenshot_delta_ms": 98,
+      "referenced_screenshot": "dataset_b/ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782929845049_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 31,
+      "session_id": "ses_20260701-192455-NEELA9BAF",
+      "timestamp_ms": 1782934289745,
+      "nearest_screenshot": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934290085_monitor_1_post.jpg",
+      "screenshot_delta_ms": 340,
+      "referenced_screenshot": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934290085_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934285347_monitor_1_post.jpg",
+          "timestamp_ms": 1782934285347,
+          "offset_s": -4.4
+        },
+        {
+          "path": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934290085_monitor_1_post.jpg",
+          "timestamp_ms": 1782934290085,
+          "offset_s": 0.3
+        }
+      ]
+    },
+    {
+      "review_index": 32,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "timestamp_ms": 1782927743094,
+      "nearest_screenshot": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927744110_monitor_1_post.jpg",
+      "screenshot_delta_ms": 1016,
+      "referenced_screenshot": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927744110_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927739229_monitor_1_post.jpg",
+          "timestamp_ms": 1782927739229,
+          "offset_s": -3.9
+        },
+        {
+          "path": "dataset_b/ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF/screenshots/scr_smart_1782927744110_monitor_1_post.jpg",
+          "timestamp_ms": 1782927744110,
+          "offset_s": 1.0
+        }
+      ]
+    },
+    {
+      "review_index": 33,
+      "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+      "timestamp_ms": 1782926466715,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926465405_monitor_1_post.jpg",
+      "screenshot_delta_ms": 1310,
+      "referenced_screenshot": "dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926465405_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 34,
+      "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782928590871,
+      "nearest_screenshot": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1730-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928590658_monitor_1_post.jpg",
+      "screenshot_delta_ms": 213,
+      "referenced_screenshot": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1730-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928590658_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1730-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928590658_monitor_1_post.jpg",
+          "timestamp_ms": 1782928590658,
+          "offset_s": -0.2
+        },
+        {
+          "path": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1730-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928591190_monitor_1_post.jpg",
+          "timestamp_ms": 1782928591190,
+          "offset_s": 0.3
+        }
+      ]
+    },
+    {
+      "review_index": 35,
+      "session_id": "ses_20260701-191537-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782933729372,
+      "nearest_screenshot": "dataset_b/ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE/screenshots/scr_smart_1782933729464_monitor_1_post.jpg",
+      "screenshot_delta_ms": 92,
+      "referenced_screenshot": "dataset_b/ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE/screenshots/scr_smart_1782933729464_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE/screenshots/scr_smart_1782933728097_monitor_1_post.jpg",
+          "timestamp_ms": 1782933728097,
+          "offset_s": -1.3
+        },
+        {
+          "path": "dataset_b/ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE/screenshots/scr_smart_1782933729464_monitor_1_post.jpg",
+          "timestamp_ms": 1782933729464,
+          "offset_s": 0.1
+        }
+      ]
+    },
+    {
+      "review_index": 36,
+      "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+      "timestamp_ms": 1782928990066,
+      "nearest_screenshot": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928990155_monitor_1_post.jpg",
+      "screenshot_delta_ms": 89,
+      "referenced_screenshot": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928990155_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928988814_monitor_1_post.jpg",
+          "timestamp_ms": 1782928988814,
+          "offset_s": -1.3
+        },
+        {
+          "path": "dataset_b/ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE/screenshots/scr_smart_1782928990155_monitor_1_post.jpg",
+          "timestamp_ms": 1782928990155,
+          "offset_s": 0.1
+        }
+      ]
+    },
+    {
+      "review_index": 37,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782927667377,
+      "nearest_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927668258_monitor_1_post.jpg",
+      "screenshot_delta_ms": 881,
+      "referenced_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927668258_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927666377_monitor_1_post.jpg",
+          "timestamp_ms": 1782927666377,
+          "offset_s": -1.0
+        },
+        {
+          "path": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927668258_monitor_1_post.jpg",
+          "timestamp_ms": 1782927668258,
+          "offset_s": 0.9
+        }
+      ]
+    },
+    {
+      "review_index": 38,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "timestamp_ms": 1782927211250,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927208531_monitor_1_post.jpg",
+      "screenshot_delta_ms": 2719,
+      "referenced_screenshot": "dataset_b/ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B/screenshots/scr_smart_1782927208531_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 39,
+      "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+      "timestamp_ms": 1782926436265,
+      "nearest_screenshot": "MISSING:dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926437539_monitor_1_post.jpg",
+      "screenshot_delta_ms": 1274,
+      "referenced_screenshot": "dataset_b/ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF/screenshots/scr_smart_1782926437539_monitor_1_post.jpg",
+      "primary_available": false,
+      "recovered_from": null,
+      "context_frame_found": false,
+      "frames_chronological": []
+    },
+    {
+      "review_index": 40,
+      "session_id": "ses_20260701-192455-NEELA9BAF",
+      "timestamp_ms": 1782934509790,
+      "nearest_screenshot": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934509622_monitor_1_post.jpg",
+      "screenshot_delta_ms": 168,
+      "referenced_screenshot": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934509622_monitor_1_post.jpg",
+      "primary_available": true,
+      "recovered_from": null,
+      "context_frame_found": true,
+      "frames_chronological": [
+        {
+          "path": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934509622_monitor_1_post.jpg",
+          "timestamp_ms": 1782934509622,
+          "offset_s": -0.2
+        },
+        {
+          "path": "dataset_b/ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF/screenshots/scr_smart_1782934510621_monitor_1_post.jpg",
+          "timestamp_ms": 1782934510621,
+          "offset_s": 0.8
+        }
+      ]
+    }
+  ]
+}

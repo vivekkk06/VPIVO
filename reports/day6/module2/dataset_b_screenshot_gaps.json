@@ -1,0 +1,432 @@
+{
+  "purpose": "Descriptive diagnosis of screenshot files referenced by the Dataset-B event logs but absent from the dataset. No file is recovered, substituted or inferred.",
+  "dataset": "dataset_b",
+  "summary": {
+    "chunks": 20,
+    "referenced_files": 4746,
+    "present_files": 3860,
+    "missing_files": 886,
+    "incomplete_chunks": 11,
+    "complete_chunks": 9,
+    "present_counts_in_incomplete_chunks": [
+      250
+    ],
+    "common_cap": 250,
+    "largest_complete_chunk": 211,
+    "every_chunk_above_cap_is_incomplete": true,
+    "incomplete_chunks_with_interleaved_gaps": 11,
+    "manifests_declaring_every_referenced_file": 11
+  },
+  "screenshot_events": 4759,
+  "upload_failure_event_types_in_log": [],
+  "upload_records": {
+    "uploads_logged": 5,
+    "uploads_logged_as_completed": 4,
+    "completed_uploads_for_incomplete_chunks": 0,
+    "incomplete_chunks_with_an_unfinished_upload_record": [
+      "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF"
+    ],
+    "incomplete_chunks_that_are_the_last_of_their_session": 10
+  },
+  "upload_records_per_chunk": [
+    {
+      "chunk": "ses_20260701-164424-CHAITANYA0BCF/chunk_20260701-1630-CHAITANYA0BCF",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF",
+      "incomplete": true,
+      "last_chunk_of_session": false,
+      "upload_started_logged": true,
+      "upload_completed_logged": false,
+      "upload_file_count": 401
+    },
+    {
+      "chunk": "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1730-CHAITANYA0BCF",
+      "incomplete": false,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1730-LAPTOP-76QMG9DE",
+      "incomplete": false,
+      "last_chunk_of_session": false,
+      "upload_started_logged": true,
+      "upload_completed_logged": true,
+      "upload_file_count": 213
+    },
+    {
+      "chunk": "ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE",
+      "incomplete": false,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B",
+      "incomplete": false,
+      "last_chunk_of_session": false,
+      "upload_started_logged": true,
+      "upload_completed_logged": true,
+      "upload_file_count": 68
+    },
+    {
+      "chunk": "ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-182634-NEELA9BAF/chunk_20260701-1800-NEELA9BAF",
+      "incomplete": false,
+      "last_chunk_of_session": false,
+      "upload_started_logged": true,
+      "upload_completed_logged": true,
+      "upload_file_count": 81
+    },
+    {
+      "chunk": "ses_20260701-182634-NEELA9BAF/chunk_20260701-1830-NEELA9BAF",
+      "incomplete": false,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-183232-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE",
+      "incomplete": false,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE",
+      "incomplete": true,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    },
+    {
+      "chunk": "ses_20260701-192455-NEELA9BAF/chunk_20260701-1900-NEELA9BAF",
+      "incomplete": false,
+      "last_chunk_of_session": false,
+      "upload_started_logged": true,
+      "upload_completed_logged": true,
+      "upload_file_count": 106
+    },
+    {
+      "chunk": "ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF",
+      "incomplete": false,
+      "last_chunk_of_session": true,
+      "upload_started_logged": false,
+      "upload_completed_logged": false,
+      "upload_file_count": null
+    }
+  ],
+  "sample_missing_screenshots": {
+    "n": 14,
+    "all_in_incomplete_chunks": true,
+    "points": [
+      {
+        "review_index": 3,
+        "chunk": "ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 5,
+        "chunk": "ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 9,
+        "chunk": "ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 17,
+        "chunk": "ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 22,
+        "chunk": "ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 24,
+        "chunk": "ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 25,
+        "chunk": "ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 26,
+        "chunk": "ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 28,
+        "chunk": "ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 29,
+        "chunk": "ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 30,
+        "chunk": "ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 33,
+        "chunk": "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 38,
+        "chunk": "ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B",
+        "chunk_incomplete": true
+      },
+      {
+        "review_index": 39,
+        "chunk": "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF",
+        "chunk_incomplete": true
+      }
+    ]
+  },
+  "cause": "Not determinable from the repository. The pattern is consistent with a per-chunk file limit applied somewhere between capture and the dataset as delivered; the logs do not say where, or how the kept files were chosen.",
+  "per_chunk": [
+    {
+      "chunk": "ses_20260701-164424-CHAITANYA0BCF/chunk_20260701-1630-CHAITANYA0BCF",
+      "referenced_files": 304,
+      "present_files": 250,
+      "missing_files": 54,
+      "declared_file_count": 304,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF",
+      "referenced_files": 399,
+      "present_files": 250,
+      "missing_files": 149,
+      "declared_file_count": 399,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1730-CHAITANYA0BCF",
+      "referenced_files": 5,
+      "present_files": 5,
+      "missing_files": 0,
+      "declared_file_count": 5,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-173246-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B",
+      "referenced_files": 363,
+      "present_files": 250,
+      "missing_files": 113,
+      "declared_file_count": 363,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-173642-NEELA9BAF/chunk_20260701-1730-NEELA9BAF",
+      "referenced_files": 280,
+      "present_files": 250,
+      "missing_files": 30,
+      "declared_file_count": 280,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1730-LAPTOP-76QMG9DE",
+      "referenced_files": 211,
+      "present_files": 211,
+      "missing_files": 0,
+      "declared_file_count": 211,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-175258-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE",
+      "referenced_files": 160,
+      "present_files": 160,
+      "missing_files": 0,
+      "declared_file_count": 160,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1730-SIDDHIGUPTAB00B",
+      "referenced_files": 66,
+      "present_files": 66,
+      "missing_files": 0,
+      "declared_file_count": 66,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-175747-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B",
+      "referenced_files": 256,
+      "present_files": 250,
+      "missing_files": 6,
+      "declared_file_count": 256,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-180923-NEELA9BAF/chunk_20260701-1800-NEELA9BAF",
+      "referenced_files": 330,
+      "present_files": 250,
+      "missing_files": 80,
+      "declared_file_count": 330,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-181413-LAPTOP-76QMG9DE/chunk_20260701-1800-LAPTOP-76QMG9DE",
+      "referenced_files": 357,
+      "present_files": 250,
+      "missing_files": 107,
+      "declared_file_count": 357,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-181913-SIDDHIGUPTAB00B/chunk_20260701-1800-SIDDHIGUPTAB00B",
+      "referenced_files": 288,
+      "present_files": 250,
+      "missing_files": 38,
+      "declared_file_count": 288,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-182634-NEELA9BAF/chunk_20260701-1800-NEELA9BAF",
+      "referenced_files": 79,
+      "present_files": 79,
+      "missing_files": 0,
+      "declared_file_count": 79,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-182634-NEELA9BAF/chunk_20260701-1830-NEELA9BAF",
+      "referenced_files": 159,
+      "present_files": 159,
+      "missing_files": 0,
+      "declared_file_count": 159,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-183232-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE",
+      "referenced_files": 193,
+      "present_files": 193,
+      "missing_files": 0,
+      "declared_file_count": 193,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-184201-LAPTOP-76QMG9DE/chunk_20260701-1830-LAPTOP-76QMG9DE",
+      "referenced_files": 456,
+      "present_files": 250,
+      "missing_files": 206,
+      "declared_file_count": 456,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-190250-NEELA9BAF/chunk_20260701-1900-NEELA9BAF",
+      "referenced_files": 275,
+      "present_files": 250,
+      "missing_files": 25,
+      "declared_file_count": 275,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-191537-LAPTOP-76QMG9DE/chunk_20260701-1900-LAPTOP-76QMG9DE",
+      "referenced_files": 328,
+      "present_files": 250,
+      "missing_files": 78,
+      "declared_file_count": 328,
+      "missing_interleaved": true
+    },
+    {
+      "chunk": "ses_20260701-192455-NEELA9BAF/chunk_20260701-1900-NEELA9BAF",
+      "referenced_files": 104,
+      "present_files": 104,
+      "missing_files": 0,
+      "declared_file_count": 104,
+      "missing_interleaved": null
+    },
+    {
+      "chunk": "ses_20260701-192455-NEELA9BAF/chunk_20260701-1930-NEELA9BAF",
+      "referenced_files": 133,
+      "present_files": 133,
+      "missing_files": 0,
+      "declared_file_count": 133,
+      "missing_interleaved": null
+    }
+  ]
+}

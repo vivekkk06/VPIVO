@@ -1,0 +1,166 @@
+{
+  "demo": "LOCAL HTTP INTEGRATION -- separate local processes over real HTTP. Not a real HR system; not a production deployment.",
+  "topology": [
+    "client (this script, standing in for the frontend)",
+    "automation API process: scripts/serve_hr_demo_api.py",
+    "HTTPHRApplication adapter (integration_mode=http)",
+    "local HR API process: scripts/serve_local_hr_api.py",
+    "SQLite: the HR system's state; SQLite: the automation API's execution state"
+  ],
+  "recorded": "states, codes and counts only; execution ids, request ids, timestamps and ports differ on every run and are not recorded",
+  "scenario_a_confirmed_path": {
+    "steps": [
+      {
+        "step": "select route",
+        "http_status": 200,
+        "route": "#/payroll-items",
+        "route_offered_by_api": true
+      },
+      {
+        "step": "enter note",
+        "note_length": 72
+      },
+      {
+        "step": "prepare execution (POST /api/prepare, integration_mode=http)",
+        "http_status": 200,
+        "status": "AWAITING_CONFIRMATION",
+        "execution_id_issued": true,
+        "note_field": "pi-note",
+        "confirm_target": "btn-pi-ok",
+        "hr_state_before_confirm": "PENDING"
+      },
+      {
+        "step": "human review checkpoint",
+        "confirmed_before_approval": false,
+        "decision": "approved (scripted demo reviewer)"
+      },
+      {
+        "step": "confirm (POST /api/confirm)",
+        "http_status": 200,
+        "status": "CONFIRMED",
+        "confirmed": true
+      },
+      {
+        "step": "local HR API receives the confirmation",
+        "confirm_requests_received": 1
+      },
+      {
+        "step": "SQLite records the execution",
+        "state": "COMMITTED",
+        "confirmation_state": "CONFIRMED",
+        "commit_count": 1,
+        "note_length_stored": 72
+      },
+      {
+        "step": "confirmation succeeds",
+        "confirmed": true
+      },
+      {
+        "step": "status lookup (GET /api/executions/{id}/status)",
+        "http_status": 200,
+        "status": "CONFIRMED",
+        "hr_confirmation_state": "CONFIRMED"
+      },
+      {
+        "step": "display",
+        "displayed_state": "CONFIRMED"
+      }
+    ]
+  },
+  "scenario_b_lost_response": {
+    "confirm": {
+      "http_status": 202,
+      "status": "UNKNOWN",
+      "error_type": "CONFIRMATION_UNKNOWN",
+      "execution_id_kept": true
+    },
+    "hr_state_while_client_unknown": {
+      "confirmation_state": "CONFIRMED",
+      "commit_count": 1
+    },
+    "status_lookup": {
+      "http_status": 200,
+      "status": "CONFIRMED",
+      "resolved_from_unknown": true
+    },
+    "second_confirm_attempt": {
+      "http_status": 400,
+      "error_type": "REPLAYED_REQUEST"
+    },
+    "hr_confirm_requests_received": 1,
+    "hr_commit_count": 1,
+    "retry_sent": false
+  },
+  "scenario_c_restart_with_durable_state": {
+    "before_restart": {
+      "confirm_http_status": 202,
+      "status_after_confirm": "UNKNOWN",
+      "error_type": "CONFIRMATION_UNKNOWN",
+      "execution_id_kept": true,
+      "status_url_offered": true,
+      "hr_committed_before_any_lookup": true
+    },
+    "restarted": [
+      "automation API",
+      "local HR API"
+    ],
+    "first_lookup_after_restart": {
+      "http_status": 200,
+      "status": "CONFIRMED",
+      "resolved_from_unknown": true
+    },
+    "second_lookup": {
+      "status": "CONFIRMED",
+      "resolved_from_unknown": false
+    },
+    "hr_commit_count": 1,
+    "hr_confirm_requests_received": 1
+  },
+  "scenario_d_restart_without_durable_state": {
+    "before_restart": {
+      "confirm_http_status": 202,
+      "status_after_confirm": "UNKNOWN",
+      "error_type": "CONFIRMATION_UNKNOWN",
+      "execution_id_kept": true,
+      "status_url_offered": true,
+      "hr_committed_before_any_lookup": true
+    },
+    "restarted": [
+      "automation API (in-memory execution state)"
+    ],
+    "automation_api_lookup_after_restart": {
+      "http_status": 404,
+      "error_type": "TARGET_NOT_FOUND"
+    },
+    "direct_hr_lookup_with_the_kept_id": {
+      "http_status": 200,
+      "confirmation_state": "CONFIRMED"
+    },
+    "conclusion": "Without durable execution state the automation API cannot resolve an UNKNOWN outcome after a restart. The HR system still can, but only if someone asks it directly with the execution_id the client kept. Durable state (EXECUTION_DB_PATH) is required for recovery."
+  },
+  "security": {
+    "files_checked": [
+      "a_audit.jsonl",
+      "a_exec.db",
+      "a_hr.db",
+      "b_audit.jsonl",
+      "b_exec.db",
+      "b_hr.db",
+      "c_audit.jsonl",
+      "c_exec.db",
+      "c_hr.db",
+      "d_audit.jsonl",
+      "d_hr.db"
+    ],
+    "note_text_found": false,
+    "credential_found": false,
+    "authorization_header_found": false
+  },
+  "not_validated": [
+    "a real HR system or HR API contract",
+    "enterprise authentication and authorisation",
+    "production secrets management",
+    "production deployment, TLS, high availability and scaling",
+    "reconciliation against a real HR source of truth"
+  ]
+}

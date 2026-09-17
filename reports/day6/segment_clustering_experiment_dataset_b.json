@@ -1,0 +1,172 @@
+{
+  "experiment": "Day-6 Phase 6 — HDBSCAN segment-level clustering for process grouping",
+  "scope_note": "Clustering answers the labelling question only. No segmentation boundary was altered; the Day-3 executions are consumed as given.",
+  "no_ground_truth_note": "Dataset B has no ground truth. ARI/NMI measure agreement with the existing Day-3 grouping, not accuracy.",
+  "circularity_note": "dominant_context is derived from the systems an execution touches, so the primary feature set excludes system identity. The contrast variant includes it only to make that circularity visible.",
+  "n_executions": 645,
+  "n_day3_process_labels": 29,
+  "n_features_behavioural": 33,
+  "n_features_with_identity": 46,
+  "min_cluster_sizes": [
+    5,
+    10,
+    15,
+    20
+  ],
+  "behavioural_only": {
+    "min_cluster_size=5": {
+      "n_clusters": 36,
+      "n_noise": 174,
+      "noise_fraction": 0.2698,
+      "n_clustered": 471,
+      "cluster_sizes_top10": [
+        90,
+        72,
+        19,
+        17,
+        16,
+        14,
+        14,
+        13,
+        12,
+        11
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.1577,
+      "normalized_mutual_info_vs_day3_labels": 0.5107
+    },
+    "min_cluster_size=10": {
+      "n_clusters": 10,
+      "n_noise": 238,
+      "noise_fraction": 0.369,
+      "n_clustered": 407,
+      "cluster_sizes_top10": [
+        136,
+        88,
+        41,
+        30,
+        26,
+        23,
+        20,
+        16,
+        15,
+        12
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.2636,
+      "normalized_mutual_info_vs_day3_labels": 0.532
+    },
+    "min_cluster_size=15": {
+      "n_clusters": 7,
+      "n_noise": 261,
+      "noise_fraction": 0.4047,
+      "n_clustered": 384,
+      "cluster_sizes_top10": [
+        135,
+        84,
+        59,
+        40,
+        34,
+        17,
+        15
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.2584,
+      "normalized_mutual_info_vs_day3_labels": 0.5207
+    },
+    "min_cluster_size=20": {
+      "n_clusters": 5,
+      "n_noise": 230,
+      "noise_fraction": 0.3566,
+      "n_clustered": 415,
+      "cluster_sizes_top10": [
+        170,
+        90,
+        82,
+        40,
+        33
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.2577,
+      "normalized_mutual_info_vs_day3_labels": 0.493
+    }
+  },
+  "with_system_identity_circular": {
+    "min_cluster_size=5": {
+      "n_clusters": 41,
+      "n_noise": 200,
+      "noise_fraction": 0.3101,
+      "n_clustered": 445,
+      "cluster_sizes_top10": [
+        42,
+        38,
+        35,
+        20,
+        19,
+        14,
+        14,
+        14,
+        13,
+        11
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.4139,
+      "normalized_mutual_info_vs_day3_labels": 0.7161
+    },
+    "min_cluster_size=10": {
+      "n_clusters": 13,
+      "n_noise": 212,
+      "noise_fraction": 0.3287,
+      "n_clustered": 433,
+      "cluster_sizes_top10": [
+        70,
+        67,
+        66,
+        56,
+        37,
+        32,
+        20,
+        16,
+        16,
+        15
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.6525,
+      "normalized_mutual_info_vs_day3_labels": 0.7835
+    },
+    "min_cluster_size=15": {
+      "n_clusters": 10,
+      "n_noise": 213,
+      "noise_fraction": 0.3302,
+      "n_clustered": 432,
+      "cluster_sizes_top10": [
+        67,
+        67,
+        60,
+        59,
+        52,
+        37,
+        36,
+        24,
+        15,
+        15
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.6283,
+      "normalized_mutual_info_vs_day3_labels": 0.7669
+    },
+    "min_cluster_size=20": {
+      "n_clusters": 8,
+      "n_noise": 262,
+      "noise_fraction": 0.4062,
+      "n_clustered": 383,
+      "cluster_sizes_top10": [
+        73,
+        65,
+        60,
+        52,
+        42,
+        37,
+        30,
+        24
+      ],
+      "adjusted_rand_index_vs_day3_labels": 0.661,
+      "normalized_mutual_info_vs_day3_labels": 0.7916
+    }
+  },
+  "best_ari_behavioural": 0.2636,
+  "best_ari_with_identity": 0.661
+}

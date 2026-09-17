@@ -1,0 +1,839 @@
+{
+  "label": "Vision-model surrogate review — not ground truth.",
+  "status": "SURROGATE REVIEW COMPLETED — human review not performed",
+  "reviewer": "vision-model surrogate reviewer (Claude), single reviewer",
+  "human_review": "NOT PERFORMED — no human judgment is recorded here",
+  "protocol": {
+    "sample_source": "reports/day6/module2/module2_dataset_b_screenshot_sample.json",
+    "seed": 20260918,
+    "sample_regenerated": false,
+    "frame_selection": "The sampled (nearest) frame plus the nearest AVAILABLE frame on the other side of the sampled moment, same session, within the window. Selected by time only, never by execution span.",
+    "context_window_ms": 60000,
+    "unavailable_rule": "A point whose sampled frame is missing is D_UNAVAILABLE by rule. No substitute frame is used.",
+    "rubric": {
+      "A_CLEAR_CONTINUITY": "The frames visibly show the same business context on both sides of the sampled moment: the same application or system and the same screen, form or document.",
+      "B_CLEAR_BOUNDARY": "The frames visibly show a change of business context across the sampled moment: a different system, application, document, or record screen.",
+      "C_AMBIGUOUS": "The visible evidence is not enough to decide — for example a single frame, a change of view within the same screen, or a frame that shows neither context clearly.",
+      "D_UNAVAILABLE": "The sampled screenshot is missing from disk or unreadable. No judgment is inferred from event metadata."
+    },
+    "operational_rules": [
+      "Recorded while reviewing and before any reveal; applied to every point.",
+      "B requires the two frames to show different business contexts: a different application with unrelated content, or a different record clearly opened after the previous one ended.",
+      "An application switch whose visible content continues the same topic (a record and the procedure or memo for that same kind of work) is C, not B.",
+      "A requires the same context visible on both sides of the sampled moment with no completion or switch signal between the frames; visible work on the same record or document strengthens it.",
+      "A completion or switch signal between the two frames (a completion toast, an app-picker dialog) leaves open whether a new unit began, so it is C unless a different record is visibly opened.",
+      "An identifier that is cut off at the frame edge is not read; if it is decisive, the point is C.",
+      "Note text visible in a frame is never transcribed into a rationale."
+    ],
+    "revisions_before_reveal": [
+      {
+        "review_index": 15,
+        "field": "label",
+        "from": "A_CLEAR_CONTINUITY",
+        "to": "C_AMBIGUOUS",
+        "reason": "The same record's approval toast appears between the two frames; under the completion rule the sampled moment may lie just after that record's work ended."
+      },
+      {
+        "review_index": 20,
+        "field": "label",
+        "from": "A_CLEAR_CONTINUITY",
+        "to": "C_AMBIGUOUS",
+        "reason": "As #15: the record's completion toast appears between the two frames."
+      },
+      {
+        "review_index": 37,
+        "field": "confidence",
+        "from": "medium",
+        "to": "low",
+        "reason": "The vendor on the selected record already has approved contracts in the same list, which weakens the same-topic reading; the record's detail panel is cut off, so C is kept."
+      }
+    ]
+  },
+  "blindness": {
+    "judgments_frozen_at": "2026-09-18T06:32:38.442221+00:00",
+    "judgments_sha256": "9384c97d27033bc5ae61ba98a55046da81baa722f6aaf205118c58dd10ddb7af",
+    "first_revealed_at": "2026-09-18T06:32:49.116464+00:00",
+    "hash_verified_at_reveal": true
+  },
+  "recovery": {
+    "method": "exact filename search across the whole dataset; accepted only with a matching session and the recorded byte size",
+    "referenced_missing": 14,
+    "recovered": 0
+  },
+  "missing_screenshots": {
+    "source": "reports/day6/module2/dataset_b_screenshot_gaps.json",
+    "summary": {
+      "chunks": 20,
+      "referenced_files": 4746,
+      "present_files": 3860,
+      "missing_files": 886,
+      "incomplete_chunks": 11,
+      "complete_chunks": 9,
+      "present_counts_in_incomplete_chunks": [
+        250
+      ],
+      "common_cap": 250,
+      "largest_complete_chunk": 211,
+      "every_chunk_above_cap_is_incomplete": true,
+      "incomplete_chunks_with_interleaved_gaps": 11,
+      "manifests_declaring_every_referenced_file": 11
+    },
+    "upload_records": {
+      "uploads_logged": 5,
+      "uploads_logged_as_completed": 4,
+      "completed_uploads_for_incomplete_chunks": 0,
+      "incomplete_chunks_with_an_unfinished_upload_record": [
+        "ses_20260701-171614-CHAITANYA0BCF/chunk_20260701-1700-CHAITANYA0BCF"
+      ],
+      "incomplete_chunks_that_are_the_last_of_their_session": 10
+    },
+    "upload_failure_event_types_in_log": [],
+    "sample_missing_all_in_incomplete_chunks": true,
+    "cause": "Not determinable from the repository. The pattern is consistent with a per-chunk file limit applied somewhere between capture and the dataset as delivered; the logs do not say where, or how the kept files were chosen.",
+    "unavailable_is_not_negative_evidence": true
+  },
+  "summary": {
+    "label": "Vision-model surrogate review — not ground truth.",
+    "sample_size": 40,
+    "screenshots_available": 26,
+    "screenshots_unavailable": 14,
+    "counts": {
+      "A_CLEAR_CONTINUITY": 7,
+      "B_CLEAR_BOUNDARY": 6,
+      "C_AMBIGUOUS": 13,
+      "D_UNAVAILABLE": 14
+    },
+    "counts_by_sample_type": {
+      "boundary_sample": {
+        "A_CLEAR_CONTINUITY": 3,
+        "B_CLEAR_BOUNDARY": 3,
+        "C_AMBIGUOUS": 6,
+        "D_UNAVAILABLE": 8
+      },
+      "control_sample": {
+        "A_CLEAR_CONTINUITY": 4,
+        "B_CLEAR_BOUNDARY": 3,
+        "C_AMBIGUOUS": 7,
+        "D_UNAVAILABLE": 6
+      }
+    },
+    "boundary_samples_judgeable": 12,
+    "control_samples_judgeable": 14,
+    "boundary_sample_visual_support_rate": 0.25,
+    "control_sample_visual_continuity_rate": 0.2857,
+    "boundary_samples_visually_continuous": 3,
+    "control_samples_visually_changing": 3,
+    "ambiguous_total": 13,
+    "not_metrics_note": "Descriptive surrogate visual-review statistics over a 40-point sample. They are not segmentation metrics, not ground truth, and must not be reported as such."
+  },
+  "decision": {
+    "outcome": "IDENTIFIES CONCERNS",
+    "options": [
+      "USEFUL CORROBORATING EVIDENCE",
+      "INCONCLUSIVE",
+      "IDENTIFIES CONCERNS"
+    ],
+    "recorded_after_reveal": true,
+    "statement": "Dataset-B visual evidence does not support the sampled boundary interpretations as a group. It is not a measure of segmentation quality, which this review cannot assess.",
+    "basis": [
+      "Judgeable boundary samples showed a visible context change in 3 of 12; judgeable controls showed one in 3 of 14.",
+      "3 of 12 judgeable boundary samples show the same context continuing across the boundary; 4 of 14 judgeable controls show clear continuity.",
+      "13 of 26 reviewable points were ambiguous, and 14 of 40 had no image."
+    ],
+    "not_a_segmentation_metric": true,
+    "module2_promotion": "Unchanged: Module 2 segmentation is NOT PROMOTED. This review is not a basis for promotion."
+  },
+  "comparison": [
+    {
+      "review_index": 1,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "B_CLEAR_BOUNDARY",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 21264,
+          "event_count": 36,
+          "systems_in_order": [
+            "system:HR人事給与システム",
+            "app:Microsoft Word",
+            "system:HR人事給与システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 2,
+      "session_id": "ses_20260701-190250-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "B_CLEAR_BOUNDARY",
+      "confidence": "high",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 15831,
+          "event_count": 44,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 3,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "sample_type": "control_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 4,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 37795,
+          "event_count": 79,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 5,
+      "session_id": "ses_20260701-184201-LAPTOP-76QMG9DE",
+      "sample_type": "control_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 6,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "sample_type": "boundary_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 2862,
+        "execution_before": {
+          "dominant_context": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+          "duration_ms": 39076,
+          "event_count": 71,
+          "systems_in_order": [
+            "app:Microsoft Word",
+            "system:受発注在庫管理システム",
+            "app:Microsoft Word",
+            "system:受発注在庫管理システム",
+            "app:Microsoft Word",
+            "system:受発注在庫管理システム"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+          "duration_ms": 2824,
+          "event_count": 8,
+          "systems_in_order": [
+            "app:Microsoft Word"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 7,
+      "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+      "sample_type": "boundary_sample",
+      "visual_label": "B_CLEAR_BOUNDARY",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 771,
+        "execution_before": {
+          "dominant_context": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+          "duration_ms": 3245,
+          "event_count": 8,
+          "systems_in_order": [
+            "app:Microsoft Word"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:受発注在庫管理システム",
+          "duration_ms": 28278,
+          "event_count": 53,
+          "systems_in_order": [
+            "system:受発注在庫管理システム",
+            "app:Microsoft Word",
+            "system:受発注在庫管理システム",
+            "app:Microsoft Word",
+            "system:受発注在庫管理システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 8,
+      "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+      "sample_type": "boundary_sample",
+      "visual_label": "B_CLEAR_BOUNDARY",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 1263,
+        "execution_before": {
+          "dominant_context": "app:Microsoft Excel::expense_calc",
+          "duration_ms": 6501,
+          "event_count": 36,
+          "systems_in_order": [
+            "app:Microsoft Excel"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:受発注在庫管理システム",
+          "duration_ms": 2807,
+          "event_count": 10,
+          "systems_in_order": [
+            "system:受発注在庫管理システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 9,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 10,
+      "session_id": "ses_20260701-175747-SIDDHIGUPTAB00B",
+      "sample_type": "control_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 56198,
+          "event_count": 84,
+          "systems_in_order": [
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 11,
+      "session_id": "ses_20260701-182634-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "A_CLEAR_CONTINUITY",
+      "confidence": "high",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 20101,
+          "event_count": 48,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 12,
+      "session_id": "ses_20260701-175747-SIDDHIGUPTAB00B",
+      "sample_type": "control_sample",
+      "visual_label": "A_CLEAR_CONTINUITY",
+      "confidence": "high",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:受発注在庫管理システム",
+          "duration_ms": 4773,
+          "event_count": 16,
+          "systems_in_order": [
+            "system:受発注在庫管理システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 13,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "sample_type": "boundary_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 0,
+        "execution_before": {
+          "dominant_context": "app:OpenWith",
+          "duration_ms": 8953,
+          "event_count": 35,
+          "systems_in_order": [
+            "app:OpenWith"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 26127,
+          "event_count": 46,
+          "systems_in_order": [
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 14,
+      "session_id": "ses_20260701-192455-NEELA9BAF",
+      "sample_type": "boundary_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 386,
+        "execution_before": {
+          "dominant_context": "system:受発注在庫管理システム",
+          "duration_ms": 14196,
+          "event_count": 12,
+          "systems_in_order": [
+            "system:受発注在庫管理システム"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 0,
+          "event_count": 1,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 15,
+      "session_id": "ses_20260701-190250-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 18014,
+          "event_count": 34,
+          "systems_in_order": [
+            "system:財務会計システム",
+            "app:Microsoft Word",
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 16,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "sample_type": "boundary_sample",
+      "visual_label": "A_CLEAR_CONTINUITY",
+      "confidence": "high",
+      "module1_context_after_reveal": {
+        "gap_ms": 480,
+        "execution_before": {
+          "dominant_context": "app:Microsoft Word::kaigo_kyuugyou_kitei",
+          "duration_ms": 4274,
+          "event_count": 8,
+          "systems_in_order": [
+            "app:Microsoft Word"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 11612,
+          "event_count": 16,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 17,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 18,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "sample_type": "boundary_sample",
+      "visual_label": "A_CLEAR_CONTINUITY",
+      "confidence": "high",
+      "module1_context_after_reveal": {
+        "gap_ms": 356,
+        "execution_before": {
+          "dominant_context": "app:Microsoft Word::shinkui_keiyaku_tetsuzuki",
+          "duration_ms": 3983,
+          "event_count": 8,
+          "systems_in_order": [
+            "app:Microsoft Word"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:受発注在庫管理システム",
+          "duration_ms": 2896,
+          "event_count": 11,
+          "systems_in_order": [
+            "system:受発注在庫管理システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 19,
+      "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+      "sample_type": "control_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 12640,
+          "event_count": 26,
+          "systems_in_order": [
+            "system:財務会計システム",
+            "app:Microsoft Word",
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 20,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 22684,
+          "event_count": 37,
+          "systems_in_order": [
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 21,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "sample_type": "boundary_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 5108,
+        "execution_before": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 15799,
+          "event_count": 45,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "app:Windows Explorer",
+          "duration_ms": 7154,
+          "event_count": 6,
+          "systems_in_order": [
+            "app:Windows Explorer"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 22,
+      "session_id": "ses_20260701-191537-LAPTOP-76QMG9DE",
+      "sample_type": "control_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 23,
+      "session_id": "ses_20260701-190250-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:受発注在庫管理システム",
+          "duration_ms": 15618,
+          "event_count": 42,
+          "systems_in_order": [
+            "system:受発注在庫管理システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 24,
+      "session_id": "ses_20260701-180923-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 25,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 26,
+      "session_id": "ses_20260701-181913-SIDDHIGUPTAB00B",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 27,
+      "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+      "sample_type": "control_sample",
+      "visual_label": "B_CLEAR_BOUNDARY",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 44157,
+          "event_count": 77,
+          "systems_in_order": [
+            "system:財務会計システム",
+            "app:Microsoft Word",
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 28,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 29,
+      "session_id": "ses_20260701-184201-LAPTOP-76QMG9DE",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 30,
+      "session_id": "ses_20260701-181413-LAPTOP-76QMG9DE",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 31,
+      "session_id": "ses_20260701-192455-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "A_CLEAR_CONTINUITY",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "app:Microsoft Word::nyusha_checklist_shinsotsu_batch",
+          "duration_ms": 8891,
+          "event_count": 20,
+          "systems_in_order": [
+            "app:Microsoft Word"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 32,
+      "session_id": "ses_20260701-173642-NEELA9BAF",
+      "sample_type": "control_sample",
+      "visual_label": "A_CLEAR_CONTINUITY",
+      "confidence": "high",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "app:Microsoft Excel::expense_calc",
+          "duration_ms": 9328,
+          "event_count": 35,
+          "systems_in_order": [
+            "app:Microsoft Excel"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 33,
+      "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 34,
+      "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+      "sample_type": "boundary_sample",
+      "visual_label": "B_CLEAR_BOUNDARY",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 426,
+        "execution_before": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 9577,
+          "event_count": 14,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 21722,
+          "event_count": 51,
+          "systems_in_order": [
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 35,
+      "session_id": "ses_20260701-191537-LAPTOP-76QMG9DE",
+      "sample_type": "boundary_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 0,
+        "execution_before": {
+          "dominant_context": "app:OpenWith",
+          "duration_ms": 9988,
+          "event_count": 81,
+          "systems_in_order": [
+            "app:OpenWith"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 22211,
+          "event_count": 35,
+          "systems_in_order": [
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 36,
+      "session_id": "ses_20260701-175258-LAPTOP-76QMG9DE",
+      "sample_type": "boundary_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "medium",
+      "module1_context_after_reveal": {
+        "gap_ms": 0,
+        "execution_before": {
+          "dominant_context": "app:OpenWith",
+          "duration_ms": 7890,
+          "event_count": 35,
+          "systems_in_order": [
+            "app:OpenWith"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:財務会計システム",
+          "duration_ms": 32357,
+          "event_count": 65,
+          "systems_in_order": [
+            "system:財務会計システム",
+            "app:Microsoft Word",
+            "system:財務会計システム",
+            "app:Microsoft Word",
+            "system:財務会計システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 37,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "sample_type": "control_sample",
+      "visual_label": "C_AMBIGUOUS",
+      "confidence": "low",
+      "module1_context_after_reveal": {
+        "execution": {
+          "dominant_context": "system:受発注在庫管理システム",
+          "duration_ms": 14485,
+          "event_count": 32,
+          "systems_in_order": [
+            "system:受発注在庫管理システム",
+            "app:Microsoft Word",
+            "system:受発注在庫管理システム"
+          ]
+        }
+      }
+    },
+    {
+      "review_index": 38,
+      "session_id": "ses_20260701-173246-SIDDHIGUPTAB00B",
+      "sample_type": "control_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 39,
+      "session_id": "ses_20260701-171614-CHAITANYA0BCF",
+      "sample_type": "boundary_sample",
+      "visual_label": "D_UNAVAILABLE",
+      "confidence": "n/a",
+      "module1_context_after_reveal": null
+    },
+    {
+      "review_index": 40,
+      "session_id": "ses_20260701-192455-NEELA9BAF",
+      "sample_type": "boundary_sample",
+      "visual_label": "A_CLEAR_CONTINUITY",
+      "confidence": "high",
+      "module1_context_after_reveal": {
+        "gap_ms": 336,
+        "execution_before": {
+          "dominant_context": "app:Microsoft Word::gyomu_itaku_keihi_kitei",
+          "duration_ms": 3100,
+          "event_count": 8,
+          "systems_in_order": [
+            "app:Microsoft Word"
+          ]
+        },
+        "execution_after": {
+          "dominant_context": "system:HR人事給与システム",
+          "duration_ms": 34029,
+          "event_count": 56,
+          "systems_in_order": [
+            "system:HR人事給与システム"
+          ]
+        }
+      }
+    }
+  ],
+  "what_this_cannot_establish": [
+    "That Dataset-B segmentation is accurate. No accuracy, precision, recall or F1 is computed or implied.",
+    "Anything about the 14 points whose sampled screenshot is missing; they are reported as unavailable, not as evidence either way.",
+    "Inter-rater agreement: there is one reviewer, and it is a vision model.",
+    "Business-level correctness: a screen shows what the UI displayed, not whether the work was right."
+  ]
+}

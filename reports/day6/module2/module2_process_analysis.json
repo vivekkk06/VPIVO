@@ -1,0 +1,1176 @@
+{
+  "module": "Module 2 — Adaptive Evidence-Guided Reconstruction & Automation",
+  "dataset": "Dataset B (no ground truth)",
+  "dataset_b_rule": "Dataset B is used for operational validation, not supervised segmentation evaluation. No accuracy, precision, recall or F1 appears in this artifact.",
+  "canonical_inputs": {
+    "profiles": "reports/day3/process_profiles_dataset_b.json",
+    "executions": "reports/day3/process_executions_dataset_b.json",
+    "ranking_and_sensitivity": "reports/day3/problem2_audit_results.json",
+    "hr_forensics": "reports/day3/hr_payroll_dominant_path_dataset_b.json"
+  },
+  "step_2a_effort": {
+    "definitions": {
+      "F_p": "execution frequency (count of executions of process p)",
+      "TD_p": "total observed duration, sum of execution durations",
+      "AD_p": "TD_p / F_p",
+      "TS_p": "TD_p / sum over all ranked processes of TD",
+      "ObservedEffort_p": "TD_p expressed in hours — an observed quantity, not a cost"
+    },
+    "monetary_roi_statement": "Direct monetary ROI cannot be estimated from the provided telemetry because operator cost/headcount cost is unavailable. No salary, rate or headcount figure appears anywhere in Dataset A or Dataset B, so any currency amount would be invented rather than measured.",
+    "environment_caveat": "Dataset-B timing may reflect the assignment/test environment rather than production reality. Durations here are observed recording time, not validated production cycle times, and must not be presented as the latter.",
+    "n_ranked_processes": 21,
+    "n_excluded_processes": 8,
+    "total_observed_time_hours_all_ranked": 2.5581,
+    "cross_check_note": "Process-level totals are read from the canonical profile artifact. Execution records carry no process_id field, so a per-process recomputation from executions is not possible without re-deriving the grouping; the profile totals are therefore used as canonical and not second-guessed.",
+    "table": [
+      {
+        "process_id": "system:HR人事給与システム",
+        "readable_name": "HR / Payroll System",
+        "executions_F_p": 122,
+        "total_observed_time_ms_TD_p": 2991209,
+        "total_observed_time_hours": 0.8309,
+        "average_duration_ms_AD_p": 24518.1,
+        "time_share_TS_p": 0.324812,
+        "observed_effort_hours": 0.8309,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "system:財務会計システム",
+        "readable_name": "Financial Accounting System",
+        "executions_F_p": 125,
+        "total_observed_time_ms_TD_p": 2596737,
+        "total_observed_time_hours": 0.7213,
+        "average_duration_ms_AD_p": 20773.9,
+        "time_share_TS_p": 0.281977,
+        "observed_effort_hours": 0.7213,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "system:受発注在庫管理システム",
+        "readable_name": "Order & Inventory Management System",
+        "executions_F_p": 96,
+        "total_observed_time_ms_TD_p": 1545088,
+        "total_observed_time_hours": 0.4292,
+        "average_duration_ms_AD_p": 16094.7,
+        "time_share_TS_p": 0.16778,
+        "observed_effort_hours": 0.4292,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+        "readable_name": "Word: Contract Termination Procedure",
+        "executions_F_p": 29,
+        "total_observed_time_ms_TD_p": 490117,
+        "total_observed_time_hours": 0.1361,
+        "average_duration_ms_AD_p": 16900.6,
+        "time_share_TS_p": 0.053221,
+        "observed_effort_hours": 0.1361,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_kyuuyo_kitei",
+        "readable_name": "Word: Outsourcing Compensation Regulations",
+        "executions_F_p": 23,
+        "total_observed_time_ms_TD_p": 297817,
+        "total_observed_time_hours": 0.0827,
+        "average_duration_ms_AD_p": 12948.6,
+        "time_share_TS_p": 0.03234,
+        "observed_effort_hours": 0.0827,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::nyusha_checklist_shinsotsu_batch",
+        "readable_name": "Word: New-Employee Checklist (New-Graduate Batch)",
+        "executions_F_p": 37,
+        "total_observed_time_ms_TD_p": 285644,
+        "total_observed_time_hours": 0.0793,
+        "average_duration_ms_AD_p": 7720.1,
+        "time_share_TS_p": 0.031018,
+        "observed_effort_hours": 0.0793,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::settai_keihi_kitei",
+        "readable_name": "Word: Entertainment Expense Regulations",
+        "executions_F_p": 15,
+        "total_observed_time_ms_TD_p": 225777,
+        "total_observed_time_hours": 0.0627,
+        "average_duration_ms_AD_p": 15051.8,
+        "time_share_TS_p": 0.024517,
+        "observed_effort_hours": 0.0627,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Excel::expense_calc",
+        "readable_name": "Excel: Expense Calculation Workbook",
+        "executions_F_p": 17,
+        "total_observed_time_ms_TD_p": 135183,
+        "total_observed_time_hours": 0.0376,
+        "average_duration_ms_AD_p": 7951.9,
+        "time_share_TS_p": 0.014679,
+        "observed_effort_hours": 0.0376,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Notepad::精算確認メモ",
+        "readable_name": "Notepad: Expense Settlement Confirmation Memo",
+        "executions_F_p": 19,
+        "total_observed_time_ms_TD_p": 115961,
+        "total_observed_time_hours": 0.0322,
+        "average_duration_ms_AD_p": 6103.2,
+        "time_share_TS_p": 0.012592,
+        "observed_effort_hours": 0.0322,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Notepad::在庫調整メモ",
+        "readable_name": "Notepad: Inventory Adjustment Memo",
+        "executions_F_p": 20,
+        "total_observed_time_ms_TD_p": 100045,
+        "total_observed_time_hours": 0.0278,
+        "average_duration_ms_AD_p": 5002.2,
+        "time_share_TS_p": 0.010864,
+        "observed_effort_hours": 0.0278,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::shinkui_keiyaku_tetsuzuki",
+        "readable_name": "Word: New Contract Procedure",
+        "executions_F_p": 4,
+        "total_observed_time_ms_TD_p": 79875,
+        "total_observed_time_hours": 0.0222,
+        "average_duration_ms_AD_p": 19968.8,
+        "time_share_TS_p": 0.008674,
+        "observed_effort_hours": 0.0222,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_ukeire_tetsuzuki",
+        "readable_name": "Word: Outsourcing Intake Procedure",
+        "executions_F_p": 12,
+        "total_observed_time_ms_TD_p": 74097,
+        "total_observed_time_hours": 0.0206,
+        "average_duration_ms_AD_p": 6174.8,
+        "time_share_TS_p": 0.008046,
+        "observed_effort_hours": 0.0206,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Excel::budget_analysis",
+        "readable_name": "Excel: Budget Analysis Workbook",
+        "executions_F_p": 7,
+        "total_observed_time_ms_TD_p": 71909,
+        "total_observed_time_hours": 0.02,
+        "average_duration_ms_AD_p": 10272.7,
+        "time_share_TS_p": 0.007809,
+        "observed_effort_hours": 0.02,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Notepad::IT申請メモ",
+        "readable_name": "Notepad: IT Request Memo",
+        "executions_F_p": 6,
+        "total_observed_time_ms_TD_p": 61681,
+        "total_observed_time_hours": 0.0171,
+        "average_duration_ms_AD_p": 10280.2,
+        "time_share_TS_p": 0.006698,
+        "observed_effort_hours": 0.0171,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::getsujitsu_teigaku_torihikisaki_ichiran",
+        "readable_name": "Word: Monthly Fixed-Amount Trading-Partner List",
+        "executions_F_p": 10,
+        "total_observed_time_ms_TD_p": 38200,
+        "total_observed_time_hours": 0.0106,
+        "average_duration_ms_AD_p": 3820.0,
+        "time_share_TS_p": 0.004148,
+        "observed_effort_hours": 0.0106,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::shinkuitorihikisaki_touroku_tetsuzuki",
+        "readable_name": "Word: New Trading-Partner Registration Procedure",
+        "executions_F_p": 8,
+        "total_observed_time_ms_TD_p": 31404,
+        "total_observed_time_hours": 0.0087,
+        "average_duration_ms_AD_p": 3925.5,
+        "time_share_TS_p": 0.00341,
+        "observed_effort_hours": 0.0087,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_keihi_kitei",
+        "readable_name": "Word: Outsourcing Expense Regulations",
+        "executions_F_p": 5,
+        "total_observed_time_ms_TD_p": 21210,
+        "total_observed_time_hours": 0.0059,
+        "average_duration_ms_AD_p": 4242.0,
+        "time_share_TS_p": 0.002303,
+        "observed_effort_hours": 0.0059,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::ikuji_kyuugyou_kitei",
+        "readable_name": "Word: Childcare Leave Regulations",
+        "executions_F_p": 4,
+        "total_observed_time_ms_TD_p": 15299,
+        "total_observed_time_hours": 0.0042,
+        "average_duration_ms_AD_p": 3824.8,
+        "time_share_TS_p": 0.001661,
+        "observed_effort_hours": 0.0042,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::kanrisya_kengen_shinsei_tetsuzuki",
+        "readable_name": "Word: Administrator Authority Request Procedure",
+        "executions_F_p": 4,
+        "total_observed_time_ms_TD_p": 13940,
+        "total_observed_time_hours": 0.0039,
+        "average_duration_ms_AD_p": 3485.0,
+        "time_share_TS_p": 0.001514,
+        "observed_effort_hours": 0.0039,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::kazoku_teate_kitei",
+        "readable_name": "Word: Family Allowance Regulations",
+        "executions_F_p": 3,
+        "total_observed_time_ms_TD_p": 11382,
+        "total_observed_time_hours": 0.0032,
+        "average_duration_ms_AD_p": 3794.0,
+        "time_share_TS_p": 0.001236,
+        "observed_effort_hours": 0.0032,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      },
+      {
+        "process_id": "app:Microsoft Word::kaigo_kyuugyou_kitei",
+        "readable_name": "Word: Family-Care Leave Regulations",
+        "executions_F_p": 2,
+        "total_observed_time_ms_TD_p": 6461,
+        "total_observed_time_hours": 0.0018,
+        "average_duration_ms_AD_p": 3230.5,
+        "time_share_TS_p": 0.000702,
+        "observed_effort_hours": 0.0018,
+        "cost_input_available": false,
+        "estimated_cost": null,
+        "missing_inputs": [
+          "operator hourly cost rate",
+          "headcount",
+          "fully-loaded employment cost"
+        ]
+      }
+    ]
+  },
+  "step_2b_operator_variants": {
+    "hypothesis": "H5 — operator-level variant behaviour reveals rollout/training risk hidden by process-level averages",
+    "canonical_split_used_not_reinterpreted": {
+      "dominant": 94,
+      "word_detour": 24,
+      "rare_edge": 4,
+      "join_matches_canonical_counts": true,
+      "execution_ids_unmatched_to_an_operator": 0
+    },
+    "hr_operator_table": [
+      {
+        "operator": "NEELA9BAF",
+        "executions": 44,
+        "dominant": 34,
+        "word_detour": 9,
+        "rare_edge": 1,
+        "dominant_path_share": 0.7727,
+        "dominant_share_95ci": [
+          0.6301,
+          0.8716
+        ],
+        "ci_contains_pooled_share": true
+      },
+      {
+        "operator": "LAPTOP-76QMG9DE",
+        "executions": 35,
+        "dominant": 25,
+        "word_detour": 8,
+        "rare_edge": 2,
+        "dominant_path_share": 0.7143,
+        "dominant_share_95ci": [
+          0.5494,
+          0.8367
+        ],
+        "ci_contains_pooled_share": true
+      },
+      {
+        "operator": "SIDDHIGUPTAB00B",
+        "executions": 25,
+        "dominant": 20,
+        "word_detour": 4,
+        "rare_edge": 1,
+        "dominant_path_share": 0.8,
+        "dominant_share_95ci": [
+          0.6087,
+          0.9114
+        ],
+        "ci_contains_pooled_share": true
+      },
+      {
+        "operator": "CHAITANYA0BCF",
+        "executions": 18,
+        "dominant": 15,
+        "word_detour": 3,
+        "rare_edge": 0,
+        "dominant_path_share": 0.8333,
+        "dominant_share_95ci": [
+          0.6078,
+          0.9416
+        ],
+        "ci_contains_pooled_share": true
+      }
+    ],
+    "pooled_dominant_share": 0.7705,
+    "dispersion": {
+      "min_share": 0.7143,
+      "max_share": 0.8333,
+      "spread": 0.119,
+      "stdev": 0.0436,
+      "chi_square": 1.152,
+      "dof": 3,
+      "chi_square_0_05_critical": 7.815,
+      "differs_beyond_chance_at_0_05": false
+    },
+    "interpretation_wording": "Variant concentration differs across operators and may indicate a training/process-adherence consideration. No operator is characterised as performing badly: the samples are small (18-44 executions each), and the confidence intervals must be read before any rollout inference is drawn.",
+    "limitations": [
+      "Only 4 operators appear in Dataset B, with 18-44 HR executions each.",
+      "Operator identity is a machine/account label, not a verified person.",
+      "Dataset B has no ground truth, so these are operational statistics only.",
+      "A difference in variant mix does not establish a difference in competence, workload, or case difficulty — none of which is observable here."
+    ],
+    "process_level_operator_concentration": [
+      {
+        "process_id": "system:財務会計システム",
+        "readable_name": "Financial Accounting System",
+        "n_operators": 4,
+        "executions": 125,
+        "largest_operator_share": 0.4,
+        "herfindahl": 0.3092
+      },
+      {
+        "process_id": "system:HR人事給与システム",
+        "readable_name": "HR / Payroll System",
+        "n_operators": 4,
+        "executions": 122,
+        "largest_operator_share": 0.3607,
+        "herfindahl": 0.2761
+      },
+      {
+        "process_id": "system:受発注在庫管理システム",
+        "readable_name": "Order & Inventory Management System",
+        "n_operators": 4,
+        "executions": 96,
+        "largest_operator_share": 0.3854,
+        "herfindahl": 0.2984
+      },
+      {
+        "process_id": "app:Microsoft Word::nyusha_checklist_shinsotsu_batch",
+        "readable_name": "Word: New-Employee Checklist (New-Graduate Batch)",
+        "n_operators": 4,
+        "executions": 37,
+        "largest_operator_share": 0.3514,
+        "herfindahl": 0.2695
+      },
+      {
+        "process_id": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+        "readable_name": "Word: Contract Termination Procedure",
+        "n_operators": 4,
+        "executions": 29,
+        "largest_operator_share": 0.4483,
+        "herfindahl": 0.3413
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_kyuuyo_kitei",
+        "readable_name": "Word: Outsourcing Compensation Regulations",
+        "n_operators": 3,
+        "executions": 23,
+        "largest_operator_share": 0.7391,
+        "herfindahl": 0.5841
+      },
+      {
+        "process_id": "app:WindowsTerminal",
+        "readable_name": "app:WindowsTerminal",
+        "n_operators": 4,
+        "executions": 21,
+        "largest_operator_share": 0.4762,
+        "herfindahl": 0.3288
+      },
+      {
+        "process_id": "app:Notepad::在庫調整メモ",
+        "readable_name": "Notepad: Inventory Adjustment Memo",
+        "n_operators": 3,
+        "executions": 20,
+        "largest_operator_share": 0.45,
+        "herfindahl": 0.365
+      },
+      {
+        "process_id": "app:Notepad::精算確認メモ",
+        "readable_name": "Notepad: Expense Settlement Confirmation Memo",
+        "n_operators": 3,
+        "executions": 19,
+        "largest_operator_share": 0.3684,
+        "herfindahl": 0.3407
+      },
+      {
+        "process_id": "app:Microsoft Excel::expense_calc",
+        "readable_name": "Excel: Expense Calculation Workbook",
+        "n_operators": 3,
+        "executions": 17,
+        "largest_operator_share": 0.5882,
+        "herfindahl": 0.4325
+      },
+      {
+        "process_id": "app:Microsoft Word::settai_keihi_kitei",
+        "readable_name": "Word: Entertainment Expense Regulations",
+        "n_operators": 2,
+        "executions": 15,
+        "largest_operator_share": 0.6,
+        "herfindahl": 0.52
+      },
+      {
+        "process_id": "app:OpenWith",
+        "readable_name": "app:OpenWith",
+        "n_operators": 1,
+        "executions": 15,
+        "largest_operator_share": 1.0,
+        "herfindahl": 1.0
+      },
+      {
+        "process_id": "app:ms-teams",
+        "readable_name": "app:ms-teams",
+        "n_operators": 4,
+        "executions": 14,
+        "largest_operator_share": 0.3571,
+        "herfindahl": 0.3061
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_ukeire_tetsuzuki",
+        "readable_name": "Word: Outsourcing Intake Procedure",
+        "n_operators": 4,
+        "executions": 12,
+        "largest_operator_share": 0.3333,
+        "herfindahl": 0.2639
+      },
+      {
+        "process_id": "app:Microsoft Word::getsujitsu_teigaku_torihikisaki_ichiran",
+        "readable_name": "Word: Monthly Fixed-Amount Trading-Partner List",
+        "n_operators": 4,
+        "executions": 10,
+        "largest_operator_share": 0.5,
+        "herfindahl": 0.36
+      },
+      {
+        "process_id": "app:Microsoft Word::shinkuitorihikisaki_touroku_tetsuzuki",
+        "readable_name": "Word: New Trading-Partner Registration Procedure",
+        "n_operators": 4,
+        "executions": 8,
+        "largest_operator_share": 0.375,
+        "herfindahl": 0.3125
+      },
+      {
+        "process_id": "app:Microsoft Excel::budget_analysis",
+        "readable_name": "Excel: Budget Analysis Workbook",
+        "n_operators": 1,
+        "executions": 7,
+        "largest_operator_share": 1.0,
+        "herfindahl": 1.0
+      },
+      {
+        "process_id": "app:Windows Explorer",
+        "readable_name": "app:Windows Explorer",
+        "n_operators": 2,
+        "executions": 7,
+        "largest_operator_share": 0.5714,
+        "herfindahl": 0.5102
+      },
+      {
+        "process_id": "app:Notepad::IT申請メモ",
+        "readable_name": "Notepad: IT Request Memo",
+        "n_operators": 4,
+        "executions": 6,
+        "largest_operator_share": 0.5,
+        "herfindahl": 0.3333
+      },
+      {
+        "process_id": "browser:127.0.0.1:5133",
+        "readable_name": "browser:127.0.0.1:5133",
+        "n_operators": 1,
+        "executions": 6,
+        "largest_operator_share": 1.0,
+        "herfindahl": 1.0
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_keihi_kitei",
+        "readable_name": "Word: Outsourcing Expense Regulations",
+        "n_operators": 2,
+        "executions": 5,
+        "largest_operator_share": 0.8,
+        "herfindahl": 0.68
+      },
+      {
+        "process_id": "app:Notepad",
+        "readable_name": "app:Notepad",
+        "n_operators": 3,
+        "executions": 5,
+        "largest_operator_share": 0.4,
+        "herfindahl": 0.36
+      },
+      {
+        "process_id": "browser:127.0.0.1:5134",
+        "readable_name": "browser:127.0.0.1:5134",
+        "n_operators": 1,
+        "executions": 5,
+        "largest_operator_share": 1.0,
+        "herfindahl": 1.0
+      },
+      {
+        "process_id": "app:Microsoft Word::shinkui_keiyaku_tetsuzuki",
+        "readable_name": "Word: New Contract Procedure",
+        "n_operators": 3,
+        "executions": 4,
+        "largest_operator_share": 0.5,
+        "herfindahl": 0.375
+      },
+      {
+        "process_id": "app:Microsoft Word::ikuji_kyuugyou_kitei",
+        "readable_name": "Word: Childcare Leave Regulations",
+        "n_operators": 3,
+        "executions": 4,
+        "largest_operator_share": 0.5,
+        "herfindahl": 0.375
+      },
+      {
+        "process_id": "app:Microsoft Word::kanrisya_kengen_shinsei_tetsuzuki",
+        "readable_name": "Word: Administrator Authority Request Procedure",
+        "n_operators": 3,
+        "executions": 4,
+        "largest_operator_share": 0.5,
+        "herfindahl": 0.375
+      },
+      {
+        "process_id": "browser:127.0.0.1:5132",
+        "readable_name": "browser:127.0.0.1:5132",
+        "n_operators": 1,
+        "executions": 4,
+        "largest_operator_share": 1.0,
+        "herfindahl": 1.0
+      },
+      {
+        "process_id": "app:Microsoft Word::kazoku_teate_kitei",
+        "readable_name": "Word: Family Allowance Regulations",
+        "n_operators": 2,
+        "executions": 3,
+        "largest_operator_share": 0.6667,
+        "herfindahl": 0.5556
+      },
+      {
+        "process_id": "app:Microsoft Word::kaigo_kyuugyou_kitei",
+        "readable_name": "Word: Family-Care Leave Regulations",
+        "n_operators": 1,
+        "executions": 2,
+        "largest_operator_share": 1.0,
+        "herfindahl": 1.0
+      }
+    ]
+  },
+  "step_2c_pareto": {
+    "hypothesis": "H6 — a Pareto frontier communicates trade-offs more transparently than a single weighted ranking",
+    "dominance_definition": "A dominates B iff Impact_A >= Impact_B AND Feasibility_A >= Feasibility_B, with at least one strict inequality.",
+    "dimensions_used": [
+      "impact",
+      "feasibility"
+    ],
+    "annotation_dimensions_not_scored": [
+      "executions",
+      "time_share",
+      "dominant_variant_share",
+      "automation_surface_evidenced_routes"
+    ],
+    "no_weighted_score_added": true,
+    "canonical_opportunity_unchanged": true,
+    "frontier_recomputed": [
+      "Excel: Budget Analysis Workbook",
+      "HR / Payroll System",
+      "Order & Inventory Management System"
+    ],
+    "frontier_canonical": [
+      "Excel: Budget Analysis Workbook",
+      "HR / Payroll System",
+      "Order & Inventory Management System"
+    ],
+    "recomputation_matches_canonical": true,
+    "n_frontier": 3,
+    "n_total": 21,
+    "table": [
+      {
+        "process_id": "system:HR人事給与システム",
+        "readable_name": "HR / Payroll System",
+        "rank_canonical": 1,
+        "impact": 0.9236,
+        "feasibility": 0.4765,
+        "opportunity_canonical": 0.4401,
+        "on_pareto_frontier": true,
+        "dominated_by": [],
+        "executions": 122,
+        "time_share": 0.324812,
+        "dominant_variant_share": 0.7705,
+        "automation_surface_evidenced_routes": 4
+      },
+      {
+        "process_id": "system:受発注在庫管理システム",
+        "readable_name": "Order & Inventory Management System",
+        "rank_canonical": 2,
+        "impact": 0.6699,
+        "feasibility": 0.5267,
+        "opportunity_canonical": 0.3529,
+        "on_pareto_frontier": true,
+        "dominated_by": [],
+        "executions": 96,
+        "time_share": 0.16778,
+        "dominant_variant_share": 0.8333,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Excel::budget_analysis",
+        "readable_name": "Excel: Budget Analysis Workbook",
+        "rank_canonical": 3,
+        "impact": 0.3542,
+        "feasibility": 0.9544,
+        "opportunity_canonical": 0.338,
+        "on_pareto_frontier": true,
+        "dominated_by": [],
+        "executions": 7,
+        "time_share": 0.007809,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "system:財務会計システム",
+        "readable_name": "Financial Accounting System",
+        "rank_canonical": 4,
+        "impact": 0.8802,
+        "feasibility": 0.3695,
+        "opportunity_canonical": 0.3252,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "HR / Payroll System"
+        ],
+        "executions": 125,
+        "time_share": 0.281977,
+        "dominant_variant_share": 0.664,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Excel::expense_calc",
+        "readable_name": "Excel: Expense Calculation Workbook",
+        "rank_canonical": 5,
+        "impact": 0.3452,
+        "feasibility": 0.9221,
+        "opportunity_canonical": 0.3183,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook"
+        ],
+        "executions": 17,
+        "time_share": 0.014679,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Notepad::在庫調整メモ",
+        "readable_name": "Notepad: Inventory Adjustment Memo",
+        "rank_canonical": 6,
+        "impact": 0.2678,
+        "feasibility": 0.659,
+        "opportunity_canonical": 0.1765,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook"
+        ],
+        "executions": 20,
+        "time_share": 0.010864,
+        "dominant_variant_share": 0.95,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_kyuuyo_kitei",
+        "readable_name": "Word: Outsourcing Compensation Regulations",
+        "rank_canonical": 7,
+        "impact": 0.3042,
+        "feasibility": 0.5653,
+        "opportunity_canonical": 0.172,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook"
+        ],
+        "executions": 23,
+        "time_share": 0.03234,
+        "dominant_variant_share": 0.8696,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::nyusha_checklist_shinsotsu_batch",
+        "readable_name": "Word: New-Employee Checklist (New-Graduate Batch)",
+        "rank_canonical": 8,
+        "impact": 0.2679,
+        "feasibility": 0.5387,
+        "opportunity_canonical": 0.1443,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Word: Outsourcing Compensation Regulations"
+        ],
+        "executions": 37,
+        "time_share": 0.031018,
+        "dominant_variant_share": 0.9189,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Notepad::精算確認メモ",
+        "readable_name": "Notepad: Expense Settlement Confirmation Memo",
+        "rank_canonical": 9,
+        "impact": 0.2473,
+        "feasibility": 0.4708,
+        "opportunity_canonical": 0.1164,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "HR / Payroll System",
+          "Order & Inventory Management System",
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Notepad: Inventory Adjustment Memo",
+          "Word: Outsourcing Compensation Regulations",
+          "Word: New-Employee Checklist (New-Graduate Batch)"
+        ],
+        "executions": 19,
+        "time_share": 0.012592,
+        "dominant_variant_share": 0.7895,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_ukeire_tetsuzuki",
+        "readable_name": "Word: Outsourcing Intake Procedure",
+        "rank_canonical": 10,
+        "impact": 0.1589,
+        "feasibility": 0.7064,
+        "opportunity_canonical": 0.1123,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook"
+        ],
+        "executions": 12,
+        "time_share": 0.008046,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::settai_keihi_kitei",
+        "readable_name": "Word: Entertainment Expense Regulations",
+        "rank_canonical": 11,
+        "impact": 0.2426,
+        "feasibility": 0.2911,
+        "opportunity_canonical": 0.0706,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "HR / Payroll System",
+          "Order & Inventory Management System",
+          "Excel: Budget Analysis Workbook",
+          "Financial Accounting System",
+          "Excel: Expense Calculation Workbook",
+          "Notepad: Inventory Adjustment Memo",
+          "Word: Outsourcing Compensation Regulations",
+          "Word: New-Employee Checklist (New-Graduate Batch)",
+          "Notepad: Expense Settlement Confirmation Memo"
+        ],
+        "executions": 15,
+        "time_share": 0.024517,
+        "dominant_variant_share": 0.6667,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::kanrisya_kengen_shinsei_tetsuzuki",
+        "readable_name": "Word: Administrator Authority Request Procedure",
+        "rank_canonical": 12,
+        "impact": 0.0863,
+        "feasibility": 0.6732,
+        "opportunity_canonical": 0.0581,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Word: Outsourcing Intake Procedure"
+        ],
+        "executions": 4,
+        "time_share": 0.001514,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::shinkuitorihikisaki_touroku_tetsuzuki",
+        "readable_name": "Word: New Trading-Partner Registration Procedure",
+        "rank_canonical": 13,
+        "impact": 0.0602,
+        "feasibility": 0.6897,
+        "opportunity_canonical": 0.0416,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Word: Outsourcing Intake Procedure"
+        ],
+        "executions": 8,
+        "time_share": 0.00341,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Notepad::IT申請メモ",
+        "readable_name": "Notepad: IT Request Memo",
+        "rank_canonical": 14,
+        "impact": 0.2172,
+        "feasibility": 0.1577,
+        "opportunity_canonical": 0.0343,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "HR / Payroll System",
+          "Order & Inventory Management System",
+          "Excel: Budget Analysis Workbook",
+          "Financial Accounting System",
+          "Excel: Expense Calculation Workbook",
+          "Notepad: Inventory Adjustment Memo",
+          "Word: Outsourcing Compensation Regulations",
+          "Word: New-Employee Checklist (New-Graduate Batch)",
+          "Notepad: Expense Settlement Confirmation Memo",
+          "Word: Entertainment Expense Regulations"
+        ],
+        "executions": 6,
+        "time_share": 0.006698,
+        "dominant_variant_share": 0.5,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::keiyaku_kaijo_tetsuzuki",
+        "readable_name": "Word: Contract Termination Procedure",
+        "rank_canonical": 15,
+        "impact": 0.307,
+        "feasibility": 0.1039,
+        "opportunity_canonical": 0.0319,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "HR / Payroll System",
+          "Order & Inventory Management System",
+          "Excel: Budget Analysis Workbook",
+          "Financial Accounting System",
+          "Excel: Expense Calculation Workbook"
+        ],
+        "executions": 29,
+        "time_share": 0.053221,
+        "dominant_variant_share": 0.4483,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::gyomu_itaku_keihi_kitei",
+        "readable_name": "Word: Outsourcing Expense Regulations",
+        "rank_canonical": 16,
+        "impact": 0.0427,
+        "feasibility": 0.6379,
+        "opportunity_canonical": 0.0272,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Notepad: Inventory Adjustment Memo",
+          "Word: Outsourcing Intake Procedure",
+          "Word: Administrator Authority Request Procedure",
+          "Word: New Trading-Partner Registration Procedure"
+        ],
+        "executions": 5,
+        "time_share": 0.002303,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::getsujitsu_teigaku_torihikisaki_ichiran",
+        "readable_name": "Word: Monthly Fixed-Amount Trading-Partner List",
+        "rank_canonical": 17,
+        "impact": 0.0432,
+        "feasibility": 0.5811,
+        "opportunity_canonical": 0.0251,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Notepad: Inventory Adjustment Memo",
+          "Word: Outsourcing Intake Procedure",
+          "Word: Administrator Authority Request Procedure",
+          "Word: New Trading-Partner Registration Procedure"
+        ],
+        "executions": 10,
+        "time_share": 0.004148,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::shinkui_keiyaku_tetsuzuki",
+        "readable_name": "Word: New Contract Procedure",
+        "rank_canonical": 18,
+        "impact": 0.1107,
+        "feasibility": 0.1047,
+        "opportunity_canonical": 0.0116,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "HR / Payroll System",
+          "Order & Inventory Management System",
+          "Excel: Budget Analysis Workbook",
+          "Financial Accounting System",
+          "Excel: Expense Calculation Workbook",
+          "Notepad: Inventory Adjustment Memo",
+          "Word: Outsourcing Compensation Regulations",
+          "Word: New-Employee Checklist (New-Graduate Batch)",
+          "Notepad: Expense Settlement Confirmation Memo",
+          "Word: Outsourcing Intake Procedure",
+          "Word: Entertainment Expense Regulations",
+          "Notepad: IT Request Memo"
+        ],
+        "executions": 4,
+        "time_share": 0.008674,
+        "dominant_variant_share": 0.5,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::ikuji_kyuugyou_kitei",
+        "readable_name": "Word: Childcare Leave Regulations",
+        "rank_canonical": 19,
+        "impact": 0.0064,
+        "feasibility": 0.75,
+        "opportunity_canonical": 0.0048,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook"
+        ],
+        "executions": 4,
+        "time_share": 0.001661,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::kazoku_teate_kitei",
+        "readable_name": "Word: Family Allowance Regulations",
+        "rank_canonical": 20,
+        "impact": 0.0033,
+        "feasibility": 0.75,
+        "opportunity_canonical": 0.0024,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Word: Childcare Leave Regulations"
+        ],
+        "executions": 3,
+        "time_share": 0.001236,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      },
+      {
+        "process_id": "app:Microsoft Word::kaigo_kyuugyou_kitei",
+        "readable_name": "Word: Family-Care Leave Regulations",
+        "rank_canonical": 21,
+        "impact": 0.0,
+        "feasibility": 0.7044,
+        "opportunity_canonical": 0.0,
+        "on_pareto_frontier": false,
+        "dominated_by": [
+          "Excel: Budget Analysis Workbook",
+          "Excel: Expense Calculation Workbook",
+          "Word: Outsourcing Intake Procedure",
+          "Word: Childcare Leave Regulations",
+          "Word: Family Allowance Regulations"
+        ],
+        "executions": 2,
+        "time_share": 0.000702,
+        "dominant_variant_share": 1.0,
+        "automation_surface_evidenced_routes": null
+      }
+    ]
+  },
+  "step_2d_sensitivity": {
+    "canonical_scenarios_reused_not_invented": true,
+    "n_scenarios": 8,
+    "n_scenarios_hr_first": 5,
+    "mean_kendall_tau_vs_default": 0.9524,
+    "weighted_view": {
+      "balanced": {
+        "hr_rank": 1,
+        "top_candidate_changed": false
+      },
+      "feasibility_feasibility_heavy": {
+        "hr_rank": 1,
+        "top_candidate_changed": false
+      },
+      "feasibility_risk_averse": {
+        "hr_rank": 1,
+        "top_candidate_changed": false
+      },
+      "frequency_heavy": {
+        "hr_rank": 1,
+        "top_candidate_changed": false
+      },
+      "time_heavy": {
+        "hr_rank": 1,
+        "top_candidate_changed": false
+      },
+      "manual_effort_heavy": {
+        "hr_rank": 3,
+        "top_candidate_changed": true
+      },
+      "volume_deemphasized": {
+        "hr_rank": 3,
+        "top_candidate_changed": true
+      },
+      "correlation_aware": {
+        "hr_rank": 3,
+        "top_candidate_changed": true
+      }
+    },
+    "pareto_view": {
+      "frontier": [
+        "Excel: Budget Analysis Workbook",
+        "HR / Payroll System",
+        "Order & Inventory Management System"
+      ],
+      "invariant_across_scenarios": true,
+      "why": "Pareto membership uses no weights, so re-weighting the Opportunity score cannot move it. That is a structural property, not an empirical finding."
+    },
+    "comparison_note": "Neither view is universally superior. The weighted view produces a single ordered recommendation and is sensitive to its weights; the Pareto view is weight-free but returns a set rather than a ranking and cannot break ties. They are shown side by side so the reader sees the trade-off rather than being handed one answer."
+  }
+}

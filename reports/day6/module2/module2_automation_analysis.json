@@ -1,0 +1,2361 @@
+{
+  "module": "Module 2 — Adaptive Evidence-Guided Reconstruction & Automation",
+  "hypotheses": {
+    "H7": "a pre-flight variant-routing gate can prevent automation attempting executions outside the evidenced dominant path",
+    "H8": "a post-action visual/structural audit provides additional evidence that the intended UI state was reached"
+  },
+  "dataset_b_rule": "Operational coverage statistics only. Dataset B has no ground truth; nothing here is a supervised metric.",
+  "provenance": {
+    "variant_labels": "reports/day3/hr_payroll_dominant_path_dataset_b.json",
+    "applications": "reports/day3/process_executions_dataset_b.json (field: applications)"
+  },
+  "step_3a_routing": {
+    "signals_used": [
+      "routes_visited (evidenced route allowlist)",
+      "applications (Microsoft Word = detour marker)",
+      "variant_signature (multi-system alternation = rare edge)"
+    ],
+    "deterministic": true,
+    "no_classifier_used": true,
+    "coverage": {
+      "total_executions": 122,
+      "routing_eligible": 62,
+      "observed_dominant_path_coverage": 0.5082,
+      "refused": 60,
+      "reason_counts": {
+        "DOMINANT_PATH_MATCH": 62,
+        "DETOUR_APPLICATION": 24,
+        "NO_ROUTE_EVIDENCE": 14,
+        "AMBIGUOUS_ROUTE_SET": 12,
+        "UNKNOWN_ROUTE": 6,
+        "MULTI_SYSTEM_VARIANT": 4
+      },
+      "metric_naming_note": "This is observed dominant-path coverage, not automation accuracy. No prediction is scored against a ground-truth label anywhere in this metric."
+    },
+    "canonical_dominant_share": 0.7705,
+    "canonical_dominant_n": 94,
+    "coverage_vs_canonical_note": "Routing-eligible coverage is deliberately LOWER than the canonical dominant share of 0.7705. The forensic label describes observed behaviour; the gate additionally requires an evidenced automation surface. Where they disagree the gate refuses, and the execution goes to a human. These are two different quantities and neither is automation accuracy.",
+    "dominant_executions_refused_by_the_gate": {
+      "n": 32,
+      "reasons": {
+        "UNKNOWN_ROUTE": 6,
+        "AMBIGUOUS_ROUTE_SET": 12,
+        "NO_ROUTE_EVIDENCE": 14
+      },
+      "explanation": "Dominant-path executions with no observed route, or touching routes outside the four evidenced ones (#/resident-tax, #/dashboard), cannot have their automation surface confirmed."
+    },
+    "by_canonical_variant": {
+      "dominant": {
+        "eligible": 62,
+        "reason:DOMINANT_PATH_MATCH": 62,
+        "refused": 32,
+        "reason:UNKNOWN_ROUTE": 6,
+        "reason:AMBIGUOUS_ROUTE_SET": 12,
+        "reason:NO_ROUTE_EVIDENCE": 14
+      },
+      "word_detour": {
+        "refused": 24,
+        "reason:DETOUR_APPLICATION": 24
+      },
+      "rare_edge": {
+        "refused": 4,
+        "reason:MULTI_SYSTEM_VARIANT": 4
+      }
+    },
+    "safety_property": "Every non-dominant variant is refused: no Word-detour and no rare-edge execution is admitted.",
+    "per_execution": [
+      {
+        "execution_id": "ses_20260701-164424-CHAITANYA0BCF::exec11",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-164424-CHAITANYA0BCF::exec9",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec11",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec13",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec15",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec17",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec19",
+        "canonical_variant": "word_detour",
+        "operator": "CHAITANYA0BCF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec21",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "HUMAN",
+        "reason_code": "UNKNOWN_ROUTE",
+        "rationale": "route(s) outside the evidenced set: #/resident-tax",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/resident-tax",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec35",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/social-insurance with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec37",
+        "canonical_variant": "word_detour",
+        "operator": "CHAITANYA0BCF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word",
+            "Notepad"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec39",
+        "canonical_variant": "word_detour",
+        "operator": "CHAITANYA0BCF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec41",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec43",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec45",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec47",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "HUMAN",
+        "reason_code": "UNKNOWN_ROUTE",
+        "rationale": "route(s) outside the evidenced set: #/resident-tax",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding",
+            "#/resident-tax"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec56",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "HUMAN",
+        "reason_code": "UNKNOWN_ROUTE",
+        "rationale": "route(s) outside the evidenced set: #/dashboard",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/dashboard",
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec7",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-171614-CHAITANYA0BCF::exec9",
+        "canonical_variant": "dominant",
+        "operator": "CHAITANYA0BCF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec15",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/social-insurance with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec17",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "UNKNOWN_ROUTE",
+        "rationale": "route(s) outside the evidenced set: #/resident-tax",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/resident-tax",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec19",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec21",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec23",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec25",
+        "canonical_variant": "word_detour",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec38",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec4",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Notepad"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec40",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec42",
+        "canonical_variant": "word_detour",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec44",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec46",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec48",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "3 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/onboarding",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173246-SIDDHIGUPTAB00B::exec6",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173642-NEELA9BAF::exec14",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/social-insurance with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173642-NEELA9BAF::exec19",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/social-insurance with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173642-NEELA9BAF::exec21",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173642-NEELA9BAF::exec23",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "UNKNOWN_ROUTE",
+        "rationale": "route(s) outside the evidenced set: #/resident-tax",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items",
+            "#/resident-tax",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173642-NEELA9BAF::exec36",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-173642-NEELA9BAF::exec40",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/dashboard",
+            "#/payroll-items",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec10",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec13",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec15",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec20",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec22",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec26",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "3 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec31",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec33",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec43",
+        "canonical_variant": "rare_edge",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "MULTI_SYSTEM_VARIANT",
+        "rationale": "execution alternates across 2 systems; the dominant path stays within system:HR人事給与システム",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": 2
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175258-LAPTOP-76QMG9DE::exec8",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec24",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "3 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/payroll-items",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec28",
+        "canonical_variant": "word_detour",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items",
+            "#/resident-tax"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec4",
+        "canonical_variant": "word_detour",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word",
+            "Notepad"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-175747-SIDDHIGUPTAB00B::exec7",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/leave-applications with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec12",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec14",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec16",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec18",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec30",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec32",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec34",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec36",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec41",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec46",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-180923-NEELA9BAF::exec48",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/dashboard",
+            "#/leave-applications",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181413-LAPTOP-76QMG9DE::exec1",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181413-LAPTOP-76QMG9DE::exec35",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec13",
+        "canonical_variant": "rare_edge",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "MULTI_SYSTEM_VARIANT",
+        "rationale": "execution alternates across 2 systems; the dominant path stays within system:HR人事給与システム",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge",
+            "Windows Explorer"
+          ],
+          "n_systems_in_signature": 2
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec3",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec30",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec32",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "UNKNOWN_ROUTE",
+        "rationale": "route(s) outside the evidenced set: #/dashboard",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/dashboard",
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec5",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec7",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-181913-SIDDHIGUPTAB00B::exec9",
+        "canonical_variant": "dominant",
+        "operator": "SIDDHIGUPTAB00B",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-182634-NEELA9BAF::exec11",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-182634-NEELA9BAF::exec20",
+        "canonical_variant": "rare_edge",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "MULTI_SYSTEM_VARIANT",
+        "rationale": "execution alternates across 2 systems; the dominant path stays within system:HR人事給与システム",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge",
+            "Windows Explorer"
+          ],
+          "n_systems_in_signature": 2
+        }
+      },
+      {
+        "execution_id": "ses_20260701-182634-NEELA9BAF::exec23",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/leave-applications with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-182634-NEELA9BAF::exec25",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-182634-NEELA9BAF::exec7",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/social-insurance with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-182634-NEELA9BAF::exec9",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/social-insurance"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec1",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-183232-LAPTOP-76QMG9DE::exec6",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec11",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec13",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec15",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec17",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec19",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec21",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec22",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec24",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec26",
+        "canonical_variant": "rare_edge",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "MULTI_SYSTEM_VARIANT",
+        "rationale": "execution alternates across 2 systems; the dominant path stays within system:HR人事給与システム",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge",
+            "Windows Explorer"
+          ],
+          "n_systems_in_signature": 2
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec3",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec5",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec7",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-184201-LAPTOP-76QMG9DE::exec9",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec15",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec17",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec19",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec21",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec23",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "3 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/leave-applications",
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec26",
+        "canonical_variant": "word_detour",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec28",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec7",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-190250-NEELA9BAF::exec9",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec1",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec10",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/onboarding with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec12",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec16",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec18",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec3",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "AMBIGUOUS_ROUTE_SET",
+        "rationale": "2 distinct routes visited; the dominant path was verified as single-route",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec5",
+        "canonical_variant": "dominant",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "AUTOMATE",
+        "reason_code": "DOMINANT_PATH_MATCH",
+        "rationale": "single evidenced route #/payroll-items with no detour marker",
+        "eligible": true,
+        "signals_used": {
+          "distinct_routes": [
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-191537-LAPTOP-76QMG9DE::exec8",
+        "canonical_variant": "word_detour",
+        "operator": "LAPTOP-76QMG9DE",
+        "decision": "HUMAN",
+        "reason_code": "DETOUR_APPLICATION",
+        "rationale": "detour application present (Microsoft Word); the dominant path was never observed using it",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [
+            "#/onboarding",
+            "#/payroll-items"
+          ],
+          "applications": [
+            "Microsoft Edge",
+            "Microsoft Word"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec1",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec10",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec12",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec14",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec16",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec20",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec22",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec24",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec26",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec34",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec36",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      },
+      {
+        "execution_id": "ses_20260701-192455-NEELA9BAF::exec8",
+        "canonical_variant": "dominant",
+        "operator": "NEELA9BAF",
+        "decision": "HUMAN",
+        "reason_code": "NO_ROUTE_EVIDENCE",
+        "rationale": "no route was observed for this execution, so the automation surface cannot be confirmed",
+        "eligible": false,
+        "signals_used": {
+          "distinct_routes": [],
+          "applications": [
+            "Microsoft Edge"
+          ],
+          "n_systems_in_signature": null
+        }
+      }
+    ]
+  },
+  "step_3b_post_action_audit": {
+    "runs_after_the_existing_flow": true,
+    "modifies_day5_automation": false,
+    "expected_state_reached": {
+      "execution_id": "demo_ok",
+      "route": "#/payroll-items",
+      "checks": [
+        {
+          "name": "expected_route_is_current",
+          "status": "PASS",
+          "detail": "current route '#/payroll-items', expected '#/payroll-items'"
+        },
+        {
+          "name": "confirm_target_still_resolves_uniquely",
+          "status": "PASS",
+          "detail": "found ['btn-pi-ok'], expected exactly ['btn-pi-ok']"
+        },
+        {
+          "name": "note_field_still_present",
+          "status": "PASS",
+          "detail": "'pi-note' present"
+        },
+        {
+          "name": "submitted_note_reads_back",
+          "status": "PASS",
+          "detail": "read-back length 30, expected 30"
+        }
+      ],
+      "passed": true,
+      "conclusive": true,
+      "screenshot_sha256": null,
+      "screenshot_path": null,
+      "pixel_difference_ratio": null,
+      "captured_at": "2026-09-18T03:34:11.741635+00:00",
+      "interpretation_note": "Evidence that the UI reached the expected state. NOT proof that the business record was written."
+    },
+    "deliberately_broken_end_state": {
+      "execution_id": "demo_route_drift",
+      "route": "#/payroll-items",
+      "checks": [
+        {
+          "name": "expected_route_is_current",
+          "status": "FAIL",
+          "detail": "current route '#/onboarding', expected '#/payroll-items'"
+        },
+        {
+          "name": "confirm_target_still_resolves_uniquely",
+          "status": "FAIL",
+          "detail": "found ['btn-ob-ok'], expected exactly ['btn-pi-ok']"
+        },
+        {
+          "name": "note_field_still_present",
+          "status": "FAIL",
+          "detail": "'pi-note' not found after the action"
+        }
+      ],
+      "passed": false,
+      "conclusive": true,
+      "screenshot_sha256": null,
+      "screenshot_path": null,
+      "pixel_difference_ratio": null,
+      "captured_at": "2026-09-18T03:34:11.741733+00:00",
+      "interpretation_note": "Evidence that the UI reached the expected state. NOT proof that the business record was written."
+    },
+    "detects_route_drift": true,
+    "not_pixel_perfect": "Checks are structural. A pixel-difference ratio is defined (changed_pixels / total_pixels) but is reported as context only, never used as a pass/fail threshold, because no evidence supports a particular constant for this UI."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "Vision-model surrogate review — not ground truth.",
+  "judgments_file": "reports/day6/module2/dataset_b_visual_review_judgments.json",
+  "judgments_sha256": "9384c97d27033bc5ae61ba98a55046da81baa722f6aaf205118c58dd10ddb7af",
+  "frozen_at": "2026-09-18T06:32:38.442221+00:00",
+  "answer_key_read_before_freeze": false,
+  "n_judgments": 40
+}
