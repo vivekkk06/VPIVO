@@ -108,14 +108,18 @@ def test_confirm_completes_only_after_prepare(api):
 def test_unknown_route_is_a_safe_stop_not_a_server_error(api):
     status, payload = _prepare(api, route="#/not-an-evidenced-route")
     assert status == 422
-    assert payload["error_type"] == "UnknownRouteError"
+    # error_type is a stable taxonomy string (Day-7); the originating exception
+    # class is still reported separately so nothing is lost.
+    assert payload["error_type"] == "INVALID_ROUTE"
+    assert payload["exception"] == "UnknownRouteError"
     assert payload["action_log"], "the partial action log must survive the refusal"
 
 
 def test_empty_note_is_a_safe_stop(api):
     status, payload = _prepare(api, note="   ")
     assert status == 422
-    assert payload["error_type"] == "InvalidNoteError"
+    assert payload["error_type"] == "INVALID_NOTE"
+    assert payload["exception"] == "InvalidNoteError"
 
 
 def test_safe_stop_does_not_issue_a_checkpoint_token(api):
@@ -133,6 +137,9 @@ def test_confirm_without_a_token_is_rejected(api):
 def test_confirm_with_an_unknown_token_is_rejected(api):
     status, payload = api("POST", "/api/confirm", {"checkpoint_token": "made-up-token"})
     assert status == 400
+    # A token this process never issued is CHECKPOINT_REQUIRED -- distinct from a
+    # token it issued and already consumed (REPLAYED_REQUEST).
+    assert payload["error_type"] == "CHECKPOINT_REQUIRED"
     assert "prepare" in payload["message"]
 
 
@@ -143,7 +150,10 @@ def test_a_checkpoint_cannot_be_confirmed_twice(api):
     second, payload = api("POST", "/api/confirm", {"checkpoint_token": token})
     assert first == 200
     assert second == 400, "a consumed checkpoint must not be replayable"
-    assert "prepare" in payload["message"]
+    # Reported as a replay, not as an unknown token: the earlier "run prepare first"
+    # wording implied the token was never issued, which was misleading.
+    assert payload["error_type"] == "REPLAYED_REQUEST"
+    assert "already been confirmed" in payload["message"]
 
 
 # --- request hygiene ------------------------------------------------------

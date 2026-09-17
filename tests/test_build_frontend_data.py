@@ -296,3 +296,169 @@ def test_day4_sensitivity_keeps_0_4401_canonical_and_0_4180_as_the_case_b_value(
     assert row["opportunity_a"] == 0.4401
     assert row["opportunity_b"] == 0.418
     assert row["rank_case_a"] == row["rank_case_b"] == 1
+
+
+# --- Day-6 Dataset-B surrogate visual review -------------------------------
+
+def test_visual_review_is_copied_verbatim_from_its_artifact(bundle):
+    results = _load_source(str(_module.VISUAL_REVIEW_SOURCE))
+    got = _read(bundle, "module-comparison.json")["dataset_b_visual_review"]
+    summary = results["summary"]
+    for key in ("sample_size", "screenshots_available", "screenshots_unavailable", "counts",
+                "counts_by_sample_type", "boundary_samples_judgeable",
+                "control_samples_judgeable", "boundary_sample_visual_support_rate",
+                "control_sample_visual_continuity_rate", "ambiguous_total", "not_metrics_note"):
+        assert got[key] == summary[key], key
+    assert got["label"] == results["label"]
+    assert got["status"] == results["status"]
+    assert got["decision"]["outcome"] == results["decision"]["outcome"]
+    assert got["screenshots_recovered"] == results["recovery"]["recovered"]
+
+
+def test_visual_review_adds_nothing_to_the_human_review_block(bundle):
+    """The surrogate review must not be written into the human sheet's status."""
+    mc = _read(bundle, "module-comparison.json")
+    sample = _load_source("reports/day6/module2/module2_dataset_b_screenshot_sample.json")
+    assert mc["dataset_b_review"]["review_status"] == sample["review_status"]
+    assert "NOT REVIEWED" in mc["dataset_b_review"]["review_status"]
+
+
+def test_bundle_still_builds_without_the_visual_review(tmp_path, monkeypatch):
+    monkeypatch.setattr(_module, "VISUAL_REVIEW_SOURCE",
+                        Path("reports/day6/module2/not_a_real_review.json"))
+    _module.build(_REPO_ROOT, tmp_path)
+    mc = _read(tmp_path, "module-comparison.json")
+    assert mc["dataset_b_visual_review"] is None
+    assert "module2_visual_review" not in _read(tmp_path, "meta.json")["canonical_sources"]
+
+
+# --- Day 1-4 investigation views --------------------------------------------
+
+def test_investigation_dataset_totals_match_the_day1_artifacts(bundle):
+    day1 = _read(bundle, "investigation.json")["day1"]
+    inventory = _load_source("reports/day1/dataset_inventory.json")
+    for key, suffix in (("dataset_a", "a"), ("dataset_b", "b")):
+        got = day1["datasets"][key]
+        audit = _load_source(f"reports/day1/full_audit_dataset_{suffix}.json")
+        assert got["sessions"] == inventory[key]["n_sessions"]
+        assert got["chunks"] == inventory[key]["n_chunks"]
+        assert got["events"] == audit["n_events_total"]
+        assert got["multi_chunk_sessions"] == sum(
+            1 for s in inventory[key]["sessions"] if s["n_chunks"] >= 2)
+    assert (day1["datasets"]["dataset_a"]["sessions"], day1["datasets"]["dataset_a"]["chunks"],
+            day1["datasets"]["dataset_a"]["events"]) == (63, 117, 162768)
+    assert (day1["datasets"]["dataset_b"]["sessions"], day1["datasets"]["dataset_b"]["chunks"],
+            day1["datasets"]["dataset_b"]["events"]) == (15, 20, 20477)
+    assert day1["datasets"]["dataset_a"]["multi_chunk_sessions"] == 53
+
+
+def test_investigation_quality_checks_are_sums_of_the_audit_rows(bundle):
+    checks = _read(bundle, "investigation.json")["day1"]["checks"]["dataset_a"]
+    audit = _load_source("reports/day1/full_audit_dataset_a.json")
+    assert checks["sequential_duplicates"] == audit["total_sequential_duplicates"] == 33232
+    assert checks["sequential_duplicates_by_type"]["app_switch"] == 32876
+    assert checks["semantic_duplicate_groups"] == 42
+    assert checks["sessions_with_out_of_order_pairs"] == 63
+    tic = checks["text_input_complete"]
+    assert (tic["events"], tic["with_content"], tic["missing_or_empty"]) == (118, 116, 2)
+    assert tic["password_fields_with_plaintext"] == 18
+    assert checks["clipboard_change"]["events"] == checks["clipboard_change"]["empty_payload"]
+
+
+def test_investigation_carries_no_text_values_from_the_logs(bundle):
+    """Only counts leave the audit: no typed, pasted or password value may be copied."""
+    raw = (bundle / "investigation.json").read_text(encoding="utf-8")
+    for forbidden in ('"final_text"', '"extracted_text"', '"clipboard_text"', '"password"'):
+        assert forbidden not in raw
+    tic = json.loads(raw)["day1"]["checks"]["dataset_a"]["text_input_complete"]
+    assert all(isinstance(v, int) for v in tic.values())
+
+
+def test_documented_figures_are_verified_against_their_reports(bundle):
+    documented = _read(bundle, "investigation.json")["documented"]
+    assert set(documented) == set(_module.DOCUMENTED)
+    for key, (value, rel, quote) in _module.DOCUMENTED.items():
+        assert documented[key] == {"value": value, "source": rel}
+        assert quote in (_REPO_ROOT / rel).read_text(encoding="utf-8"), key
+
+
+def test_build_fails_when_a_documented_figure_leaves_its_report(tmp_path, monkeypatch):
+    broken = dict(_module.DOCUMENTED)
+    broken["screenshot_resolution_a"] = ("9.9%", "reports/day1/data_quality_report.md",
+                                         "| **Resolution rate** | **9.9%** |")
+    monkeypatch.setattr(_module, "DOCUMENTED", broken)
+    with pytest.raises(SystemExit, match="no longer appears"):
+        _module.build(_REPO_ROOT, tmp_path)
+
+
+def test_reconstruction_record_copies_the_canonical_day2_systems(bundle):
+    day2 = _read(bundle, "investigation.json")["day2"]
+    systems = _load_source("reports/day2/protected_boundary_experiment_dataset_a.json")["systems"]
+    for name, system in systems.items():
+        for metric in _module.POOLED_KEYS:
+            assert day2["systems"][name][metric] == system["pooled"][metric], (name, metric)
+    locked = next(e for e in day2["experiments"] if e["id"] == "combined")
+    assert locked["status"] == "LOCKED"
+    assert locked["metrics"]["f1"] == 0.3440233236151604
+    assert day2["protection"]["Strategy_Agreement"]["false_to_true_protection_ratio"] == 11.28
+
+
+def test_reconstruction_record_keeps_every_failure_and_rejection(bundle):
+    experiments = _read(bundle, "investigation.json")["day2"]["experiments"]
+    status = {e["id"]: e["status"] for e in experiments}
+    assert status["v1"] == status["v2"] == "FAILED"
+    assert status["agreement"] == "REJECTED"
+    assert status["tempo"] == "NOT SELECTED"
+    assert status["module2"] == "NOT PROMOTED"
+    day7 = [e for e in experiments if e["day"] == "Day 7"]
+    assert len(day7) == 4 and all(e["status"] == "REJECTED" for e in day7)
+    c2 = next(e for e in day7 if e["id"] == "C2_rule_plus_continuity_veto")
+    assert round(c2["metrics"]["f1"], 4) == 0.2822
+    assert round(c2["metrics"]["pct_gt_executions_fragmented"], 2) == 40.87
+    assert round(c2["metrics"]["under_segmentation_rate"], 4) == 0.6606
+    for e in experiments:
+        assert e["result"] and e["failure_mode"] and e["decision"], e["id"]
+
+
+def test_reconstruction_record_carries_module2_gain_and_gate(bundle):
+    module2 = _read(bundle, "investigation.json")["day2"]["module2"]
+    assert module2["f1_gain"] == 0.0102
+    assert module2["required_gain"] == 0.02
+    assert round(module2["metrics"]["f1"], 4) == 0.3519
+    assert "NOT PROMOTED" in module2["status"]
+
+
+def test_threshold_curve_is_the_full_session_boundary_first_sweep(bundle):
+    curve = _read(bundle, "investigation.json")["day2"]["v1_threshold_curve"]
+    source = _load_source("reports/day2/threshold_tradeoff_dataset_a.json")["v1_curve"]
+    assert len(curve) == len(source)
+    best = _load_source("reports/day2/threshold_tradeoff_dataset_a.json")["v1_best_f1_point"]
+    v1 = _load_source("reports/day2/protected_boundary_experiment_dataset_a.json")["systems"]["V1"]["pooled"]
+    # the sweep shares the full-session basis with the systems it is drawn beside
+    assert best["f1"] == pytest.approx(v1["f1"])
+
+
+def test_day3_operational_metrics_never_carry_scores(bundle):
+    day3 = _read(bundle, "investigation.json")["day3"]
+    hr = day3["process_metrics"]["system:HR人事給与システム"]
+    assert hr["time_share"] == 0.3248
+    assert hr["execution_count"] == 122
+    for row in day3["process_metrics"].values():
+        assert not {"impact", "feasibility", "opportunity"} & set(row)
+    assert "0.4186" not in json.dumps(day3)
+
+
+def test_day4_machine_labels_are_anonymous_and_consistent(bundle):
+    day4 = _read(bundle, "investigation.json")["day4"]
+    raw = json.dumps(day4)
+    health_a = _load_source("reports/day4/instrumentation_health_dataset_a.json")
+    health_b = _load_source("reports/day4/instrumentation_health_dataset_b.json")
+    for host in list(health_a["by_machine"]) + list(health_b["by_machine"]):
+        assert host not in raw, host
+    assert all(m["label"].startswith("Machine ") for m in day4["machines_a"] + day4["machines_b"])
+    assert sum(m["flagged"] for m in day4["machines_a"]) == 8
+    assert sum(m["flagged"] for m in day4["machines_b"]) == 2
+    assert max(day4["machines_a"], key=lambda m: m["flagged"]) == {"label": "Machine A", "sessions": 7, "flagged": 7}
+    assert day4["agreement"]["confusion"] == {"tp": 8, "fp": 0, "fn": 2, "tn": 53}
+    assert day4["summary"]["dataset_a"]["n_degraded"] == 8
+    assert day4["summary"]["dataset_b"]["n_degraded"] == 2
