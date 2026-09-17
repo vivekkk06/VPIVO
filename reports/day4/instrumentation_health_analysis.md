@@ -260,8 +260,10 @@ faithful.
 | mean Kendall τ vs default | 0.9524 | 0.9476 |
 | processes ranked | 21 | 21 |
 
-The top five keep their exact order. Eleven processes change rank; every
-change is ±1 and all are below rank 5.
+The top five keep their exact order. Eleven processes change rank, all of
+them below rank 5; nine move by ±1, and the two largest movements are
+Word: Contract Termination Procedure (15 → 12, −3) and Notepad: IT Request
+Memo (14 → 16, +2).
 
 **The recommendation is robust.** Removing 11.5% of executions —
 including 11.5% of the HR/Payroll evidence — does not change the top

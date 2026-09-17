@@ -258,3 +258,37 @@ the 2 instrumentation-degraded Dataset-B sessions, with the full 21-row
 everywhere. `0.4180` appears **only** as `opportunity_b` — the Day-4
 degraded-excluded sensitivity case — and is never presented as the headline
 figure. Four tests guard this.
+
+---
+
+## Final presentation pass — `investigation.json` (new file)
+
+Added for the Day 1–4 investigation pages. Same rule as the rest of the bundle: values are
+copied from canonical artifacts, or are marked counts and sums over per-session rows. No
+score, threshold or segmentation is computed.
+
+**Sources** (all read, none written): `reports/day1/dataset_inventory.json`,
+`profile_dataset_{a,b}.json`, `full_audit_dataset_{a,b}.json`,
+`validation_dataset_{a,b}.json`; `reports/day2/protected_boundary_experiment_dataset_a.json`,
+`baseline_segmentation_dataset_a.json`, `learned_model_dataset_a.json`,
+`threshold_tradeoff_dataset_a.json`; `reports/day6/boundary_ensemble_experiment_dataset_a.json`
+and, when present, the Module 2 gate and segmentation artifacts;
+`reports/day7/segmentation_comparison.json`; `reports/day4/instrumentation_health_dataset_{a,b}.json`;
+`reports/day3/problem2_process_mining_full_results.json` (operational metrics only) and
+`problem2_audit_results.json` (entropy note only).
+
+| Block | Content | Transformation |
+|---|---|---|
+| `day1.datasets` | sessions, chunks, events, screenshot references, ground-truth coverage, session lengths | verbatim; `multi_chunk_sessions` is a DERIVED count of inventory rows |
+| `day1.checks` | ordering, duplicates, identity issues, timestamp checks, text-input and clipboard counts | verbatim totals; per-session sums are DERIVED. **Counts only — no typed, pasted or password value is read or carried.** |
+| `day2.systems`, `day2.protection` | the six Day-2 systems' pooled metrics; protection ratios and failed gates | verbatim |
+| `day2.temporal_baselines`, `learned_classifier` | rule baselines at the best gap; the boundary-first classifier | verbatim |
+| `day2.v1_threshold_curve` | the boundary-first threshold sweep | verbatim; the continuity-first sweep is **not** carried, because it was scored on labelled transitions only |
+| `day2.day6`, `day2.day7`, `day2.module2` | HMM and ensembles; the four Day-7 candidates with their failed gates; Module 2's best metrics, control F1, gain and required gain | verbatim; gate ids mapped to readable words |
+| `day2.experiments` | the ordered experiment record | narrative text authored in the adapter; every metric attached is copied from the blocks above |
+| `day3.process_metrics` | time share, frequency share, raw variant entropy, automation surface, operator count per process | verbatim from the full-results file, whose pre-fix **scores** are never read |
+| `day4` | thresholds, per-dataset counts, flagged-versus-healthy distributions, confusion | verbatim; machine host names replaced by stable letters in order of first recorded session |
+| `documented` | figures that exist only in a written report (for example the 7.2% / 81.2% screenshot resolution) | each carries its report path, and the build fails if the quoted sentence is no longer in that report |
+
+Tests: `tests/test_build_frontend_data.py` (11 added) and
+`frontend/src/__tests__/investigation.test.tsx` (56).

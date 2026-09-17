@@ -32,7 +32,8 @@ primary signal regardless.
 
 Of the 116 events with content, **18 have `input_context.is_password_field:
 true` and `final_text` populated with the plaintext value typed** (e.g. a
-test credential like `pr0cm1ne3@026`). The chunk manifest's
+synthetic test credential; the value itself is deliberately not reproduced
+in this report). The chunk manifest's
 `capture_settings_snapshot.redact_password_fields` field is `true` for these
 sessions — the redaction flag is set, but `text_input_complete.final_text`
 does not appear to honor it.
