@@ -1,0 +1,257 @@
+{
+  "experiment": "Day-7 recommendation robustness under segmentation uncertainty",
+  "question": "Does reasonable variation in the leave-and-return merge threshold change the automation recommendation?",
+  "variable": "max_away_events (leave-and-return merge threshold)",
+  "held_constant": [
+    "boundary signal (system_change_boundaries)",
+    "scoring weights and opportunity formula",
+    "exclusion policy",
+    "process definitions",
+    "both downstream scripts (invoked unmodified as subprocesses)"
+  ],
+  "no_ground_truth_note": "Dataset B has no ground truth. No threshold's segmentation is claimed to be more correct than another's; this measures decision stability, not segmentation accuracy.",
+  "baseline_threshold": 5,
+  "thresholds_tested": [
+    0,
+    5,
+    11,
+    36
+  ],
+  "threshold_rationale": {
+    "0": "no merging at all -- raw system-change segmentation (conservative lower bound)",
+    "5": "p25 of Dataset B's immediate return-pattern away-span -- THE LOCKED BASELINE",
+    "11": "p50 (median) of the same away-span distribution",
+    "36": "p90 of the same away-span distribution (aggressive merging upper bound)"
+  },
+  "control_check": {
+    "description": "threshold=5 must reproduce reports/day3/problem2_audit_results.json exactly",
+    "ranking_order_matches": true,
+    "hr_opportunity_matches": true,
+    "verified": true
+  },
+  "results": {
+    "0": {
+      "top_by_handling_time": "HR / Payroll System",
+      "top_by_handling_time_id": "system:HR人事給与システム",
+      "hr_rank_by_handling_time": 1,
+      "handling_time_top3": [
+        "HR / Payroll System",
+        "Financial Accounting System",
+        "Order & Inventory Management System"
+      ],
+      "n_ranked_processes": 22,
+      "top_candidate": "HR / Payroll System",
+      "top_candidate_id": "system:HR人事給与システム",
+      "top_opportunity": 0.4,
+      "top3": [
+        "HR / Payroll System",
+        "Financial Accounting System",
+        "Order & Inventory Management System"
+      ],
+      "hr_rank": 1,
+      "hr_opportunity": 0.4,
+      "hr_impact": 0.8817,
+      "hr_feasibility": 0.4536,
+      "hr_execution_count": 164,
+      "hr_total_human_hours": 0.7635,
+      "hr_n_operators": 4,
+      "hr_dominant_variant_share": 1.0,
+      "pareto_processes": [
+        "Excel: Budget Analysis Workbook",
+        "HR / Payroll System"
+      ],
+      "hr_on_pareto_frontier": true,
+      "n_scenarios_hr_first": 5,
+      "n_excluded_contexts": 8,
+      "excluded_executions": 134,
+      "excluded_hours": 0.1307,
+      "n_executions": 1018,
+      "threshold": 0,
+      "rationale": "no merging at all -- raw system-change segmentation (conservative lower bound)"
+    },
+    "5": {
+      "top_by_handling_time": "HR / Payroll System",
+      "top_by_handling_time_id": "system:HR人事給与システム",
+      "hr_rank_by_handling_time": 1,
+      "handling_time_top3": [
+        "HR / Payroll System",
+        "Financial Accounting System",
+        "Order & Inventory Management System"
+      ],
+      "n_ranked_processes": 21,
+      "top_candidate": "HR / Payroll System",
+      "top_candidate_id": "system:HR人事給与システム",
+      "top_opportunity": 0.4401,
+      "top3": [
+        "HR / Payroll System",
+        "Order & Inventory Management System",
+        "Excel: Budget Analysis Workbook"
+      ],
+      "hr_rank": 1,
+      "hr_opportunity": 0.4401,
+      "hr_impact": 0.9236,
+      "hr_feasibility": 0.4765,
+      "hr_execution_count": 122,
+      "hr_total_human_hours": 0.8309,
+      "hr_n_operators": 4,
+      "hr_dominant_variant_share": 0.7705,
+      "pareto_processes": [
+        "Excel: Budget Analysis Workbook",
+        "HR / Payroll System",
+        "Order & Inventory Management System"
+      ],
+      "hr_on_pareto_frontier": true,
+      "n_scenarios_hr_first": 5,
+      "n_excluded_contexts": 8,
+      "excluded_executions": 77,
+      "excluded_hours": 0.122,
+      "n_executions": 645,
+      "threshold": 5,
+      "rationale": "p25 of Dataset B's immediate return-pattern away-span -- THE LOCKED BASELINE"
+    },
+    "11": {
+      "top_by_handling_time": "HR / Payroll System",
+      "top_by_handling_time_id": "system:HR人事給与システム",
+      "hr_rank_by_handling_time": 1,
+      "handling_time_top3": [
+        "HR / Payroll System",
+        "Financial Accounting System",
+        "Order & Inventory Management System"
+      ],
+      "n_ranked_processes": 19,
+      "top_candidate": "Excel: Budget Analysis Workbook",
+      "top_candidate_id": "app:Microsoft Excel::budget_analysis",
+      "top_opportunity": 0.3593,
+      "top3": [
+        "Excel: Budget Analysis Workbook",
+        "Financial Accounting System",
+        "Excel: Expense Calculation Workbook"
+      ],
+      "hr_rank": 5,
+      "hr_opportunity": 0.2862,
+      "hr_impact": 0.8105,
+      "hr_feasibility": 0.3531,
+      "hr_execution_count": 75,
+      "hr_total_human_hours": 0.8684,
+      "hr_n_operators": 4,
+      "hr_dominant_variant_share": 0.5333,
+      "pareto_processes": [
+        "Excel: Budget Analysis Workbook",
+        "Financial Accounting System",
+        "Order & Inventory Management System"
+      ],
+      "hr_on_pareto_frontier": false,
+      "n_scenarios_hr_first": 0,
+      "n_excluded_contexts": 8,
+      "excluded_executions": 75,
+      "excluded_hours": 0.1199,
+      "n_executions": 479,
+      "threshold": 11,
+      "rationale": "p50 (median) of the same away-span distribution"
+    },
+    "36": {
+      "top_by_handling_time": "HR / Payroll System",
+      "top_by_handling_time_id": "system:HR人事給与システム",
+      "hr_rank_by_handling_time": 1,
+      "handling_time_top3": [
+        "HR / Payroll System",
+        "Financial Accounting System",
+        "Order & Inventory Management System"
+      ],
+      "n_ranked_processes": 17,
+      "top_candidate": "HR / Payroll System",
+      "top_candidate_id": "system:HR人事給与システム",
+      "top_opportunity": 0.2899,
+      "top3": [
+        "HR / Payroll System",
+        "Excel: Expense Calculation Workbook",
+        "Financial Accounting System"
+      ],
+      "hr_rank": 1,
+      "hr_opportunity": 0.2899,
+      "hr_impact": 0.886,
+      "hr_feasibility": 0.3271,
+      "hr_execution_count": 51,
+      "hr_total_human_hours": 0.9796,
+      "hr_n_operators": 4,
+      "hr_dominant_variant_share": 0.3333,
+      "pareto_processes": [
+        "Excel: Expense Calculation Workbook",
+        "HR / Payroll System",
+        "Notepad: Inventory Adjustment Memo",
+        "Order & Inventory Management System",
+        "Word: Administrator Authority Request Procedure"
+      ],
+      "hr_on_pareto_frontier": true,
+      "n_scenarios_hr_first": 3,
+      "n_excluded_contexts": 8,
+      "excluded_executions": 63,
+      "excluded_hours": 0.1092,
+      "n_executions": 262,
+      "threshold": 36,
+      "rationale": "p90 of the same away-span distribution (aggressive merging upper bound)"
+    }
+  },
+  "rank_stability_vs_baseline": {
+    "0": {
+      "kendall_tau_vs_baseline": 0.7905,
+      "spearman_vs_baseline": 0.9143,
+      "n_processes_compared": 21,
+      "top_candidate_changed": false,
+      "hr_rank_delta": 0
+    },
+    "5": {
+      "kendall_tau_vs_baseline": 1.0,
+      "spearman_vs_baseline": 1.0,
+      "n_processes_compared": 21,
+      "top_candidate_changed": false,
+      "hr_rank_delta": 0
+    },
+    "11": {
+      "kendall_tau_vs_baseline": 0.7778,
+      "spearman_vs_baseline": 0.9295,
+      "n_processes_compared": 19,
+      "top_candidate_changed": true,
+      "hr_rank_delta": 4
+    },
+    "36": {
+      "kendall_tau_vs_baseline": 0.4559,
+      "spearman_vs_baseline": 0.6156,
+      "n_processes_compared": 17,
+      "top_candidate_changed": false,
+      "hr_rank_delta": 0
+    }
+  },
+  "summary": {
+    "composite_score_layer": {
+      "top_candidate_unchanged_across_all_thresholds": false,
+      "hr_rank_1_at_every_threshold": false,
+      "hr_on_pareto_frontier_at_every_threshold": false,
+      "min_kendall_tau_vs_baseline": 0.4559,
+      "classification": "C. SENSITIVE"
+    },
+    "evidence_layer": {
+      "hr_top_by_handling_time_at_every_threshold": true,
+      "hr_all_four_operators_at_every_threshold": true,
+      "hr_handling_hours_by_threshold": {
+        "0": 0.7635,
+        "5": 0.8309,
+        "11": 0.8684,
+        "36": 0.9796
+      },
+      "classification": "A. STABLE"
+    },
+    "execution_count_range": [
+      262,
+      1018
+    ],
+    "hr_dominant_variant_share_by_threshold": {
+      "0": 1.0,
+      "5": 0.7705,
+      "11": 0.5333,
+      "36": 0.3333
+    },
+    "classification": "C. SENSITIVE",
+    "interpretation": "The composite Opportunity score is threshold-sensitive: at the p50 threshold the top slot goes to a 7-execution, 0.02-hour, single-operator workbook whose Feasibility normalises to 1.0. The underlying evidence is not sensitive: HR is the largest consumer of recorded handling time, and is used by all four operators, at every threshold tested. The instability lives in the scoring layer, not in the process evidence."
+  }
+}

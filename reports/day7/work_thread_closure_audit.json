@@ -1,0 +1,661 @@
+{
+  "experiment": "Work-thread closure audit: independent P1 verification + feature-group ablation",
+  "parameters": {
+    "seed": 0,
+    "n_splits": 5,
+    "max_gap": 600,
+    "max_pairs_per_session": 6000
+  },
+  "feature_groups": {
+    "A_temporal_positional": [
+      "log1p_delta_t_ms",
+      "index_gap",
+      "n_app_switches_between",
+      "n_distinct_apps_between",
+      "any_navigation_between",
+      "any_clipboard_between"
+    ],
+    "B_linking_context": [
+      "same_application",
+      "same_window_title",
+      "same_browser_domain",
+      "both_domains_known",
+      "same_tab_id",
+      "both_tabs_known",
+      "same_event_type",
+      "same_chunk"
+    ]
+  },
+  "p1_independent_verification": {
+    "method": "independent of the original span-pair comparison: sweep-line concurrency over boundary points, plus run-length analysis of the per-event case assignment",
+    "total_gt_executions_analysed": 1752,
+    "sessions_analysed": 63,
+    "max_simultaneous_executions_anywhere": 1,
+    "executions_involved_in_overlap": 0,
+    "executions_nested_inside_another": 0,
+    "sessions_with_any_overlap": 0,
+    "observable_a_b_a_cases": 0,
+    "sessions_with_any_a_b_a": 0,
+    "observable_non_contiguous_cases": 0,
+    "per_session": {
+      "ses_20260630-121953-LAPTOP-R36BQBTE": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260630-124826-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260630-125757-LAPTOP-R36BQBTE": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 20,
+        "n_distinct_cases": 20,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 20
+      },
+      "ses_20260630-131729-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 21,
+        "n_distinct_cases": 21,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 21
+      },
+      "ses_20260630-132737-LAPTOP-R36BQBTE": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 25,
+        "n_distinct_cases": 25,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 25
+      },
+      "ses_20260630-135201-LAPTOP-R36BQBTE": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 24,
+        "n_distinct_cases": 24,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 24
+      },
+      "ses_20260630-135451-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260630-145433-JAYESH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 34,
+        "n_distinct_cases": 34,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 34
+      },
+      "ses_20260630-163424-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260630-164418-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260701-005920-yuvraj": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260701-014804-yuvraj": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 27,
+        "n_distinct_cases": 27,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 27
+      },
+      "ses_20260701-022828-yuvraj": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 25,
+        "n_distinct_cases": 25,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 25
+      },
+      "ses_20260701-030836-yuvraj": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 24,
+        "n_distinct_cases": 24,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 24
+      },
+      "ses_20260701-032825-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 26,
+        "n_distinct_cases": 26,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 26
+      },
+      "ses_20260701-035622-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 34,
+        "n_distinct_cases": 34,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 34
+      },
+      "ses_20260701-043922-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 37,
+        "n_distinct_cases": 37,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 37
+      },
+      "ses_20260701-051820-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 24,
+        "n_distinct_cases": 24,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 24
+      },
+      "ses_20260701-051850-LAPTOP-R36BQBTE": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 31,
+        "n_distinct_cases": 31,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 31
+      },
+      "ses_20260701-053005-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 27,
+        "n_distinct_cases": 27,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 27
+      },
+      "ses_20260701-053720-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 31,
+        "n_distinct_cases": 31,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 31
+      },
+      "ses_20260701-054901-LAPTOP-R36BQBTE": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 26,
+        "n_distinct_cases": 26,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 26
+      },
+      "ses_20260701-054930-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 26,
+        "n_distinct_cases": 26,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 26
+      },
+      "ses_20260701-055037-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260701-055918-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260701-062250-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260701-062732-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 27,
+        "n_distinct_cases": 27,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 27
+      },
+      "ses_20260701-063106-LAPTOP-R36BQBTE": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 23,
+        "n_distinct_cases": 23,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 23
+      },
+      "ses_20260701-065151-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 31,
+        "n_distinct_cases": 31,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 31
+      },
+      "ses_20260701-070320-JAYESH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 38,
+        "n_distinct_cases": 38,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 38
+      },
+      "ses_20260701-071849-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 26,
+        "n_distinct_cases": 26,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 26
+      },
+      "ses_20260701-072319-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260701-072435-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 27,
+        "n_distinct_cases": 27,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 27
+      },
+      "ses_20260701-074424-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260701-075548-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 20,
+        "n_distinct_cases": 20,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 20
+      },
+      "ses_20260701-075604-LAPTOP-0IM1OHQH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260701-081120-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 26,
+        "n_distinct_cases": 26,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 26
+      },
+      "ses_20260701-081732-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 22,
+        "n_distinct_cases": 22,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 22
+      },
+      "ses_20260701-083656-LAPTOP-0IM1OHQH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 31,
+        "n_distinct_cases": 31,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 31
+      },
+      "ses_20260701-090300-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 22,
+        "n_distinct_cases": 22,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 22
+      },
+      "ses_20260701-092027-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260701-093900-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 24,
+        "n_distinct_cases": 24,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 24
+      },
+      "ses_20260701-095337-LAPTOP-0IM1OHQH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 25,
+        "n_distinct_cases": 25,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 25
+      },
+      "ses_20260701-100550-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260701-103521-LAPTOP-0IM1OHQH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 24,
+        "n_distinct_cases": 24,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 24
+      },
+      "ses_20260701-103853-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260701-110548-LAPTOP-0IM1OHQH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 25,
+        "n_distinct_cases": 25,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 25
+      },
+      "ses_20260701-110917-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 27,
+        "n_distinct_cases": 27,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 27
+      },
+      "ses_20260701-115141-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 41,
+        "n_distinct_cases": 41,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 41
+      },
+      "ses_20260701-120612-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 27,
+        "n_distinct_cases": 27,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 27
+      },
+      "ses_20260701-120828-LAPTOP-0IM1OHQH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 25,
+        "n_distinct_cases": 25,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 25
+      },
+      "ses_20260701-123729-Marcos": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 29,
+        "n_distinct_cases": 29,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 29
+      },
+      "ses_20260701-124033-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260701-124550-LAPTOP-0IM1OHQH": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 29,
+        "n_distinct_cases": 29,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 29
+      },
+      "ses_20260701-124636-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 31,
+        "n_distinct_cases": 31,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 31
+      },
+      "ses_20260701-131015-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 29,
+        "n_distinct_cases": 29,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 29
+      },
+      "ses_20260701-131247-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 31,
+        "n_distinct_cases": 31,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 31
+      },
+      "ses_20260701-134215-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 31,
+        "n_distinct_cases": 31,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 31
+      },
+      "ses_20260701-141430-SIDDHIGUPTAB00B": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 30,
+        "n_distinct_cases": 30,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 30
+      },
+      "ses_20260701-145907-MSI": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 28,
+        "n_distinct_cases": 28,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 28
+      },
+      "ses_20260701-152030-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 9,
+        "n_distinct_cases": 9,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 27
+      },
+      "ses_20260701-155031-CHAITANYA0BCF": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 25,
+        "n_distinct_cases": 25,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 25
+      },
+      "ses_20260701-172430-yuvraj": {
+        "max_concurrency": 1,
+        "executions_involved_in_overlap": 0,
+        "n_runs": 25,
+        "n_distinct_cases": 25,
+        "cases_appearing_in_multiple_runs": 0,
+        "max_runs_for_one_case": 1,
+        "n_executions": 25
+      }
+    }
+  },
+  "feature_group_ablation": {
+    "A_temporal_positional_only": {
+      "group": "A temporal/positional only",
+      "n_features": 6,
+      "n_pairs": 378000,
+      "positive_rate": 0.5589,
+      "roc_auc": 0.9802,
+      "pr_auc": 0.9823,
+      "precision": 0.9324,
+      "recall": 0.93,
+      "f1": 0.9312
+    },
+    "B_linking_context_only": {
+      "group": "B linking/context only",
+      "n_features": 8,
+      "n_pairs": 378000,
+      "positive_rate": 0.5589,
+      "roc_auc": 0.7651,
+      "pr_auc": 0.7821,
+      "precision": 0.7603,
+      "recall": 0.7395,
+      "f1": 0.7498
+    },
+    "C_combined": {
+      "group": "C combined",
+      "n_features": 14,
+      "n_pairs": 378000,
+      "positive_rate": 0.5589,
+      "roc_auc": 0.9897,
+      "pr_auc": 0.9906,
+      "precision": 0.9624,
+      "recall": 0.9585,
+      "f1": 0.9604
+    }
+  },
+  "ablation_deltas": {
+    "combined_minus_temporal_f1": 0.0292,
+    "combined_minus_temporal_roc_auc": 0.0095,
+    "combined_minus_temporal_pr_auc": 0.0083,
+    "linking_only_f1": 0.7498
+  },
+  "intervening_stratum": {
+    "n_intervening_pairs": 86722,
+    "label_counts_in_intervening_stratum": {
+      "same_execution_1": 0,
+      "different_execution_0": 86722
+    },
+    "n_non_intervening_pairs": 291278,
+    "positive_rate_non_intervening": 0.7253
+  },
+  "note": "Feature importance is a model-specific diagnostic. This ablation is the stronger test: it measures whether linking evidence adds predictive information beyond temporal structure."
+}

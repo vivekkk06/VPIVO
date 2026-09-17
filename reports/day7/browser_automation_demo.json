@@ -1,0 +1,74 @@
+{
+  "demo": "HR automation through a real browser DOM",
+  "target": "local hr_payroll_mock_app.html prototype",
+  "not_connected_to_real_hr_system": true,
+  "timestamp": "2026-09-16T23:40:59.527415+00:00",
+  "steps": [
+    {
+      "step": "valid_route",
+      "route": "#/payroll-items",
+      "confirmed": true,
+      "note_reached_dom": true,
+      "browser_start_seconds": 0.355,
+      "prepare_seconds": 0.125,
+      "confirm_seconds": 0.033,
+      "action_log": [
+        {
+          "step": "route_check",
+          "detail": "'#/payroll-items' is an evidenced route",
+          "timestamp": "2026-09-16T23:40:59.882244+00:00"
+        },
+        {
+          "step": "note_check",
+          "detail": "note text is non-empty",
+          "timestamp": "2026-09-16T23:40:59.882260+00:00"
+        },
+        {
+          "step": "navigate",
+          "detail": "navigated to '#/payroll-items'",
+          "timestamp": "2026-09-16T23:40:59.984827+00:00"
+        },
+        {
+          "step": "find_note_field",
+          "detail": "found 'pi-note'",
+          "timestamp": "2026-09-16T23:40:59.994957+00:00"
+        },
+        {
+          "step": "insert_note",
+          "detail": "inserted note into 'pi-note'",
+          "timestamp": "2026-09-16T23:41:00.001065+00:00"
+        },
+        {
+          "step": "find_confirm_button",
+          "detail": "found 'btn-pi-ok'",
+          "timestamp": "2026-09-16T23:41:00.006975+00:00"
+        },
+        {
+          "step": "checkpoint",
+          "detail": "prepared -- awaiting human review before the confirmation click",
+          "timestamp": "2026-09-16T23:41:00.006989+00:00"
+        },
+        {
+          "step": "confirm",
+          "detail": "human-approved: clicked 'btn-pi-ok'",
+          "timestamp": "2026-09-16T23:41:00.041434+00:00"
+        }
+      ]
+    },
+    {
+      "step": "replay",
+      "refused": true,
+      "reason": "this checkpoint has already been confirmed -- confirm_submission is not re-entrant"
+    },
+    {
+      "step": "invalid_route",
+      "refused": true,
+      "error_type": "UnknownRouteError"
+    },
+    {
+      "step": "empty_note",
+      "refused": true,
+      "error_type": "InvalidNoteError"
+    }
+  ]
+}

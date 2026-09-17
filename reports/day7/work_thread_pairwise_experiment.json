@@ -1,0 +1,306 @@
+{
+  "experiment": "Work-thread hypothesis, Steps 3-5: pairwise same-execution prediction",
+  "question": "Can two events be linked as belonging to the same execution using only signals the telemetry actually contains?",
+  "prediction_under_test": "The signal audit predicted this works at short distance (where 'same work' is nearly the same claim as 'adjacent in time') and fails across an intervening block of different work -- i.e. exactly where linking would add value over the existing per-transition model.",
+  "leakage_controls": {
+    "labels": "GT case_id; never a feature",
+    "features_used": [
+      "log1p_delta_t_ms",
+      "index_gap",
+      "same_application",
+      "same_window_title",
+      "same_browser_domain",
+      "both_domains_known",
+      "same_tab_id",
+      "both_tabs_known",
+      "same_event_type",
+      "same_chunk",
+      "n_app_switches_between",
+      "n_distinct_apps_between",
+      "any_navigation_between",
+      "any_clipboard_between"
+    ],
+    "gt_derived_features": "none",
+    "split": "GroupKFold(n_splits=5) grouped by session",
+    "intervening_flag": "GT-derived; used only to stratify reported results"
+  },
+  "parameters": {
+    "seed": 0,
+    "max_gap": 600,
+    "log_spaced_samples": 24,
+    "max_pairs_per_session": 6000
+  },
+  "scale": {
+    "events": 162768,
+    "pairs": 378000,
+    "positive_rate": 0.5589,
+    "sessions": 63,
+    "pair_build_seconds": 11.9
+  },
+  "results": {
+    "logistic_regression": {
+      "overall": {
+        "n": 378000,
+        "positive_rate": 0.5589,
+        "roc_auc": 0.9694,
+        "pr_auc": 0.9732,
+        "precision": 0.9158,
+        "recall": 0.9311,
+        "f1": 0.9234
+      },
+      "by_time_gap": {
+        "under_1s": {
+          "n": 76142,
+          "positive_rate": 0.9797,
+          "roc_auc": 0.8782,
+          "pr_auc": 0.9972,
+          "precision": 0.9797,
+          "recall": 1.0,
+          "f1": 0.9898
+        },
+        "1s_to_5s": {
+          "n": 74981,
+          "positive_rate": 0.9454,
+          "roc_auc": 0.8235,
+          "pr_auc": 0.9877,
+          "precision": 0.9494,
+          "recall": 0.9797,
+          "f1": 0.9643
+        },
+        "5s_to_30s": {
+          "n": 97487,
+          "positive_rate": 0.5972,
+          "roc_auc": 0.8538,
+          "pr_auc": 0.887,
+          "precision": 0.8039,
+          "recall": 0.8527,
+          "f1": 0.8276
+        },
+        "over_30s": {
+          "n": 129390,
+          "positive_rate": 0.0585,
+          "roc_auc": 0.9461,
+          "pr_auc": 0.6381,
+          "precision": 0.8056,
+          "recall": 0.4006,
+          "f1": 0.5351
+        }
+      },
+      "by_index_gap": {
+        "adjacent_1_to_3": {
+          "n": 57507,
+          "positive_rate": 0.98,
+          "roc_auc": 0.8381,
+          "pr_auc": 0.9962,
+          "precision": 0.9804,
+          "recall": 0.9992,
+          "f1": 0.9898
+        },
+        "near_4_to_20": {
+          "n": 113620,
+          "positive_rate": 0.9092,
+          "roc_auc": 0.8449,
+          "pr_auc": 0.9802,
+          "precision": 0.9282,
+          "recall": 0.9879,
+          "f1": 0.9571
+        },
+        "mid_21_to_100": {
+          "n": 104116,
+          "positive_rate": 0.4869,
+          "roc_auc": 0.8672,
+          "pr_auc": 0.8652,
+          "precision": 0.8091,
+          "recall": 0.7562,
+          "f1": 0.7818
+        },
+        "far_101_to_600": {
+          "n": 102757,
+          "positive_rate": 0.009,
+          "roc_auc": 0.9009,
+          "pr_auc": 0.1476,
+          "precision": 0.5294,
+          "recall": 0.0293,
+          "f1": 0.0555
+        }
+      },
+      "the_decisive_split": {
+        "no_intervening_other_work": {
+          "n": 291278,
+          "positive_rate": 0.7253,
+          "roc_auc": 0.9371,
+          "pr_auc": 0.9734,
+          "precision": 0.916,
+          "recall": 0.9311,
+          "f1": 0.9235
+        },
+        "intervening_other_work": {
+          "n": 86722,
+          "note": "too few samples or single class"
+        }
+      },
+      "mean_fit_seconds": 0.93
+    },
+    "random_forest": {
+      "overall": {
+        "n": 378000,
+        "positive_rate": 0.5589,
+        "roc_auc": 0.9897,
+        "pr_auc": 0.9906,
+        "precision": 0.9624,
+        "recall": 0.9585,
+        "f1": 0.9604
+      },
+      "by_time_gap": {
+        "under_1s": {
+          "n": 76142,
+          "positive_rate": 0.9797,
+          "roc_auc": 0.9928,
+          "pr_auc": 0.9997,
+          "precision": 0.9974,
+          "recall": 0.9974,
+          "f1": 0.9974
+        },
+        "1s_to_5s": {
+          "n": 74981,
+          "positive_rate": 0.9454,
+          "roc_auc": 0.9684,
+          "pr_auc": 0.9967,
+          "precision": 0.9872,
+          "recall": 0.9884,
+          "f1": 0.9878
+        },
+        "5s_to_30s": {
+          "n": 97487,
+          "positive_rate": 0.5972,
+          "roc_auc": 0.9586,
+          "pr_auc": 0.9678,
+          "precision": 0.9156,
+          "recall": 0.9146,
+          "f1": 0.9151
+        },
+        "over_30s": {
+          "n": 129390,
+          "positive_rate": 0.0585,
+          "roc_auc": 0.945,
+          "pr_auc": 0.7145,
+          "precision": 0.7157,
+          "recall": 0.6324,
+          "f1": 0.6715
+        }
+      },
+      "by_index_gap": {
+        "adjacent_1_to_3": {
+          "n": 57507,
+          "positive_rate": 0.98,
+          "roc_auc": 0.9749,
+          "pr_auc": 0.999,
+          "precision": 0.9953,
+          "recall": 0.9961,
+          "f1": 0.9957
+        },
+        "near_4_to_20": {
+          "n": 113620,
+          "positive_rate": 0.9092,
+          "roc_auc": 0.9759,
+          "pr_auc": 0.996,
+          "precision": 0.9821,
+          "recall": 0.9841,
+          "f1": 0.9831
+        },
+        "mid_21_to_100": {
+          "n": 104116,
+          "positive_rate": 0.4869,
+          "roc_auc": 0.9502,
+          "pr_auc": 0.9499,
+          "precision": 0.8876,
+          "recall": 0.8754,
+          "f1": 0.8815
+        },
+        "far_101_to_600": {
+          "n": 102757,
+          "positive_rate": 0.009,
+          "roc_auc": 0.8426,
+          "pr_auc": 0.425,
+          "precision": 0.6555,
+          "recall": 0.3612,
+          "f1": 0.4657
+        }
+      },
+      "the_decisive_split": {
+        "no_intervening_other_work": {
+          "n": 291278,
+          "positive_rate": 0.7253,
+          "roc_auc": 0.9813,
+          "pr_auc": 0.9914,
+          "precision": 0.963,
+          "recall": 0.9585,
+          "f1": 0.9608
+        },
+        "intervening_other_work": {
+          "n": 86722,
+          "note": "too few samples or single class"
+        }
+      },
+      "mean_fit_seconds": 11.53
+    }
+  },
+  "random_forest_feature_importance": [
+    {
+      "feature": "log1p_delta_t_ms",
+      "importance": 0.2991
+    },
+    {
+      "feature": "n_app_switches_between",
+      "importance": 0.2608
+    },
+    {
+      "feature": "index_gap",
+      "importance": 0.2303
+    },
+    {
+      "feature": "any_navigation_between",
+      "importance": 0.11
+    },
+    {
+      "feature": "any_clipboard_between",
+      "importance": 0.0388
+    },
+    {
+      "feature": "same_window_title",
+      "importance": 0.0366
+    },
+    {
+      "feature": "same_event_type",
+      "importance": 0.0089
+    },
+    {
+      "feature": "same_browser_domain",
+      "importance": 0.0067
+    },
+    {
+      "feature": "both_domains_known",
+      "importance": 0.0056
+    },
+    {
+      "feature": "same_chunk",
+      "importance": 0.0023
+    },
+    {
+      "feature": "both_tabs_known",
+      "importance": 0.0005
+    },
+    {
+      "feature": "same_tab_id",
+      "importance": 0.0003
+    },
+    {
+      "feature": "same_application",
+      "importance": 0.0
+    },
+    {
+      "feature": "n_distinct_apps_between",
+      "importance": 0.0
+    }
+  ]
+}
