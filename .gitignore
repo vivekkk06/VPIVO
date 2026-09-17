@@ -22,3 +22,10 @@ frontend/tsconfig.tsbuildinfo
 frontend/node_modules/
 frontend/dist/
 frontend/tsconfig.tsbuildinfo
+
+# Local environment (never commit real values)
+.env
+
+# Local integration state (SQLite) -- runtime data, never committed
+local_hr_system.db
+execution_state.db
