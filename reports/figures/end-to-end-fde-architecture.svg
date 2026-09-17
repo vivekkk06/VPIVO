@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="1080" viewBox="0 0 1020 1080">
+<defs>
+<marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#44586B"/>
+</marker>
+<marker id="greyhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#9A9A9A"/>
+</marker>
+</defs>
+<rect width="1020" height="1080" fill="#FFFFFF"/>
+<text x="40.0" y="34.0" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#1A1A1A">End-to-end FDE architecture</text>
+<text x="40.0" y="53.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Canonical pipeline (left). The Day-7 machine-learning experiment is a side branch and feeds nothing.</text>
+<rect x="70.0" y="78.0" width="330.0" height="46.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4"/>
+<text x="235.0" y="97.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Raw operation logs</text>
+<text x="235.0" y="115.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">keystrokes · clicks · app switches</text>
+<rect x="70.0" y="140.0" width="330.0" height="46.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="235.0" y="159.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Data audit &amp; quality check</text>
+<text x="235.0" y="177.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">Day 1 — defects found before modelling</text>
+<line x1="235.0" y1="124.0" x2="235.0" y2="133.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="202.0" width="330.0" height="46.0" rx="5" fill="#FDF3E7" stroke="#C2700F" stroke-width="1.4"/>
+<text x="235.0" y="221.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Instrumentation health</text>
+<text x="235.0" y="239.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">upstream diagnostic, outside the decision path</text>
+<line x1="235.0" y1="186.0" x2="235.0" y2="195.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="264.0" width="330.0" height="46.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="235.0" y="283.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Locked segmentation</text>
+<text x="235.0" y="301.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">Combined strategy — retained after Day-7 challenge</text>
+<line x1="235.0" y1="248.0" x2="235.0" y2="257.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="326.0" width="330.0" height="46.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="235.0" y="345.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Executions</text>
+<text x="235.0" y="363.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">Dataset B → 645</text>
+<line x1="235.0" y1="310.0" x2="235.0" y2="319.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="388.0" width="330.0" height="46.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="235.0" y="407.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Process mining</text>
+<text x="235.0" y="425.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">21 ranked · 8 excluded</text>
+<line x1="235.0" y1="372.0" x2="235.0" y2="381.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="450.0" width="330.0" height="46.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="235.0" y="469.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Variants · DFG · operational metrics</text>
+<text x="235.0" y="487.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">frequency · time · operators</text>
+<line x1="235.0" y1="434.0" x2="235.0" y2="443.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="512.0" width="330.0" height="46.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="235.0" y="531.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Impact × Feasibility</text>
+<text x="235.0" y="549.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">computed separately, multiplied last</text>
+<line x1="235.0" y1="496.0" x2="235.0" y2="505.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="574.0" width="330.0" height="46.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="235.0" y="593.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Sensitivity / Pareto</text>
+<text x="235.0" y="611.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">8 weightings · merge thresholds</text>
+<line x1="235.0" y1="558.0" x2="235.0" y2="567.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="636.0" width="330.0" height="46.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="235.0" y="655.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Automation decision</text>
+<text x="235.0" y="673.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">HR / Payroll — Opportunity 0.4401</text>
+<line x1="235.0" y1="620.0" x2="235.0" y2="629.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="698.0" width="330.0" height="46.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="235.0" y="717.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">HUMAN REVIEW CHECKPOINT</text>
+<text x="235.0" y="735.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">nothing is submitted until a person approves</text>
+<line x1="235.0" y1="682.0" x2="235.0" y2="691.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="760.0" width="330.0" height="46.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="235.0" y="779.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Automation service</text>
+<text x="235.0" y="797.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">route allowlist · note validation · re-verification</text>
+<line x1="235.0" y1="744.0" x2="235.0" y2="753.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="822.0" width="330.0" height="46.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="235.0" y="841.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Browser adapter</text>
+<text x="235.0" y="859.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">Playwright — safety logic stays above this layer</text>
+<line x1="235.0" y1="806.0" x2="235.0" y2="815.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="884.0" width="330.0" height="46.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4"/>
+<text x="235.0" y="903.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Local HR mock DOM</text>
+<text x="235.0" y="921.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">hr_payroll_mock_app.html</text>
+<line x1="235.0" y1="868.0" x2="235.0" y2="877.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<text x="560.0" y="96.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="start" fill="#5A5A5A" font-style="italic">Independent experiment (Day 7)</text>
+<rect x="560.0" y="110.0" width="380.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="129.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Ground-truth executions</text>
+<text x="750.0" y="147.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">Dataset A · 15 process codes</text>
+<rect x="560.0" y="176.0" width="380.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="195.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Process-identity ML experiment</text>
+<text x="750.0" y="213.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">GroupKFold grouped by session</text>
+<line x1="750.0" y1="156.0" x2="750.0" y2="169.0" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="560.0" y="242.0" width="380.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="261.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Behaviour vs system identity</text>
+<text x="750.0" y="279.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">macro F1 0.2892 vs 0.5948</text>
+<line x1="750.0" y1="222.0" x2="750.0" y2="235.0" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="560.0" y="308.0" width="380.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="327.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">VALIDATION ONLY</text>
+<text x="750.0" y="345.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">confirms the Day-3 grouping decision</text>
+<line x1="750.0" y1="288.0" x2="750.0" y2="301.0" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="560.0" y="374.0" width="380.0" height="52.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="396.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">NOT IN THE CANONICAL PIPELINE</text>
+<text x="750.0" y="414.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">feeds neither segmentation nor Opportunity</text>
+<line x1="750.0" y1="354.0" x2="750.0" y2="367.0" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="560.0" y="444.0" width="380.0" height="76.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="750.0" y="465.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">The tempting model — predicting automation suitability —</text>
+<text x="750.0" y="479.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">would have been trained on the Opportunity score it was</text>
+<text x="750.0" y="493.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">meant to support. It was rejected as circular and never</text>
+<text x="750.0" y="507.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">built.</text>
+<line x1="70" y1="956.0" x2="960" y2="956.0" stroke="#B23A2F" stroke-width="2" stroke-dasharray="9 5"/>
+<text x="70.0" y="948.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start" fill="#B23A2F">LOCAL VALIDATED</text>
+<text x="960.0" y="948.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="end" fill="#B23A2F">≠  REAL HR PRODUCTION SYSTEM</text>
+<rect x="70.0" y="968.0" width="890.0" height="58.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="515.0" y="994.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">Everything above this line runs and is tested against a local prototype page. Crossing it requires a real HR system, authentication,</text>
+<text x="515.0" y="1008.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">authorisation, secrets management and governance sign-off — none of which this project has done.</text>
+<rect x="40.0" y="1061.0" width="16" height="12" rx="2.5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.2"/>
+<text x="62.0" y="1070.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Input</text>
+<rect x="95.5" y="1061.0" width="16" height="12" rx="2.5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.2"/>
+<text x="117.5" y="1070.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Processing</text>
+<rect x="180.5" y="1061.0" width="16" height="12" rx="2.5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.2"/>
+<text x="202.5" y="1070.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Validation</text>
+<rect x="265.5" y="1061.0" width="16" height="12" rx="2.5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.2"/>
+<text x="287.5" y="1070.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Decision / human</text>
+<rect x="385.9" y="1061.0" width="16" height="12" rx="2.5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.2"/>
+<text x="407.9" y="1070.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Automation</text>
+<rect x="470.9" y="1061.0" width="16" height="12" rx="2.5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.2"/>
+<text x="492.9" y="1070.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Not in pipeline</text>
+</svg>

@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="960" viewBox="0 0 1020 960">
+<defs>
+<marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#44586B"/>
+</marker>
+<marker id="greyhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#9A9A9A"/>
+</marker>
+</defs>
+<rect width="1020" height="960" fill="#FFFFFF"/>
+<text x="40.0" y="34.0" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#1A1A1A">Figure 5 — Automation execution and safety workflow</text>
+<text x="40.0" y="53.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Every mechanism shown is implemented in the prototype. The automation acts only inside explicit verification boundaries.</text>
+<rect x="70.0" y="86.0" width="380.0" height="50.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4"/>
+<text x="260.0" y="107.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Trigger — operator selects route + supplies note</text>
+<text x="260.0" y="125.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">note text is a required input; never invented</text>
+<rect x="70.0" y="150.0" width="380.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="260.0" y="171.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Guard: route allowlist</text>
+<text x="260.0" y="189.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">only the 4 evidenced routes are accepted</text>
+<line x1="260.0" y1="136.0" x2="260.0" y2="143.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="214.0" width="380.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="260.0" y="235.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Guard: note is non-empty</text>
+<text x="260.0" y="253.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">checked BEFORE any UI contact</text>
+<line x1="260.0" y1="200.0" x2="260.0" y2="207.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="278.0" width="380.0" height="50.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="260.0" y="308.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Navigate to target route</text>
+<line x1="260.0" y1="264.0" x2="260.0" y2="271.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="342.0" width="380.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="260.0" y="363.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Locate note field</text>
+<text x="260.0" y="381.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">refuses to guess if absent or duplicated</text>
+<line x1="260.0" y1="328.0" x2="260.0" y2="335.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="406.0" width="380.0" height="50.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="260.0" y="436.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Insert note</text>
+<line x1="260.0" y1="392.0" x2="260.0" y2="399.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="470.0" width="380.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="260.0" y="491.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Locate confirm button</text>
+<text x="260.0" y="509.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">refuses to guess if absent or duplicated</text>
+<line x1="260.0" y1="456.0" x2="260.0" y2="463.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="534.0" width="380.0" height="50.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="260.0" y="555.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Server-side checkpoint issued</text>
+<text x="260.0" y="573.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">opaque single-use token; browser cannot construct one</text>
+<line x1="260.0" y1="520.0" x2="260.0" y2="527.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="598.0" width="380.0" height="50.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="260.0" y="619.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">HUMAN REVIEW &amp; AUTHORISATION</text>
+<text x="260.0" y="637.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">nothing is submitted until a person approves</text>
+<line x1="260.0" y1="584.0" x2="260.0" y2="591.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="662.0" width="380.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="260.0" y="683.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Re-verify confirm button</text>
+<text x="260.0" y="701.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">re-located immediately before the click, never cached</text>
+<line x1="260.0" y1="648.0" x2="260.0" y2="655.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="726.0" width="380.0" height="50.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="260.0" y="756.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Perform action — click confirm</text>
+<line x1="260.0" y1="712.0" x2="260.0" y2="719.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="790.0" width="380.0" height="50.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="260.0" y="811.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Record outcome</text>
+<text x="260.0" y="829.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">timestamped action log for every step, success or failure</text>
+<line x1="260.0" y1="776.0" x2="260.0" y2="783.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="854.0" width="380.0" height="46.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="260.0" y="873.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Success</text>
+<text x="260.0" y="891.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">confirmed, logged, token consumed</text>
+<line x1="260.0" y1="840.0" x2="260.0" y2="847.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="610.0" y="330.0" width="350.0" height="88.0" rx="5" fill="#FDF3E7" stroke="#C2700F" stroke-width="1.4"/>
+<text x="785.0" y="364.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">SAFE STOP</text>
+<text x="785.0" y="382.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">AutomationSafetyError · HTTP 422 · partial action log</text>
+<text x="785.0" y="395.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">preserved · nothing submitted</text>
+<path d="M 450.0 175.0 L 580.0 175.0 L 580.0 374.0 L 603.0 374.0" fill="none" stroke="#C2700F" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<path d="M 450.0 239.0 L 580.0 239.0 L 580.0 374.0 L 603.0 374.0" fill="none" stroke="#C2700F" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<path d="M 450.0 367.0 L 580.0 367.0 L 580.0 374.0 L 603.0 374.0" fill="none" stroke="#C2700F" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<path d="M 450.0 495.0 L 580.0 495.0 L 580.0 374.0 L 603.0 374.0" fill="none" stroke="#C2700F" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<path d="M 450.0 687.0 L 580.0 687.0 L 580.0 374.0 L 603.0 374.0" fill="none" stroke="#C2700F" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<text x="960.0" y="318.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#C2700F" font-style="italic">any guard fails → refuse, never guess</text>
+<rect x="610.0" y="470.0" width="350.0" height="120.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="785.0" y="513.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">The single-use token is consumed on confirm, so a</text>
+<text x="785.0" y="527.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">checkpoint cannot be confirmed twice. The confirm</text>
+<text x="785.0" y="541.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">button is re-located after the human pause, so a page</text>
+<text x="785.0" y="555.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">change during review cannot go undetected.</text>
+<rect x="610.0" y="620.0" width="350.0" height="130.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="785.0" y="661.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">Boundary: the prototype drives a deterministic</text>
+<text x="785.0" y="675.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">in-memory mock, not a real HR system. Production</text>
+<text x="785.0" y="689.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">additionally requires a real browser driver, an</text>
+<text x="785.0" y="703.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">explicit note-content source, and business-owner</text>
+<text x="785.0" y="717.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">confirmation that the confirm click means "submit".</text>
+<rect x="40.0" y="931.0" width="16" height="12" rx="2.5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.2"/>
+<text x="62.0" y="940.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Input</text>
+<rect x="95.5" y="931.0" width="16" height="12" rx="2.5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.2"/>
+<text x="117.5" y="940.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Guard / check</text>
+<rect x="198.2" y="931.0" width="16" height="12" rx="2.5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.2"/>
+<text x="220.2" y="940.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Human control</text>
+<rect x="300.9" y="931.0" width="16" height="12" rx="2.5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.2"/>
+<text x="322.9" y="940.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Action</text>
+<rect x="362.3" y="931.0" width="16" height="12" rx="2.5" fill="#FDF3E7" stroke="#C2700F" stroke-width="1.2"/>
+<text x="384.3" y="940.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Exception path</text>
+</svg>

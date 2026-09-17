@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="900" viewBox="0 0 1020 900">
+<defs>
+<marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#44586B"/>
+</marker>
+<marker id="greyhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#9A9A9A"/>
+</marker>
+</defs>
+<rect width="1020" height="900" fill="#FFFFFF"/>
+<text x="40.0" y="34.0" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#1A1A1A">Figure 2 — Segmentation validation and failure analysis</text>
+<text x="40.0" y="53.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Hypothesis → experiment → evidence → decision. Every branch below was measured, not assumed.</text>
+<rect x="70.0" y="84.0" width="290.0" height="56.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4"/>
+<text x="215.0" y="108.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Continuous event stream</text>
+<text x="215.0" y="126.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">Dataset A, chronologically ordered</text>
+<rect x="70.0" y="164.0" width="290.0" height="56.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="215.0" y="182.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Feature &amp; boundary detection</text>
+<text x="215.0" y="200.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">temporal, application, window, browser,</text>
+<text x="215.0" y="213.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">behavioural</text>
+<rect x="70.0" y="244.0" width="290.0" height="56.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="215.0" y="268.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Candidate segments</text>
+<text x="215.0" y="286.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">predicted execution boundaries</text>
+<rect x="70.0" y="324.0" width="290.0" height="56.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="215.0" y="342.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Ground-truth comparison</text>
+<text x="215.0" y="360.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">2,009 labelled executions ·</text>
+<text x="215.0" y="373.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">leave-one-session-out</text>
+<rect x="70.0" y="404.0" width="290.0" height="56.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="215.0" y="422.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Precision / Recall / F1</text>
+<text x="215.0" y="440.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">0.2358 · 0.6355 · F1 0.3440 — transition-level,</text>
+<text x="215.0" y="453.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">not accuracy</text>
+<rect x="70.0" y="484.0" width="290.0" height="56.0" rx="5" fill="#FDF3E7" stroke="#C2700F" stroke-width="1.4"/>
+<text x="215.0" y="508.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Failure analysis</text>
+<text x="215.0" y="526.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">79.05% of executions still fragmented</text>
+<line x1="215.0" y1="140.0" x2="215.0" y2="157.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="215.0" y1="220.0" x2="215.0" y2="237.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="215.0" y1="300.0" x2="215.0" y2="317.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="215.0" y1="380.0" x2="215.0" y2="397.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="215.0" y1="460.0" x2="215.0" y2="477.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="470.0" y="484.0" width="470.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4"/>
+<text x="705.0" y="503.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Tempo / pace hypothesis</text>
+<text x="705.0" y="521.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">median gaps vary 1.27x overall; degraded machine 1.02x — no difference</text>
+<path d="M 360.0 512.0 L 446.0 512.0 L 446.0 507.0 L 463.0 507.0" fill="none" stroke="#9A9A9A" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="470.0" y="538.0" width="470.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4"/>
+<text x="705.0" y="557.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Window-title fallback</text>
+<text x="705.0" y="575.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">median lift 1.10; fires at 3.33% of boundaries vs 3.55% of non-boundaries</text>
+<path d="M 360.0 512.0 L 446.0 512.0 L 446.0 561.0 L 463.0 561.0" fill="none" stroke="#9A9A9A" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="470.0" y="592.0" width="470.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4"/>
+<text x="705.0" y="611.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Threshold re-tuning</text>
+<text x="705.0" y="629.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">needs recall to collapse to ~0.15–0.21 to help — not a calibration problem</text>
+<path d="M 360.0 512.0 L 446.0 512.0 L 446.0 615.0 L 463.0 615.0" fill="none" stroke="#9A9A9A" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="470.0" y="646.0" width="470.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4"/>
+<text x="705.0" y="665.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Gaussian HMM (sequence model)</text>
+<text x="705.0" y="683.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">F1 0.0194 vs 0.3440 — about 18x worse</text>
+<path d="M 360.0 512.0 L 446.0 512.0 L 446.0 669.0 L 463.0 669.0" fill="none" stroke="#9A9A9A" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<rect x="470.0" y="700.0" width="470.0" height="46.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4"/>
+<text x="705.0" y="719.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">HMM / baseline ensemble</text>
+<text x="705.0" y="737.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">~225 false positives per additional true boundary</text>
+<path d="M 360.0 512.0 L 446.0 512.0 L 446.0 723.0 L 463.0 723.0" fill="none" stroke="#9A9A9A" stroke-width="1.2" stroke-dasharray="5 4" marker-end="url(#greyhead)"/>
+<text x="940.0" y="470.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#7A7A7A" font-style="italic">rejected on measured evidence</text>
+<rect x="470.0" y="786.0" width="470.0" height="46.0" rx="5" fill="#FDF3E7" stroke="#C2700F" stroke-width="1.4"/>
+<text x="705.0" y="805.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Instrumentation health</text>
+<text x="705.0" y="823.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">6 of 7 worst sessions at 0.00% browser-domain coverage</text>
+<path d="M 360.0 512.0 L 446.0 512.0 L 446.0 809.0 L 463.0 809.0" fill="none" stroke="#C2700F" stroke-width="1.3" marker-end="url(#head)"/>
+<text x="940.0" y="772.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#C2700F" font-style="italic">upstream data-quality issue identified</text>
+<rect x="70.0" y="604.0" width="290.0" height="92.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="215.0" y="633.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Engineering decision</text>
+<text x="215.0" y="651.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">Retain the validated architecture as an</text>
+<text x="215.0" y="664.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">imperfect foundation. No alternative earned its</text>
+<text x="215.0" y="677.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">complexity.</text>
+<line x1="215.0" y1="540.0" x2="215.0" y2="597.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="70.0" y="724.0" width="290.0" height="76.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="215.0" y="752.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">Boundary recovery is NOT solved. The</text>
+<text x="215.0" y="766.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">decision is to carry a measured limitation</text>
+<text x="215.0" y="780.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">forward, not to claim it away.</text>
+<rect x="40.0" y="869.0" width="16" height="12" rx="2.5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.2"/>
+<text x="62.0" y="878.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Measured</text>
+<rect x="113.2" y="869.0" width="16" height="12" rx="2.5" fill="#FDF3E7" stroke="#C2700F" stroke-width="1.2"/>
+<text x="135.2" y="878.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Finding</text>
+<rect x="180.5" y="869.0" width="16" height="12" rx="2.5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.2"/>
+<text x="202.5" y="878.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Rejected on evidence</text>
+<rect x="324.5" y="869.0" width="16" height="12" rx="2.5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.2"/>
+<text x="346.5" y="878.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Decision</text>
+</svg>

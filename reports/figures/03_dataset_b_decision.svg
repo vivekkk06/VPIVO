@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="910" viewBox="0 0 1020 910">
+<defs>
+<marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#44586B"/>
+</marker>
+<marker id="greyhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#9A9A9A"/>
+</marker>
+</defs>
+<rect width="1020" height="910" fill="#FFFFFF"/>
+<text x="40.0" y="34.0" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#1A1A1A">Figure 3 — From Dataset B to a defensible automation candidate</text>
+<text x="40.0" y="53.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="start" fill="#5A5A5A">The recommendation is not "highest score wins": six independent inputs converge on the decision.</text>
+<rect x="360.0" y="82.0" width="300.0" height="54.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="510.0" y="105.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Dataset B</text>
+<text x="510.0" y="123.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">15 sessions · no ground truth</text>
+<rect x="360.0" y="156.0" width="300.0" height="54.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="510.0" y="179.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Recovered executions</text>
+<text x="510.0" y="197.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">645 executions</text>
+<rect x="360.0" y="230.0" width="300.0" height="54.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="510.0" y="247.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Process grouping</text>
+<text x="510.0" y="265.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">29 contexts → 21 ranked · 8 excluded as</text>
+<text x="510.0" y="278.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">infrastructure</text>
+<line x1="510.0" y1="136.0" x2="510.0" y2="149.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<line x1="510.0" y1="210.0" x2="510.0" y2="223.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="40.0" y="322.0" width="214.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="147.0" y="343.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Execution frequency</text>
+<text x="147.0" y="361.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">how often it runs</text>
+<line x1="510.0" y1="284.0" x2="147.0" y2="315.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="274.0" y="322.0" width="214.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="381.0" y="343.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Handling time</text>
+<text x="381.0" y="361.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">recorded time consumed</text>
+<line x1="510.0" y1="284.0" x2="381.0" y2="315.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="508.0" y="322.0" width="214.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="615.0" y="343.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Operator coverage</text>
+<text x="615.0" y="361.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">how many people perform it</text>
+<line x1="510.0" y1="284.0" x2="615.0" y2="315.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="742.0" y="322.0" width="214.0" height="50.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="849.0" y="343.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Variants</text>
+<text x="849.0" y="361.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">how standardised it is</text>
+<line x1="510.0" y1="284.0" x2="849.0" y2="315.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="360.0" y="408.0" width="300.0" height="54.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="510.0" y="431.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Opportunity scoring</text>
+<text x="510.0" y="449.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">impact x feasibility, computed separately</text>
+<line x1="147.0" y1="372.0" x2="510.0" y2="401.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<line x1="381.0" y1="372.0" x2="510.0" y2="401.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<line x1="615.0" y1="372.0" x2="510.0" y2="401.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<line x1="849.0" y1="372.0" x2="510.0" y2="401.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="360.0" y="482.0" width="300.0" height="54.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="510.0" y="499.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Sensitivity analysis</text>
+<text x="510.0" y="517.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">8 weightings · merge thresholds · degraded</text>
+<text x="510.0" y="530.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">sessions</text>
+<line x1="510.0" y1="462.0" x2="510.0" y2="475.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="360.0" y="556.0" width="300.0" height="54.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="510.0" y="579.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Candidate comparison</text>
+<text x="510.0" y="597.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">Pareto frontier — needs no weighting</text>
+<line x1="510.0" y1="536.0" x2="510.0" y2="549.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<text x="40.0" y="620.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#5A5A5A" font-style="italic">Six inputs to the decision — no single one decides it:</text>
+<rect x="38.0" y="630.0" width="145.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#B0B0B0" stroke-width="1.4"/>
+<text x="110.5" y="649.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Quantitative</text>
+<text x="110.5" y="665.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">opportunity</text>
+<line x1="110.5" y1="674.0" x2="110.5" y2="694.0" stroke="#44586B" stroke-width="1.2"/>
+<rect x="198.0" y="630.0" width="145.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#B0B0B0" stroke-width="1.4"/>
+<text x="270.5" y="657.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Robustness</text>
+<line x1="270.5" y1="674.0" x2="270.5" y2="694.0" stroke="#44586B" stroke-width="1.2"/>
+<rect x="358.0" y="630.0" width="145.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#B0B0B0" stroke-width="1.4"/>
+<text x="430.5" y="657.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Operator coverage</text>
+<line x1="430.5" y1="674.0" x2="430.5" y2="694.0" stroke="#44586B" stroke-width="1.2"/>
+<rect x="518.0" y="630.0" width="145.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#B0B0B0" stroke-width="1.4"/>
+<text x="590.5" y="649.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Business</text>
+<text x="590.5" y="665.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">relevance</text>
+<line x1="590.5" y1="674.0" x2="590.5" y2="694.0" stroke="#44586B" stroke-width="1.2"/>
+<rect x="678.0" y="630.0" width="145.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#B0B0B0" stroke-width="1.4"/>
+<text x="750.5" y="657.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Feasibility</text>
+<line x1="750.5" y1="674.0" x2="750.5" y2="694.0" stroke="#44586B" stroke-width="1.2"/>
+<rect x="838.0" y="630.0" width="145.0" height="44.0" rx="5" fill="#FFFFFF" stroke="#B0B0B0" stroke-width="1.4"/>
+<text x="910.5" y="657.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Risk</text>
+<line x1="910.5" y1="674.0" x2="910.5" y2="694.0" stroke="#44586B" stroke-width="1.2"/>
+<line x1="110.5" y1="694.0" x2="910.5" y2="694.0" stroke="#44586B" stroke-width="1.2"/>
+<line x1="510.0" y1="610.0" x2="510.0" y2="694.0" stroke="#44586B" stroke-width="1.4"/>
+<rect x="300.0" y="726.0" width="420.0" height="62.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="510.0" y="753.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Recommended process</text>
+<text x="510.0" y="771.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">HR / Payroll System — evidence-led decision</text>
+<line x1="510.0" y1="694.0" x2="510.0" y2="719.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="120.0" y="820.0" width="360.0" height="50.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="300.0" y="841.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Feasibility assessment</text>
+<text x="300.0" y="859.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">system access · business logic · governance</text>
+<rect x="540.0" y="820.0" width="360.0" height="50.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="720.0" y="841.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Automation prototype</text>
+<text x="720.0" y="859.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">bounded scope, human-supervised</text>
+<line x1="420.0" y1="788.0" x2="300.0" y2="813.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="480.0" y1="845.0" x2="533.0" y2="845.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="40.0" y="883.0" width="16" height="12" rx="2.5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.2"/>
+<text x="62.0" y="892.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Input</text>
+<rect x="95.5" y="883.0" width="16" height="12" rx="2.5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.2"/>
+<text x="117.5" y="892.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Processing</text>
+<rect x="180.5" y="883.0" width="16" height="12" rx="2.5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.2"/>
+<text x="202.5" y="892.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Validation</text>
+<rect x="265.5" y="883.0" width="16" height="12" rx="2.5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.2"/>
+<text x="287.5" y="892.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Decision</text>
+<rect x="338.7" y="883.0" width="16" height="12" rx="2.5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.2"/>
+<text x="360.7" y="892.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Automation</text>
+<rect x="423.7" y="883.0" width="16" height="12" rx="2.5" fill="#FFFFFF" stroke="#2C3E50" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="445.7" y="892.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">dashed = no ground truth available</text>
+</svg>

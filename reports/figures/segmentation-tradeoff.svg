@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="620" viewBox="0 0 1020 620">
+<defs>
+<marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#44586B"/>
+</marker>
+<marker id="greyhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#9A9A9A"/>
+</marker>
+</defs>
+<rect width="1020" height="620" fill="#FFFFFF"/>
+<text x="40.0" y="34.0" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#1A1A1A">Why the segmentation baseline was retained</text>
+<text x="40.0" y="53.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Day-7 candidates moved along the fragmentation ↔ under-segmentation trade-off; none found a better operating point.</text>
+<line x1="110" y1="470" x2="730" y2="470" stroke="#44586B" stroke-width="1.4"/>
+<line x1="110" y1="470" x2="110" y2="110" stroke="#44586B" stroke-width="1.4"/>
+<text x="420.0" y="514.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A">Fragmentation  (% of GT executions split) →</text>
+<text x="34" y="290.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#5A5A5A" text-anchor="middle" transform="rotate(-90 34 290.0)">Under-segmentation (executions merged) →</text>
+<line x1="172.0" y1="470" x2="172.0" y2="110" stroke="#EDF1F5" stroke-width="1"/>
+<text x="172.0" y="490.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle" fill="#5A5A5A">40%</text>
+<line x1="296.0" y1="470" x2="296.0" y2="110" stroke="#EDF1F5" stroke-width="1"/>
+<text x="296.0" y="490.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle" fill="#5A5A5A">50%</text>
+<line x1="420.0" y1="470" x2="420.0" y2="110" stroke="#EDF1F5" stroke-width="1"/>
+<text x="420.0" y="490.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle" fill="#5A5A5A">60%</text>
+<line x1="544.0" y1="470" x2="544.0" y2="110" stroke="#EDF1F5" stroke-width="1"/>
+<text x="544.0" y="490.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle" fill="#5A5A5A">70%</text>
+<line x1="668.0" y1="470" x2="668.0" y2="110" stroke="#EDF1F5" stroke-width="1"/>
+<text x="668.0" y="490.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="middle" fill="#5A5A5A">80%</text>
+<line x1="110" y1="418.6" x2="730" y2="418.6" stroke="#EDF1F5" stroke-width="1"/>
+<text x="100.0" y="422.6" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#5A5A5A">0.1</text>
+<line x1="110" y1="367.1" x2="730" y2="367.1" stroke="#EDF1F5" stroke-width="1"/>
+<text x="100.0" y="371.1" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#5A5A5A">0.2</text>
+<line x1="110" y1="315.7" x2="730" y2="315.7" stroke="#EDF1F5" stroke-width="1"/>
+<text x="100.0" y="319.7" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#5A5A5A">0.3</text>
+<line x1="110" y1="264.3" x2="730" y2="264.3" stroke="#EDF1F5" stroke-width="1"/>
+<text x="100.0" y="268.3" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#5A5A5A">0.4</text>
+<line x1="110" y1="212.9" x2="730" y2="212.9" stroke="#EDF1F5" stroke-width="1"/>
+<text x="100.0" y="216.9" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#5A5A5A">0.5</text>
+<line x1="110" y1="161.4" x2="730" y2="161.4" stroke="#EDF1F5" stroke-width="1"/>
+<text x="100.0" y="165.4" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#5A5A5A">0.6</text>
+<path d="M 182.8 130.2 L 351.2 214.1 L 489.2 266.4 L 500.5 269.8 L 656.3 397.4" fill="none" stroke="#9A9A9A" stroke-width="1.3" stroke-dasharray="6 4"/>
+<circle cx="182.8" cy="130.2" r="7" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.8"/>
+<text x="196.8" y="124.2" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#7A7A7A">C2</text>
+<text x="196.8" y="139.2" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#7A7A7A">F1 0.2822</text>
+<circle cx="351.2" cy="214.1" r="7" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.8"/>
+<text x="365.2" y="208.1" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#7A7A7A">C3</text>
+<text x="365.2" y="223.1" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#7A7A7A">F1 0.2493</text>
+<circle cx="489.2" cy="266.4" r="7" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.8"/>
+<text x="469.2" y="246.4" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="end" fill="#7A7A7A">C4</text>
+<text x="469.2" y="261.4" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="end" fill="#7A7A7A">F1 0.2256</text>
+<circle cx="500.5" cy="269.8" r="7" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.8"/>
+<text x="514.5" y="269.8" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#7A7A7A">C1</text>
+<text x="514.5" y="284.8" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#7A7A7A">F1 0.2245</text>
+<rect x="648.3" y="389.4" width="16" height="16" fill="#FAF0E2" stroke="#A9791C" stroke-width="2.2"/>
+<circle cx="656.3" cy="397.4" r="15" fill="none" stroke="#A9791C" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="670.3" y="391.4" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="600" text-anchor="start" fill="#1A1A1A">BASELINE</text>
+<text x="670.3" y="406.4" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#1A1A1A">F1 0.3440</text>
+<rect x="770" y="118" width="16" height="16" fill="#FAF0E2" stroke="#A9791C" stroke-width="2.2"/>
+<text x="796.0" y="131.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" text-anchor="start" fill="#1A1A1A">LOCKED BASELINE (square)</text>
+<circle cx="778" cy="158" r="7" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.8"/>
+<text x="796.0" y="162.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start" fill="#7A7A7A">REJECTED CANDIDATES (circle)</text>
+<rect x="760.0" y="190.0" width="230.0" height="150.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="875.0" y="241.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">Every candidate that lowered</text>
+<text x="875.0" y="255.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">fragmentation raised</text>
+<text x="875.0" y="269.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">under-segmentation by a</text>
+<text x="875.0" y="283.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">corresponding amount — the</text>
+<text x="875.0" y="297.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">ordering is monotonic.</text>
+<rect x="110.0" y="516.0" width="880.0" height="68.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="550.0" y="547.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">Day-7 candidates reduced fragmentation by accepting substantially more under-segmentation; none passed the pre-registered promotion gates. The</text>
+<text x="550.0" y="561.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">locked baseline therefore remained unchanged.</text>
+</svg>

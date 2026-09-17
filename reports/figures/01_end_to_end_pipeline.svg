@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="1010" viewBox="0 0 1020 1010">
+<defs>
+<marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#44586B"/>
+</marker>
+<marker id="greyhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#9A9A9A"/>
+</marker>
+</defs>
+<rect width="1020" height="1010" fill="#FFFFFF"/>
+<text x="40.0" y="34.0" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#1A1A1A">Figure 1 — End-to-end evidence pipeline</text>
+<text x="40.0" y="53.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Raw desktop telemetry to a bounded automation prototype. Dataset A validates the method; Dataset B carries the analysis.</text>
+<rect x="360.0" y="80.0" width="300.0" height="58.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4"/>
+<text x="510.0" y="99.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Raw operation logs</text>
+<text x="510.0" y="117.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">keystrokes · clicks · app switches · browser +</text>
+<text x="510.0" y="130.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">window context</text>
+<rect x="360.0" y="166.0" width="300.0" height="58.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="510.0" y="191.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Validation &amp; cleaning</text>
+<text x="510.0" y="209.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">schema checks · ordering · data-quality audit</text>
+<line x1="510.0" y1="138.0" x2="510.0" y2="159.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="90.0" y="258.0" width="300.0" height="58.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4"/>
+<text x="240.0" y="283.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Dataset A</text>
+<text x="240.0" y="301.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">63 sessions · ground truth available</text>
+<rect x="630.0" y="258.0" width="300.0" height="58.0" rx="5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="780.0" y="283.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Dataset B</text>
+<text x="780.0" y="301.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">15 sessions · NO ground truth</text>
+<line x1="460.0" y1="224.0" x2="240.0" y2="251.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="560.0" y1="224.0" x2="780.0" y2="251.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="90.0" y="348.0" width="300.0" height="58.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4"/>
+<text x="240.0" y="373.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Segmentation — developed &amp; tuned</text>
+<text x="240.0" y="391.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">leave-one-session-out cross-validation</text>
+<rect x="630.0" y="348.0" width="300.0" height="58.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="780.0" y="367.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Segmentation — applied</text>
+<text x="780.0" y="385.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">separate boundary signal; method transferred, not</text>
+<text x="780.0" y="398.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">the model</text>
+<line x1="240.0" y1="316.0" x2="240.0" y2="341.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="780.0" y1="316.0" x2="780.0" y2="341.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="90.0" y="438.0" width="300.0" height="58.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="240.0" y="463.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Dataset A validation</text>
+<text x="240.0" y="481.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">measured against 2,009 labelled executions</text>
+<rect x="630.0" y="438.0" width="300.0" height="58.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="780.0" y="457.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Recovered executions</text>
+<text x="780.0" y="475.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">645 executions · no segment-level validation</text>
+<text x="780.0" y="488.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">possible</text>
+<line x1="240.0" y1="406.0" x2="240.0" y2="431.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="780.0" y1="406.0" x2="780.0" y2="431.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="90.0" y="528.0" width="300.0" height="58.0" rx="5" fill="#FDF3E7" stroke="#C2700F" stroke-width="1.4"/>
+<text x="240.0" y="553.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Instrumentation-health analysis</text>
+<text x="240.0" y="571.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">upstream telemetry quality, both datasets</text>
+<rect x="630.0" y="528.0" width="300.0" height="58.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="780.0" y="553.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Process &amp; variant analysis</text>
+<text x="780.0" y="571.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">frequency · handling time · operators · variants</text>
+<line x1="240.0" y1="496.0" x2="240.0" y2="521.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="780.0" y1="496.0" x2="780.0" y2="521.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<line x1="390.0" y1="557.0" x2="623.0" y2="557.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<text x="510.0" y="547.0" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">quality context</text>
+<rect x="630.0" y="618.0" width="300.0" height="58.0" rx="5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="780.0" y="643.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Opportunity scoring</text>
+<text x="780.0" y="661.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">impact and feasibility kept separate</text>
+<line x1="780.0" y1="586.0" x2="780.0" y2="611.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="630.0" y="708.0" width="300.0" height="58.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="780.0" y="733.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Sensitivity &amp; robustness</text>
+<text x="780.0" y="751.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">weighting · instrumentation · merge threshold</text>
+<line x1="780.0" y1="676.0" x2="780.0" y2="701.0" stroke="#44586B" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#head)"/>
+<rect x="90.0" y="620.0" width="300.0" height="130.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="240.0" y="661.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">Segmentation is an imperfect measurement</text>
+<text x="240.0" y="675.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">layer, not business truth. Dataset A</text>
+<text x="240.0" y="689.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">quantifies how imperfect it is; Dataset B</text>
+<text x="240.0" y="703.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">inherits that uncertainty and never claims</text>
+<text x="240.0" y="717.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">segment-level correctness.</text>
+<rect x="360.0" y="816.0" width="300.0" height="58.0" rx="5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.4"/>
+<text x="510.0" y="835.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Automation recommendation</text>
+<text x="510.0" y="853.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">evidence-led; the score is corroboration, not</text>
+<text x="510.0" y="866.0" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">foundation</text>
+<rect x="360.0" y="906.0" width="300.0" height="58.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="510.0" y="931.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Working automation prototype</text>
+<text x="510.0" y="949.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">bounded scope · mandatory human checkpoint</text>
+<path d="M 780.0 766.0 L 780.0 786 L 510.0 786 L 510.0 809.0" fill="none" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<line x1="510.0" y1="874.0" x2="510.0" y2="899.0" stroke="#44586B" stroke-width="1.4" marker-end="url(#head)"/>
+<rect x="40.0" y="991.0" width="16" height="12" rx="2.5" fill="#EDF2F7" stroke="#2C3E50" stroke-width="1.2"/>
+<text x="62.0" y="1000.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Input</text>
+<rect x="95.5" y="991.0" width="16" height="12" rx="2.5" fill="#E7EDF5" stroke="#3A5A80" stroke-width="1.2"/>
+<text x="117.5" y="1000.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Processing</text>
+<rect x="180.5" y="991.0" width="16" height="12" rx="2.5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.2"/>
+<text x="202.5" y="1000.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Validation</text>
+<rect x="265.5" y="991.0" width="16" height="12" rx="2.5" fill="#FAF0E2" stroke="#A9791C" stroke-width="1.2"/>
+<text x="287.5" y="1000.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Decision</text>
+<rect x="338.7" y="991.0" width="16" height="12" rx="2.5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.2"/>
+<text x="360.7" y="1000.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">Automation</text>
+<rect x="423.7" y="991.0" width="16" height="12" rx="2.5" fill="#FFFFFF" stroke="#2C3E50" stroke-width="1.2" stroke-dasharray="4 3"/>
+<text x="445.7" y="1000.0" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" text-anchor="start" fill="#5A5A5A">dashed = no ground truth available</text>
+</svg>

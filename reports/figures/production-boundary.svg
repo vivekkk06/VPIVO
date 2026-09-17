@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="620" viewBox="0 0 1020 620">
+<defs>
+<marker id="head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#44586B"/>
+</marker>
+<marker id="greyhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M 0 1 L 9 5 L 0 9 z" fill="#9A9A9A"/>
+</marker>
+</defs>
+<rect width="1020" height="620" fill="#FFFFFF"/>
+<text x="40.0" y="34.0" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="600" text-anchor="start" fill="#1A1A1A">Validated boundary vs production requirements</text>
+<text x="40.0" y="53.0" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="start" fill="#B23A2F">LOCAL VALIDATED — NOT A REAL HR SYSTEM.</text>
+<rect x="50.0" y="86.0" width="440.0" height="40.0" rx="5" fill="#E8F1EA" stroke="#3F7A52" stroke-width="1.4"/>
+<text x="270.0" y="102.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">CURRENTLY VALIDATED</text>
+<text x="270.0" y="120.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#5A5A5A">implemented and tested here</text>
+<rect x="530.0" y="86.0" width="440.0" height="40.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="102.5" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">REQUIRED FOR REAL PRODUCTION</text>
+<text x="750.0" y="120.5" font-family="Helvetica, Arial, sans-serif" font-size="11.0" text-anchor="middle" fill="#7A7A7A">not done in this project</text>
+<rect x="50.0" y="140.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="162.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">React Decision Center</text>
+<rect x="50.0" y="180.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Local automation API (stdlib HTTP)</text>
+<rect x="50.0" y="220.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="242.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Policy / safety layer</text>
+<rect x="50.0" y="260.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="282.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Deterministic automation service</text>
+<rect x="50.0" y="300.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="322.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Playwright browser adapter</text>
+<rect x="50.0" y="340.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="362.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Local HR mock DOM</text>
+<rect x="50.0" y="380.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="402.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Structured audit logging (redacted)</text>
+<rect x="50.0" y="420.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="442.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Replay prevention (single-use token)</text>
+<rect x="50.0" y="460.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="482.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">Human confirmation checkpoint</text>
+<rect x="50.0" y="500.0" width="440.0" height="34.0" rx="5" fill="#F0EAF5" stroke="#6B4E8C" stroke-width="1.4"/>
+<text x="270.0" y="522.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#1A1A1A">19 live-DOM browser tests</text>
+<rect x="530.0" y="140.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="162.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Real HR system integration</text>
+<rect x="530.0" y="180.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="202.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Authentication</text>
+<rect x="530.0" y="220.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="242.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Authorisation</text>
+<rect x="530.0" y="260.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="282.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Explicit CORS origin allowlist</text>
+<rect x="530.0" y="300.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="322.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Real system selectors / API contract</text>
+<rect x="530.0" y="340.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="362.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Execution status endpoint</text>
+<rect x="530.0" y="380.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="402.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Owner confirmation of confirm semantics</text>
+<rect x="530.0" y="420.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="442.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Credential / secrets management</text>
+<rect x="530.0" y="460.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="482.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Monitoring and alerting</text>
+<rect x="530.0" y="500.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="522.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Deployment and security hardening</text>
+<rect x="530.0" y="540.0" width="440.0" height="34.0" rx="5" fill="#F3F3F3" stroke="#9A9A9A" stroke-width="1.4" stroke-dasharray="6 4"/>
+<text x="750.0" y="562.0" font-family="Helvetica, Arial, sans-serif" font-size="13.0" font-weight="600" text-anchor="middle" fill="#7A7A7A">Failure and recovery strategy</text>
+<line x1="510" y1="86" x2="510" y2="580" stroke="#B23A2F" stroke-width="2" stroke-dasharray="9 5"/>
+<rect x="50.0" y="556.0" width="920.0" height="46.0" rx="4" fill="#F7F9FB" stroke="#D3DCE4" stroke-width="1"/>
+<text x="510.0" y="576.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">The left column runs against a local prototype page. Nothing in this project has been connected to a real HR system, and "ready for bounded pilot"</text>
+<text x="510.0" y="590.0" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" text-anchor="middle" fill="#5A5A5A" font-style="italic">means a supervised trial — not production readiness.</text>
+</svg>
