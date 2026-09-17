@@ -8,7 +8,10 @@
  * the existing Python prototype and are never reimplemented here.
  */
 
-import type { ApiSafeStop, AutomationResultPayload, CheckpointPayload } from "../types";
+import type {
+  ApiSafeStop, AutomationResultPayload, CheckpointPayload, ExecutionStatusPayload,
+  IntegrationMode, IntegrationModesPayload,
+} from "../types";
 
 export const API_ROOT = "/api";
 
@@ -55,12 +58,57 @@ async function post<T>(path: string, body: unknown): Promise<ApiOutcome<T>> {
   return { kind: "api_error", message: p.message ?? `API error (HTTP ${res.status}).` };
 }
 
-export function prepare(route: string, noteText: string) {
-  return post<CheckpointPayload>("/prepare", { route, note_text: noteText });
+/** Options for the Day-5 integration boundary. All optional: omitting them keeps
+ *  the original behaviour (the in-memory mock, no injected failure). */
+export interface PrepareOptions {
+  integrationMode?: IntegrationMode;
+  /** Deterministic, never random -- a demo that fails randomly cannot be re-run. */
+  failureMode?: string;
+  /** Model "the service applied the change and the response was lost". */
+  loseResponse?: boolean;
 }
 
+export function prepare(route: string, noteText: string, options: PrepareOptions = {}) {
+  return post<CheckpointPayload>("/prepare", {
+    route,
+    note_text: noteText,
+    ...(options.integrationMode ? { integration_mode: options.integrationMode } : {}),
+    ...(options.failureMode ? { failure_mode: options.failureMode } : {}),
+    ...(options.loseResponse ? { lose_response: true } : {}),
+  });
+}
+
+/** Note that a 202 is `res.ok`, so an UNKNOWN outcome arrives as `kind: "ok"` with
+ *  `status: "UNKNOWN"`. That is deliberate: it is not an error, it is an outcome the
+ *  caller must resolve by asking, never by retrying. */
 export function confirm(checkpointToken: string) {
   return post<AutomationResultPayload>("/confirm", { checkpoint_token: checkpointToken });
+}
+
+/** The answer to a lost confirmation response: ask what actually happened. This
+ *  never re-submits the mutation. */
+export async function fetchExecutionStatus(
+  executionId: string,
+): Promise<ApiOutcome<ExecutionStatusPayload>> {
+  let res: Response;
+  try {
+    res = await fetch(`${API_ROOT}/executions/${encodeURIComponent(executionId)}/status`);
+  } catch {
+    return {
+      kind: "api_error",
+      message:
+        "Automation API is not running. Start it with: python scripts/serve_hr_demo_api.py",
+    };
+  }
+  let payload: unknown;
+  try {
+    payload = await res.json();
+  } catch {
+    return { kind: "api_error", message: `API returned a non-JSON response (HTTP ${res.status}).` };
+  }
+  if (res.ok) return { kind: "ok", data: payload as ExecutionStatusPayload };
+  const p = payload as { message?: string };
+  return { kind: "api_error", message: p.message ?? `API error (HTTP ${res.status}).` };
 }
 
 export async function fetchRoutes(): Promise<string[]> {
@@ -71,5 +119,22 @@ export async function fetchRoutes(): Promise<string[]> {
     return data.routes ?? [];
   } catch {
     return [];
+  }
+}
+
+/** Returns null when the API is unreachable, so the screen can fall back to the
+ *  mock-only view rather than rendering an empty selector. */
+export async function fetchIntegrationModes(): Promise<IntegrationModesPayload | null> {
+  try {
+    const res = await fetch(`${API_ROOT}/integration-modes`);
+    if (!res.ok) return null;
+    const data = (await res.json()) as Partial<IntegrationModesPayload>;
+    // Shape-checked rather than trusted: an API that does not advertise modes
+    // must leave the selector hidden, not render an empty or malformed one.
+    return Array.isArray(data?.modes) && data.modes.length
+      ? (data as IntegrationModesPayload)
+      : null;
+  } catch {
+    return null;
   }
 }
