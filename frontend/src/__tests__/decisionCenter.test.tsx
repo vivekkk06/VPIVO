@@ -5,8 +5,8 @@ import App from "../App";
 import { __clearSessionCache } from "../services/dataService";
 import { dataRequests, installFetchStub, readBundleFile } from "./helpers";
 import type {
-  HrPayrollFile, InstrumentationFile, InstrumentationSensitivityFile,
-  OpportunitiesFile, ProcessRow,
+  EngineeringUpgradeFile, HrPayrollFile, InstrumentationFile,
+  InstrumentationSensitivityFile, OpportunitiesFile, ProcessRow,
 } from "../types";
 
 async function openDecisionCenter(stubOptions = {}) {
@@ -15,7 +15,7 @@ async function openDecisionCenter(stubOptions = {}) {
   const stub = installFetchStub(stubOptions);
   render(<App />);
   await waitFor(() =>
-    expect(screen.getByRole("heading", { name: "Dashboard" })).toBeInTheDocument());
+    expect(screen.getByRole("heading", { name: "Executive Dashboard" })).toBeInTheDocument());
   const nav = screen.getByRole("navigation", { name: "Main" });
   await userEvent.click(within(nav).getByRole("button", { name: /Automation Decision Center/ }));
   await screen.findByRole("heading", { name: "Automation Decision Center" });
@@ -312,5 +312,98 @@ describe("Decision Center navigation", () => {
   it("does not fetch any per-session execution file just to render the screen", async () => {
     const stub = await openDecisionCenter();
     expect(dataRequests(stub).filter((u) => u.includes("/data/executions/"))).toEqual([]);
+  });
+});
+
+// ---------------- honesty caveats required by the Day-3 evidence ----------------
+
+describe("Evidence honesty caveats", () => {
+  it("flags the note/confirm click discrepancy as unexplained, with its route", async () => {
+    const hr = readBundleFile<HrPayrollFile>("hr-payroll.json");
+    const ct = hr.dominant_path.dominant_variant_analysis!.click_target_frequency!;
+    const notes = Object.entries(ct).filter(([k]) => k.includes("note"))
+      .reduce((a, [, v]) => a + v, 0);
+    const confirms = Object.entries(ct).filter(([k]) => k.startsWith("btn-"))
+      .reduce((a, [, v]) => a + v, 0);
+    expect(notes).toBe(139);
+    expect(confirms).toBe(138);
+
+    await openDecisionCenter();
+    const body = document.body.textContent ?? "";
+    expect(body).toContain(`${notes} vs ${confirms}`);
+    expect(body).toMatch(/unexplained/i);
+    // the mismatch is localised to the leave-applications route
+    expect(body).toContain("#/leave-applications");
+  });
+
+  it("never asserts the pairing is exactly 1:1", async () => {
+    await openDecisionCenter();
+    const body = document.body.textContent ?? "";
+    expect(body).toContain("near-1:1");
+    expect(body).not.toMatch(/exactly 1:1(?!\.)/);
+  });
+
+  it("identifies OK-button-as-confirmation as a DOM-structure inference", async () => {
+    await openDecisionCenter();
+    const body = document.body.textContent ?? "";
+    expect(body).toContain("DOM-structure inference");
+    expect(body).toMatch(/no .submit. event exists/i);
+  });
+
+  it("ties the inference to the human checkpoint rather than trusting it alone", async () => {
+    await openDecisionCenter();
+    expect(document.body.textContent).toContain("human checkpoint precedes every confirm");
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Day-7 engineering upgrade: model support, browser status, production boundary.
+// These guard the HONESTY of the new sections. The risk is not that they fail to
+// render -- it is that a future edit lets them imply a capability the project does
+// not have, or lets the model look like the reason for the recommendation.
+// ---------------------------------------------------------------------------
+describe("Decision Center — Day-7 upgrade sections", () => {
+  it("presents the model as a supporting signal, never as the reason", async () => {
+    await openDecisionCenter();
+    const text = document.body.textContent ?? "";
+    expect(text).toContain("supporting signal, not the reason");
+    expect(text).toContain("unchanged by this model");
+    // It must never claim to have selected the process.
+    expect(text).not.toContain("the model selected");
+    expect(text).not.toContain("AI recommends");
+  });
+
+  it("shows model metrics and its leakage control from the artifact", async () => {
+    const up = readBundleFile<EngineeringUpgradeFile>("engineering-upgrade.json");
+    await openDecisionCenter();
+    const text = document.body.textContent ?? "";
+    expect(text).toContain(up.model.behavioural_only_macro_f1.toFixed(4));
+    expect(text).toContain(up.model.with_system_identity_macro_f1.toFixed(4));
+    expect(text).toContain("GroupKFold");
+  });
+
+  it("labels browser integration as local, never as production integrated", async () => {
+    await openDecisionCenter();
+    const text = document.body.textContent ?? "";
+    expect(text).toContain("LOCAL VALIDATED");
+    expect(text).toContain("NOT connected to a real HR system");
+    expect(text).not.toContain("Production integrated");
+    expect(text).not.toContain("production-ready");
+  });
+
+  it("states that the automation logic was not modified for the browser", async () => {
+    await openDecisionCenter();
+    expect(document.body.textContent ?? "").toContain("not modified");
+  });
+
+  it("separates what is implemented from what production still requires", async () => {
+    const up = readBundleFile<EngineeringUpgradeFile>("engineering-upgrade.json");
+    await openDecisionCenter();
+    const text = document.body.textContent ?? "";
+    expect(text).toContain("Implemented and tested");
+    expect(text).toContain("Requires production integration");
+    expect(text).toContain(up.production_boundary.implemented[0]);
+    expect(text).toContain(up.production_boundary.requires_production_integration[0]);
+    expect(text).toContain("This is not a production deployment");
   });
 });

@@ -2,7 +2,7 @@
  * Loads the static Day-5 data bundle. Presentation-level only: fetch,
  * cache, and surface errors. No analytical value is computed here.
  *
- * The bundle is split deliberately: everything below is eager (~465 KB
+ * The bundle is split deliberately: everything below is eager (~595 KB
  * total) except per-session execution files (~4.4 MB combined), which are
  * fetched only when a session is opened for replay and then cached.
  */
@@ -14,7 +14,10 @@ import type {
   HrPayrollFile,
   InstrumentationFile,
   InstrumentationSensitivityFile,
+  InvestigationFile,
+  EngineeringUpgradeFile,
   Meta,
+  ModuleComparisonFile,
   OpportunitiesFile,
   ProcessRow,
   SessionRow,
@@ -64,6 +67,12 @@ export interface EagerBundle {
   hrPayroll: HrPayrollFile;
   datasetAMetrics: DatasetAMetrics;
   instrumentationSensitivity: InstrumentationSensitivityFile;
+  engineeringUpgrade: EngineeringUpgradeFile;
+  /** Day 1-4 investigation views (data audit, reconstruction record, evidence health). */
+  investigation: InvestigationFile;
+  /** Day-6 Module 1 vs Module 2. Null when the experimental module has not been run,
+   *  so the app still works against a bundle built without it. */
+  moduleComparison: ModuleComparisonFile | null;
 }
 
 export async function loadEagerBundle(): Promise<EagerBundle> {
@@ -78,6 +87,8 @@ export async function loadEagerBundle(): Promise<EagerBundle> {
     hrPayroll,
     datasetAMetrics,
     instrumentationSensitivity,
+    engineeringUpgrade,
+    investigation,
   ] = await Promise.all([
     loadJson<Meta>("meta.json"),
     loadJson<SessionRow[]>("sessions.json"),
@@ -89,8 +100,14 @@ export async function loadEagerBundle(): Promise<EagerBundle> {
     loadJson<HrPayrollFile>("hr-payroll.json"),
     loadJson<DatasetAMetrics>("dataset-a-metrics.json"),
     loadJson<InstrumentationSensitivityFile>("instrumentation-sensitivity.json"),
+    loadJson<EngineeringUpgradeFile>("engineering-upgrade.json"),
+    loadJson<InvestigationFile>("investigation.json"),
   ]);
+  // Optional: a bundle built without the Day-6 experimental module simply omits it.
+  const moduleComparison = await loadJson<ModuleComparisonFile>("module-comparison.json")
+    .catch(() => null);
   return {
+    moduleComparison,
     meta,
     sessions,
     executionsIndex,
@@ -101,6 +118,8 @@ export async function loadEagerBundle(): Promise<EagerBundle> {
     hrPayroll,
     datasetAMetrics,
     instrumentationSensitivity,
+    engineeringUpgrade,
+    investigation,
   };
 }
 

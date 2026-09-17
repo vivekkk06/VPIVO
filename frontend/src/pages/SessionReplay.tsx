@@ -1,8 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { PageHeader } from "../components/PageHeader";
 import type { EagerBundle } from "../services/dataService";
 import { loadSessionExecutions } from "../services/dataService";
 import type { Execution } from "../types";
 import { EmptyState, HealthBadge, Notice, ProvenancePanel } from "../components/common";
+import { EvidenceBadge, EvidenceTrace } from "../components/evidence";
 import { formatDuration, formatOffset, formatTimestamp } from "../utils/format";
 import type { NavParams } from "../navigation";
 
@@ -17,7 +19,8 @@ export default function SessionReplay({
   navParams: NavParams;
   navNonce: number;
 }) {
-  const { meta, sessions, executionsIndex } = bundle;
+  const { meta, sessions, executionsIndex, hrPayroll, investigation } = bundle;
+  const [showEventTypes, setShowEventTypes] = useState(false);
 
   const datasetBSessions = useMemo(
     () => sessions.filter((s) => s.dataset === "dataset_b"),
@@ -102,6 +105,14 @@ export default function SessionReplay({
     [executions, executionId],
   );
   const steps = execution?.ordered_steps ?? [];
+  // Membership in the Day-3 HR forensic split is a look-up in that artifact's own list.
+  const hrDominantIds = useMemo(
+    () => new Set((hrPayroll.dominant_path?.dominant_variant_analysis?.per_execution as
+      { execution_id: string }[] | undefined ?? []).map((r) => r.execution_id)),
+    [hrPayroll],
+  );
+  const onHrDominantPath = !!execution && hrDominantIds.has(execution.execution_id);
+  const screenshotShareB = investigation.documented.screenshot_resolution_b?.value;
 
   // --- step-level playback ------------------------------------------------
   const [cursor, setCursor] = useState(0);
@@ -125,15 +136,17 @@ export default function SessionReplay({
 
   return (
     <>
-      <header>
-        <h2>Execution Step Replay</h2>
-        <p className="lede">
-          Step-level replay of recovered Dataset-B executions. Each row below is a persisted{" "}
-          <span className="mono">ordered_steps</span> entry covering one or more raw events — this
-          is <strong>not</strong> an individual-event replay, and no raw event stream exists in the
-          data bundle.
-        </p>
-      </header>
+      <PageHeader
+        screen="replay"
+        title="Execution Step Replay"
+        purpose={<>
+          Inspect the persisted ordered steps of a single recovered execution. Each row is a
+          persisted <span className="mono">ordered_steps</span> entry covering one or more raw
+          events — this is <strong>not</strong> an individual-event replay, and no raw event
+          stream exists in the data bundle.
+        </>}
+        context="Dataset B · step-level, not event-level"
+      />
 
       <Notice kind="info">
         <strong>Data availability.</strong> Dataset A has no replay view. Its locked segmentation
@@ -273,33 +286,49 @@ export default function SessionReplay({
         <section className="panel" aria-labelledby="sr-replay">
           <h3 id="sr-replay">Step replay — {execution.execution_id}</h3>
 
-          <div className="grid cols-4" style={{ marginBottom: 14 }}>
-            <div className="metric">
-              <div className="label">Process</div>
-              <div className="value" style={{ fontSize: 14 }}>
-                {execution.process_readable_name ?? execution.dominant_context}
+          <div className="replay-meta">
+            <dl className="kv">
+              <div><dt>Execution ID</dt><dd className="mono wrap-any">{execution.execution_id}</dd></div>
+              <div><dt>Session</dt><dd className="mono wrap-any">{execution.session_id}</dd></div>
+              <div>
+                <dt>Process</dt>
+                <dd>
+                  {execution.process_readable_name ?? execution.dominant_context}{" "}
+                  <EvidenceBadge kind="inferred" label="INFERRED · DOMINANT CONTEXT" />
+                </dd>
               </div>
-            </div>
-            <div className="metric">
-              <div className="label">Duration</div>
-              <div className="value" style={{ fontSize: 16 }}>{formatDuration(execution.duration_ms)}</div>
-            </div>
-            <div className="metric">
-              <div className="label">Raw events covered</div>
-              <div className="value" style={{ fontSize: 16 }}>{execution.event_count}</div>
-              <div className="hint">across {steps.length} persisted steps</div>
-            </div>
-            <div className="metric">
-              <div className="label">Applications</div>
-              <div className="value" style={{ fontSize: 13 }}>
-                {execution.applications?.length ? execution.applications.join(", ") : "Not available"}
+              <div><dt>Start</dt><dd className="mono">{formatTimestamp(execution.start_ms)}</dd></div>
+              <div><dt>End</dt><dd className="mono">{formatTimestamp(execution.end_ms)}</dd></div>
+              <div><dt>Duration</dt><dd className="mono">{formatDuration(execution.duration_ms)}</dd></div>
+              <div>
+                <dt>Raw events covered</dt>
+                <dd className="mono">{execution.event_count} <span className="muted">across {steps.length} persisted steps</span></dd>
               </div>
+              <div>
+                <dt>Applications</dt>
+                <dd>{execution.applications?.length ? execution.applications.join(", ") : "Not available"}</dd>
+              </div>
+              <div>
+                <dt>Screenshots</dt>
+                <dd>
+                  Not included in this bundle.{" "}
+                  <span className="muted">
+                    {screenshotShareB
+                      ? `On disk, about ${screenshotShareB} of Dataset-B screenshot references resolve to a file (Day 1).`
+                      : "Raw screenshots are not redistributed."}
+                  </span>
+                </dd>
+              </div>
+            </dl>
+            <div className="evidence-labels" aria-label="Evidence sources for this execution">
+              <p className="small"><EvidenceBadge kind="observed" /> Timestamps, event counts and applications come from the recorded events.</p>
+              <p className="small"><EvidenceBadge kind="inferred" /> The process name is the dominant system context of the execution; Dataset B has no ground truth.</p>
+              <p className="small"><EvidenceBadge kind="canonical" /> Execution boundaries are the Day-3 output (<span className="mono">segments.jsonl</span>), shown unchanged.</p>
+              {onHrDominantPath ? (
+                <p className="small"><EvidenceBadge kind="canonical" label="HR DOMINANT PATH" /> This execution is one of the dominant-path cases in the Day-3 HR forensic split.</p>
+              ) : null}
             </div>
           </div>
-
-          <p className="small muted">
-            Start {formatTimestamp(execution.start_ms)} · End {formatTimestamp(execution.end_ms)}
-          </p>
 
           {steps.length === 0 ? (
             <EmptyState>This execution has no persisted steps.</EmptyState>
@@ -322,6 +351,10 @@ export default function SessionReplay({
                     {s}x
                   </button>
                 ))}
+                <button className="btn small-btn" aria-pressed={showEventTypes}
+                  onClick={() => setShowEventTypes((v) => !v)}>
+                  {showEventTypes ? "Hide event types" : "Show event types"}
+                </button>
                 <span className="step-counter mono" aria-live="polite">
                   Step {Math.min(cursor + 1, steps.length)} of {steps.length}
                 </span>
@@ -338,7 +371,7 @@ export default function SessionReplay({
                         <span className="sys">{step.system ?? "(no system attributed)"}</span>
                         <br />
                         <span className="cat">{step.interaction_category}</span>
-                        {step.dominant_event_types?.length ? (
+                        {showEventTypes && step.dominant_event_types?.length ? (
                           <>
                             {" · "}
                             <span className="cat mono">
@@ -360,6 +393,13 @@ export default function SessionReplay({
           )}
         </section>
       ) : null}
+
+      <EvidenceTrace
+        source={["reports/day3/process_executions_dataset_b.json", "frontend/public/data/executions/<session>.json"]}
+        metric="Ordered steps per execution: system, interaction category, event count and time span."
+        method="Each step groups consecutive raw events of one system and interaction category. The grouping was persisted by the Day-3 pipeline and is shown unchanged."
+        limitations="Step level only: the raw per-event stream and the screenshots are not part of the bundle."
+      />
 
       <ProvenancePanel
         meta={meta}

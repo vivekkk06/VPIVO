@@ -5,7 +5,8 @@ import App from "../App";
 import { __clearSessionCache } from "../services/dataService";
 import { dataRequests, installFetchStub, readBundleFile } from "./helpers";
 import type {
-  HrPayrollFile, InstrumentationFile, OpportunitiesFile, ProcessRow, SessionRow,
+  EngineeringUpgradeFile, HrPayrollFile, InstrumentationFile, OpportunitiesFile,
+  ProcessRow, SessionRow,
 } from "../types";
 
 /** The app syncs the screen to location.hash so back/refresh work. jsdom keeps
@@ -17,7 +18,7 @@ async function renderApp(stubOptions = {}) {
   const stub = installFetchStub(stubOptions);
   render(<App />);
   await waitFor(() =>
-    expect(screen.getByRole("heading", { name: "Dashboard" })).toBeInTheDocument());
+    expect(screen.getByRole("heading", { name: "Executive Dashboard" })).toBeInTheDocument());
   return stub;
 }
 
@@ -58,11 +59,31 @@ describe("Dashboard", () => {
     const top = opp.ranking[0];
     await renderApp();
 
-    expect(screen.getByRole("heading", { name: /Top automation opportunity/i })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /Decision at a glance/i })).toBeInTheDocument();
     expect(screen.getByText(top.readable_name)).toBeInTheDocument();
     expect(screen.getAllByText(top.opportunity.toFixed(4)).length).toBeGreaterThan(0);
     expect(screen.getAllByText(top.impact.toFixed(4)).length).toBeGreaterThan(0);
     expect(screen.getAllByText(top.feasibility.toFixed(4)).length).toBeGreaterThan(0);
+  });
+
+  it("presents the segmentation score as a limitation, never as a good result", async () => {
+    await renderApp();
+    const text = document.body.textContent ?? "";
+    // The honest framing must survive: weak result, imbalance as context not excuse,
+    // and an explicit statement that Dataset B is not validated by these numbers.
+    expect(text).toContain("material limitation");
+    expect(text).toContain("1.03%");
+    expect(text).toContain("does not excuse the value");
+    expect(text).toContain("Dataset B is not validated by these numbers");
+    // And it must never be relabelled as accuracy.
+    expect(text).not.toContain("segmentation accuracy");
+  });
+
+  it("shows the rejected alternatives that justify keeping the architecture", async () => {
+    await renderApp();
+    const text = document.body.textContent ?? "";
+    expect(text).toContain("0.0194");
+    expect(text).toContain("225 false");
   });
 
   it("shows observed HR volume from the process profile, not hardcoded", async () => {
@@ -138,9 +159,13 @@ describe("Dashboard", () => {
 
   it("keeps the Dataset-A quality metrics and the F1 wording", async () => {
     await renderApp();
-    expect(screen.getByText("0.3440")).toBeInTheDocument();
-    expect(screen.getByText("0.2358")).toBeInTheDocument();
-    expect(screen.getByText("0.6355")).toBeInTheDocument();
+    // F1 now appears twice: the metric card and the baseline-retention table.
+    // Scope to the quality panel so the assertion stays unambiguous.
+    const quality = document.querySelector('[aria-labelledby="db-quality"]') as HTMLElement;
+    expect(quality).toBeTruthy();
+    expect(within(quality).getAllByText("0.3440").length).toBeGreaterThan(0);
+    expect(within(quality).getByText("0.2358")).toBeInTheDocument();
+    expect(within(quality).getByText("0.6355")).toBeInTheDocument();
     expect(screen.getByText(/Transition-level F1, not/i)).toBeInTheDocument();
     expect(screen.queryByText(/segmentation accuracy/i)).not.toBeInTheDocument();
   });
@@ -316,7 +341,7 @@ describe("Process Explorer", () => {
 describe("Execution Step Replay", () => {
   it("is named as step replay and disclaims a raw event stream", async () => {
     await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
     expect(await screen.findByRole("heading", { name: "Execution Step Replay" })).toBeInTheDocument();
     expect(document.body.textContent).toContain("not an individual-event replay");
     expect(document.body.textContent).toContain("no raw event stream exists");
@@ -326,7 +351,7 @@ describe("Execution Step Replay", () => {
     const sessions = readBundleFile<SessionRow[]>("sessions.json");
     const nB = sessions.filter((s) => s.dataset === "dataset_b").length;
     await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
     expect(document.body.textContent).toContain("Dataset A has no replay view");
     const options = await screen.findByLabelText("Session", { exact: true });
     expect(options.querySelectorAll("option[value]:not([value=''])").length).toBe(nB);
@@ -336,7 +361,7 @@ describe("Execution Step Replay", () => {
     const sessions = readBundleFile<SessionRow[]>("sessions.json");
     const target = sessions.find((s) => s.dataset === "dataset_b")!;
     await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
 
     await userEvent.type(screen.getByLabelText("Search sessions"), target.operator);
     const expected = sessions.filter(
@@ -349,7 +374,7 @@ describe("Execution Step Replay", () => {
     const sessions = readBundleFile<SessionRow[]>("sessions.json");
     const degraded = sessions.filter((s) => s.dataset === "dataset_b" && s.status === "degraded");
     await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
     await userEvent.click(screen.getByRole("button", { name: /Degraded instrumentation only/i }));
     await waitFor(() =>
       expect(screen.getByText(new RegExp(`Showing ${degraded.length} of`))).toBeInTheDocument());
@@ -357,7 +382,7 @@ describe("Execution Step Replay", () => {
 
   it("lazy-loads a session's executions only on selection", async () => {
     const stub = await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
     expect(dataRequests(stub).filter((u) => u.includes("/executions/"))).toEqual([]);
 
     const sessions = readBundleFile<SessionRow[]>("sessions.json");
@@ -372,7 +397,7 @@ describe("Execution Step Replay", () => {
     const sessions = readBundleFile<SessionRow[]>("sessions.json");
     const degraded = sessions.find((s) => s.dataset === "dataset_b" && s.status === "degraded")!;
     await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
     await userEvent.selectOptions(
       screen.getByLabelText("Session", { exact: true }), degraded.session_id);
     expect(await screen.findByText("Instrumentation degraded")).toBeInTheDocument();
@@ -383,7 +408,7 @@ describe("Execution Step Replay", () => {
     const sessions = readBundleFile<SessionRow[]>("sessions.json");
     const s = sessions.filter((x) => x.dataset === "dataset_b")[0];
     await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
     await userEvent.selectOptions(screen.getByLabelText("Session", { exact: true }), s.session_id);
 
     expect(await screen.findByText(new RegExp(`Showing ${s.n_executions} of ${s.n_executions}`)))
@@ -397,7 +422,7 @@ describe("Execution Step Replay", () => {
     const sessions = readBundleFile<SessionRow[]>("sessions.json");
     const sessionId = sessions.filter((s) => s.dataset === "dataset_b")[0].session_id;
     await renderApp();
-    await goTo("Execution Step Replay");
+    await goTo("Execution Replay");
     await userEvent.selectOptions(screen.getByLabelText("Session", { exact: true }), sessionId);
     await userEvent.click((await screen.findAllByRole("button", { name: /exec\d+/ }))[0]);
 
@@ -537,6 +562,11 @@ describe("HR Automation Demo", () => {
       api: (path: string) => {
         if (path.endsWith("/routes")) return okRoutes;
         if (path.endsWith("/prepare")) return { status: 200, payload: CHECKPOINT };
+        // Count confirmations explicitly rather than treating every other call as
+        // one. The screen also asks the API which integration targets it offers,
+        // and that lookup is not a confirmation. The assertion below is unchanged
+        // and now measures exactly what it claims to.
+        if (!path.endsWith("/confirm")) return { status: 404, payload: {} };
         confirms += 1;
         return confirms === 1
           ? { status: 200, payload: { route: "#/payroll-items", confirmed: true, action_log: [] } }
@@ -589,5 +619,128 @@ describe("navigation and resilience", () => {
     render(<App />);
     expect(await screen.findByText(/Data error/i)).toBeInTheDocument();
     expect(screen.getByText(/processes\.json/)).toBeInTheDocument();
+  });
+});
+
+// ===================== FINAL POLISH PASS =====================
+// Page headers, "Decision at a glance", and the baseline-retention explainer.
+// These assert against the real generated bundle, never hardcoded values.
+
+describe("Page headers", () => {
+  const screens: [string, string, RegExp][] = [
+    ["Dashboard", "Dashboard", /Dataset A \+ Dataset B/],
+    ["Execution Replay", "Execution Step Replay", /Dataset B/],
+    ["Process Explorer", "Process Explorer", /ranked processes/],
+    ["Opportunities", "Opportunities", /canonical ranking/],
+    ["Automation Decision Center", "Automation Decision Center", /executions/],
+    ["HR Automation Demo", "HR \\/ Payroll Automation Demo", /LOCAL VALIDATED/],
+  ];
+
+  it.each(screens)("%s has a title, purpose and dataset context", async (nav, heading, ctx) => {
+    await renderApp();
+    if (nav !== "Dashboard") await goTo(nav);
+    const h = await screen.findByRole("heading", { name: new RegExp(heading) });
+    const header = h.closest("header") as HTMLElement;
+    expect(header).toBeTruthy();
+    // purpose line
+    expect(header.querySelector(".lede")?.textContent?.length ?? 0).toBeGreaterThan(20);
+    // dataset / status context line
+    expect(header.querySelector(".page-context")?.textContent ?? "").toMatch(ctx);
+  });
+});
+
+describe("Dashboard — decision at a glance", () => {
+  it("shows the canonical Opportunity, rank and Pareto status from the bundle", async () => {
+    const opp = readBundleFile<OpportunitiesFile>("opportunities.json");
+    const top = opp.ranking[0];
+    await renderApp();
+    const panel = document.querySelector('[aria-labelledby="db-top"]') as HTMLElement;
+    expect(panel).toBeTruthy();
+    expect(within(panel).getAllByText(top.opportunity.toFixed(4)).length).toBeGreaterThan(0);
+    expect(within(panel).getByText(new RegExp(`Rank ${top.rank} of`))).toBeInTheDocument();
+    if (top.pareto_status === "frontier") {
+      expect(within(panel).getAllByText("Yes").length).toBeGreaterThan(0);
+    }
+  });
+
+  it("shows the dominant-path split and share from the HR forensic artifact", async () => {
+    const hr = readBundleFile<HrPayrollFile>("hr-payroll.json");
+    const processes = readBundleFile<ProcessRow[]>("processes.json");
+    const profile = processes.find((p) => p.process_id === hr.dominant_path.hr_process_id)!;
+    await renderApp();
+    const panel = document.querySelector('[aria-labelledby="db-top"]') as HTMLElement;
+    const text = panel.textContent ?? "";
+    // 94 / 122 -- the forensic automation grouping, not the 7 variant signatures
+    expect(text).toContain(`${hr.variant_split.dominant.n} / ${profile.execution_count}`);
+    expect(text).toContain((profile.dominant_variant_share * 100).toFixed(2));
+  });
+
+  it("states READY FOR BOUNDED PILOT with its qualifier, not production readiness", async () => {
+    await renderApp();
+    const panel = document.querySelector('[aria-labelledby="db-top"]') as HTMLElement;
+    const text = panel.textContent ?? "";
+    expect(text).toContain("READY FOR BOUNDED PILOT");
+    expect(text).toContain("human review remains required");
+    expect(text).not.toContain("production-ready");
+    expect(text).not.toContain("fully automated");
+  });
+
+  it("labels sensitivity as scenarios, never as statistical confidence", async () => {
+    const opp = readBundleFile<OpportunitiesFile>("opportunities.json");
+    await renderApp();
+    const panel = document.querySelector('[aria-labelledby="db-top"]') as HTMLElement;
+    const s = opp.sensitivity_summary!;
+    expect(panel.textContent).toContain(`#1 in ${s.n_hr_first}/${s.n_scenarios} scenarios`);
+    expect(panel.textContent).toContain("not statistical confidence");
+  });
+
+  it("offers a route into the Decision Center", async () => {
+    await renderApp();
+    await userEvent.click(screen.getByRole("button", { name: /Inspect decision/i }));
+    expect(
+      await screen.findByRole("heading", { name: "Automation Decision Center" }),
+    ).toBeInTheDocument();
+  });
+});
+
+describe("Dashboard — why the baseline was retained", () => {
+  it("keeps the weak F1 visible rather than hiding it behind the explainer", async () => {
+    await renderApp();
+    const quality = document.querySelector('[aria-labelledby="db-quality"]') as HTMLElement;
+    expect(within(quality).getAllByText("0.3440").length).toBeGreaterThan(0);
+    expect(quality.textContent).toContain("79.05%");
+  });
+
+  it("explains the retention decision with the canonical Day-7 trade-off", async () => {
+    const up = readBundleFile<EngineeringUpgradeFile>("engineering-upgrade.json");
+    const sc = up.segmentation_challenge;
+    await renderApp();
+
+    const summary = screen.getByText(/Why was the baseline retained\?/i);
+    expect(summary).toBeInTheDocument();
+    await userEvent.click(summary);
+
+    const table = screen.getByRole("table", { name: /Locked baseline versus/i });
+    const text = table.textContent ?? "";
+    expect(text).toContain(sc.baseline_f1.toFixed(4));
+    expect(text).toContain(sc.baseline_fragmentation_pct.toFixed(2));
+    expect(text).toContain(sc.best_candidate_f1.toFixed(4));
+    expect(text).toContain(sc.best_candidate_fragmentation_pct.toFixed(2));
+    expect(text).toContain(sc.best_candidate_under_segmentation.toFixed(4));
+    expect(text).toContain(sc.best_candidate_label);
+  });
+
+  it("states that no candidate passed the pre-registered gates", async () => {
+    await renderApp();
+    await userEvent.click(screen.getByText(/Why was the baseline retained\?/i));
+    const body = document.body.textContent ?? "";
+    expect(body).toContain("None passed the required gates");
+    expect(body).toContain("pre-registered promotion gates");
+    expect(body).toContain("without improving the overall decision objective");
+  });
+
+  it("introduces no stale 0.4186 anywhere on the Dashboard", async () => {
+    await renderApp();
+    expect(document.body.textContent).not.toContain("0.4186");
   });
 });

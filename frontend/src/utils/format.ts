@@ -34,6 +34,25 @@ export function formatNumber(value: number | null | undefined, digits = 4): stri
   return value.toFixed(digits);
 }
 
+/** Integer with thousands separators, fixed to en-US so the output never depends on
+ *  the viewer's locale. */
+export function formatInt(value: number | null | undefined): string {
+  if (value == null || !Number.isFinite(value)) return "Not available";
+  return Math.round(value).toLocaleString("en-US");
+}
+
+/** A 0..100 percentage that the artifact already stores as a percentage. */
+export function formatPct100(value: number | null | undefined, digits = 2): string {
+  if (value == null || !Number.isFinite(value)) return "—";
+  return `${value.toFixed(digits)}%`;
+}
+
+/** Seconds shown as minutes, one decimal. */
+export function formatMinutes(seconds: number | null | undefined): string {
+  if (seconds == null || !Number.isFinite(seconds)) return "Not available";
+  return `${(seconds / 60).toFixed(1)} min`;
+}
+
 export function formatTimestamp(ms: number | null | undefined): string {
   if (ms == null || !Number.isFinite(ms)) return "Not available";
   return new Date(ms).toISOString().replace("T", " ").replace(".000Z", "Z");

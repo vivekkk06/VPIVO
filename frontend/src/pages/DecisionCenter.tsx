@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
+import { PageHeader } from "../components/PageHeader";
 import type { EagerBundle } from "../services/dataService";
-import { Notice, ProvenancePanel } from "../components/common";
+import { MetricCard, Notice, ProvenancePanel } from "../components/common";
+import { EvidenceBadge, type EvidenceKind } from "../components/evidence";
 import { formatDuration, formatNumber, formatPercent } from "../utils/format";
 import type { Navigate } from "../navigation";
 
@@ -32,6 +34,9 @@ interface EvidenceItem {
   sourceFile: string;
   sourceField?: string;
   available: boolean;
+  /** What kind of claim this item is, shown as a badge next to the headline. */
+  kind: EvidenceKind;
+  kindLabel?: string;
   action?: { label: string; run: () => void };
 }
 
@@ -50,6 +55,7 @@ export default function DecisionCenter({
   const {
     meta, opportunities, processes, hrPayroll, instrumentation,
     instrumentationSensitivity, executionsIndex,
+    engineeringUpgrade: upgrade,
   } = bundle;
 
   const ranking = opportunities.ranking;
@@ -76,6 +82,17 @@ export default function DecisionCenter({
   const confirmClicks = Object.entries(clickTargets)
     .filter(([k]) => k.startsWith("btn-")).reduce((a, [, v]) => a + v, 0);
   const routesPerExec = dva?.n_distinct_routes_per_execution;
+
+  // Locate which route carries the note-click / confirm-click mismatch, by
+  // counting the artifact's own click targets per route prefix. The pairing
+  // is near-1:1, never asserted as exactly 1:1.
+  const routePairing = Object.entries(hrPayroll.dominant_path?.route_id_prefix_correspondence ?? {})
+    .map(([route, prefix]) => {
+      const notes = clickTargets[`${prefix}-note|input`] ?? 0;
+      const confirms = clickTargets[`btn-${prefix}-ok|btn success`] ?? 0;
+      return { route, prefix, notes, confirms, matched: notes === confirms };
+    });
+  const mismatched = routePairing.filter((r) => !r.matched);
 
   const b = instrumentation.dataset_b.summary;
 
@@ -159,6 +176,16 @@ export default function DecisionCenter({
       text: "Note content is not observable in the logs; the operator must supply it.",
       source: "Day-1 finding: clipboard payload text is not captured (analytical report, not in frontend bundle)",
     });
+    caveats.push({
+      text: "No “submit” event exists in the schema — treating the OK button as the confirmation step is a DOM-structure inference, which is why a human checkpoint precedes every confirm.",
+      source: "hr-payroll.json → dominant_variant_analysis.click_target_frequency (inference stated in the Day-3 prototype report)",
+    });
+    if (mismatched.length) {
+      caveats.push({
+        text: `Note/confirm click pairing is near-1:1, not exact: ${noteClicks} vs ${confirmClicks} overall, with the single unexplained discrepancy on ${mismatched.map((r) => r.route).join(", ")}.`,
+        source: "hr-payroll.json → dominant_variant_analysis.click_target_frequency",
+      });
+    }
     if (split.word_detour || split.rare_edge) {
       const excluded = (split.word_detour?.n ?? 0) + (split.rare_edge?.n ?? 0);
       caveats.push({
@@ -179,6 +206,7 @@ export default function DecisionCenter({
   if (profile) {
     evidence.push({
       id: "e1",
+      kind: "observed",
       headline: `${profile.execution_count} ${profile.readable_name} executions observed`,
       observed: `${profile.execution_count} executions, ${formatDuration(profile.total_duration_ms)} of recorded activity, ${formatPercent(profile.avg_manual_event_share, 1)} manual events`,
       why: "Volume is what makes a repeated workflow worth automating at all; a one-off would not justify the build.",
@@ -191,6 +219,7 @@ export default function DecisionCenter({
   if (isHr && split.dominant) {
     evidence.push({
       id: "e2",
+      kind: "canonical",
       headline: `${split.dominant.n} executions follow the dominant path`,
       observed: `${split.dominant.n} of ${hrTotal} executions classified as dominant path by the Day-3 forensics`,
       why: "A deterministic script can only be written against a path that actually repeats. This is the population the prototype targets.",
@@ -201,6 +230,7 @@ export default function DecisionCenter({
     });
     evidence.push({
       id: "e3",
+      kind: "canonical",
       headline: `Dominant path is ${formatPercent(split.dominant.share, 2)} of executions`,
       observed: `share = ${split.dominant.share}; remaining: ${split.word_detour?.n ?? 0} Word detour, ${split.rare_edge?.n ?? 0} rare multi-hop`,
       why: "Sets the realistic coverage ceiling for a bounded automation — and names exactly what is left for a human.",
@@ -212,6 +242,7 @@ export default function DecisionCenter({
   if (isHr && routes.length) {
     evidence.push({
       id: "e4",
+      kind: "observed",
       headline: `${routes.length} evidenced routes were observed`,
       observed: routes.join(", "),
       why: "A bounded, enumerable surface is what makes the automation safe to scope; the prototype refuses any route outside this set.",
@@ -224,17 +255,46 @@ export default function DecisionCenter({
   if (isHr && inputMethodNames.length) {
     evidence.push({
       id: "e5",
+      kind: "observed",
       headline: `Note entry observed as a single interaction method (${inputMethodNames[0]})`,
-      observed: `${totalInputObs} form-input observations, all "${inputMethodNames[0]}"; ${noteClicks} note-field clicks and ${confirmClicks} confirm-button clicks recorded`,
-      why: "Deterministic, non-judgemental interactions are the ones a script can reproduce safely. The near 1:1 note/confirm pairing is what the prototype replicates.",
+      observed: `${totalInputObs} form-input observations, all "${inputMethodNames[0]}" — no live typing observed. Click pairing: ${noteClicks} note-field clicks against ${confirmClicks} confirm-button clicks.`,
+      why: "Deterministic, non-judgemental interactions are the ones a script can reproduce safely. The pairing is described as near-1:1 and is never asserted as exactly 1:1.",
       sourceFile: "hr-payroll.json",
       sourceField: "dominant_path.dominant_variant_analysis.form_input_method_distribution / click_target_frequency",
+      available: true,
+    });
+    if (mismatched.length) {
+      evidence.push({
+        id: "e5b",
+      kind: "limitation",
+      kindLabel: "UNEXPLAINED",
+        headline: `Note/confirm click counts do not match exactly (${noteClicks} vs ${confirmClicks}) — unexplained`,
+        observed: mismatched
+          .map((r) => `${r.route}: ${r.notes} note clicks vs ${r.confirms} confirm clicks`)
+          .join("; ") +
+          ". Every other evidenced route pairs exactly. The cause of this single discrepancy is not established.",
+        why: "Recorded rather than smoothed over: it is the one place the otherwise exact pairing breaks, and it is why the pattern is only ever claimed as near-1:1. It does not change the automation scope, but it should not disappear from the evidence.",
+        sourceFile: "hr-payroll.json",
+        sourceField: "dominant_path.dominant_variant_analysis.click_target_frequency",
+        available: true,
+      });
+    }
+    evidence.push({
+      id: "e5c",
+      kind: "inferred",
+      kindLabel: "INFERRED FROM DOM",
+      headline: "Confirmation is read from DOM structure — no “submit” event exists in the schema",
+      observed: `Clicks on btn-<route>-ok are treated as the confirmation step; no event type named "submit" is recorded anywhere in the logs.`,
+      why: "This is a DOM-structure inference, not a directly-labelled fact. It is precisely why the prototype requires a human review checkpoint before every confirm click rather than trusting the inference on its own.",
+      sourceFile: "hr-payroll.json",
+      sourceField: "dominant_path.dominant_variant_analysis.click_target_frequency (interpretation stated in reports/day3/hr_payroll_automation_prototype.md)",
       available: true,
     });
   }
   if (sampleExecution) {
     evidence.push({
       id: "e6",
+      kind: "observed",
       headline: "Individual executions can be inspected step by step",
       observed: `e.g. ${sampleExecution.execution_id} — ${sampleExecution.event_count} raw events, ${formatDuration(sampleExecution.duration_ms)}`,
       why: "The recommendation is traceable down to a concrete recorded execution, not just an aggregate.",
@@ -253,6 +313,8 @@ export default function DecisionCenter({
   if (isHr) {
     evidence.push({
       id: "e7",
+      kind: "prototype",
+      kindLabel: "LOCAL PROTOTYPE",
       headline: "Prototype enforces validation, human review and confirm-time re-verification",
       observed: "Route validation, note validation, single-element DOM checks, a held ReviewCheckpoint, and re-location of the confirm button at confirm time",
       why: "Demonstrates the workflow is not only describable but executable under safety controls — the difference between a proposal and a pilot.",
@@ -263,6 +325,8 @@ export default function DecisionCenter({
     });
     evidence.push({
       id: "e8",
+      kind: "limitation",
+      kindLabel: "NOT OBSERVABLE",
       headline: "Note content itself is not observable",
       observed: "Not available in the frontend bundle",
       why: "Bounds the claim: the automation can place a note the operator supplies, but cannot author or verify its content.",
@@ -287,27 +351,25 @@ export default function DecisionCenter({
 
   return (
     <>
-      <header>
-        <h2>Automation Decision Center</h2>
-        <p className="lede">
-          Are we ready to automate this process, why do we believe that, and how robust is that
-          decision? Every figure below is read from the generated bundle — nothing on this screen
-          is scored or recomputed.
-        </p>
-      </header>
+      <PageHeader
+        screen="decision"
+        title="Automation Decision Center"
+        purpose="The decision, written as an engineering record: what was decided, on which evidence, how robust it is, where its boundary sits, and what is still open. Every figure is read from the generated bundle; nothing here is scored or recomputed."
+        context={`Dataset B · ${executionsIndex.length} executions · ${ranking.length} ranked processes`}
+      />
 
-      {/* ---------- decision summary ---------- */}
-      <section className="panel headline" aria-labelledby="dc-summary">
+      {/* ---------- decision record ---------- */}
+      <section className="panel headline record" aria-labelledby="dc-summary">
         <div className="headline-head">
           <div>
-            <h3 id="dc-summary" style={{ marginBottom: 6 }}>Decision</h3>
+            <h3 id="dc-summary" style={{ marginBottom: 6 }}>Decision record</h3>
             <p className="headline-name">{opp?.readable_name ?? "No process"}</p>
             <p className="small muted" style={{ margin: "2px 0 0" }}>
               Rank {opp?.rank ?? "—"} of {ranking.length}
               {opp?.pareto_status === "frontier" ? " · Pareto non-dominated" : ""}
             </p>
           </div>
-          <label className="field" style={{ minWidth: 260, marginBottom: 0 }}>
+          <label className="field" style={{ minWidth: 240, marginBottom: 0 }}>
             <span>Process</span>
             <select value={processId} onChange={(e) => { setProcessId(e.target.value); setOpenEvidence(""); }}
               aria-label="Select process">
@@ -318,44 +380,60 @@ export default function DecisionCenter({
           </label>
         </div>
 
-        <div className="grid cols-4" style={{ marginTop: 14 }}>
-          <div className="metric">
-            <div className="label">Recommendation</div>
-            <div className="value" style={{ fontSize: 16 }}>
-              {isHr ? "Deterministic RPA" : "Not proposed"}
-            </div>
-            <div className="hint">
+        <dl className="record-grid">
+          <div className="record-cell record-decision">
+            <dt>Decision</dt>
+            <dd><span className={`badge ${readiness.tone} verdict`}>{readiness.label}</span></dd>
+            <dd className="record-main">{isHr ? "Deterministic RPA" : "Not proposed"}</dd>
+            <dd className="record-note">
               {isHr ? "Bounded to evidenced routes" : "No prototype or route evidence for this process"}
-            </div>
+              {" · "}{corePass} of {gates.length} evidence gates passed
+            </dd>
           </div>
-          <div className="metric">
-            <div className="label">Readiness</div>
-            <div className="value" style={{ fontSize: 15 }}>
-              <span className={`badge ${readiness.tone}`}>{readiness.label}</span>
-            </div>
-            <div className="hint">{corePass} of {gates.length} evidence gates passed</div>
+          <div className="record-cell">
+            <dt>Evidence</dt>
+            <dd className="record-main">{evidence.length} evidence items</dd>
+            <dd className="record-note">
+              {isHr
+                ? "Process and interaction level: profile, variants, forensic split, routes, DFG, prototype. Listed under B."
+                : "Process level only: profile and variants, no DOM-level forensics persisted."}
+            </dd>
           </div>
-          <div className="metric">
-            <div className="label">Decision robustness</div>
-            <div className="value" style={{ fontSize: 14 }}>{isHr ? robustness : "Not available"}</div>
-            <div className="hint">
+          <div className="record-cell">
+            <dt>Robustness</dt>
+            <dd className="record-main">{isHr ? robustness : "Not available"}</dd>
+            <dd className="record-note">
               {isHr && scenarioRows.length
                 ? `top candidate in ${nTop} of ${scenarioRows.length} tested scenarios; worst tested rank ${worstRank}`
                 : "Per-scenario data in the artifact is specific to the HR/Payroll candidate"}
-            </div>
+            </dd>
           </div>
-          <div className="metric">
-            <div className="label">Evidence depth</div>
-            <div className="value" style={{ fontSize: 14 }}>
-              {isHr ? "Process + interaction level" : "Process level only"}
-            </div>
-            <div className="hint">
-              {isHr
-                ? "profile, variants, forensic split, routes, DFG, prototype"
-                : "profile and variants only — no DOM-level forensics persisted"}
-            </div>
+          <div className="record-cell">
+            <dt>Scope</dt>
+            <dd className="record-main">{isHr ? `${routes.length} routes, dominant path only` : "No route-level scope"}</dd>
+            <dd className="record-note">
+              {isHr && split.dominant
+                ? `${split.dominant.n} of ${hrTotal} executions are inside the boundary`
+                : "Scope is defined only where route evidence exists"}
+            </dd>
           </div>
-        </div>
+          <div className="record-cell">
+            <dt>Boundary</dt>
+            <dd className="record-main">{isHr ? "Human review before every confirmation" : "Not defined"}</dd>
+            <dd className="record-note">
+              {isHr ? "Prepare stops at a held checkpoint; confirm needs a single-use token." : "No automation is proposed."}
+            </dd>
+          </div>
+          <div className="record-cell">
+            <dt>Risks</dt>
+            <dd className="record-main">
+              {upgrade.production_boundary.requires_production_integration.length} open before any real deployment
+            </dd>
+            <dd className="record-note">
+              Listed under G, with {caveats.length} evidence caveats under A.
+            </dd>
+          </div>
+        </dl>
         <p className="small muted" style={{ marginTop: 12 }}>
           “Pilot readiness” describes a bounded trial under human review. No production-readiness
           claim is made anywhere on this screen, and no monetary ROI is derivable from these logs.
@@ -449,7 +527,10 @@ export default function DecisionCenter({
                   onClick={() => setOpenEvidence(open ? "" : e.id)}
                 >
                   <span className="ev-mark" aria-hidden="true">{e.available ? "▸" : "○"}</span>
-                  <span className="ev-headline">{e.headline}</span>
+                  <span className="ev-headline">
+                    {e.headline}{" "}
+                    <EvidenceBadge kind={e.kind} label={e.kindLabel} />
+                  </span>
                   <span className="badge neutral ev-src">{e.sourceFile}</span>
                 </button>
                 {open ? (
@@ -612,6 +693,9 @@ export default function DecisionCenter({
           </div>
           <div className="why" style={{ marginTop: 12 }}>
             <h4>Why not automate everything?</h4>
+            <p style={{ margin: "0 0 8px" }}>
+              Only the dominant deterministic HR path is inside the initial automation boundary.
+            </p>
             <p style={{ margin: 0 }}>
               Because the evidence supports a bounded deterministic path, while the remaining
               variants and the unobservable, judgment-dependent work do not have sufficient
@@ -636,6 +720,85 @@ export default function DecisionCenter({
           </div>
         </section>
       ) : null}
+
+      {/* ---------- E. model support (Day 7) ---------- */}
+      <section className="panel" aria-labelledby="dc-model">
+        <h3 id="dc-model">E · Model support</h3>
+        <Notice kind="warn">
+          <strong>This is a supporting signal, not the reason for the recommendation.</strong>{" "}
+          {upgrade.model.prohibited_use} The HR/Payroll selection comes from the analytical
+          framework — handling time, operator coverage, Pareto and sensitivity — and is
+          unchanged by this model.
+        </Notice>
+        <p><strong>Task:</strong> {upgrade.model.task}</p>
+        <div className="grid cols-3">
+          <MetricCard label="Behaviour only" value={upgrade.model.behavioural_only_macro_f1.toFixed(4)}
+            hint="macro F1, GroupKFold by session" />
+          <MetricCard label="With system identity" value={upgrade.model.with_system_identity_macro_f1.toFixed(4)}
+            hint={`uplift +${upgrade.model.identity_uplift.toFixed(4)}`} />
+          <MetricCard label="Stratified baseline" value={upgrade.model.stratified_baseline_macro_f1.toFixed(4)}
+            hint={`${upgrade.model.n_classes} balanced classes`} />
+        </div>
+        <p><strong>Finding.</strong> {upgrade.model.finding}</p>
+        <p className="small"><strong>Top contributing features:</strong>{" "}
+          {upgrade.model.top_features.map((f) => f.feature).join(" · ")}</p>
+        <Notice kind="info">
+          <strong>Leakage control.</strong> {upgrade.model.leakage_control}
+        </Notice>
+        <Notice kind="info">
+          <strong>Why this task and not "is it automatable?"</strong> {upgrade.model.why_not_circular}
+        </Notice>
+        <p className="small mono src">
+          engineering-upgrade.json → model; reports/day7/model_card.md
+        </p>
+      </section>
+
+      {/* ---------- F. browser automation status (Day 7) ---------- */}
+      <section className="panel" aria-labelledby="dc-browser">
+        <h3 id="dc-browser">F · Browser automation</h3>
+        <p>
+          <EvidenceBadge kind="prototype" label={upgrade.browser.status} />{" "}
+          {upgrade.browser.status_detail}
+        </p>
+        <ul>
+          <li>Confirmed through a real DOM: <strong>{String(upgrade.browser.confirmed)}</strong></li>
+          <li>Note verified in the live DOM: <strong>{String(upgrade.browser.note_reached_dom)}</strong></li>
+          <li>Replayed checkpoint refused: <strong>{String(upgrade.browser.replay_refused)}</strong></li>
+          <li>Unevidenced route refused: <strong>{String(upgrade.browser.invalid_route_refused)}</strong></li>
+          <li>Empty note refused: <strong>{String(upgrade.browser.empty_note_refused)}</strong></li>
+        </ul>
+        <Notice kind="info">
+          The automation logic was <strong>not modified</strong> for the browser. The same
+          functions that drive the in-memory mock drive a real Chromium DOM, because the
+          adapter implements the same interface — so every safety control still applies.
+        </Notice>
+        <p className="small mono src">engineering-upgrade.json → browser</p>
+      </section>
+
+      {/* ---------- G. production boundary (Day 7) ---------- */}
+      <section className="panel" aria-labelledby="dc-prod">
+        <h3 id="dc-prod">G · Production boundary</h3>
+        <div className="grid cols-2">
+          <div className="boundary automate">
+            <h4>Implemented and tested</h4>
+            <ul>
+              {upgrade.production_boundary.implemented.map((x) => <li key={x}>{x}</li>)}
+            </ul>
+          </div>
+          <div className="boundary human">
+            <h4>Requires production integration</h4>
+            <ul>
+              {upgrade.production_boundary.requires_production_integration.map(
+                (x) => <li key={x}>{x}</li>)}
+            </ul>
+          </div>
+        </div>
+        <Notice kind="warn">
+          <strong>This is not a production deployment.</strong> The automation targets a
+          local prototype page. Readiness here means a bounded pilot under human review.
+        </Notice>
+        <p className="small mono src">engineering-upgrade.json → production_boundary</p>
+      </section>
 
       <ProvenancePanel
         meta={meta}

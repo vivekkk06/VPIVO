@@ -1,7 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
+import { PageHeader } from "../components/PageHeader";
 import type { EagerBundle } from "../services/dataService";
 import { EmptyState, MetricCard, Notice, ProvenancePanel } from "../components/common";
 import { DfgFlow } from "../components/DfgFlow";
+import { EvidenceBadge, EvidenceTrace } from "../components/evidence";
 import { formatDuration, formatNumber, formatPercent } from "../utils/format";
 import type { NavParams, Navigate } from "../navigation";
 
@@ -74,13 +76,25 @@ export default function ProcessExplorer({
 
   return (
     <>
-      <header>
-        <h2>Process Explorer</h2>
-        <p className="lede">
-          Processes recovered from Dataset B, with their measured volume, duration and variant
-          structure. All figures are read from the Day-3 profile and variant artifacts.
-        </p>
-      </header>
+      <PageHeader
+        screen="processes"
+        title="Process Explorer"
+        purpose="Inspect process frequency, variants, traces and directly-follows structure. All figures are read from the Day-3 profile and variant artifacts."
+        context={`Dataset B · ${processes.filter((p) => !p.excluded_from_ranking).length} ranked processes`}
+      />
+
+      <section className="panel" aria-labelledby="pe-summary">
+        <div className="panel-head">
+          <h3 id="pe-summary">Discovered processes</h3>
+          <EvidenceBadge kind="observed" />
+        </div>
+        <div className="grid cols-4">
+          <MetricCard label="Contexts discovered" value={processes.length} />
+          <MetricCard label="Ranked" value={ranked.length} hint="enter the opportunity scoring" />
+          <MetricCard label="Excluded from ranking" value={excluded.length} hint="kept visible, not scored" />
+          <MetricCard label="Executions" value={executionsIndex.length} hint="Dataset B, all processes" />
+        </div>
+      </section>
 
       <section className="panel" aria-labelledby="pe-list">
         <h3 id="pe-list">
@@ -200,7 +214,7 @@ export default function ProcessExplorer({
             </div>
           ) : null}
 
-          <div className="grid cols-4" style={{ marginTop: 14 }}>
+          <div className="grid cols-3" style={{ marginTop: 14 }}>
             <MetricCard label="Executions" value={selected.execution_count} />
             <MetricCard label="Total time" value={formatDuration(selected.total_duration_ms)}
               hint={`${formatNumber(selected.total_human_hours, 4)} human hours`} />
@@ -211,6 +225,11 @@ export default function ProcessExplorer({
               value={Object.keys(selected.frequency_by_operator ?? {}).length}
               hint={Object.entries(selected.frequency_by_operator ?? {})
                 .map(([op, n]) => `${op}: ${n}`).join(" · ") || "Not available"} />
+            <MetricCard label="Variants" value={selected.n_variants}
+              hint="distinct system sequences" />
+            <MetricCard label="Dominant variant share"
+              value={formatPercent(selected.dominant_variant_share, 2)}
+              hint="executions on the most common sequence" />
           </div>
 
           {/* ---------- HR forensic split, made prominent ---------- */}
@@ -248,6 +267,13 @@ export default function ProcessExplorer({
               <h3 style={{ marginTop: 22 }}>
                 Directly-follows graph — top {dfgShown} of {dfgTotal} edges
               </h3>
+              {dfgShown < dfgTotal ? (
+                <p className="small">
+                  <span className="status-tag st-neutral">Top {dfgShown} of {dfgTotal} edges</span>{" "}
+                  The artifact persisted the {dfgShown} most frequent transitions; one or more
+                  rarer ones are not drawn.
+                </p>
+              ) : null}
               <p className="small muted">
                 Edge counts and transition probabilities are copied from the Day-3 process-mining
                 artifact. Available for HR/Payroll only — the other processes&rsquo; graphs were not
@@ -283,6 +309,13 @@ export default function ProcessExplorer({
               ) : (
                 <EmptyState>No directly-follows edges in the bundle.</EmptyState>
               )}
+              <EvidenceTrace
+                source={["reports/day3/hr_payroll_dominant_path_dataset_b.json → variant_split",
+                         "reports/day3/problem2_process_mining_full_results.json → hr_payroll_dfg"]}
+                metric="Forensic split of the HR executions; directly-follows edge counts and P(to | from)."
+                method="The split is classified from DOM-level route, click and input evidence; the graph counts context-to-context transitions inside each execution."
+                limitations="The graph lists the most frequent edges only, and only HR / Payroll's graph was persisted."
+              />
             </>
           ) : (
             <Notice kind="info">

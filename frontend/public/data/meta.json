@@ -8,9 +8,65 @@
       "bytes": 169861,
       "path": "reports/day2/protected_boundary_experiment_dataset_a.json"
     },
+    "day1_audit_a": {
+      "bytes": 394427,
+      "path": "reports/day1/full_audit_dataset_a.json"
+    },
+    "day1_audit_b": {
+      "bytes": 93351,
+      "path": "reports/day1/full_audit_dataset_b.json"
+    },
+    "day1_inventory": {
+      "bytes": 10015,
+      "path": "reports/day1/dataset_inventory.json"
+    },
+    "day1_profile_a": {
+      "bytes": 113773,
+      "path": "reports/day1/profile_dataset_a.json"
+    },
+    "day1_profile_b": {
+      "bytes": 25128,
+      "path": "reports/day1/profile_dataset_b.json"
+    },
+    "day1_validation_a": {
+      "bytes": 3788842,
+      "path": "reports/day1/validation_dataset_a.json"
+    },
+    "day1_validation_b": {
+      "bytes": 725358,
+      "path": "reports/day1/validation_dataset_b.json"
+    },
+    "day2_baselines": {
+      "bytes": 7698,
+      "path": "reports/day2/baseline_segmentation_dataset_a.json"
+    },
+    "day2_learned": {
+      "bytes": 4437,
+      "path": "reports/day2/learned_model_dataset_a.json"
+    },
+    "day2_threshold_tradeoff": {
+      "bytes": 77598,
+      "path": "reports/day2/threshold_tradeoff_dataset_a.json"
+    },
     "day4_sensitivity": {
       "bytes": 10006,
       "path": "reports/day4/instrumentation_sensitivity_check.json"
+    },
+    "day6_ensemble": {
+      "bytes": 91782,
+      "path": "reports/day6/boundary_ensemble_experiment_dataset_a.json"
+    },
+    "day7_browser": {
+      "bytes": 2198,
+      "path": "reports/day7/browser_automation_demo.json"
+    },
+    "day7_classifier": {
+      "bytes": 42193,
+      "path": "reports/day7/process_classifier_experiment.json"
+    },
+    "day7_segmentation": {
+      "bytes": 122877,
+      "path": "reports/day7/segmentation_comparison.json"
     },
     "executions": {
       "bytes": 4873714,
@@ -32,6 +88,30 @@
       "bytes": 26009,
       "path": "reports/day3/problem2_process_mining_full_results.json"
     },
+    "module2_automation": {
+      "bytes": 77702,
+      "path": "reports/day6/module2/module2_automation_analysis.json"
+    },
+    "module2_gate": {
+      "bytes": 28173,
+      "path": "reports/day6/module2/module2_promotion_gate.json"
+    },
+    "module2_process": {
+      "bytes": 42027,
+      "path": "reports/day6/module2/module2_process_analysis.json"
+    },
+    "module2_screenshots": {
+      "bytes": 28337,
+      "path": "reports/day6/module2/module2_dataset_b_screenshot_sample.json"
+    },
+    "module2_segmentation": {
+      "bytes": 233572,
+      "path": "reports/day6/module2/module2_segmentation_experiment.json"
+    },
+    "module2_visual_review": {
+      "bytes": 28633,
+      "path": "reports/day6/module2/dataset_b_visual_review_results.json"
+    },
     "profiles": {
       "bytes": 26671,
       "path": "reports/day3/process_profiles_dataset_b.json"
@@ -41,7 +121,7 @@
       "path": "reports/day3/process_variants_dataset_b.json"
     }
   },
-  "generated_at": "2026-09-15T09:15:53Z",
+  "generated_at": "2026-09-18T15:50:44Z",
   "generator": "scripts/build_frontend_data.py",
   "not_available": [
     "raw per-event streams (dataset_a/ and dataset_b/ are gitignored; the finest persisted grain is executions[].ordered_steps)",
@@ -50,11 +130,14 @@
   ],
   "outputs": {
     "dataset-a-metrics.json": 63,
+    "engineering-upgrade.json": 4,
     "executions-index.json": 645,
     "executions/": 15,
     "hr-payroll.json": 122,
     "instrumentation-sensitivity.json": 21,
     "instrumentation.json": 78,
+    "investigation.json": 16,
+    "module-comparison.json": 4,
     "opportunities.json": 21,
     "processes.json": 29,
     "sessions.json": 78,
