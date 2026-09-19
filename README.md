@@ -1,6 +1,7 @@
 # From Operation Logs to an Automation Proposal
 
 **Vivek Badgujar** · IIT Goa, Computer Science and Engineering · vivek303323@gmail.com
+/vivek.badgujar.24031@iitgoa.ac.in
 
 **Start with the [final report](reports/final_report.md).** This README explains what is in
 the repository and how to run it. The daily reasoning, including what failed, is in the
