@@ -375,4 +375,4 @@ A complete walkthrough of the project explaining the end-to-end workflow, includ
 - Production-readiness boundary
 - Rejected approaches and final engineering decisions
 
-👉 **[Watch the Complete Project Explanation Video](./docs/demo/DEMO.mp4)**
+👉 **[Watch the Complete Project Explanation Video](https://drive.google.com/file/d/1kbpBh02UAvG8f8YVZrKRyxey86qL8WB-/view?usp=sharing)**
