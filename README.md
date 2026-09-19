@@ -349,6 +349,7 @@ hypotheses. Engineering decisions, experiment scope, acceptance/rejection criter
 interpretation of evidence, safety boundaries, and final conclusions were reviewed and
 directed by the author. The [work log](work_log.md) records the split day by day.
 
+
 ## 19. Final takeaway
 
 The logs cannot perfectly reconstruct business work, and this project does not claim they
@@ -356,3 +357,22 @@ can. What it offers is a defensible path from imperfect operational evidence to 
 automation proposal: HR / Payroll's dominant path, automated deterministically under human
 review, with the uncertainty stated and the safety controls tested. The next step is a
 supervised pilot on one route, not full automation.
+
+## 20 Project Walkthrough
+
+A complete walkthrough of the project explaining the end-to-end workflow, including:
+
+- Dataset inspection and data-quality analysis
+- Dataset A process segmentation
+- Segmentation experiments and validation
+- Dataset B process discovery
+- Automation opportunity analysis
+- HR / Payroll candidate selection
+- Evidence and robustness analysis
+- Automation prototype and safety boundaries
+- Human review and safe-stop mechanism
+- Execution lifecycle and `UNKNOWN` state
+- Production-readiness boundary
+- Rejected approaches and final engineering decisions
+
+👉 **[Watch the Complete Project Explanation Video](./docs/demo/DEMO.mp4)**
